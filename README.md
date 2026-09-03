@@ -48,6 +48,8 @@ name and order on these screens exists to draw the design.
 | `*.dc.html` | one artboard each — a self-contained page with inline styles |
 | `canvas.json` | layout: positions, the five pages, the sticky notes |
 | `build-index.py` | regenerates `index.html` from `canvas.json` |
+| `build-og.py` | renders the two 1200×630 link-preview cards with headless Chrome |
+| `og*.png` | the preview cards themselves — **generated**, do not hand-edit |
 | `support.js` | a no-op; the canvas editor injects the real one at render time |
 
 ⛔ **Do not hand-edit `index.html`.** It is generated from `canvas.json`, so an artboard added to
