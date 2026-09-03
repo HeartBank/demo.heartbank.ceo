@@ -6,6 +6,14 @@ Design source for **HeartBank Shops** — a storefront platform on `heartbank.ce
 **Live:** <https://demo.heartbank.ceo> · **GitHub Pages**, `main` branch root (the
 `brand.333.eco` pattern, not Firebase).
 
+**The editable canvas** — all 30 artboards on one pan/zoom surface, five pages:
+<https://claude.ai/code/artifact/56af2e2b-c4fc-4f52-a859-61c19da27fe8>
+⚠️ **It is a SEPARATE copy, and editing an artboard here does not update it.** Re-seed and
+republish to that URL after any artboard change (see *Rebuilding the canvas* below), or the canvas
+quietly serves the older screens. ⭐ **Extract it first and diff against these files** — 30
+identical and 1 differing is what a clean re-seed looks like; anything else means someone saved in
+the GUI and you are about to discard their work.
+
 ⚠️ **`robots.txt` disallows everything and `index.html` carries `noindex`.** This is reachable by
 link and deliberately not searchable — it names real people, and it is a demo handed to someone
 directly, not a published page.
