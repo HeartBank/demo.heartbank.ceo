@@ -104,9 +104,35 @@ TEMPLATE = r"""<!doctype html>
 
   .wrap{max-width:860px;margin:0 auto;padding:48px 22px 72px}
   header{margin-bottom:34px}
-  .emblem{width:34px;height:34px;color:var(--accent);display:block;margin-bottom:16px}
   h1{font-family:var(--font-display);font-size:clamp(2rem,6vw,2.9rem);font-weight:600;
      margin:0 0 10px;letter-spacing:-.022em;text-wrap:balance;line-height:1.1}
+  /* The wordmark substitution: the B in *Bank* only, never the H in *Heart*.
+     inline-block matters — transforms do not apply to non-replaced inline
+     elements, and the class must sit on the <svg>, never on a wrapper.
+
+     ⚠️ THE THREE NUMBERS ARE MEASURED, NOT CHOSEN. The path does not fill its
+     own viewBox: getBBox() gives the drawn shape as 0.7535 of the box height,
+     with 0.1533 of padding below it and 0.1534 to its left. Newsreader's cap
+     height here is 0.6937em. So the box is 0.6937/0.7535 = .92em for the mark
+     to stand exactly as tall as a capital; it drops .1533 × .92 = .141em for
+     its foot to land on the baseline; and the side margins cancel the built-in
+     padding so "Heart" and "ank" close up like letters instead of words.
+     Re-measure if the path is ever redrawn — do not nudge these by eye. */
+  .emblem{width:.92em;height:.92em;display:inline-block;vertical-align:-.141em;
+          margin-left:-.09em;margin-right:-.04em;color:var(--accent)}
+  /* brand.333.eco css/motion.css, copied exactly. Two UNEQUAL beats and then a
+     long rest — systole, a weaker diastole, then 450ms of stillness in every
+     1500ms cycle (~40 BPM). THE MORPHOLOGY is the signature, not the tempo:
+     do not "correct" the stops, and do not move 70% without meaning to. */
+  @keyframes heartbeat{
+    0%,100%{transform:scale(1)}
+    14%{transform:scale(1.3)}
+    28%{transform:scale(1)}
+    42%{transform:scale(1.3)}
+    70%{transform:scale(1)}
+  }
+  .beating{animation:heartbeat 1.5s 0s infinite;transform-origin:center}
+  @media (prefers-reduced-motion:reduce){.beating{animation:none}}
   .sub{margin:0;color:var(--ink-dim);font-size:1.02rem;max-width:56ch;line-height:1.6}
 
   .start{display:block;text-decoration:none;border:2px solid var(--accent);
@@ -141,13 +167,10 @@ TEMPLATE = r"""<!doctype html>
 <body>
 <div class="wrap">
   <header>
-    <!-- B-Emblem™ — the heart rotated 45° into a bistable capital B. Rotation is baked
-         into the path, never applied as a transform. Static here: .beating belongs on
-         chrome, and this is not chrome. -->
-    <svg class="emblem" viewBox="0 0 24 24" aria-hidden="true">
-      <path fill="currentColor" d="M3.9743 20.0257L3.8824 18.0670C3.5430 11.1232 3.3167 6.5411 5.9896 3.8683C8.1675 1.6904 11.5899 1.6904 13.7678 3.8683C14.9981 5.0986 15.6062 6.8523 15.4719 8.5281C17.1477 8.3938 18.9014 9.0019 20.1317 10.2322C22.3096 12.4101 22.3096 15.8325 20.1317 18.0104C17.4589 20.6833 12.8768 20.4570 5.9260 20.1247L3.9743 20.0257Z"/>
-    </svg>
-    <h1>HeartBank Shops</h1>
+    <!-- B-Emblem™ standing in for the B of *Bank* — the heart rotated 45° into a
+         bistable capital B, rotation baked into the path, never a transform attribute.
+         It beats because a page header is CHROME; it would not beside a person's name. -->
+    <h1>Heart<svg class="emblem beating" viewBox="0 0 24 24" role="img" aria-label="B"><path fill="currentColor" d="M3.9743 20.0257L3.8824 18.0670C3.5430 11.1232 3.3167 6.5411 5.9896 3.8683C8.1675 1.6904 11.5899 1.6904 13.7678 3.8683C14.9981 5.0986 15.6062 6.8523 15.4719 8.5281C17.1477 8.3938 18.9014 9.0019 20.1317 10.2322C22.3096 12.4101 22.3096 15.8325 20.1317 18.0104C17.4589 20.6833 12.8768 20.4570 5.9260 20.1247L3.9743 20.0257Z"/></svg>ank Shops</h1>
     <p class="sub">Design source for a storefront platform on <span class="mono">heartbank.ceo</span>
       — {{COUNT}} artboards across five surfaces, plus a walkthrough you can actually use.
       Home Coffee is the first shop.</p>
