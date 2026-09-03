@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+Khmer:wght@400;500;600&display=swap">
+  <style>
+    :root{
+      --bg:#fcfbfe; --surface:#f4f1fb; --surface-2:#ebe7f5;
+      --line:rgba(20,16,30,.12); --line-strong:rgba(20,16,30,.28);
+      --ink:#16141c; --ink-dim:#5b5766; --ink-faint:#8b8796;
+      --accent:#15803d; --accent-soft:#106430; --accent-ink:#ffffff;
+      --accent-wash:rgba(16,100,48,.10); --accent-edge:rgba(16,100,48,.25);
+      --font-display:"Newsreader",Georgia,serif;
+      --font-text:"IBM Plex Sans",ui-sans-serif,system-ui,sans-serif;
+      --font-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+      --font-khmer:"Noto Sans Khmer",sans-serif;
+      --r-card:1.25rem; --r-control:1rem; --r-pill:999px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-text);font-size:16px;line-height:1.6}
+    a{color:var(--accent-soft);text-decoration:none} a:hover{color:var(--accent)}
+    .km{font-family:var(--font-khmer);line-height:1.5}
+    .lbl{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;
+         color:var(--ink-faint);margin:0 0 10px}
+  </style>
+</helmet>
+
+<div style="width:390px;min-height:844px;display:flex;flex-direction:column;background:var(--bg)">
+
+  <div style="display:flex;align-items:center;gap:14px;padding:18px 20px;border-bottom:1px solid var(--line)">
+    <span style="font-size:1.4rem;color:var(--ink-dim);cursor:pointer;line-height:1">←</span>
+    <span style="font-family:var(--font-display);font-size:1.15rem;font-weight:600">A gift</span>
+  </div>
+
+  <div style="padding:20px;display:flex;flex-direction:column;gap:24px">
+
+    <!-- same three doors, gift selected -->
+    <div>
+      <p class="lbl">How you'll get it</p>
+      <div style="display:flex;gap:9px">
+        <div style="flex:1;border:1px solid var(--line);border-radius:var(--r-control);
+                    padding:12px 11px;min-height:74px">
+          <p style="margin:0;font-weight:500;font-size:.9rem;color:var(--ink-dim)">Pickup</p>
+          <p style="margin:2px 0 0;font-size:.77rem;color:var(--ink-faint)">~10 min</p>
+        </div>
+        <div style="flex:1;border:1px solid var(--line);border-radius:var(--r-control);
+                    padding:12px 11px;min-height:74px">
+          <p style="margin:0;font-weight:500;font-size:.9rem;color:var(--ink-dim)">Delivery</p>
+          <p style="margin:2px 0 0;font-size:.77rem;color:var(--ink-faint)">+1,000៛</p>
+        </div>
+        <div style="flex:1;border:2px solid var(--accent);border-radius:var(--r-control);
+                    padding:12px 11px;background:var(--bg);min-height:74px">
+          <p style="margin:0;font-weight:600;font-size:.9rem">Gift code</p>
+          <p style="margin:2px 0 0;font-size:.77rem;color:var(--ink-dim)">for someone</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- item-denominated, never cash. this is the legal shape AND the human one. -->
+    <div style="border:1px solid var(--accent-edge);background:var(--accent-wash);
+                border-radius:var(--r-card);padding:18px 19px">
+      <p class="lbl" style="margin-bottom:12px">What they'll get</p>
+      <div style="display:flex;align-items:center;gap:14px">
+        <div style="width:56px;height:56px;border-radius:.8rem;overflow:hidden;flex:none"><svg viewBox="0 0 48 48" style="width:100%;height:100%;display:block"><rect width="48" height="48" fill="#e9dcc6"/><path d="M15 12h18l-2.4 26h-13.2z" fill="#4a2c17"/><path d="M15 12h18l-.9 10h-16.2z" fill="#cfa87a"/><rect x="14" y="9.5" width="20" height="3.5" rx="1.7" fill="#f2e6d4"/><rect x="19" y="15" width="6" height="6" rx="1.4" fill="#fff" opacity=".55"/><rect x="26" y="20" width="5" height="5" rx="1.2" fill="#fff" opacity=".4"/><rect x="29" y="4" width="3" height="14" rx="1.5" fill="#d8503c" transform="rotate(12 30 11)"/></svg></div>
+        <div style="min-width:0">
+          <p class="km" style="margin:0;font-weight:600;font-size:1.05rem">កាហ្វេទឹកកក</p>
+          <p style="margin:1px 0 0;font-size:.86rem;color:var(--ink-dim)">One iced coffee at Home Coffee</p>
+        </div>
+      </div>
+      <p style="margin:14px 0 0;font-size:.82rem;color:var(--ink-dim);line-height:1.55">
+        A coffee, not an amount. If Kanghna raises her prices, it's still a coffee.
+      </p>
+    </div>
+
+    <!-- who it's for. no account needed for either party. -->
+    <div>
+      <p class="lbl">Who's it for?</p>
+      <div style="border:1px solid var(--line-strong);border-radius:var(--r-control);
+                  padding:12px 16px;background:var(--bg);min-height:56px;display:flex;align-items:center;gap:11px">
+        <div style="width:32px;height:32px;border-radius:50%;overflow:hidden;flex:none"><svg viewBox="0 0 40 40" style="width:100%;height:100%;display:block"><circle cx="20" cy="20" r="20" fill="#efe6f4"/><path d="M20 23c7.2 0 13 5.4 13 12v5H7v-5c0-6.6 5.8-12 13-12z" fill="#7b5fa0"/><circle cx="20" cy="15" r="7.6" fill="#d8ab84"/><path d="M12.4 14.6a7.6 7.6 0 0 1 15.2 0c0-4.4-3.4-7.2-7.6-7.2s-7.6 2.8-7.6 7.2z" fill="#2f2119"/><path d="M11.4 14q-1.2 9 1 14h-4q-2.4 -7 -.6 -14z" fill="#2f2119"/><path d="M28.6 14q1.2 9 -1 14h4q2.4 -7 .6 -14z" fill="#2f2119"/><circle cx="17.2" cy="15.4" r="1.05" fill="#3b2a1e"/><circle cx="22.8" cy="15.4" r="1.05" fill="#3b2a1e"/><path d="M18 18.6q2 1.5 4 0" stroke="#3b2a1e" stroke-width="1" fill="none" stroke-linecap="round"/></svg></div><span class="km" style="font-size:1.02rem;font-weight:500">សុភា</span><span style="color:var(--accent);margin-left:1px">|</span>
+      </div>
+      <p style="margin:9px 0 0;font-size:.81rem;color:var(--ink-faint);line-height:1.5">
+        Just so the code knows whose name to carry. They don't need an account either.
+      </p>
+    </div>
+
+    <!-- a note travels with it -->
+    <div>
+      <p class="lbl">Say something</p>
+      <div style="border:1px solid var(--line-strong);border-radius:var(--r-control);
+                  padding:14px 16px;background:var(--bg);min-height:88px">
+        <span class="km" style="font-size:.96rem;color:var(--ink-dim);line-height:1.6">អរគុណសម្រាប់ជំនួយកាលពីម្សិលមិញ</span>
+      </div>
+      <p style="margin:9px 0 0;font-size:.81rem;color:var(--ink-faint);line-height:1.5">
+        Thanks for the help yesterday
+      </p>
+    </div>
+
+    <!-- how it travels -->
+    <div>
+      <p class="lbl">Send it how?</p>
+      <div style="display:flex;gap:9px">
+        <div style="flex:1;border:2px solid var(--accent);border-radius:var(--r-control);
+                    padding:13px 12px;text-align:center;min-height:52px;display:flex;
+                    align-items:center;justify-content:center">
+          <span style="font-weight:600;font-size:.9rem">Show me the code</span>
+        </div>
+        <div style="flex:1;border:1px solid var(--line);border-radius:var(--r-control);
+                    padding:13px 12px;text-align:center;min-height:52px;display:flex;
+                    align-items:center;justify-content:center">
+          <span style="font-weight:500;font-size:.9rem;color:var(--ink-dim)">Send a link</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- pay her, same rail -->
+    <div>
+      <p class="lbl">Pay now</p>
+      <div style="display:flex;flex-direction:column;gap:9px">
+        <div style="display:flex;align-items:center;gap:12px;border:2px solid var(--accent);
+                    border-radius:var(--r-control);padding:13px 15px;min-height:56px">
+          <div style="width:34px;height:34px;border-radius:8px;background:var(--ink);flex:none;
+                      display:flex;align-items:center;justify-content:center;color:#fff;
+                      font-family:var(--font-mono);font-size:.6rem;font-weight:500">QR</div>
+          <div style="min-width:0;flex:1">
+            <p style="margin:0;font-weight:600;font-size:.94rem">KHQR</p>
+            <p style="margin:0;font-size:.79rem;color:var(--ink-dim)">Straight to her bank</p>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;border:1px solid var(--line);
+                    border-radius:var(--r-control);padding:13px 15px;min-height:56px">
+          <div style="width:34px;height:34px;flex:none;border-radius:8px;overflow:hidden"><svg viewBox="0 0 40 40" style="width:100%;height:100%;display:block"><rect width="40" height="40" rx="7" fill="#16141c"/><g fill="#fff"><rect x="6" y="6" width="10" height="10" rx="2"/><rect x="24" y="6" width="10" height="10" rx="2"/><rect x="6" y="24" width="10" height="10" rx="2"/><rect x="20" y="20" width="3" height="3"/><rect x="26" y="23" width="3" height="3"/><rect x="31" y="20" width="3" height="3"/><rect x="21" y="28" width="3" height="3"/><rect x="27" y="30" width="3" height="3"/><rect x="32" y="27" width="3" height="3"/></g><g fill="#16141c"><rect x="9" y="9" width="4" height="4"/><rect x="27" y="9" width="4" height="4"/><rect x="9" y="27" width="4" height="4"/></g></svg></div>
+          <div style="min-width:0;flex:1">
+            <p style="margin:0;font-weight:500;font-size:.94rem;color:var(--ink-dim)">HeartBank® <span style="font-family:var(--font-mono);font-size:.66rem;background:var(--surface-2);border-radius:var(--r-pill);padding:2px 7px;margin-left:3px">TRIAL</span></p>
+            <p style="margin:0;font-size:.79rem;color:var(--ink-faint)">Into her Personal Wallet℠</p>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;border:1px solid var(--line);
+                    border-radius:var(--r-control);padding:13px 15px;min-height:56px">
+          <div style="width:34px;height:34px;border-radius:8px;background:var(--surface-2);flex:none"></div>
+          <div style="min-width:0;flex:1">
+            <p style="margin:0;font-weight:500;font-size:.94rem;color:var(--ink-dim)">Cash at the counter</p>
+            <p style="margin:0;font-size:.79rem;color:var(--ink-faint)">Hand her the money and she gives you the code</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:auto;position:sticky;bottom:0;background:var(--bg);
+              border-top:1px solid var(--line);padding:14px 20px 20px">
+    <button style="width:100%;background:var(--accent);color:var(--accent-ink);border:none;
+                   border-radius:var(--r-control);min-height:56px;font-size:1rem;font-weight:500;
+                   font-family:var(--font-text);cursor:pointer;display:flex;align-items:center;
+                   justify-content:space-between;padding:0 22px">
+      <span>Pay and request the code</span><span style="font-family:var(--font-mono)">3,000៛</span>
+    </button>
+    <p style="text-align:center;margin:11px 0 0;font-size:.8rem;color:var(--ink-faint);line-height:1.5">
+      Unlike a coffee, there is nothing to hand you first — so this one is paid ahead.
+    </p>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

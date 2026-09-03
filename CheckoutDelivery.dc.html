@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+Khmer:wght@400;500;600&display=swap">
+  <style>
+    :root{
+      --bg:#fcfbfe; --surface:#f4f1fb; --surface-2:#ebe7f5;
+      --line:rgba(20,16,30,.12); --line-strong:rgba(20,16,30,.28);
+      --ink:#16141c; --ink-dim:#5b5766; --ink-faint:#8b8796;
+      --accent:#15803d; --accent-soft:#106430; --accent-ink:#ffffff;
+      --accent-wash:rgba(16,100,48,.10); --accent-edge:rgba(16,100,48,.25);
+      --font-display:"Newsreader",Georgia,serif;
+      --font-text:"IBM Plex Sans",ui-sans-serif,system-ui,sans-serif;
+      --font-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+      --font-khmer:"Noto Sans Khmer",sans-serif;
+      --r-card:1.25rem; --r-control:1rem; --r-pill:999px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-text);font-size:16px;line-height:1.6}
+    a{color:var(--accent-soft);text-decoration:none} a:hover{color:var(--accent)}
+    .km{font-family:var(--font-khmer);line-height:1.5}
+    .lbl{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;
+         color:var(--ink-faint);margin:0 0 10px}
+  </style>
+</helmet>
+
+<div style="width:390px;min-height:844px;display:flex;flex-direction:column;background:var(--bg)">
+
+  <div style="display:flex;align-items:center;gap:14px;padding:18px 20px;border-bottom:1px solid var(--line)">
+    <span style="font-size:1.4rem;color:var(--ink-dim);cursor:pointer;line-height:1">←</span>
+    <span style="font-family:var(--font-display);font-size:1.15rem;font-weight:600">Delivery</span>
+  </div>
+
+  <div style="padding:20px;display:flex;flex-direction:column;gap:24px">
+
+    <div>
+      <p class="lbl">How you'll get it</p>
+      <div style="display:flex;gap:9px">
+        <div style="flex:1;border:1px solid var(--line);border-radius:var(--r-control);
+                    padding:12px 11px;min-height:74px">
+          <p style="margin:0;font-weight:500;font-size:.9rem;color:var(--ink-dim)">Pickup</p>
+          <p style="margin:2px 0 0;font-size:.77rem;color:var(--ink-faint)">~10 min</p>
+        </div>
+        <div style="flex:1;border:2px solid var(--accent);border-radius:var(--r-control);
+                    padding:12px 11px;background:var(--bg);min-height:74px">
+          <p style="margin:0;font-weight:600;font-size:.9rem">Delivery</p>
+          <p style="margin:2px 0 0;font-size:.77rem;color:var(--ink-dim)">+1,000៛</p>
+        </div>
+        <div style="flex:1;border:1px solid var(--line);border-radius:var(--r-control);
+                    padding:12px 11px;min-height:74px">
+          <p style="margin:0;font-weight:500;font-size:.9rem;color:var(--ink-dim)">Gift code</p>
+          <p style="margin:2px 0 0;font-size:.77rem;color:var(--ink-faint)">for someone</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- where to. a guest may type one; the safeguard is WHO SEES IT. -->
+    <div>
+      <p class="lbl">Where to?</p>
+      <div style="border:1px solid var(--line-strong);border-radius:var(--r-control);
+                  padding:14px 16px;background:var(--bg);min-height:56px;display:flex;align-items:center">
+        <span class="km" style="font-size:.98rem">ផ្ទះលេខ ១២, ផ្លូវវិទ្យាល័យ</span><span style="color:var(--accent);margin-left:1px">|</span>
+      </div>
+      <div style="border:1px solid var(--line);border-radius:var(--r-control);
+                  padding:12px 16px;background:var(--bg);min-height:48px;display:flex;
+                  align-items:center;margin-top:9px">
+        <span class="km" style="font-size:.9rem;color:var(--ink-dim)">ខាងក្រោយសាលា · ផ្ទះពណ៌ខៀវ</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:9px;background:var(--surface);
+                  border-radius:var(--r-pill);padding:8px 14px;margin-top:11px;width:fit-content">
+        <span style="width:7px;height:7px;border-radius:50%;background:var(--accent);display:block"></span>
+        <span style="font-size:.84rem;color:var(--ink-dim)">1.4 km — inside the 3 km she delivers to</span>
+      </div>
+      <p style="margin:9px 0 0;font-size:.81rem;color:var(--ink-faint);line-height:1.5">
+        A landmark helps more than a house number here. If you type somewhere she does not reach,
+        this line says so before you order — not after.
+      </p>
+    </div>
+
+    <!-- who will see the address. this is the whole minors safeguard, said plainly. -->
+    <div style="border:1px solid var(--accent-edge);background:var(--accent-wash);
+                border-radius:var(--r-card);padding:15px 17px;display:flex;gap:12px;align-items:flex-start">
+      <svg viewBox="0 0 24 24" width="19" height="19" style="color:var(--accent-soft);flex:none;margin-top:2px">
+        <path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"
+              d="M12 3l7 3v5.5c0 4.4-3 8.2-7 9.5-4-1.3-7-5.1-7-9.5V6z"/>
+        <path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"
+              d="M9 12l2 2 4-4"/>
+      </svg>
+      <div style="min-width:0">
+      <p style="margin:0;font-size:.85rem;color:var(--ink-dim);line-height:1.55">
+        Only someone <strong style="color:var(--ink)">Kanghna has approved</strong> will ever see
+        this address. It is never offered to a stranger.
+      </p>
+      <div style="display:flex;align-items:center;gap:14px;margin-top:12px">
+        <div style="display:flex;align-items:center;gap:7px">
+          <div style="width:28px;height:28px;border-radius:50%;overflow:hidden;flex:none"><svg viewBox="0 0 40 40" style="width:100%;height:100%;display:block"><circle cx="20" cy="20" r="20" fill="#dfe8f2"/><path d="M20 23c7.2 0 13 5.4 13 12v5H7v-5c0-6.6 5.8-12 13-12z" fill="#3c6ea5"/><circle cx="20" cy="15" r="7.6" fill="#d2a67c"/><path d="M12.4 14.6a7.6 7.6 0 0 1 15.2 0c0-4.4-3.4-7.2-7.6-7.2s-7.6 2.8-7.6 7.2z" fill="#211a15"/><circle cx="17.2" cy="15.4" r="1.05" fill="#3b2a1e"/><circle cx="22.8" cy="15.4" r="1.05" fill="#3b2a1e"/><path d="M18 18.6q2 1.5 4 0" stroke="#3b2a1e" stroke-width="1" fill="none" stroke-linecap="round"/></svg></div>
+          <span style="font-size:.84rem;color:var(--ink-dim)">Reach</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:7px">
+          <div style="width:28px;height:28px;border-radius:50%;overflow:hidden;flex:none"><svg viewBox="0 0 40 40" style="width:100%;height:100%;display:block"><circle cx="20" cy="20" r="20" fill="#e6ecdb"/><path d="M20 23c7.2 0 13 5.4 13 12v5H7v-5c0-6.6 5.8-12 13-12z" fill="#6b7f4e"/><circle cx="20" cy="15" r="7.6" fill="#c99b70"/><path d="M12.4 14.6a7.6 7.6 0 0 1 15.2 0c0-4.4-3.4-7.2-7.6-7.2s-7.6 2.8-7.6 7.2z" fill="#211a15"/><path d="M11.6 12.4a8.4 8.4 0 0 1 16.8 0z" fill="#4a6b3f"/><path d="M28.4 12.4h5.6q0 2.4 -5.6 2.4z" fill="#3d5a34"/><circle cx="17.2" cy="15.4" r="1.05" fill="#3b2a1e"/><circle cx="22.8" cy="15.4" r="1.05" fill="#3b2a1e"/><path d="M18 18.6q2 1.5 4 0" stroke="#3b2a1e" stroke-width="1" fill="none" stroke-linecap="round"/></svg></div>
+          <span style="font-size:.84rem;color:var(--ink-dim)">Vichea</span>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <!-- the secret code, introduced BEFORE it is needed -->
+    <div>
+      <p class="lbl">Your code for the door</p>
+      <div style="display:flex;gap:9px">
+        <span style="flex:1;border:1px solid var(--line-strong);border-radius:.7rem;min-height:56px;
+                     display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);
+                     font-size:1.4rem;font-weight:500">4</span>
+        <span style="flex:1;border:1px solid var(--line-strong);border-radius:.7rem;min-height:56px;
+                     display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);
+                     font-size:1.4rem;font-weight:500">1</span>
+        <span style="flex:1;border:1px solid var(--line-strong);border-radius:.7rem;min-height:56px;
+                     display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);
+                     font-size:1.4rem;font-weight:500">7</span>
+        <span style="flex:1;border:1px solid var(--line-strong);border-radius:.7rem;min-height:56px;
+                     display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);
+                     font-size:1.4rem;font-weight:500">2</span>
+      </div>
+      <p style="margin:9px 0 0;font-size:.81rem;color:var(--ink-faint);line-height:1.5">
+        Read it out when your coffee arrives. Don't send it ahead — it's how the rider proves he
+        actually handed it over.
+      </p>
+    </div>
+
+    <!-- totals with the fee -->
+    <div style="background:var(--surface);border-radius:var(--r-card);padding:16px 18px">
+      <div style="display:flex;justify-content:space-between;gap:12px;padding-bottom:9px">
+        <span style="font-size:.9rem;color:var(--ink-dim)">Two things</span>
+        <span style="font-family:var(--font-mono);font-size:.9rem">6,500៛</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;gap:12px;padding-bottom:9px">
+        <span style="font-size:.9rem;color:var(--ink-dim)">Delivery</span>
+        <span style="font-family:var(--font-mono);font-size:.9rem">1,000៛</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;gap:12px;padding-bottom:11px">
+        <span style="font-size:.9rem;color:var(--ink-dim)">Thank you</span>
+        <span style="font-family:var(--font-mono);font-size:.9rem">1,000៛</span>
+      </div>
+      <div style="height:1px;background:var(--line)"></div>
+      <div style="display:flex;justify-content:space-between;gap:12px;padding-top:11px;font-weight:600">
+        <span>Total</span><span style="font-family:var(--font-mono)">8,500៛</span>
+      </div>
+      <p style="margin:11px 0 0;font-size:.79rem;color:var(--ink-dim);line-height:1.5">
+        Deliveries are paid before anyone rides out, straight to Kanghna. Whoever brings it
+        carries your coffee and nothing else — no money, no card reader, nothing to settle at
+        your door.
+      </p>
+    </div>
+  </div>
+
+  <div style="margin-top:auto;position:sticky;bottom:0;background:var(--bg);
+              border-top:1px solid var(--line);padding:14px 20px 20px">
+    <button style="width:100%;background:var(--accent);color:var(--accent-ink);border:none;
+                   border-radius:var(--r-control);min-height:56px;font-size:1rem;font-weight:500;
+                   font-family:var(--font-text);cursor:pointer;display:flex;align-items:center;
+                   justify-content:space-between;padding:0 22px">
+      <span>Pay and send the order</span><span style="font-family:var(--font-mono)">8,500៛</span>
+    </button>
+    <p style="text-align:center;margin:11px 0 0;font-size:.8rem;color:var(--ink-faint)">
+      No account needed
+    </p>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

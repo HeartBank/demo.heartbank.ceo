@@ -1,0 +1,222 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+Khmer:wght@400;500;600&display=swap">
+  <style>
+    :root{
+      --bg:#fcfbfe; --surface:#f4f1fb; --surface-2:#ebe7f5;
+      --line:rgba(20,16,30,.12); --line-strong:rgba(20,16,30,.28);
+      --ink:#16141c; --ink-dim:#5b5766; --ink-faint:#8b8796;
+      --accent:#15803d; --accent-soft:#106430; --accent-ink:#ffffff;
+      --accent-wash:rgba(16,100,48,.10); --accent-edge:rgba(16,100,48,.25);
+      --font-display:"Newsreader",Georgia,serif;
+      --font-text:"IBM Plex Sans",ui-sans-serif,system-ui,sans-serif;
+      --font-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+      --font-khmer:"Noto Sans Khmer",sans-serif;
+      --r-card:1.25rem; --r-control:1rem; --r-pill:999px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-text);font-size:16px;line-height:1.6}
+    a{color:var(--accent-soft);text-decoration:none} a:hover{color:var(--accent)}
+    .km{font-family:var(--font-khmer);line-height:1.5}
+    .btag{display:inline-flex;align-items:center;gap:4px;font-family:var(--font-mono);
+          font-size:.62rem;letter-spacing:.04em;color:var(--accent-soft);
+          background:var(--accent-wash);border:1px solid var(--accent-edge);
+          border-radius:var(--r-pill);padding:2px 7px 2px 5px;white-space:nowrap}
+  </style>
+</helmet>
+
+<div style="width:390px;min-height:844px;display:flex;flex-direction:column;background:var(--bg)">
+
+  <div style="height:150px;position:relative;flex:none;overflow:hidden">
+    <svg viewBox="0 0 390 150" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block">
+      <defs>
+        <linearGradient id="nc-sky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#dfeccd"/><stop offset="1" stop-color="#9db97a"/>
+        </linearGradient>
+      </defs>
+      <rect width="390" height="150" fill="url(#nc-sky)"/>
+      <g opacity="0.35" fill="#5d7a3e">
+        <circle cx="46" cy="52" r="20"/><circle cx="70" cy="44" r="16"/><circle cx="26" cy="46" r="14"/>
+        <rect x="42" y="60" width="7" height="34" rx="3"/>
+        <circle cx="342" cy="46" r="17"/><circle cx="364" cy="52" r="13"/>
+        <rect x="339" y="54" width="6" height="30" rx="3"/>
+      </g>
+      <rect y="112" width="390" height="38" fill="#a08a63"/>
+      <rect y="108" width="390" height="7" fill="#8b7551"/>
+      <g>
+        <path d="M118 34 L196 16 L274 34 Z" fill="#d94f3d"/>
+        <path d="M118 34 L196 16 L274 34 Z" fill="#ffffff" opacity="0.14"/>
+        <rect x="193" y="34" width="6" height="30" fill="#7a5a3a"/>
+      </g>
+      <g>
+        <rect x="132" y="64" width="128" height="40" rx="5" fill="#c9a06a"/>
+        <rect x="132" y="64" width="128" height="9" rx="4" fill="#e0bd8c"/>
+        <rect x="146" y="80" width="26" height="16" rx="2" fill="#8b6a42" opacity="0.55"/>
+        <rect x="180" y="80" width="26" height="16" rx="2" fill="#8b6a42" opacity="0.55"/>
+        <rect x="214" y="80" width="26" height="16" rx="2" fill="#8b6a42" opacity="0.55"/>
+        <circle cx="156" cy="112" r="11" fill="#4a3a26"/><circle cx="156" cy="112" r="4" fill="#8b7551"/>
+        <circle cx="238" cy="112" r="11" fill="#4a3a26"/><circle cx="238" cy="112" r="4" fill="#8b7551"/>
+        <rect x="258" y="70" width="30" height="5" rx="2.5" fill="#7a5a3a" transform="rotate(-14 258 72)"/>
+      </g>
+      <g>
+        <ellipse cx="168" cy="60" rx="17" ry="6" fill="#f2f2ee"/>
+        <path d="M151 60 q17 12 34 0 z" fill="#e4e4dd"/>
+        <ellipse cx="168" cy="59" rx="12" ry="4" fill="#d8c9a4"/>
+        <ellipse cx="212" cy="61" rx="15" ry="5" fill="#f2f2ee"/>
+        <path d="M197 61 q15 11 30 0 z" fill="#e4e4dd"/>
+      </g>
+      <g stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" fill="none" opacity="0.5">
+        <path d="M168 48 q-5 -8 0 -14 t0 -11"/>
+        <path d="M212 50 q-5 -7 0 -12 t0 -10"/>
+      </g>
+    </svg>
+    <span style="position:absolute;left:14px;top:12px;font-family:var(--font-mono);font-size:.6rem;letter-spacing:.06em;color:rgba(255,255,255,.85);background:rgba(0,0,0,.34);border-radius:var(--r-pill);padding:3px 9px">[ PLACEHOLDER ART ]</span>
+    <button style="position:absolute;right:14px;top:12px;border:none;background:rgba(255,255,255,.92);border-radius:var(--r-pill);padding:6px 12px;font-family:var(--font-mono);font-size:.72rem;color:var(--ink);min-height:32px;cursor:pointer">ខ្មែរ / EN</button>
+  </div>
+
+  <div style="padding:16px 20px 0">
+    <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px">
+      <div style="min-width:0">
+        <h1 class="km" style="font-size:1.45rem;font-weight:600;margin:0;letter-spacing:0">រទេះ​នំបញ្ចុក</h1>
+        <p style="font-family:var(--font-display);font-size:1.1rem;font-weight:500;margin:2px 0 0">Noodle cart</p>
+      </div>
+    </div>
+
+    <!-- OUT NOW: coarse, live, and it ends when she goes home -->
+    <div style="margin:16px 0 0;border:1px solid var(--accent-edge);background:var(--accent-wash);
+                border-radius:var(--r-card);padding:15px 17px">
+      <div style="display:flex;align-items:center;gap:9px;margin-bottom:9px">
+        <span style="width:8px;height:8px;border-radius:50%;background:var(--accent);display:block"></span>
+        <span style="font-weight:600;font-size:.98rem">Out now</span>
+      </div>
+      <p class="km" style="margin:0;font-size:.94rem;color:var(--ink-dim);line-height:1.55">
+        នៅចុងខាងជើងផ្សារ · ប្រហែល ៤០០ ម៉ែត្រ
+      </p>
+      <p style="margin:3px 0 0;font-size:.86rem;color:var(--ink-dim)">
+        North end of the market · about 400 m
+      </p>
+    </div>
+
+    <!-- follow: a notification preference. NO COUNT, to anyone. -->
+    <button style="width:100%;margin-top:11px;background:var(--bg);color:var(--ink);
+                   border:1px solid var(--line-strong);border-radius:var(--r-control);
+                   min-height:52px;font-size:.94rem;font-weight:500;font-family:var(--font-text);
+                   cursor:pointer;display:flex;align-items:center;justify-content:center;gap:9px">
+      <svg viewBox="0 0 24 24" width="18" height="18" style="color:var(--ink-dim)">
+        <path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"
+              d="M18 8A6 6 0 0 0 6 8c0 7-3 8-3 8h18s-3-1-3-8M13.7 21a2 2 0 0 1-3.4 0"/>
+      </svg>
+      Tell me when she's nearby
+    </button>
+    <p style="margin:9px 0 0;font-size:.8rem;color:var(--ink-faint);line-height:1.5">
+      You'll hear when she reaches somewhere near you — never that she has left.
+    </p>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:12px;padding:20px 20px 0">
+
+    <div style="display:grid;grid-template-columns:64px minmax(0,1fr) auto;gap:14px;align-items:center;
+                border:1px solid var(--line);border-radius:var(--r-card);padding:12px">
+      <div style="width:64px;height:64px;border-radius:.85rem;overflow:hidden;flex:none"><svg viewBox="0 0 48 48" style="width:100%;height:100%;display:block"><rect width="48" height="48" fill="#e6efd8"/><path d="M8 24 q16 16 32 0 z" fill="#f0f0ea"/><ellipse cx="24" cy="24" rx="16" ry="5.4" fill="#fbfbf6"/><g stroke="#e3d1a4" stroke-width="2" fill="none" stroke-linecap="round"><path d="M14 23 q5 -4 10 0 t10 0"/><path d="M15 26 q5 -4 9 0 t9 0"/></g><path d="M30 18 q5 -3 7 1" stroke="#7d9b4e" stroke-width="2.4" fill="none" stroke-linecap="round"/><path d="M12 40 h24 l-2 3 h-20 z" fill="#cbb68d"/></svg></div>
+      <div style="min-width:0">
+        <p class="km" style="margin:0;font-weight:600;font-size:1rem">នំបញ្ចុក</p>
+        <p style="margin:1px 0 6px;font-size:.84rem;color:var(--ink-dim)">Num banh chok</p>
+        <span class="btag">
+          <svg viewBox="0 0 24 24" width="9" height="9" style="color:var(--accent-soft)"><path fill="currentColor" d="M3.9743 20.0257L3.8824 18.0670C3.5430 11.1232 3.3167 6.5411 5.9896 3.8683C8.1675 1.6904 11.5899 1.6904 13.7678 3.8683C14.9981 5.0986 15.6062 6.8523 15.4719 8.5281C17.1477 8.3938 18.9014 9.0019 20.1317 10.2322C22.3096 12.4101 22.3096 15.8325 20.1317 18.0104C17.4589 20.6833 12.8768 20.4570 5.9260 20.1247L3.9743 20.0257Z"/></svg>
+          B-Tag
+        </span>
+      </div>
+      <div style="text-align:right;display:flex;flex-direction:column;align-items:flex-end;gap:6px">
+        <span style="font-family:var(--font-mono);font-weight:500;font-size:.95rem">4,000៛</span>
+        <button style="background:var(--accent);color:var(--accent-ink);border:none;border-radius:var(--r-pill);
+                       width:44px;height:44px;font-size:1.25rem;cursor:pointer;line-height:1">+</button>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:64px minmax(0,1fr) auto;gap:14px;align-items:center;
+                border:1px solid var(--line);border-radius:var(--r-card);padding:12px">
+      <div style="width:64px;height:64px;border-radius:.85rem;overflow:hidden;flex:none"><svg viewBox="0 0 48 48" style="width:100%;height:100%;display:block"><rect width="48" height="48" fill="#dfe9cc"/><path d="M8 24 q16 16 32 0 z" fill="#dfe6cd"/><ellipse cx="24" cy="24" rx="16" ry="5.4" fill="#c9d9a4"/><g stroke="#9db36a" stroke-width="2" fill="none" stroke-linecap="round"><path d="M14 23 q5 -4 10 0 t10 0"/><path d="M15 26 q5 -4 9 0 t9 0"/></g><circle cx="18" cy="22" r="2" fill="#e08a3c"/><circle cx="30" cy="23" r="1.7" fill="#e08a3c"/><path d="M12 40 h24 l-2 3 h-20 z" fill="#cbb68d"/></svg></div>
+      <div style="min-width:0">
+        <p class="km" style="margin:0;font-weight:600;font-size:1rem">នំបញ្ចុកសម្លរខ្មែរ</p>
+        <p style="margin:1px 0 6px;font-size:.84rem;color:var(--ink-dim)">With Khmer curry</p>
+        <span class="btag">
+          <svg viewBox="0 0 24 24" width="9" height="9" style="color:var(--accent-soft)"><path fill="currentColor" d="M3.9743 20.0257L3.8824 18.0670C3.5430 11.1232 3.3167 6.5411 5.9896 3.8683C8.1675 1.6904 11.5899 1.6904 13.7678 3.8683C14.9981 5.0986 15.6062 6.8523 15.4719 8.5281C17.1477 8.3938 18.9014 9.0019 20.1317 10.2322C22.3096 12.4101 22.3096 15.8325 20.1317 18.0104C17.4589 20.6833 12.8768 20.4570 5.9260 20.1247L3.9743 20.0257Z"/></svg>
+          B-Tag
+        </span>
+      </div>
+      <div style="text-align:right;display:flex;flex-direction:column;align-items:flex-end;gap:6px">
+        <span style="font-family:var(--font-mono);font-weight:500;font-size:.95rem">5,000៛</span>
+        <button style="background:var(--accent);color:var(--accent-ink);border:none;border-radius:var(--r-pill);
+                       width:44px;height:44px;font-size:1.25rem;cursor:pointer;line-height:1">+</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- she comes to you. owner-enabled; a public spot, and declining is silent. -->
+  <div style="margin:20px 20px 0;border:1px solid var(--line);border-radius:var(--r-card);
+              padding:16px 17px;background:var(--bg)">
+    <div style="display:flex;align-items:flex-start;gap:12px">
+      <svg viewBox="0 0 24 24" width="20" height="20" style="color:var(--accent-soft);flex:none;margin-top:2px">
+        <path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"
+              d="M3 17h1.5a2 2 0 0 0 4 0h7a2 2 0 0 0 4 0H21M4 17V8h10v9M14 11h3.2l2.8 3.2V17"/>
+      </svg>
+      <div style="min-width:0">
+        <p style="margin:0;font-weight:600;font-size:.96rem">Ask her to come by</p>
+        <p style="margin:2px 0 0;font-size:.84rem;color:var(--ink-dim);line-height:1.55">
+          She's already out. If she's heading your way she'll say yes.
+        </p>
+      </div>
+    </div>
+    <div style="border:1px solid var(--line-strong);border-radius:var(--r-control);
+                padding:13px 15px;margin-top:13px;min-height:52px;display:flex;align-items:center">
+      <span class="km" style="font-size:.94rem">មុខសាលា</span>
+      <span style="font-size:.86rem;color:var(--ink-faint);margin-left:8px">· in front of the school</span>
+    </div>
+    <p style="margin:9px 0 12px;font-size:.81rem;color:var(--ink-faint);line-height:1.5">
+      Somewhere public, not your house — she's a woman alone with a cart and a day's cash.
+    </p>
+    <div style="display:flex;gap:10px;align-items:flex-start;background:var(--surface);
+                border-radius:.8rem;padding:11px 13px;margin-bottom:13px">
+      <svg viewBox="0 0 24 24" width="16" height="16" style="color:var(--ink-dim);flex:none;margin-top:2px">
+        <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.7"/>
+        <path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" d="M12 8v5M12 16.2v.1"/>
+      </svg>
+      <p style="margin:0;font-size:.8rem;color:var(--ink-dim);line-height:1.5">
+        If she says yes she really moves, and everyone watching sees her new spot. She isn't hidden
+        while she comes to you.
+      </p>
+    </div>
+    <button style="width:100%;background:var(--accent);color:var(--accent-ink);border:none;
+                   border-radius:var(--r-control);min-height:52px;font-size:.95rem;font-weight:500;
+                   font-family:var(--font-text);cursor:pointer">Ask</button>
+  </div>
+
+  <div style="margin:14px 20px 0;background:var(--surface);border-radius:var(--r-card);padding:15px 17px">
+    <p style="margin:0;font-size:.87rem;color:var(--ink-dim);line-height:1.55">
+      Or walk over and she'll have it ready. A cart doesn't deliver — she's already out.
+    </p>
+  </div>
+
+  <div style="margin-top:auto;position:sticky;bottom:0;background:var(--bg);
+              border-top:1px solid var(--line);padding:14px 20px 20px">
+    <button style="width:100%;background:var(--accent);color:var(--accent-ink);border:none;
+                   border-radius:var(--r-control);min-height:56px;font-size:1rem;font-weight:500;
+                   font-family:var(--font-text);cursor:pointer;display:flex;align-items:center;
+                   justify-content:space-between;padding:0 22px">
+      <span>Order for pickup · 1 item</span>
+      <span style="font-family:var(--font-mono)">4,000៛</span>
+    </button>
+    <p style="text-align:center;margin:11px 0 0;font-family:var(--font-mono);
+              font-size:.75rem;color:var(--ink-faint)">shop-p2m8.heartbank.ceo</p>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

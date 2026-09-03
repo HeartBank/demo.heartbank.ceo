@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+Khmer:wght@400;500;600&display=swap">
+  <style>
+    :root{
+      --bg:#fcfbfe; --surface:#f4f1fb; --surface-2:#ebe7f5;
+      --line:rgba(20,16,30,.12); --line-strong:rgba(20,16,30,.28);
+      --ink:#16141c; --ink-dim:#5b5766; --ink-faint:#8b8796;
+      --accent:#15803d; --accent-soft:#106430; --accent-ink:#ffffff;
+      --accent-wash:rgba(16,100,48,.10); --accent-edge:rgba(16,100,48,.25);
+      --font-display:"Newsreader",Georgia,serif;
+      --font-text:"IBM Plex Sans",ui-sans-serif,system-ui,sans-serif;
+      --font-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+      --font-khmer:"Noto Sans Khmer",sans-serif;
+      --r-card:1.25rem; --r-control:1rem; --r-pill:999px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-text);font-size:16px;line-height:1.6}
+    a{color:var(--accent-soft);text-decoration:none} a:hover{color:var(--accent)}
+    .km{font-family:var(--font-khmer);line-height:1.5}
+    .lbl{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;
+         color:var(--ink-faint);margin:0 0 11px}
+    .card{background:var(--bg);border:1px solid var(--line);border-radius:var(--r-card);padding:16px 17px}
+    .row{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:10px 0}
+    .stepper{display:flex;align-items:center;gap:11px}
+    .step{width:36px;height:36px;border-radius:50%;border:1px solid var(--line-strong);background:var(--bg);
+          display:flex;align-items:center;justify-content:center;font-size:1.1rem;line-height:1;cursor:pointer}
+  </style>
+</helmet>
+
+<div style="width:390px;min-height:844px;display:flex;flex-direction:column;background:var(--surface)">
+
+  <div style="background:var(--bg);padding:16px 20px;border-bottom:1px solid var(--line);
+              display:flex;align-items:center;justify-content:space-between;gap:12px">
+    <div style="display:flex;align-items:center;gap:13px;min-width:0">
+      <span style="font-size:1.4rem;color:var(--ink-dim);cursor:pointer;line-height:1">←</span>
+      <span style="font-family:var(--font-display);font-size:1.12rem;font-weight:600">Shop</span>
+    </div>
+    <span style="font-family:var(--font-mono);font-size:.66rem;letter-spacing:.04em;
+                 border:1px solid var(--accent-edge);color:var(--accent-soft);background:var(--accent-wash);
+                 border-radius:var(--r-pill);padding:4px 10px;white-space:nowrap">KANGHNA · OWNER</span>
+  </div>
+
+  <div style="padding:18px 16px 0;display:flex;flex-direction:column;gap:18px">
+    <div class="card">
+      <p class="lbl">Your shop</p>
+      <div class="row" style="padding-top:0;border-bottom:1px solid var(--line)">
+        <span style="font-size:.93rem">Name</span>
+        <span class="val km">កាហ្វេ​ផ្ទះ</span>
+      </div>
+      <div class="row" style="border-bottom:1px solid var(--line)">
+        <span style="font-size:.93rem">In English</span>
+        <span class="val">Home Coffee</span>
+      </div>
+      <div class="row" style="border-bottom:1px solid var(--line)">
+        <span style="font-size:.93rem">Where you are</span>
+        <span class="val km" style="font-size:.8rem">៧៦M៦+៨GH</span>
+      </div>
+      <div class="row" style="border-bottom:1px solid var(--line)">
+        <span style="font-size:.93rem">Open</span>
+        <span class="val">6am – 6pm</span>
+      </div>
+      <div class="row" style="padding-bottom:0">
+        <div style="min-width:0">
+          <p style="margin:0;font-size:.93rem">Your photo</p>
+          <p style="margin:1px 0 0;font-size:.81rem;color:var(--ink-dim)">The first thing anyone sees</p>
+        </div>
+        <span style="width:52px;height:38px;border-radius:.5rem;flex:none;
+                     background:linear-gradient(155deg,#8a6a45,#4a3520)"></span>
+      </div>
+    </div>
+
+    <div class="card">
+      <p class="lbl">Things that do not exist yet</p>
+      <p style="margin:0 0 12px;font-size:.83rem;color:var(--ink-dim);line-height:1.55">
+        Tap any of these and we will know you want it. Nothing is ordered and nothing is charged —
+        your shop works exactly as well without them.
+      </p>
+      <div style="display:flex;flex-direction:column;gap:9px">
+      <div style="display:flex;align-items:center;gap:12px;border:1px dashed var(--line-strong);
+                  border-radius:var(--r-control);padding:12px 14px;min-height:56px">
+        <svg viewBox="0 0 24 24" width="17" height="17" style="color:var(--ink-dim)"><path fill="currentColor" d="M16.4 12.7c0-2.1 1.7-3.1 1.8-3.2-1-1.4-2.5-1.6-3-1.7-1.3-.1-2.5.8-3.2.8s-1.7-.7-2.7-.7c-1.4 0-2.7.8-3.4 2.1-1.5 2.5-.4 6.3 1 8.4.7 1 1.5 2.1 2.6 2.1 1 0 1.4-.7 2.7-.7s1.6.7 2.7.6c1.1 0 1.8-1 2.5-2a9 9 0 0 0 1.1-2.3c-.02-.01-2.1-.8-2.1-3.4zM14.3 6.3c.6-.7 1-1.6.9-2.6-.8 0-1.9.5-2.5 1.3-.5.6-1 1.6-.9 2.5.9.1 1.9-.5 2.5-1.2z"/></svg>
+        <div style="min-width:0;flex:1">
+          <p style="margin:0;font-size:.91rem;font-weight:500">Your shop in the App Store</p>
+          <p style="margin:1px 0 0;font-size:.79rem;color:var(--ink-dim);line-height:1.45">as its own app</p>
+        </div>
+        <span style="font-family:var(--font-mono);font-size:.68rem;letter-spacing:.04em;
+                     border:1px solid var(--line);border-radius:var(--r-pill);padding:3px 9px;
+                     color:var(--ink-faint);white-space:nowrap">NOT YET</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;border:1px dashed var(--line-strong);
+                  border-radius:var(--r-control);padding:12px 14px;min-height:56px">
+        <svg viewBox="0 0 24 24" width="17" height="17" style="color:var(--ink-dim)"><path fill="currentColor" d="M4.2 2.6a1.4 1.4 0 0 0-.7 1.2v16.4c0 .5.3 1 .7 1.2l9-9.4-9-9.4zm10.2 8.2 2.5-2.6-8.5-4.8 6 7.4zm0 2.4-6 7.4 8.5-4.8-2.5-2.6zm3.9-3.4-2.1 2.2 2.1 2.2 2-1.1c.7-.4.7-1.8 0-2.2l-2-1.1z"/></svg>
+        <div style="min-width:0;flex:1">
+          <p style="margin:0;font-size:.91rem;font-weight:500">Your shop in the Play Store</p>
+          <p style="margin:1px 0 0;font-size:.79rem;color:var(--ink-dim);line-height:1.45">as its own app</p>
+        </div>
+        <span style="font-family:var(--font-mono);font-size:.68rem;letter-spacing:.04em;
+                     border:1px solid var(--line);border-radius:var(--r-pill);padding:3px 9px;
+                     color:var(--ink-faint);white-space:nowrap">NOT YET</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;border:1px dashed var(--line-strong);
+                  border-radius:var(--r-control);padding:12px 14px;min-height:56px">
+        <svg viewBox="0 0 24 24" width="17" height="17" style="color:var(--ink-dim)"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.7"/><path fill="none" stroke="currentColor" stroke-width="1.7" d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+        <div style="min-width:0;flex:1">
+          <p style="margin:0;font-size:.91rem;font-weight:500">Your own web address</p>
+          <p style="margin:1px 0 0;font-size:.79rem;color:var(--ink-dim);line-height:1.45">homecoffee.com instead of ours</p>
+        </div>
+        <span style="font-family:var(--font-mono);font-size:.68rem;letter-spacing:.04em;
+                     border:1px solid var(--line);border-radius:var(--r-pill);padding:3px 9px;
+                     color:var(--ink-faint);white-space:nowrap">NOT YET</span>
+      </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <p class="lbl">Your colour</p>
+      <div style="display:flex;gap:11px;flex-wrap:wrap">
+        <span style="width:46px;height:46px;border-radius:50%;background:#15803d;
+                     box-shadow:0 0 0 3px var(--bg),0 0 0 5px #15803d;display:block"></span>
+        <span style="width:46px;height:46px;border-radius:50%;background:#0f52ba;display:block"></span>
+        <span style="width:46px;height:46px;border-radius:50%;background:#c8102e;display:block"></span>
+        <span style="width:46px;height:46px;border-radius:50%;background:#e85d04;display:block"></span>
+        <span style="width:46px;height:46px;border-radius:50%;background:#9966cc;display:block"></span>
+        <span style="width:46px;height:46px;border-radius:50%;background:#0e7490;display:block"></span>
+      </div>
+      <p style="margin:13px 0 0;font-size:.82rem;color:var(--ink-dim);line-height:1.55">
+        Six to choose from. Each one is checked so your text stays readable on every phone.
+      </p>
+    </div>
+
+  </div>
+
+  <div style="margin-top:auto;padding:22px 16px 24px">
+    <p style="margin:0;font-size:.8rem;color:var(--ink-faint);line-height:1.55;text-align:center">
+      Your name, your place, your colour.
+    </p>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+Khmer:wght@400;500;600&display=swap">
+  <style>
+    :root{
+      --bg:#fcfbfe; --surface:#f4f1fb; --surface-2:#ebe7f5;
+      --line:rgba(20,16,30,.12); --line-strong:rgba(20,16,30,.28);
+      --ink:#16141c; --ink-dim:#5b5766; --ink-faint:#8b8796;
+      --accent:#15803d; --accent-soft:#106430; --accent-ink:#ffffff;
+      --accent-wash:rgba(16,100,48,.10); --accent-edge:rgba(16,100,48,.25);
+      --font-display:"Newsreader",Georgia,serif;
+      --font-text:"IBM Plex Sans",ui-sans-serif,system-ui,sans-serif;
+      --font-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+      --font-khmer:"Noto Sans Khmer",sans-serif;
+      --r-card:1.25rem; --r-control:1rem; --r-pill:999px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-text);font-size:16px;line-height:1.6}
+    a{color:var(--accent-soft);text-decoration:none} a:hover{color:var(--accent)}
+    .km{font-family:var(--font-khmer);line-height:1.5}
+    .lbl{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;
+         color:var(--ink-faint);margin:0 0 11px}
+  </style>
+</helmet>
+
+<div style="width:390px;min-height:844px;display:flex;flex-direction:column;background:var(--surface)">
+
+  <div style="background:var(--bg);padding:16px 20px;border-bottom:1px solid var(--line)">
+    <p style="margin:0;font-family:var(--font-display);font-size:1.12rem;font-weight:600">You</p>
+    <p style="margin:0;font-size:.79rem;color:var(--ink-faint)">counter.heartbank.ceo</p>
+  </div>
+
+  <div style="padding:26px 16px 0;text-align:center">
+    <div style="width:84px;height:84px;border-radius:50%;overflow:hidden;margin:0 auto 14px"><svg viewBox="0 0 40 40" style="width:100%;height:100%;display:block"><circle cx="20" cy="20" r="20" fill="#dfe8f2"/><path d="M20 23c7.2 0 13 5.4 13 12v5H7v-5c0-6.6 5.8-12 13-12z" fill="#3c6ea5"/><circle cx="20" cy="15" r="7.6" fill="#d2a67c"/><path d="M12.4 14.6a7.6 7.6 0 0 1 15.2 0c0-4.4-3.4-7.2-7.6-7.2s-7.6 2.8-7.6 7.2z" fill="#211a15"/><circle cx="17.2" cy="15.4" r="1.05" fill="#3b2a1e"/><circle cx="22.8" cy="15.4" r="1.05" fill="#3b2a1e"/><path d="M18 18.6q2 1.5 4 0" stroke="#3b2a1e" stroke-width="1" fill="none" stroke-linecap="round"/></svg></div>
+    <p style="margin:0;font-family:var(--font-display);font-size:1.5rem;font-weight:600">Reach</p>
+    <span style="display:inline-block;margin-top:8px;font-family:var(--font-mono);font-size:.7rem;
+                 letter-spacing:.04em;border:1px solid var(--accent-edge);color:var(--accent-soft);
+                 background:var(--accent-wash);border-radius:var(--r-pill);padding:4px 12px">STAFF · CAN DRIVE</span>
+  </div>
+
+  <div style="padding:24px 16px 0;display:flex;flex-direction:column;gap:16px">
+    <div class="card">
+      <p style="font-family:var(--font-mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;
+                color:var(--ink-faint);margin:0 0 12px">What you can do here</p>
+      <div style="display:flex;flex-direction:column;gap:9px">
+        <div style="display:flex;gap:11px;align-items:flex-start"><span style="color:var(--accent-soft);font-family:var(--font-mono)">✓</span><span style="font-size:.9rem;color:var(--ink-dim)">Take orders and move them along</span></div>
+        <div style="display:flex;gap:11px;align-items:flex-start"><span style="color:var(--accent-soft);font-family:var(--font-mono)">✓</span><span style="font-size:.9rem;color:var(--ink-dim)">Take money at the counter</span></div>
+        <div style="display:flex;gap:11px;align-items:flex-start"><span style="color:var(--accent-soft);font-family:var(--font-mono)">✓</span><span style="font-size:.9rem;color:var(--ink-dim)">Carry a delivery</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <p style="font-family:var(--font-mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;
+                color:var(--ink-faint);margin:0 0 12px">Your work this week</p>
+      <div style="display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:8px 0;
+                  border-bottom:1px solid var(--line)">
+        <span style="font-size:.93rem">Shifts</span>
+        <span style="font-family:var(--font-mono);font-size:.95rem;font-weight:500">4</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:8px 0">
+        <span style="font-size:.93rem">Kanghna owes you</span>
+        <span style="font-family:var(--font-mono);font-size:.95rem;font-weight:500">80,000៛</span>
+      </div>
+      <p style="margin:11px 0 0;font-size:.81rem;color:var(--ink-dim);line-height:1.55">
+        The same tally your mother sees. Nobody can change it quietly.
+      </p>
+    </div>
+
+    <div class="card">
+      <p style="font-family:var(--font-mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;
+                color:var(--ink-faint);margin:0 0 12px">Cash in the till</p>
+      <div style="display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:8px 0;
+                  border-bottom:1px solid var(--line)">
+        <span style="font-size:.93rem">Taken by hand today</span>
+        <span style="font-family:var(--font-mono);font-size:.95rem;font-weight:500">34,000៛</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:8px 0">
+        <span style="font-size:.93rem;color:var(--ink-dim)">12 orders paid in cash</span>
+        <span style="font-family:var(--font-mono);font-size:.86rem;color:var(--ink-dim)">since 6am</span>
+      </div>
+      <p style="margin:11px 0 0;font-size:.81rem;color:var(--ink-dim);line-height:1.55">
+        What should be in the drawer when you hand over. It is a fact about the till, not a score
+        about you — nothing keeps a running record of how close you came.
+      </p>
+    </div>
+
+    <div class="card">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:14px">
+        <span style="font-size:.93rem">Language</span>
+        <span style="font-family:var(--font-mono);font-size:.86rem;border:1px solid var(--line-strong);
+                     border-radius:.6rem;padding:6px 12px">ខ្មែរ</span>
+      </div>
+    </div>
+
+    <button style="width:100%;background:var(--bg);color:var(--ink-dim);border:1px solid var(--line-strong);
+                   border-radius:var(--r-control);min-height:50px;font-size:.93rem;font-weight:500;
+                   font-family:var(--font-text);cursor:pointer">Sign out</button>
+  </div>
+  <div style="margin-top:auto;position:sticky;bottom:0;background:var(--bg);border-top:1px solid var(--line);
+              display:flex;justify-content:space-around;padding:11px 8px 18px">
+    <div style="text-align:center;color:var(--ink-faint);display:flex;flex-direction:column;align-items:center;gap:3px;min-width:58px">
+      <svg viewBox="0 0 24 24" width="21" height="21"><path fill="none" stroke="currentColor" stroke-width="1.7"
+        stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h10"/></svg>
+      <span style="font-size:.7rem">Orders</span>
+    </div>
+    <div style="text-align:center;color:var(--ink-faint);display:flex;flex-direction:column;align-items:center;gap:3px;min-width:58px">
+      <svg viewBox="0 0 24 24" width="21" height="21"><path fill="none" stroke="currentColor" stroke-width="1.7"
+        stroke-linecap="round" stroke-linejoin="round" d="M5 4h14v16l-7-3.5L5 20z"/></svg>
+      <span style="font-size:.7rem">History</span>
+    </div>
+    <div style="text-align:center;color:var(--ink-faint);display:flex;flex-direction:column;align-items:center;gap:3px;min-width:58px;opacity:.35">
+      <svg viewBox="0 0 24 24" width="21" height="21"><path fill="none" stroke="currentColor" stroke-width="1.7"
+        stroke-linecap="round" stroke-linejoin="round" d="M4 20V9l8-5 8 5v11a1 1 0 0 1-1 1h-5v-6h-4v6H5a1 1 0 0 1-1-1z"/></svg>
+      <span style="font-size:.7rem">Shop</span>
+    </div>
+    <div style="text-align:center;color:var(--accent);display:flex;flex-direction:column;align-items:center;gap:3px;min-width:58px">
+      <svg viewBox="0 0 24 24" width="21" height="21"><circle cx="12" cy="8" r="3.4" fill="none"
+        stroke="currentColor" stroke-width="1.7"/><path fill="none" stroke="currentColor" stroke-width="1.7"
+        stroke-linecap="round" d="M5.5 19.5a6.8 6.8 0 0 1 13 0"/></svg>
+      <span style="font-size:.7rem;font-weight:500">You</span>
+    </div>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

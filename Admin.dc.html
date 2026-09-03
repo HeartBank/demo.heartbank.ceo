@@ -1,0 +1,270 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <style>
+    :root{
+      --bg:#fcfbfe; --surface:#f4f1fb; --surface-2:#ebe7f5;
+      --line:rgba(20,16,30,.12); --line-strong:rgba(20,16,30,.28);
+      --ink:#16141c; --ink-dim:#5b5766; --ink-faint:#8b8796;
+      --accent:#15803d; --accent-soft:#106430; --accent-ink:#ffffff;
+      --accent-wash:rgba(16,100,48,.10); --accent-edge:rgba(16,100,48,.25);
+      --danger:#dc2626;
+      --font-display:"Newsreader",Georgia,serif;
+      --font-text:"IBM Plex Sans",ui-sans-serif,system-ui,sans-serif;
+      --font-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+      --r-card:1.25rem; --r-control:1rem; --r-pill:999px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-text);font-size:16px;line-height:1.6}
+    a{color:var(--accent-soft);text-decoration:none} a:hover{color:var(--accent)}
+    .lbl{font-family:var(--font-mono);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;
+         color:var(--ink-faint);margin:0 0 12px}
+    .card{border:1px solid var(--line);border-radius:var(--r-card);padding:20px 22px}
+    .field{display:flex;align-items:center;justify-content:space-between;gap:16px;
+           padding:11px 0;border-bottom:1px solid var(--line)}
+    .val{font-family:var(--font-mono);font-size:.9rem;border:1px solid var(--line-strong);
+         border-radius:.6rem;padding:6px 12px;background:var(--bg);min-height:36px;
+         display:flex;align-items:center}
+  </style>
+</helmet>
+
+<div style="width:1280px;min-height:860px;display:flex;background:var(--surface)">
+
+  <!-- rail -->
+  <aside style="width:210px;flex:none;background:var(--bg);border-right:1px solid var(--line);
+                padding:22px 0;display:flex;flex-direction:column">
+    <div style="padding:0 22px 22px;display:flex;align-items:center;gap:9px">
+      <svg viewBox="0 0 24 24" width="19" height="19" style="color:var(--accent)"><path fill="currentColor" d="M3.9743 20.0257L3.8824 18.0670C3.5430 11.1232 3.3167 6.5411 5.9896 3.8683C8.1675 1.6904 11.5899 1.6904 13.7678 3.8683C14.9981 5.0986 15.6062 6.8523 15.4719 8.5281C17.1477 8.3938 18.9014 9.0019 20.1317 10.2322C22.3096 12.4101 22.3096 15.8325 20.1317 18.0104C17.4589 20.6833 12.8768 20.4570 5.9260 20.1247L3.9743 20.0257Z"/></svg>
+      <span style="font-family:var(--font-mono);font-size:.76rem;letter-spacing:.04em">admin</span>
+    </div>
+    <nav style="display:flex;flex-direction:column">
+      <span style="padding:9px 22px;font-size:.9rem;background:var(--accent-wash);
+                   color:var(--accent-soft);font-weight:500;border-left:3px solid var(--accent)">Platform</span>
+      <span style="padding:9px 22px;font-size:.9rem;color:var(--ink-dim);border-left:3px solid transparent">Shops</span>
+      <span style="padding:9px 22px;font-size:.9rem;color:var(--ink-dim);border-left:3px solid transparent">Reports</span>
+      <span style="padding:9px 22px;font-size:.9rem;color:var(--ink-dim);border-left:3px solid transparent">Themes</span>
+      <span style="padding:9px 22px;font-size:.9rem;color:var(--ink-dim);border-left:3px solid transparent">Recommendation</span>
+    </nav>
+    <div style="margin-top:auto;padding:18px 22px 0">
+      <p style="margin:0;font-size:.76rem;color:var(--ink-faint);line-height:1.5">
+        Every action here is logged and attributed.
+      </p>
+    </div>
+  </aside>
+
+  <!-- body -->
+  <main style="flex:1;min-width:0;padding:30px 34px;display:flex;flex-direction:column;gap:22px">
+    <div>
+      <h1 style="font-family:var(--font-display);font-size:1.85rem;font-weight:500;
+                 letter-spacing:-.02em;margin:0 0 3px">Platform settings</h1>
+      <p style="margin:0;color:var(--ink-dim);font-size:.94rem">4 shops · 2 drivers approved by their owners</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px">
+      <div class="card" style="background:var(--bg)">
+        <p class="lbl" style="margin-bottom:6px">Shops open</p>
+        <p style="margin:0;font-family:var(--font-mono);font-size:1.7rem;font-weight:500">4</p>
+      </div>
+      <div class="card" style="background:var(--bg)">
+        <p class="lbl" style="margin-bottom:6px">Orders this week</p>
+        <p style="margin:0;font-family:var(--font-mono);font-size:1.7rem;font-weight:500">1,240</p>
+      </div>
+      <div class="card" style="background:var(--bg)">
+        <p class="lbl" style="margin-bottom:6px">Deliveries</p>
+        <p style="margin:0;font-family:var(--font-mono);font-size:1.7rem;font-weight:500">96</p>
+      </div>
+      <div class="card" style="background:var(--bg)">
+        <p class="lbl" style="margin-bottom:6px">Reports open</p>
+        <p style="margin:0;font-family:var(--font-mono);font-size:1.7rem;font-weight:500">2</p>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px">
+      <div class="card" style="background:var(--bg)">
+        <p class="lbl" style="margin-bottom:6px">Circulated, all shops</p>
+        <p style="margin:0 0 3px;font-family:var(--font-mono);font-size:1.7rem;font-weight:500">1,608,000៛</p>
+        <p style="margin:0;font-size:.82rem;color:var(--ink-dim)">sales and delivery, this week</p>
+      </div>
+      <div class="card" style="background:var(--accent-wash);border-color:var(--accent-edge)">
+        <p class="lbl" style="margin-bottom:6px">Thanked, all shops</p>
+        <p style="margin:0 0 3px;font-family:var(--font-mono);font-size:1.7rem;font-weight:500;
+                  color:var(--accent-soft)">231,000៛</p>
+        <p style="margin:0;font-size:.82rem;color:var(--ink-dim)">the figure the mission is measured by</p>
+      </div>
+    </div>
+
+    <div class="card" style="background:var(--surface-2);border-color:var(--line-strong)">
+      <p class="lbl">Why these totals carry no breakdown</p>
+      <p style="margin:0;font-size:.87rem;color:var(--ink-dim);line-height:1.6">
+        Everything here is summed <strong style="color:var(--ink)">across</strong> the shops, never
+        split between them — including the money. A per-shop figure would answer "which shops are driving this?" — and the
+        honest answer is that the question is the first half of a promotion tool. The appetite arrives
+        before the feature does, so the number is not stored in a form this surface can query.
+      </p>
+    </div>
+
+    <div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px">
+
+      <div class="card" style="background:var(--bg)">
+        <p class="lbl">Pricing</p>
+        <div class="field">
+          <span style="font-size:.93rem">Vanity tag</span>
+          <span class="val">$12 once</span>
+        </div>
+        <div class="field">
+          <span style="font-size:.93rem">Storage endowment, beyond the free cap</span>
+          <span class="val">$9 once</span>
+        </div>
+        <div class="field" style="border-bottom:none">
+          <span style="font-size:.93rem">Free media length cap</span>
+          <span class="val">90 s</span>
+        </div>
+        <p style="margin:14px 0 0;font-size:.82rem;color:var(--ink-dim);line-height:1.5">
+          One-time endowments, never rentals. A random tag stays free and permanent.
+        </p>
+      </div>
+
+      <div class="card" style="background:var(--bg)">
+        <p class="lbl">Discovery</p>
+        <div class="field">
+          <span style="font-size:.93rem">Liveness window</span>
+          <span class="val">90 days</span>
+        </div>
+        <div class="field">
+          <span style="font-size:.93rem">Walk radius shown</span>
+          <span class="val">15 min</span>
+        </div>
+        <div class="field">
+          <div style="min-width:0">
+            <span style="font-size:.93rem">Movement floor</span>
+            <p style="margin:1px 0 0;font-size:.81rem;color:var(--ink-dim)">
+              How far a moving vendor must travel before followers hear about it
+            </p>
+          </div>
+          <span class="val">300 m</span>
+        </div>
+        <div class="field" style="border-bottom:none">
+          <div style="min-width:0">
+            <span style="font-size:.93rem">Quiet period after a notice</span>
+            <p style="margin:1px 0 0;font-size:.81rem;color:var(--ink-dim)">
+              At most one arrival per vendor in this window
+            </p>
+          </div>
+          <span class="val">45 min</span>
+        </div>
+        <div style="margin-top:15px;background:var(--accent-wash);border:1px solid var(--accent-edge);
+                    border-radius:.8rem;padding:12px 14px">
+          <p style="margin:0 0 8px;font-size:.83rem;color:var(--ink-dim);line-height:1.55">
+            All three are global and published. None is ever set per shop, per place, or per
+            campaign — a number tuned for one vendor is a placement lever wearing a threshold's
+            clothes.
+          </p>
+          <p style="margin:0;font-size:.83rem;color:var(--ink-dim);line-height:1.55">
+            A notice says where a vendor <strong style="color:var(--ink)">is</strong>, never that she
+            has left, and never that you missed her.
+          </p>
+        </div>
+      </div>
+
+      <div class="card" style="background:var(--bg)">
+        <p class="lbl">Abuse ceilings</p>
+        <div class="field">
+          <div style="min-width:0">
+            <span style="font-size:.93rem">Orders waiting per phone, all shops</span>
+            <p style="margin:1px 0 0;font-size:.81rem;color:var(--ink-dim)">
+              A shop only sees its own queue; this sees across them
+            </p>
+          </div>
+          <span class="val">8</span>
+        </div>
+        <div class="field" style="border-bottom:none">
+          <div style="min-width:0">
+            <span style="font-size:.93rem">Each shop's own cap</span>
+            <p style="margin:1px 0 0;font-size:.81rem;color:var(--ink-dim)">Set by the owner, not here</p>
+          </div>
+          <span style="font-size:.9rem;color:var(--ink-dim)">hers</span>
+        </div>
+        <div style="margin-top:15px;background:var(--accent-wash);border:1px solid var(--accent-edge);
+                    border-radius:.8rem;padding:12px 14px">
+          <p style="margin:0 0 8px;font-size:.83rem;color:var(--ink-dim);line-height:1.55">
+            ⚠️ <strong style="color:var(--ink)">Counts only what is open right now.</strong> It empties
+            as orders complete and keeps no history, so no record of a device accumulates across
+            shops — the cross-shop profile the customer design refuses.
+          </p>
+          <p style="margin:0;font-size:.83rem;color:var(--ink-dim);line-height:1.55">
+            At four shops this does nothing. The field exists so the ceiling is not invented in a
+            hurry the first time it is needed.
+          </p>
+        </div>
+      </div>
+
+      <div class="card" style="background:var(--bg)">
+        <p class="lbl">Home Coffee · homecoffee</p>
+        <div class="field">
+          <span style="font-size:.93rem">Tier</span>
+          <span style="font-family:var(--font-mono);font-size:.86rem;color:var(--ink-dim)">
+            B-Vendor <span style="color:var(--ink-faint)">· derived from menu</span>
+          </span>
+        </div>
+        <div class="field">
+          <span style="font-size:.93rem">B-Affiliate eligibility</span>
+          <span style="background:var(--accent);color:var(--accent-ink);border-radius:var(--r-pill);
+                       padding:6px 15px;font-size:.85rem;font-weight:500;min-height:36px;
+                       display:flex;align-items:center">Approve</span>
+        </div>
+        <div class="field" style="border-bottom:none">
+          <span style="font-size:.93rem">Status</span>
+          <span style="color:var(--danger);font-size:.88rem;cursor:pointer">Close shop…</span>
+        </div>
+        <p style="margin:14px 0 0;font-size:.82rem;color:var(--ink-dim);line-height:1.5">
+          Approval grants eligibility. The tier follows when the owner turns fixed prices off —
+          closing a shop never releases its tag.
+        </p>
+      </div>
+
+      <!-- the refusals, stated on the surface where they would be violated -->
+      <div class="card" style="background:var(--surface-2);border-color:var(--line-strong)">
+        <p class="lbl">Not settings, and never will be</p>
+        <div style="display:flex;flex-direction:column;gap:9px">
+          <div style="display:flex;gap:10px;align-items:flex-start">
+            <span style="color:var(--ink-faint);font-family:var(--font-mono);flex:none">—</span>
+            <span style="font-size:.89rem;color:var(--ink-dim)">Featuring, boosting, or placing a shop</span>
+          </div>
+          <div style="display:flex;gap:10px;align-items:flex-start">
+            <span style="color:var(--ink-faint);font-family:var(--font-mono);flex:none">—</span>
+            <span style="font-size:.89rem;color:var(--ink-dim)">Turning off location deletion</span>
+          </div>
+          <div style="display:flex;gap:10px;align-items:flex-start">
+            <span style="color:var(--ink-faint);font-family:var(--font-mono);flex:none">—</span>
+            <span style="font-size:.89rem;color:var(--ink-dim)">Editing a shop's menu or prices</span>
+          </div>
+          <div style="display:flex;gap:10px;align-items:flex-start">
+            <span style="color:var(--ink-faint);font-family:var(--font-mono);flex:none">—</span>
+            <span style="font-size:.89rem;color:var(--ink-dim)">Reading a thank marked private</span>
+          </div>
+          <div style="display:flex;gap:10px;align-items:flex-start">
+            <span style="color:var(--ink-faint);font-family:var(--font-mono);flex:none">—</span>
+            <span style="font-size:.89rem;color:var(--ink-dim)">Editing reserved words</span>
+          </div>
+        </div>
+        <p style="margin:15px 0 0;font-size:.81rem;color:var(--ink-faint);line-height:1.55">
+          An admin console is where deleted gradients come back to life. Each request sounds
+          reasonable on its own.
+        </p>
+      </div>
+    </div>
+  </main>
+</div>
+</x-dc>
+</body>
+</html>

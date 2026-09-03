@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <style>
+    :root{
+      --bg:#fcfbfe; --surface:#f4f1fb; --surface-2:#ebe7f5;
+      --line:rgba(20,16,30,.12); --line-strong:rgba(20,16,30,.28);
+      --ink:#16141c; --ink-dim:#5b5766; --ink-faint:#8b8796;
+      --accent:#15803d; --accent-soft:#106430; --accent-ink:#ffffff;
+      --accent-wash:rgba(16,100,48,.10); --accent-edge:rgba(16,100,48,.25); --danger:#dc2626;
+      --font-display:"Newsreader",Georgia,serif;
+      --font-text:"IBM Plex Sans",ui-sans-serif,system-ui,sans-serif;
+      --font-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+      --r-card:1.25rem; --r-control:1rem; --r-pill:999px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-text);font-size:16px;line-height:1.6}
+    a{color:var(--accent-soft);text-decoration:none} a:hover{color:var(--accent)}
+    .lbl{font-family:var(--font-mono);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;
+         color:var(--ink-faint);margin:0 0 12px}
+    .card{border:1px solid var(--line);border-radius:var(--r-card);padding:19px 21px;background:var(--bg)}
+    .field{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:11px 0;
+           border-bottom:1px solid var(--line)}
+    .val{font-family:var(--font-mono);font-size:.88rem;border:1px solid var(--line-strong);
+         border-radius:.6rem;padding:6px 12px;background:var(--bg);min-height:36px;
+         display:flex;align-items:center;white-space:nowrap}
+  </style>
+</helmet>
+
+<div style="width:1280px;min-height:840px;display:flex;background:var(--surface)">
+
+  <aside style="width:210px;flex:none;background:var(--bg);border-right:1px solid var(--line);padding:22px 0">
+    <div style="padding:0 22px 22px;display:flex;align-items:center;gap:9px">
+      <svg viewBox="0 0 24 24" width="19" height="19" style="color:var(--accent)"><path fill="currentColor" d="M3.9743 20.0257L3.8824 18.0670C3.5430 11.1232 3.3167 6.5411 5.9896 3.8683C8.1675 1.6904 11.5899 1.6904 13.7678 3.8683C14.9981 5.0986 15.6062 6.8523 15.4719 8.5281C17.1477 8.3938 18.9014 9.0019 20.1317 10.2322C22.3096 12.4101 22.3096 15.8325 20.1317 18.0104C17.4589 20.6833 12.8768 20.4570 5.9260 20.1247L3.9743 20.0257Z"/></svg>
+      <span style="font-family:var(--font-mono);font-size:.76rem;letter-spacing:.04em">admin</span>
+    </div>
+    <nav style="display:flex;flex-direction:column">
+      <span style="padding:9px 22px;font-size:.9rem;color:var(--ink-dim);border-left:3px solid transparent">Platform</span>
+      <span style="padding:9px 22px;font-size:.9rem;color:var(--ink-dim);border-left:3px solid transparent">Shops</span>
+      <span style="padding:9px 22px;font-size:.9rem;color:var(--ink-dim);border-left:3px solid transparent">Reports</span>
+      <span style="padding:9px 22px;font-size:.9rem;color:var(--ink-dim);border-left:3px solid transparent">Themes</span>
+      <span style="padding:9px 22px;font-size:.9rem;background:var(--accent-wash);color:var(--accent-soft);
+                   font-weight:500;border-left:3px solid var(--accent)">Recommendation</span>
+    </nav>
+  </aside>
+
+  <main style="flex:1;min-width:0;padding:30px 34px;display:flex;flex-direction:column;gap:20px">
+    <div>
+      <h1 style="font-family:var(--font-display);font-size:1.85rem;font-weight:500;
+                 letter-spacing:-.02em;margin:0 0 3px">Recommendation</h1>
+      <p style="margin:0;color:var(--ink-dim);font-size:.94rem">
+        What Miss Aquarius℠ may look at when she suggests a tip — and what she must never see.
+      </p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;align-items:start">
+
+      <div class="card">
+        <p class="lbl">What she reads</p>
+        <div class="field">
+          <div style="min-width:0">
+            <p style="margin:0;font-size:.93rem;font-weight:500">The item, and the shop's own prices</p>
+            <p style="margin:1px 0 0;font-size:.81rem;color:var(--ink-dim)">Always</p>
+          </div>
+          <span style="width:46px;height:27px;border-radius:var(--r-pill);background:var(--accent);
+                       position:relative;display:block;flex:none">
+            <span style="position:absolute;top:3px;right:3px;width:21px;height:21px;border-radius:50%;background:#fff"></span>
+          </span>
+        </div>
+        <div class="field">
+          <div style="min-width:0">
+            <p style="margin:0;font-size:.93rem;font-weight:500">Cost basis, if the shop offers one</p>
+            <p style="margin:1px 0 0;font-size:.81rem;color:var(--ink-dim)">Never shown to a customer</p>
+          </div>
+          <span style="width:46px;height:27px;border-radius:var(--r-pill);background:var(--accent);
+                       position:relative;display:block;flex:none">
+            <span style="position:absolute;top:3px;right:3px;width:21px;height:21px;border-radius:50%;background:#fff"></span>
+          </span>
+        </div>
+        <div class="field">
+          <div style="min-width:0">
+            <p style="margin:0;font-size:.93rem;font-weight:500">Comparable items in the region</p>
+            <p style="margin:1px 0 0;font-size:.81rem;color:var(--ink-dim)">Calibration, after you are already at a shop</p>
+          </div>
+          <span style="width:46px;height:27px;border-radius:var(--r-pill);background:var(--accent);
+                       position:relative;display:block;flex:none">
+            <span style="position:absolute;top:3px;right:3px;width:21px;height:21px;border-radius:50%;background:#fff"></span>
+          </span>
+        </div>
+        <div class="field" style="border-bottom:none">
+          <div style="min-width:0">
+            <p style="margin:0;font-size:.93rem;font-weight:500">How people actually deviate</p>
+            <p style="margin:1px 0 0;font-size:.81rem;color:var(--ink-dim)">In aggregate, never per person</p>
+          </div>
+          <span style="width:46px;height:27px;border-radius:var(--r-pill);background:var(--accent);
+                       position:relative;display:block;flex:none">
+            <span style="position:absolute;top:3px;right:3px;width:21px;height:21px;border-radius:50%;background:#fff"></span>
+          </span>
+        </div>
+      </div>
+
+      <div class="card">
+        <p class="lbl">Shape of the suggestion</p>
+        <div class="field">
+          <span style="font-size:.93rem">Default suggestion</span>
+          <span class="val">12% of the item</span>
+        </div>
+        <div class="field">
+          <span style="font-size:.93rem">Quick amounts offered</span>
+          <span class="val">3</span>
+        </div>
+        <div class="field">
+          <span style="font-size:.93rem">Skip always available</span>
+          <span class="val">yes · not a setting</span>
+        </div>
+        <div class="field" style="border-bottom:none">
+          <span style="font-size:.93rem">Reasons shown with every suggestion</span>
+          <span class="val">yes · not a setting</span>
+        </div>
+        <div style="margin-top:15px;background:var(--accent-wash);border:1px solid var(--accent-edge);
+                    border-radius:.8rem;padding:13px 15px">
+          <p style="margin:0;font-size:.85rem;color:var(--ink-dim);line-height:1.55">
+            An anchor, not a price. Deviating in either direction is signal she learns from — and
+            black-box pricing would corrode the trust the whole arrangement runs on.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- what she must never see -->
+    <div class="card" style="background:var(--surface-2);border-color:var(--line-strong)">
+      <p class="lbl">What she must never see, and it is not a toggle</p>
+      <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 32px">
+        <div style="display:flex;gap:11px;align-items:flex-start">
+          <span style="color:var(--ink-faint);font-family:var(--font-mono);flex:none">—</span>
+          <span style="font-size:.89rem;color:var(--ink-dim)">Who the customer is. She never needs an identity to suggest a tip.</span>
+        </div>
+        <div style="display:flex;gap:11px;align-items:flex-start">
+          <span style="color:var(--ink-faint);font-family:var(--font-mono);flex:none">—</span>
+          <span style="font-size:.89rem;color:var(--ink-dim)">What this customer tipped before, or can afford.</span>
+        </div>
+        <div style="display:flex;gap:11px;align-items:flex-start">
+          <span style="color:var(--ink-faint);font-family:var(--font-mono);flex:none">—</span>
+          <span style="font-size:.89rem;color:var(--ink-dim)">A per-shop dial. One function, published, the same for everyone.</span>
+        </div>
+        <div style="display:flex;gap:11px;align-items:flex-start">
+          <span style="color:var(--ink-faint);font-family:var(--font-mono);flex:none">—</span>
+          <span style="font-size:.89rem;color:var(--ink-dim)">Anything that would raise a suggestion because a shop paid.</span>
+        </div>
+      </div>
+      <p style="margin:16px 0 0;font-size:.82rem;color:var(--ink-faint);line-height:1.55">
+        Personalised pricing is the same machine as ranked discovery, pointed at a wallet instead of
+        a slate. This is open problem #9, and the honest state of it is: these are the constraints,
+        not yet the answer.
+      </p>
+    </div>
+  </main>
+</div>
+</x-dc>
+</body>
+</html>

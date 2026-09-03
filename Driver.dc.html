@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+Khmer:wght@400;500;600&display=swap">
+  <style>
+    :root{
+      --bg:#fcfbfe; --surface:#f4f1fb; --surface-2:#ebe7f5;
+      --line:rgba(20,16,30,.12); --line-strong:rgba(20,16,30,.28);
+      --ink:#16141c; --ink-dim:#5b5766; --ink-faint:#8b8796;
+      --accent:#15803d; --accent-soft:#106430; --accent-ink:#ffffff;
+      --accent-wash:rgba(16,100,48,.10); --accent-edge:rgba(16,100,48,.25);
+      --font-display:"Newsreader",Georgia,serif;
+      --font-text:"IBM Plex Sans",ui-sans-serif,system-ui,sans-serif;
+      --font-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+      --font-khmer:"Noto Sans Khmer",sans-serif;
+      --r-card:1.25rem; --r-control:1rem; --r-pill:999px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-text);font-size:16px;line-height:1.6}
+    a{color:var(--accent-soft);text-decoration:none} a:hover{color:var(--accent)}
+    .km{font-family:var(--font-khmer);line-height:1.5}
+  </style>
+</helmet>
+
+<div style="width:390px;min-height:844px;display:flex;flex-direction:column;background:var(--bg)">
+
+  <div style="padding:16px 20px;border-bottom:1px solid var(--line);display:flex;
+              align-items:center;justify-content:space-between;gap:12px">
+    <div>
+      <p style="margin:0;font-family:var(--font-display);font-size:1.15rem;font-weight:600">Your turn</p>
+      <p style="margin:0;font-size:.76rem;color:var(--ink-faint);font-family:var(--font-mono)">driver.heartbank.ceo</p>
+    </div>
+    <span style="display:flex;align-items:center;gap:7px;background:var(--accent-wash);
+                 border:1px solid var(--accent-edge);border-radius:var(--r-pill);padding:5px 12px">
+      <span style="width:7px;height:7px;border-radius:50%;background:var(--accent);display:block"></span>
+      <span style="font-size:.8rem;color:var(--accent-soft);font-weight:500">Available</span>
+    </span>
+  </div>
+
+  <!-- the offer. whose turn it is, never who is best. no score anywhere. -->
+  <div style="padding:20px">
+    <div style="border:2px solid var(--accent);border-radius:var(--r-card);overflow:hidden">
+      <div style="background:var(--accent);color:var(--accent-ink);padding:11px 17px;
+                  display:flex;align-items:center;justify-content:space-between;gap:12px">
+        <span style="font-weight:600;font-size:.93rem">Offered to you</span>
+        <span style="font-family:var(--font-mono);font-size:.82rem">0:24</span>
+      </div>
+      <div style="padding:17px">
+        <p style="margin:0 0 3px;font-weight:600;font-size:1.05rem">Home Coffee</p>
+        <p class="km" style="margin:0 0 15px;font-size:.88rem;color:var(--ink-dim)">
+          ៧៦M៦+៨GH ត្រាំត្រាយឹង → ផ្ទះលេខ ១២, ផ្លូវវិទ្យាល័យ
+        </p>
+        <div style="display:flex;gap:22px;margin-bottom:17px">
+          <div>
+            <p style="margin:0;font-family:var(--font-mono);font-size:1.15rem;font-weight:500">1.4 km</p>
+            <p style="margin:0;font-size:.76rem;color:var(--ink-faint)">to drop-off</p>
+          </div>
+          <div>
+            <p style="margin:0;font-family:var(--font-mono);font-size:1.15rem;font-weight:500">1,500៛</p>
+            <p style="margin:0;font-size:.76rem;color:var(--ink-faint)">the 1–2 km band</p>
+          </div>
+        </div>
+        <div style="display:flex;gap:10px">
+          <button style="flex:2;background:var(--accent);color:var(--accent-ink);border:none;
+                         border-radius:var(--r-control);min-height:52px;font-size:.97rem;font-weight:500;
+                         font-family:var(--font-text);cursor:pointer">Accept</button>
+          <button style="flex:1;background:var(--bg);color:var(--ink-dim);border:1px solid var(--line-strong);
+                         border-radius:var(--r-control);min-height:52px;font-size:.97rem;
+                         font-family:var(--font-text);cursor:pointer">Pass</button>
+        </div>
+        <p style="margin:12px 0 0;font-size:.79rem;color:var(--ink-faint);line-height:1.5;text-align:center">
+          Passing costs you nothing. It moves to the next driver, and comes back around.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- active run -->
+  <div style="padding:0 20px">
+    <p style="font-family:var(--font-mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;
+              color:var(--ink-faint);margin:0 0 11px">On the way</p>
+    <div style="border:1px solid var(--line);border-radius:var(--r-card);overflow:hidden">
+      <!-- map -->
+      <div style="height:150px;background:var(--surface);position:relative;overflow:hidden">
+        <svg viewBox="0 0 350 150" style="width:100%;height:100%;display:block">
+          <path d="M0 96 H120 M175 0 V150 M0 40 H350 M260 0 V150" stroke="rgba(20,16,30,.10)" stroke-width="9" fill="none"/>
+          <path d="M28 118 C 90 118, 120 96, 175 96 S 250 62, 300 40"
+                stroke="#15803d" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-dasharray="0"/>
+          <circle cx="300" cy="40" r="6" fill="none" stroke="#15803d" stroke-width="2.5"/>
+          <circle cx="175" cy="96" r="7.5" fill="#15803d"/>
+          <circle cx="175" cy="96" r="14" fill="#15803d" opacity=".18"/>
+        </svg>
+        <span style="position:absolute;left:12px;bottom:11px;background:var(--bg);border-radius:var(--r-pill);
+                     padding:5px 12px;font-family:var(--font-mono);font-size:.78rem;font-weight:500;
+                     border:1px solid var(--line)">6 min</span>
+      </div>
+      <div style="padding:15px 17px">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:13px">
+          <span style="display:flex;align-items:center;gap:10px"><div style="width:32px;height:32px;border-radius:50%;overflow:hidden;flex:none"><svg viewBox="0 0 40 40" style="width:100%;height:100%;display:block"><circle cx="20" cy="20" r="20" fill="#f4e6ee"/><path d="M20 23c7.2 0 13 5.4 13 12v5H7v-5c0-6.6 5.8-12 13-12z" fill="#f0efe8"/><circle cx="20" cy="15" r="7.6" fill="#dcb392"/><path d="M12.4 14.6a7.6 7.6 0 0 1 15.2 0c0-4.4-3.4-7.2-7.6-7.2s-7.6 2.8-7.6 7.2z" fill="#2f2119"/><path d="M27.6 13q4.6 2 3.6 9" stroke="#2f2119" stroke-width="3.2" fill="none" stroke-linecap="round"/><circle cx="17.2" cy="15.4" r="1.05" fill="#3b2a1e"/><circle cx="22.8" cy="15.4" r="1.05" fill="#3b2a1e"/><path d="M18 18.6q2 1.5 4 0" stroke="#3b2a1e" stroke-width="1" fill="none" stroke-linecap="round"/></svg></div><span style="font-family:var(--font-display);font-size:1.15rem;font-weight:600">Dara</span></span>
+          <span style="display:flex;align-items:center;gap:9px"><div style="width:30px;height:30px;border-radius:.7rem;overflow:hidden;flex:none"><svg viewBox="0 0 48 48" style="width:100%;height:100%;display:block"><rect width="48" height="48" fill="#e9dcc6"/><path d="M15 12h18l-2.4 26h-13.2z" fill="#4a2c17"/><path d="M15 12h18l-.9 10h-16.2z" fill="#cfa87a"/><rect x="14" y="9.5" width="20" height="3.5" rx="1.7" fill="#f2e6d4"/><rect x="19" y="15" width="6" height="6" rx="1.4" fill="#fff" opacity=".55"/><rect x="26" y="20" width="5" height="5" rx="1.2" fill="#fff" opacity=".4"/><rect x="29" y="4" width="3" height="14" rx="1.5" fill="#d8503c" transform="rotate(12 30 11)"/></svg></div><span class="km" style="font-size:.83rem;color:var(--ink-dim)">២ × កាហ្វេ</span></span>
+        </div>
+        <div style="display:flex;align-items:center;gap:9px;background:var(--surface);
+                    border-radius:var(--r-pill);padding:8px 14px;margin-bottom:14px;width:fit-content">
+          <span style="width:7px;height:7px;border-radius:50%;background:var(--accent);display:block"></span>
+          <span style="font-size:.83rem;color:var(--ink-dim)">Already paid — collect nothing</span>
+        </div>
+        <div style="display:flex;gap:9px;margin-bottom:15px">
+          <button style="flex:1;background:var(--bg);border:1px solid var(--line-strong);
+                         border-radius:var(--r-control);min-height:44px;font-size:.86rem;
+                         font-family:var(--font-text);color:var(--ink);cursor:pointer">I'm outside</button>
+          <button style="flex:1;background:var(--bg);border:1px solid var(--line-strong);
+                         border-radius:var(--r-control);min-height:44px;font-size:.86rem;
+                         font-family:var(--font-text);color:var(--ink);cursor:pointer">Can't find it</button>
+        </div>
+        <p style="font-family:var(--font-mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;
+                  color:var(--ink-faint);margin:0 0 8px">Ask Dara for the code</p>
+        <div style="display:flex;gap:9px">
+          <span style="flex:1;border:1px solid var(--line-strong);border-radius:.7rem;min-height:52px;
+                       display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);
+                       font-size:1.35rem;font-weight:500">4</span>
+          <span style="flex:1;border:1px solid var(--line-strong);border-radius:.7rem;min-height:52px;
+                       display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);
+                       font-size:1.35rem;font-weight:500">1</span>
+          <span style="flex:1;border:2px solid var(--accent);border-radius:.7rem;min-height:52px;
+                       display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);
+                       font-size:1.35rem;color:var(--accent)">|</span>
+          <span style="flex:1;border:1px solid var(--line);border-radius:.7rem;min-height:52px"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:auto;padding:20px;text-align:center">
+    <p style="margin:0;font-size:.79rem;color:var(--ink-faint);line-height:1.5">
+      Your location, and your way of reaching Dara, both end when the code is entered.
+    </p>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

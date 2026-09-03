@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+Khmer:wght@400;500;600&display=swap">
+  <style>
+    :root{
+      --bg:#fcfbfe; --surface:#f4f1fb; --surface-2:#ebe7f5;
+      --line:rgba(20,16,30,.12); --line-strong:rgba(20,16,30,.28);
+      --ink:#16141c; --ink-dim:#5b5766; --ink-faint:#8b8796;
+      --accent:#15803d; --accent-soft:#106430; --accent-ink:#ffffff;
+      --accent-wash:rgba(16,100,48,.10); --accent-edge:rgba(16,100,48,.25);
+      --font-display:"Newsreader",Georgia,serif;
+      --font-text:"IBM Plex Sans",ui-sans-serif,system-ui,sans-serif;
+      --font-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+      --font-khmer:"Noto Sans Khmer",sans-serif;
+      --r-card:1.25rem; --r-control:1rem; --r-pill:999px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-text);font-size:16px;line-height:1.6}
+    a{color:var(--accent-soft);text-decoration:none} a:hover{color:var(--accent)}
+    .km{font-family:var(--font-khmer);line-height:1.5}
+    .tier{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.04em;
+          border-radius:var(--r-pill);padding:2px 8px;white-space:nowrap}
+    /* one card shape for every shop. no badges of merit, no scores. */
+    .shop{border:1px solid var(--line);border-radius:var(--r-card);padding:13px 15px;
+          display:grid;grid-template-columns:52px minmax(0,1fr) auto;gap:13px;align-items:center}
+  </style>
+</helmet>
+
+<div style="width:390px;min-height:844px;display:flex;flex-direction:column;background:var(--bg)">
+
+  <div style="padding:20px 20px 0">
+    <h1 style="font-family:var(--font-display);font-size:1.7rem;font-weight:500;
+               letter-spacing:-.02em;margin:0 0 4px">Near you</h1>
+    <p style="margin:0 0 16px;font-size:.9rem;color:var(--ink-dim)">Traeng Trayueng · ordered by how far you'd walk</p>
+
+    <div style="display:flex;gap:8px;overflow-x:auto;padding-bottom:2px">
+      <span style="background:var(--ink);color:var(--bg);border-radius:var(--r-pill);padding:7px 15px;
+                   font-size:.85rem;font-weight:500;white-space:nowrap">Everything</span>
+      <span style="border:1px solid var(--line);border-radius:var(--r-pill);padding:7px 15px;
+                   font-size:.85rem;color:var(--ink-dim);white-space:nowrap">Coffee</span>
+      <span style="border:1px solid var(--line);border-radius:var(--r-pill);padding:7px 15px;
+                   font-size:.85rem;color:var(--ink-dim);white-space:nowrap">Food</span>
+      <span style="border:1px solid var(--line);border-radius:var(--r-pill);padding:7px 15px;
+                   font-size:.85rem;color:var(--ink-dim);white-space:nowrap">Repairs</span>
+    </div>
+  </div>
+
+  <div style="padding:18px 20px 0;display:flex;flex-direction:column;gap:11px">
+
+    <div class="shop">
+      <div style="width:52px;height:52px;border-radius:.8rem;overflow:hidden;flex:none"><svg viewBox="0 0 48 48" style="width:100%;height:100%;display:block"><rect width="48" height="48" fill="#e9dcc6"/><path d="M15 12h18l-2.4 26h-13.2z" fill="#4a2c17"/><path d="M15 12h18l-.9 10h-16.2z" fill="#cfa87a"/><rect x="14" y="9.5" width="20" height="3.5" rx="1.7" fill="#f2e6d4"/><rect x="19" y="15" width="6" height="6" rx="1.4" fill="#fff" opacity=".55"/><rect x="26" y="20" width="5" height="5" rx="1.2" fill="#fff" opacity=".4"/><rect x="29" y="4" width="3" height="14" rx="1.5" fill="#d8503c" transform="rotate(12 30 11)"/></svg></div>
+      <div style="min-width:0">
+        <p class="km" style="margin:0;font-weight:600;font-size:1rem">កាហ្វេ​ផ្ទះ</p>
+        <p style="margin:0 0 7px;font-size:.85rem;color:var(--ink-dim)">Home Coffee</p>
+        <span class="tier" style="background:var(--surface-2);color:var(--ink-dim)">B-Vendor</span>
+      </div>
+      <div style="text-align:right">
+        <p style="margin:0;font-family:var(--font-mono);font-size:1.02rem;font-weight:500">190 m</p>
+        <p style="margin:0;font-size:.76rem;color:var(--ink-faint)">2 min walk</p>
+      </div>
+    </div>
+
+    <div class="shop">
+      <div style="width:52px;height:52px;border-radius:.8rem;overflow:hidden;flex:none"><svg viewBox="0 0 48 48" style="width:100%;height:100%;display:block"><rect width="48" height="48" fill="#f3e6cf"/><path d="M9 30q0-11 15-11t15 11v4a3 3 0 0 1-3 3H12a3 3 0 0 1-3-3z" fill="#d9a760"/><path d="M12 30q0-8 12-8t12 8" fill="#c08a45"/><g stroke="#a97534" stroke-width="1.6" stroke-linecap="round"><path d="M17 26l3-4M24 25l3-4M31 26l2-3"/></g></svg></div>
+      <div style="min-width:0">
+        <p class="km" style="margin:0;font-weight:600;font-size:1rem">នំបុ័ង​ចាស់</p>
+        <p style="margin:0 0 7px;font-size:.85rem;color:var(--ink-dim)">Old Bread</p>
+        <span class="tier" style="background:var(--accent-wash);color:var(--accent-soft);
+              border:1px solid var(--accent-edge)">B-Affiliate</span>
+      </div>
+      <div style="text-align:right">
+        <p style="margin:0;font-family:var(--font-mono);font-size:1.02rem;font-weight:500">420 m</p>
+        <p style="margin:0;font-size:.76rem;color:var(--ink-faint)">5 min walk</p>
+      </div>
+    </div>
+
+    <!-- a mobile vendor: out right now, coarse position. no follower count. -->
+    <div class="shop">
+      <div style="width:52px;height:52px;border-radius:.8rem;overflow:hidden;flex:none"><svg viewBox="0 0 48 48" style="width:100%;height:100%;display:block"><rect width="48" height="48" fill="#e6efd8"/><path d="M8 24 q16 16 32 0 z" fill="#f0f0ea"/><ellipse cx="24" cy="24" rx="16" ry="5.4" fill="#fbfbf6"/><g stroke="#e3d1a4" stroke-width="2" fill="none" stroke-linecap="round"><path d="M14 23 q5 -4 10 0 t10 0"/><path d="M15 26 q5 -4 9 0 t9 0"/></g><path d="M12 40 h24 l-2 3 h-20 z" fill="#cbb68d"/></svg></div>
+      <div style="min-width:0">
+        <div style="display:flex;align-items:center;gap:7px">
+          <span style="width:7px;height:7px;border-radius:50%;background:var(--accent);display:block;flex:none"></span>
+          <p class="km" style="margin:0;font-weight:600;font-size:1rem">រទេះ​នំបញ្ចុក</p>
+        </div>
+        <p style="margin:0 0 7px;font-size:.85rem;color:var(--ink-dim)">Noodle cart · out now, by the market</p>
+        <span class="tier" style="background:var(--surface-2);color:var(--ink-dim)">B-Vendor</span>
+      </div>
+      <div style="text-align:right">
+        <p style="margin:0;font-family:var(--font-mono);font-size:1.02rem;font-weight:500">610 m</p>
+        <p style="margin:0;font-size:.76rem;color:var(--ink-faint)">moving</p>
+      </div>
+    </div>
+
+    <div class="shop">
+      <div style="width:52px;height:52px;border-radius:.8rem;overflow:hidden;flex:none"><svg viewBox="0 0 48 48" style="width:100%;height:100%;display:block"><rect width="48" height="48" fill="#e2e8f0"/><circle cx="13" cy="31" r="7" fill="none" stroke="#4a4a52" stroke-width="3"/><circle cx="35" cy="31" r="7" fill="none" stroke="#4a4a52" stroke-width="3"/><path d="M13 31l7-11h9l6 11" fill="none" stroke="#3c6ea5" stroke-width="3" stroke-linejoin="round"/><path d="M20 20h8" stroke="#3c6ea5" stroke-width="3" stroke-linecap="round"/></svg></div>
+      <div style="min-width:0">
+        <p class="km" style="margin:0;font-weight:600;font-size:1rem">ជួសជុល​ម៉ូតូ ស៊ុន</p>
+        <p style="margin:0 0 7px;font-size:.85rem;color:var(--ink-dim)">Sun's moto repair</p>
+        <span class="tier" style="background:var(--surface-2);color:var(--ink-dim)">B-Vendor</span>
+      </div>
+      <div style="text-align:right">
+        <p style="margin:0;font-family:var(--font-mono);font-size:1.02rem;font-weight:500">1.1 km</p>
+        <p style="margin:0;font-size:.76rem;color:var(--ink-faint)">13 min walk</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- the list ENDS. no infinite scroll, no re-prompt, no "you passed three today". -->
+  <div style="padding:26px 20px 0;text-align:center">
+    <p style="margin:0;font-size:.86rem;color:var(--ink-faint);line-height:1.55">
+      That's everyone within a fifteen minute walk.
+    </p>
+  </div>
+
+  <div style="margin-top:auto;padding:22px 20px 24px;border-top:1px solid var(--line);margin-top:32px">
+    <p style="margin:0;font-size:.79rem;color:var(--ink-faint);line-height:1.55;text-align:center">
+      Shops appear in order of distance from where you're standing. Nobody can buy a place in
+      this list, and nobody is ranked.
+    </p>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

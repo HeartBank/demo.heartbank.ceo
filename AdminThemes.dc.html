@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <style>
+    :root{
+      --bg:#fcfbfe; --surface:#f4f1fb; --surface-2:#ebe7f5;
+      --line:rgba(20,16,30,.12); --line-strong:rgba(20,16,30,.28);
+      --ink:#16141c; --ink-dim:#5b5766; --ink-faint:#8b8796;
+      --accent:#15803d; --accent-soft:#106430; --accent-ink:#ffffff;
+      --accent-wash:rgba(16,100,48,.10); --accent-edge:rgba(16,100,48,.25); --danger:#dc2626;
+      --font-display:"Newsreader",Georgia,serif;
+      --font-text:"IBM Plex Sans",ui-sans-serif,system-ui,sans-serif;
+      --font-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+      --r-card:1.25rem; --r-control:1rem; --r-pill:999px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-text);font-size:16px;line-height:1.6}
+    a{color:var(--accent-soft);text-decoration:none} a:hover{color:var(--accent)}
+    .lbl{font-family:var(--font-mono);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;
+         color:var(--ink-faint)}
+    .theme{border:1px solid var(--line);border-radius:var(--r-card);padding:17px 18px;background:var(--bg)}
+    .mono{font-family:var(--font-mono);font-size:.78rem}
+    .pass{color:var(--accent-soft);font-weight:500}
+  </style>
+</helmet>
+
+<div style="width:1280px;min-height:820px;display:flex;background:var(--surface)">
+
+  <aside style="width:210px;flex:none;background:var(--bg);border-right:1px solid var(--line);padding:22px 0">
+    <div style="padding:0 22px 22px;display:flex;align-items:center;gap:9px">
+      <svg viewBox="0 0 24 24" width="19" height="19" style="color:var(--accent)"><path fill="currentColor" d="M3.9743 20.0257L3.8824 18.0670C3.5430 11.1232 3.3167 6.5411 5.9896 3.8683C8.1675 1.6904 11.5899 1.6904 13.7678 3.8683C14.9981 5.0986 15.6062 6.8523 15.4719 8.5281C17.1477 8.3938 18.9014 9.0019 20.1317 10.2322C22.3096 12.4101 22.3096 15.8325 20.1317 18.0104C17.4589 20.6833 12.8768 20.4570 5.9260 20.1247L3.9743 20.0257Z"/></svg>
+      <span style="font-family:var(--font-mono);font-size:.76rem;letter-spacing:.04em">admin</span>
+    </div>
+    <nav style="display:flex;flex-direction:column">
+      <span style="padding:9px 22px;font-size:.9rem;color:var(--ink-dim);border-left:3px solid transparent">Platform</span>
+      <span style="padding:9px 22px;font-size:.9rem;color:var(--ink-dim);border-left:3px solid transparent">Shops</span>
+      <span style="padding:9px 22px;font-size:.9rem;color:var(--ink-dim);border-left:3px solid transparent">Reports</span>
+      <span style="padding:9px 22px;font-size:.9rem;background:var(--accent-wash);color:var(--accent-soft);
+                   font-weight:500;border-left:3px solid var(--accent)">Themes</span>
+      <span style="padding:9px 22px;font-size:.9rem;color:var(--ink-dim);border-left:3px solid transparent">Recommendation</span>
+    </nav>
+  </aside>
+
+  <main style="flex:1;min-width:0;padding:30px 34px;display:flex;flex-direction:column;gap:20px">
+    <div>
+      <h1 style="font-family:var(--font-display);font-size:1.85rem;font-weight:500;
+                 letter-spacing:-.02em;margin:0 0 3px">Themes</h1>
+      <p style="margin:0;color:var(--ink-dim);font-size:.94rem">
+        Six a shop may choose. Each carries two values no formula can pick.
+      </p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px">
+
+      <div class="theme" style="border-color:var(--accent);border-width:2px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+          <span style="width:40px;height:40px;border-radius:50%;background:#15803d;flex:none;display:block"></span>
+          <div style="min-width:0">
+            <p style="margin:0;font-weight:600;font-size:.96rem">Green</p>
+            <p class="mono" style="margin:0;color:var(--ink-faint)">.ceo default</p>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:5px">
+          <div style="display:flex;justify-content:space-between"><span class="mono" style="color:var(--ink-dim)">accent</span><span class="mono">#15803d · <span class="pass">4.86</span></span></div>
+          <div style="display:flex;justify-content:space-between"><span class="mono" style="color:var(--ink-dim)">soft</span><span class="mono">#106430 · <span class="pass">7.05</span></span></div>
+          <div style="display:flex;justify-content:space-between"><span class="mono" style="color:var(--ink-dim)">ink</span><span class="mono">white · <span class="pass">5.02</span></span></div>
+        </div>
+      </div>
+
+      <div class="theme">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+          <span style="width:40px;height:40px;border-radius:50%;background:#0f52ba;flex:none;display:block"></span>
+          <div style="min-width:0"><p style="margin:0;font-weight:600;font-size:.96rem">Sapphire</p>
+          <p class="mono" style="margin:0;color:var(--ink-faint)">3 shops</p></div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:5px">
+          <div style="display:flex;justify-content:space-between"><span class="mono" style="color:var(--ink-dim)">accent</span><span class="mono">#0f52ba · <span class="pass">7.00</span></span></div>
+          <div style="display:flex;justify-content:space-between"><span class="mono" style="color:var(--ink-dim)">soft</span><span class="mono">#0c4193 · <span class="pass">9.42</span></span></div>
+          <div style="display:flex;justify-content:space-between"><span class="mono" style="color:var(--ink-dim)">ink</span><span class="mono">white · <span class="pass">7.19</span></span></div>
+        </div>
+      </div>
+
+      <div class="theme">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+          <span style="width:40px;height:40px;border-radius:50%;background:#c8102e;flex:none;display:block"></span>
+          <div style="min-width:0"><p style="margin:0;font-weight:600;font-size:.96rem">Ruby</p>
+          <p class="mono" style="margin:0;color:var(--ink-faint)">1 shop</p></div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:5px">
+          <div style="display:flex;justify-content:space-between"><span class="mono" style="color:var(--ink-dim)">accent</span><span class="mono">#c8102e · <span class="pass">6.01</span></span></div>
+          <div style="display:flex;justify-content:space-between"><span class="mono" style="color:var(--ink-dim)">soft</span><span class="mono">#9c0c24 · <span class="pass">8.71</span></span></div>
+          <div style="display:flex;justify-content:space-between"><span class="mono" style="color:var(--ink-dim)">ink</span><span class="mono">white · <span class="pass">6.20</span></span></div>
+        </div>
+      </div>
+
+      <div class="theme">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+          <span style="width:40px;height:40px;border-radius:50%;background:#e85d04;flex:none;display:block"></span>
+          <div style="min-width:0"><p style="margin:0;font-weight:600;font-size:.96rem">Fire Opal</p>
+          <p class="mono" style="margin:0;color:var(--ink-faint)">unused</p></div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:5px">
+          <div style="display:flex;justify-content:space-between"><span class="mono" style="color:var(--ink-dim)">accent</span><span class="mono">#e85d04 · <span style="color:var(--danger);font-weight:500">3.40</span></span></div>
+          <div style="display:flex;justify-content:space-between"><span class="mono" style="color:var(--ink-dim)">soft</span><span class="mono">#8a3802 · <span class="pass">8.14</span></span></div>
+          <div style="display:flex;justify-content:space-between"><span class="mono" style="color:var(--ink-dim)">ink</span><span class="mono">near-black · <span class="pass">5.83</span></span></div>
+        </div>
+        <p style="margin:12px 0 0;font-size:.79rem;color:var(--ink-dim);line-height:1.5">
+          The one that proves the rule — it takes dark ink where every other theme takes white.
+        </p>
+      </div>
+
+      <div class="theme">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+          <span style="width:40px;height:40px;border-radius:50%;background:#9966cc;flex:none;display:block"></span>
+          <div style="min-width:0"><p style="margin:0;font-weight:600;font-size:.96rem">Amethyst</p>
+          <p class="mono" style="margin:0;color:var(--ink-faint)">unused</p></div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:5px">
+          <div style="display:flex;justify-content:space-between"><span class="mono" style="color:var(--ink-dim)">accent</span><span class="mono">#7a4aa8 · <span class="pass">6.28</span></span></div>
+          <div style="display:flex;justify-content:space-between"><span class="mono" style="color:var(--ink-dim)">soft</span><span class="mono">#5f3a83 · <span class="pass">8.53</span></span></div>
+          <div style="display:flex;justify-content:space-between"><span class="mono" style="color:var(--ink-dim)">ink</span><span class="mono">white · <span class="pass">6.47</span></span></div>
+        </div>
+      </div>
+
+      <div class="theme">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+          <span style="width:40px;height:40px;border-radius:50%;background:#0e7490;flex:none;display:block"></span>
+          <div style="min-width:0"><p style="margin:0;font-weight:600;font-size:.96rem">Teal</p>
+          <p class="mono" style="margin:0;color:var(--ink-faint)">unused</p></div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:5px">
+          <div style="display:flex;justify-content:space-between"><span class="mono" style="color:var(--ink-dim)">accent</span><span class="mono">#0e7490 · <span class="pass">5.21</span></span></div>
+          <div style="display:flex;justify-content:space-between"><span class="mono" style="color:var(--ink-dim)">soft</span><span class="mono">#0b5a70 · <span class="pass">7.34</span></span></div>
+          <div style="display:flex;justify-content:space-between"><span class="mono" style="color:var(--ink-dim)">ink</span><span class="mono">white · <span class="pass">5.37</span></span></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="background:var(--surface-2);border:1px solid var(--line-strong);
+                border-radius:var(--r-card);padding:19px 21px;display:grid;
+                grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:26px">
+      <div>
+        <p class="lbl" style="margin:0 0 10px">Why there is no colour picker here</p>
+        <p style="margin:0;font-size:.87rem;color:var(--ink-dim);line-height:1.6">
+          Two values in every theme cannot be derived from the accent: the ink that sits on the fill,
+          and the soft variant on a light ground. Fire Opal fails at 3.40 where Sapphire passes at
+          7.00 — and no formula picks correctly between them.
+        </p>
+      </div>
+      <div>
+        <p class="lbl" style="margin:0 0 10px">So the shape is</p>
+        <p style="margin:0;font-size:.87rem;color:var(--ink-dim);line-height:1.6">
+          A gem, plus two measured overrides, checked on both grounds before it is ever offered.
+          Adding a seventh theme is a measurement, not a setting — which is why it happens here and
+          not in a shop's own settings.
+        </p>
+      </div>
+    </div>
+  </main>
+</div>
+</x-dc>
+</body>
+</html>

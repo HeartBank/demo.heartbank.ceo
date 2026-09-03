@@ -1,0 +1,342 @@
+{
+  "artboards": [
+    {
+      "file": "Driver.dc.html",
+      "x": 0,
+      "y": 0,
+      "w": 390,
+      "h": 1120,
+      "title": "1 · Your turn",
+      "page": "page-4"
+    },
+    {
+      "file": "Delivered.dc.html",
+      "x": 490,
+      "y": 0,
+      "w": 390,
+      "h": 800,
+      "title": "2 · Delivered",
+      "page": "page-4"
+    },
+    {
+      "file": "Admin.dc.html",
+      "x": 0,
+      "y": 0,
+      "w": 1280,
+      "h": 1900,
+      "title": "Platform",
+      "page": "page-5"
+    },
+    {
+      "file": "AdminShops.dc.html",
+      "x": 1400,
+      "y": 0,
+      "w": 1280,
+      "h": 800,
+      "title": "Shops",
+      "page": "page-5"
+    },
+    {
+      "file": "AdminReports.dc.html",
+      "x": 2800,
+      "y": 0,
+      "w": 1280,
+      "h": 800,
+      "title": "Reports",
+      "page": "page-5"
+    },
+    {
+      "file": "AdminThemes.dc.html",
+      "x": 0,
+      "y": 2060,
+      "w": 1280,
+      "h": 860,
+      "title": "Themes",
+      "page": "page-5"
+    },
+    {
+      "file": "AdminRecommendation.dc.html",
+      "x": 1400,
+      "y": 2060,
+      "w": 1280,
+      "h": 880,
+      "title": "Recommendation",
+      "page": "page-5"
+    },
+    {
+      "file": "Counter.dc.html",
+      "x": 0,
+      "y": 0,
+      "w": 390,
+      "h": 1700,
+      "title": "1 · Orders (staff)",
+      "page": "page-3"
+    },
+    {
+      "file": "CounterPayment.dc.html",
+      "x": 490,
+      "y": 0,
+      "w": 390,
+      "h": 1020,
+      "title": "2 · Settle up (staff)",
+      "page": "page-3"
+    },
+    {
+      "file": "Menu.dc.html",
+      "x": 1470,
+      "y": 1860,
+      "w": 390,
+      "h": 1000,
+      "title": "3 · Menu (owner)",
+      "page": "page-3"
+    },
+    {
+      "file": "Settings.dc.html",
+      "x": 980,
+      "y": 0,
+      "w": 390,
+      "h": 880,
+      "title": "4 · Your shop (owner)",
+      "page": "page-3"
+    },
+    {
+      "file": "SettingsShop.dc.html",
+      "x": 0,
+      "y": 1860,
+      "w": 390,
+      "h": 1660,
+      "title": "4a · Shop",
+      "page": "page-3"
+    },
+    {
+      "file": "SettingsDelivery.dc.html",
+      "x": 490,
+      "y": 1860,
+      "w": 390,
+      "h": 1080,
+      "title": "4b · Delivery",
+      "page": "page-3"
+    },
+    {
+      "file": "SettingsPeople.dc.html",
+      "x": 980,
+      "y": 1860,
+      "w": 390,
+      "h": 1600,
+      "title": "4c · People",
+      "page": "page-3"
+    },
+    {
+      "file": "SettingsSales.dc.html",
+      "x": 1960,
+      "y": 1860,
+      "w": 390,
+      "h": 1980,
+      "title": "4d · How it's going",
+      "page": "page-3"
+    },
+    {
+      "file": "CounterHistory.dc.html",
+      "x": 1470,
+      "y": 0,
+      "w": 390,
+      "h": 1080,
+      "title": "5 · History (staff)",
+      "page": "page-3"
+    },
+    {
+      "file": "CounterYou.dc.html",
+      "x": 1960,
+      "y": 0,
+      "w": 390,
+      "h": 1440,
+      "title": "6 · You (staff)",
+      "page": "page-3"
+    },
+    {
+      "file": "Storefront.dc.html",
+      "x": 0,
+      "y": 0,
+      "w": 390,
+      "h": 1560,
+      "title": "1 · Menu",
+      "page": "page-2"
+    },
+    {
+      "file": "Checkout.dc.html",
+      "x": 490,
+      "y": 0,
+      "w": 390,
+      "h": 1500,
+      "title": "2 · Pickup",
+      "page": "page-2"
+    },
+    {
+      "file": "CheckoutDelivery.dc.html",
+      "x": 980,
+      "y": 0,
+      "w": 390,
+      "h": 1320,
+      "title": "2b · Delivery",
+      "page": "page-2"
+    },
+    {
+      "file": "Gift.dc.html",
+      "x": 1470,
+      "y": 0,
+      "w": 390,
+      "h": 1320,
+      "title": "2c · As a gift",
+      "page": "page-2"
+    },
+    {
+      "file": "Confirm.dc.html",
+      "x": 1960,
+      "y": 0,
+      "w": 390,
+      "h": 1320,
+      "title": "3 · Placed",
+      "page": "page-2"
+    },
+    {
+      "file": "Rewards.dc.html",
+      "x": 2450,
+      "y": 0,
+      "w": 390,
+      "h": 940,
+      "title": "4 · Rewards",
+      "page": "page-2"
+    },
+    {
+      "file": "CartStorefront.dc.html",
+      "x": 0,
+      "y": 1760,
+      "w": 390,
+      "h": 1560,
+      "title": "A moving vendor",
+      "page": "page-2"
+    },
+    {
+      "file": "Main.dc.html",
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 1600,
+      "title": "1 · The Office",
+      "page": "page-1"
+    },
+    {
+      "file": "Find.dc.html",
+      "x": 1620,
+      "y": 0,
+      "w": 390,
+      "h": 960,
+      "title": "2 · /find",
+      "page": "page-1"
+    },
+    {
+      "file": "OpenShop.dc.html",
+      "x": 2110,
+      "y": 0,
+      "w": 390,
+      "h": 1180,
+      "title": "3 · Open a shop",
+      "page": "page-1"
+    },
+    {
+      "file": "SettingsPayments.dc.html",
+      "page": "page-3",
+      "x": 2450,
+      "y": 1860,
+      "w": 390,
+      "h": 1060,
+      "title": "How you take money"
+    },
+    {
+      "file": "SettingsOrders.dc.html",
+      "page": "page-3",
+      "x": 2940,
+      "y": 1860,
+      "w": 390,
+      "h": 1100,
+      "title": "Orders from someone new"
+    },
+    {
+      "file": "SettingsGift.dc.html",
+      "page": "page-3",
+      "x": 3430,
+      "y": 1860,
+      "w": 390,
+      "h": 900,
+      "title": "Welcome gift"
+    }
+  ],
+  "annotations": [
+    {
+      "id": "note-driver",
+      "x": 0,
+      "y": -170,
+      "w": 460,
+      "text": "driver.heartbank.ceo — rotation over liveness.\n\nWhose turn it is, never who is best: no rating, no acceptance score, and passing is free. The route is deleted when the code is entered.",
+      "page": "page-4"
+    },
+    {
+      "id": "note-admin",
+      "x": 0,
+      "y": -170,
+      "w": 460,
+      "text": "admin.heartbank.ceo — one screen per sidebar item.\n\nEvery screen prints its own refusals, because an admin console is where deleted gradients come back to life. Shops has no performance column; Recommendation has no per-shop dial.",
+      "page": "page-5"
+    },
+    {
+      "id": "note-counter",
+      "x": 0,
+      "y": -271,
+      "w": 460,
+      "text": "counter.heartbank.ceo — Kanghna and Reach, on a phone behind the counter.\n\nTWO QUEUES, the founder's rule: people who checked in are standing in the line and are served in arrival order; orders sent from elsewhere wait separately.\n\nTop row is the daily work. Bottom row is the owner's Shop tab, which staff do not have at all — settings split four ways so no single screen is a wall.",
+      "page": "page-3"
+    },
+    {
+      "id": "note-store",
+      "x": 0,
+      "y": -190,
+      "w": 460,
+      "text": "<tag>.heartbank.ceo — a customer's whole visit, signed out the entire way.\n\nThree doors at checkout: keep it, have it brought, or hand it to someone.\n\nBelow: a moving vendor. A cart has no address, so it carries a live position instead — and no delivery, because she is already out.",
+      "page": "page-2"
+    },
+    {
+      "id": "note-root",
+      "x": 0,
+      "y": -180,
+      "w": 460,
+      "text": "heartbank.ceo — the root.\n\nWho HeartBank is → who's near you → open your own. The whole path a shop owner walks before they have a shop.",
+      "page": "page-1"
+    }
+  ],
+  "launch": {
+    "view": "canvas",
+    "page": "page-3"
+  },
+  "pages": [
+    {
+      "id": "page-1",
+      "name": "heartbank.ceo"
+    },
+    {
+      "id": "page-2",
+      "name": "<tag>.heartbank.ceo"
+    },
+    {
+      "id": "page-3",
+      "name": "counter.heartbank.ceo"
+    },
+    {
+      "id": "page-4",
+      "name": "driver.heartbank.ceo"
+    },
+    {
+      "id": "page-5",
+      "name": "admin.heartbank.ceo"
+    }
+  ]
+}
