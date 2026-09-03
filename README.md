@@ -14,9 +14,27 @@ quietly serves the older screens. ⭐ **Extract it first and diff against these 
 identical and 1 differing is what a clean re-seed looks like; anything else means someone saved in
 the GUI and you are about to discard their work.
 
-⚠️ **`robots.txt` disallows everything and `index.html` carries `noindex`.** This is reachable by
-link and deliberately not searchable — it names real people, and it is a demo handed to someone
-directly, not a published page.
+⚠️ **Not searchable, but fully shareable.** Every page carries `noindex,nofollow`; `robots.txt`
+**deliberately allows crawling**. ⛔ **Do not "tighten" it to `Disallow: /`** — that breaks link
+previews (Messenger, WhatsApp and Telegram crawlers respect robots.txt, so the card loses its title
+and image) *and* hides the `noindex` from the crawler that would obey it, which is how a disallowed
+page ends up indexed with no snippet. The reason is written into `robots.txt` itself.
+
+**Link previews** come from `og.png` / `og-walkthrough.png`, rendered by `build-og.py` from the
+site's own tokens and fonts via headless Chrome — 1200×630, regenerate after a copy change.
+⛔ `og:image` must stay an **absolute** URL; a relative one silently yields a card with no image.
+
+**Mobile.** Every page declares a viewport. The artboards declare **their own design width**
+(`width=390` / `1280` / `1440`, from `canvas.json`) because they are fixed-width frames, not
+responsive pages — a phone then scales the whole frame to fit instead of laying it out at ~980px.
+The walkthrough goes **full-bleed below 430px**: no frame, `100dvh`, the app is the page.
+
+⛔⛔ **A page served from here needs its own `<head>` — it does NOT get the Artifact skeleton's.**
+That skeleton supplies a charset, a viewport *and* `[hidden]{display:none!important}`. Without that
+last rule the UA's `[hidden]` is a type selector, so any class setting `display` beats it: the
+walkthrough's owner tab bar showed to customers and its cart footer sat over an empty cart, and
+every check had passed because they were all run inside the artifact. **Verify with
+`python3 -m http.server`, not only in the artifact.**
 
 ⛔ **Nothing here is the shop.** No order is taken, no money moves, nobody is charged. Every price,
 name and order on these screens exists to draw the design.
