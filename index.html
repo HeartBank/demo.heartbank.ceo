@@ -3,7 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex,nofollow">
+<!-- Kept out of SEARCH by naming the search crawlers, NOT with a blanket
+     <meta name="robots" content="noindex">. The blanket form addresses EVERY robot,
+     and a link-preview crawler can read it as "do not process this page" — which is
+     how a private demo ends up shareable with no card. Naming them keeps the intent
+     and leaves Messenger, WhatsApp, Telegram and Slack free to build the preview. -->
+<meta name="googlebot" content="noindex,nofollow">
+<meta name="bingbot" content="noindex,nofollow">
+<meta name="slurp" content="noindex,nofollow">
+<meta name="yandex" content="noindex,nofollow">
 <title>HeartBank Shops — design</title>
 <!-- Link preview. og:image MUST be absolute — a relative path yields a card with
      no image on every platform, and it fails silently. noindex above keeps this
