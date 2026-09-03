@@ -1,2 +1,15 @@
+# Crawling is ALLOWED on purpose, and "noindex" does the actual work.
+#
+# ⛔ Do not put "Disallow: /" back. It breaks the two things this site needs:
+#   1. Link previews. Messenger, Telegram and WhatsApp crawlers respect robots.txt,
+#      so a disallow means a bare URL with no title, image or description —
+#      exactly the shape of a link nobody taps.
+#   2. The noindex itself. A crawler that is not allowed to FETCH the page never
+#      sees the <meta name="robots" content="noindex"> inside it, so a disallowed
+#      page can still be indexed from inbound links, with no snippet.
+#
+# Every page here carries "noindex,nofollow". That keeps the site out of search
+# results while leaving it perfectly shareable by link, which is what a demo
+# handed to one person actually needs.
 User-agent: *
-Disallow: /
+Allow: /

@@ -40,9 +40,10 @@ def main():
         rows = "\n".join(
             '        <a class="board" href="./{f}">'
             '<span class="t">{t}</span>'
-            '<span class="d mono">{w}×{h}</span></a>'.format(
+            '<span class="d mono">{tag}{w}×{h}</span></a>'.format(
                 f=html.escape(a["file"]),
                 t=html.escape(a.get("title", a["file"].replace(".dc.html", ""))),
+                tag=("desktop · " if a["w"] > 430 else ""),
                 w=a["w"], h=a["h"])
             for a in by_page.get(pid, []))
         sections.append(
@@ -67,6 +68,20 @@ TEMPLATE = r"""<!doctype html>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
 <title>HeartBank Shops — design</title>
+<!-- Link preview. og:image MUST be absolute — a relative path yields a card with
+     no image on every platform, and it fails silently. noindex above keeps this
+     out of search; robots.txt deliberately ALLOWS the crawl so the card exists. -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://demo.heartbank.ceo/">
+<meta property="og:site_name" content="HeartBank Shops">
+<meta property="og:title" content="HeartBank&#174; Shops">
+<meta property="og:description" content="A storefront platform, drawn screen by screen — 30 artboards across five surfaces, plus a walkthrough you can use. Home Coffee is the first shop.">
+<meta property="og:image" content="https://demo.heartbank.ceo/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="HeartBank Shops, on a dark ground with the B-Emblem standing in for the B.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#15803d">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
   /* brand.333.eco v1.3.0 tokens, with the .ceo green pinned. Nothing invented here. */
@@ -103,6 +118,13 @@ TEMPLATE = r"""<!doctype html>
   a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:10px}
 
   .wrap{max-width:860px;margin:0 auto;padding:48px 22px 72px}
+  @media (max-width:430px){
+    .wrap{padding:28px 18px 44px}
+    .start{padding:18px 18px;margin:24px 0 34px}
+    .start h2{font-size:1.35rem}
+    .board{padding:11px 13px;gap:10px}
+    footer{margin-top:38px}
+  }
   header{margin-bottom:34px}
   h1{font-family:var(--font-display);font-size:clamp(2rem,6vw,2.9rem);font-weight:600;
      margin:0 0 10px;letter-spacing:-.022em;text-wrap:balance;line-height:1.1}

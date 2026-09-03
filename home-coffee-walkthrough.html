@@ -1,5 +1,20 @@
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Home Coffee Walkthrough</title>
+<meta name="robots" content="noindex,nofollow">
+<!-- This is the link that actually gets sent to someone, so the card matters
+     more here than on the front door. og:image must be an ABSOLUTE url. -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://demo.heartbank.ceo/home-coffee-walkthrough.html">
+<meta property="og:site_name" content="HeartBank Shops">
+<meta property="og:title" content="Home Coffee — a walkthrough">
+<meta property="og:description" content="Order as a customer, then switch sides: run the shop, make it, hand it over, or ride it across town. Drawings, not the shop — nothing here charges anyone.">
+<meta property="og:image" content="https://demo.heartbank.ceo/og-walkthrough.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Home Coffee, with its Khmer name above it on a dark ground.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#15803d">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+Khmer:wght@400;500;600&display=swap">
 <style>
   /* Tokens are brand.333.eco v1.3.0 with the .ceo green pinned: nothing invented here. */
@@ -33,6 +48,12 @@
     --stage:#121218; --frame:#000;
   }
   *{box-sizing:border-box}
+  /* ⚠️ NOT OPTIONAL, and not decorative. The UA's [hidden] rule is a type
+     selector, so ANY class that sets display beats it — .tabs{display:flex}
+     and .foot{display:flex} both did, which showed the owner's tab bar to
+     customers and the cart footer over an empty cart. It never surfaced in
+     the published artifact because that skeleton injects this same rule. */
+  [hidden]{display:none!important}
   body{margin:0;background:var(--stage);color:var(--ink);font-family:var(--font-text);
        font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
   .km{font-family:var(--font-km);line-height:1.5}
@@ -68,6 +89,18 @@
   .screen.on{display:flex;animation:in .22s ease-out}
   @keyframes in{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
   @media (prefers-reduced-motion:reduce){.screen.on{animation:none}.role{transition:none}}
+
+  /* ---- on a phone the page IS the app: no frame around a frame ---- */
+  @media (max-width:430px){
+    .wrap{min-height:100dvh;padding:14px 0 0;gap:12px}
+    .lede{padding:0 16px}
+    .lede h1{font-size:1.28rem}
+    .lede p{font-size:.83rem}
+    .roles{width:auto;max-width:none;align-self:stretch;margin:0 12px}
+    .phone{max-width:none;height:auto;flex:1;min-height:0;border-radius:0;
+           border-left:0;border-right:0;border-bottom:0;box-shadow:none}
+    .note{padding:0 16px 18px;margin-top:0}
+  }
 
   .bar{display:flex;align-items:center;gap:12px;padding:14px 18px;border-bottom:1px solid var(--line);
        background:var(--bg);position:sticky;top:0;z-index:2}
