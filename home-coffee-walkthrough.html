@@ -279,6 +279,9 @@
             <span style="width:7px;height:7px;border-radius:50%;background:var(--accent);display:block"></span>
             <span style="font-size:.85rem;color:var(--ink-dim)">Open · about a <b style="color:var(--ink)">10 minute wait</b></span>
           </div>
+          <!-- ⭐ The FIRST step, not the checkout. Someone who was given a coffee and
+               wants nothing else must never be made to order something to claim it. -->
+          <div id="claimRowTop" style="margin-top:14px"></div>
           <div id="menu"></div>
           <!-- ⭐ On EVERY shop, paid or free, identical. It is how another vendor
                discovers the platform exists — and because it never varies, it can
@@ -616,11 +619,17 @@
   const shop = { delivery: true };
   // A released gift code. ⛔ It carries an ITEM, never an amount — the moment it
   // holds riel it is a prepaid monetary instrument and a launch blocker.
-  // ⚠️ SEEDED, deliberately. A gift code exists in the world before this page is
-  // opened — someone was sent one. Starting at null meant the redeem control was a
-  // silent no-op in the exact state every visitor begins in.
-  let gift = {code:'HC-7K2M', itemId:'americano', from:'Thon', to:'សុភា', redeemed:false};
-  let claimed = null;   // the code applied to the order in front of us
+  // ⚠️ SEEDED, deliberately. Gift codes exist in the world before this page is
+  // opened — someone was sent one. Starting empty made the redeem control a silent
+  // no-op in the exact state every visitor begins in.
+  // ⭐ TWO of them, because a person can be given more than one and refusing the
+  // second would be arbitrary — three paper vouchers hand over as easily as one.
+  const CODES = [
+    {code:'HC-7K2M', itemId:'americano', from:'Thon',  to:'សុភា', redeemed:false},
+    {code:'HC-3B9P', itemId:'birdsnest', from:'Reach', to:'សុភា', redeemed:false}
+  ];
+  let gift = CODES[0];  // the one THIS gift page was opened with
+  let claimed = [];     // every code applied to the order in front of us
   let claimOpen = false, claimError = '';
 
   function goods(){ return MENU.reduce((s,m)=> s + (cart[m.id]||0) * m.price, 0); }
@@ -655,8 +664,12 @@
       return head + (c.id === 'pz' ? sizeCard(items) : items.map(row).join(''));
     }).join('');
     const count = Object.values(cart).reduce((a,b)=>a+b,0);
-    document.getElementById('menufoot').hidden = !count;
-    document.getElementById('cartLabel').textContent = `Start an order · ${count} item${count>1?'s':''}`;
+    // ⛔ A claimed gift OPENS the cart on its own. Gating this on `count` alone made
+    // the gift-only journey impossible: someone given a coffee and wanting nothing
+    // else could never reach the checkout at all.
+    const n = count + claimed.length;
+    document.getElementById('menufoot').hidden = !n;
+    document.getElementById('cartLabel').textContent = `Start an order · ${n} item${n>1?'s':''}`;
     document.getElementById('cartTotal').textContent = riel(goods());
   }
 
@@ -734,7 +747,9 @@
     document.getElementById('giftBlock').hidden = fulfil!=='gift';
     document.getElementById('payLbl').textContent = prepaid() ? 'Pay now' : 'Pay when you collect';
     document.getElementById('sendLbl').textContent = prepaid() ? 'Pay and send the order' : 'Send the order';
-    document.getElementById('sendHint').textContent = fulfil==='pickup'
+    document.getElementById('sendHint').textContent = total()===0
+      ? 'Nothing to pay — it was already paid for.'
+      : fulfil==='pickup'
       ? 'Nothing is charged now. You pay when she hands it to you.'
       : fulfil==='delivery'
         ? 'Paid before anyone rides out, so whoever brings it carries no money.'
@@ -751,24 +766,56 @@
            <span class="mono" style="font-size:.88rem;color:var(--ink-dim)">${riel(FEE)}</span></div>` : '';
     // ⛔ A gift line reads "gift", NEVER "−4,000៛". The recipient owes what is
     // left; the coffee was never priced against their bill.
-    const gm = claimed ? MENU.find(x=>x.id===claimed.itemId) : null;
-    const giftLine = gm ? `<div class="row" style="padding:5px 0">
+    const giftLine = claimed.map(c => {
+      const gm = MENU.find(x => x.id === c.itemId); if(!gm) return '';
+      return `<div class="row" style="padding:5px 0">
          <span style="display:flex;align-items:center;gap:10px">
            <span class="thumb" style="width:32px;height:32px;border-radius:.5rem">${svg(gm.art)}</span>
            <span style="font-size:.92rem">${gm.en}</span></span>
          <span class="mono" style="font-size:.78rem;color:var(--accent-soft);
-               background:var(--accent-wash);border-radius:var(--r-pill);padding:3px 9px">gift</span></div>` : '';
+               background:var(--accent-wash);border-radius:var(--r-pill);padding:3px 9px">gift</span></div>`;
+    }).join('');
     document.getElementById('cartLines').innerHTML = rows + giftLine + fee +
       `<div class="row" style="padding-top:9px;margin-top:5px;border-top:1px solid var(--line);font-weight:600">
          <span>Total</span><span class="mono">${riel(total())}</span></div>`;
-    const gc = document.getElementById('claimRow');
-    gc.innerHTML = claimed
-      ? `<button class="chip" style="width:100%;text-align:left" aria-pressed="true" onclick="unclaim()">
-           <b>Gift code applied · ${claimed.code}</b>
-           <span>Tap to remove it from this order</span></button>`
-      : claimOpen
-      ? `<div style="display:flex;gap:8px">
-           <input class="field mono" id="claimInput" placeholder="HC-7K2M" autocapitalize="characters"
+    document.getElementById('tips').innerHTML = TIPS.map(t =>
+      `<button class="chip" style="text-align:center;min-height:46px;display:flex;align-items:center;justify-content:center"
+        aria-pressed="${t===tip}" onclick="setTip(${t})"><b class="mono">${riel(t)}</b></button>`).join('') +
+      `<button class="chip" style="text-align:center;min-height:46px;display:flex;align-items:center;justify-content:center"
+        aria-pressed="${tip===0}" onclick="setTip(0)"><b style="font-weight:500;color:var(--ink-dim)">Skip</b></button>`;
+    document.getElementById('cartTotal2').textContent = riel(total());
+    document.getElementById('claimRow').innerHTML = claimHtml();
+    document.getElementById('claimRowTop').innerHTML = claimHtml(true);
+  }
+
+  function claimHtml(top){
+    // ⚠️ ORDER MATTERS: claimOpen is tested FIRST. Checking claimed.length first
+    // made the input unreachable the moment one code was on the order — the
+    // multi-code path existed in the data and nowhere in the interface.
+    if(claimOpen) return inputHtml();
+    return claimed.length
+      ? claimed.map(c => {
+          const m = MENU.find(x => x.id === c.itemId);
+          return `<button class="chip" style="width:100%;text-align:left;margin-bottom:6px"
+            aria-pressed="true" onclick="unclaim('${c.code}')">
+            <b>${m ? m.en : 'A gift'} · from ${c.from}</b>
+            <span class="mono" style="font-size:.7rem">${c.code} — tap to remove</span></button>`;
+        }).join('') + `<p style="margin:2px 0 0"><button class="chip"
+            style="width:100%;text-align:left" onclick="openClaim()">
+            <b>Add another gift code</b>
+            <span>More than one can be used on the same order</span></button></p>
+          <p class="hint" style="text-align:left;margin-top:8px">
+            ${claimed.length > 1 ? 'Both are on this order. ' : ''}Add anything else you want,
+            or send it as it is.</p>`
+      : `<button class="chip" style="width:100%;text-align:left" onclick="openClaim()">
+           <b>Have a gift code?</b>
+           <span>${top ? 'Use it on its own — you need not order anything else'
+                       : 'Enter or paste it — it adds what it is for'}</span></button>`;
+  }
+
+  function inputHtml(){
+    return `<div style="display:flex;gap:8px">
+           <input class="field mono claimInput" placeholder="HC-7K2M" autocapitalize="characters"
                   spellcheck="false" aria-label="Gift code" style="flex:1;min-width:0;letter-spacing:.08em"
                   onkeydown="if(event.key==='Enter')claim()">
            <button class="cta center" style="width:auto;padding:0 18px" onclick="claim()">Use it</button>
@@ -778,16 +825,7 @@
            It adds what it is for &mdash; it never takes money off the bill.
            <a href="#" onclick="event.preventDefault();go('s-gift')"
               style="color:var(--accent-soft)">See a gift page</a>
-         </p>`
-      : `<button class="chip" style="width:100%;text-align:left" onclick="openClaim()">
-           <b>Have a gift code?</b>
-           <span>Enter or paste it &mdash; it adds what it is for</span></button>`;
-    document.getElementById('tips').innerHTML = TIPS.map(t =>
-      `<button class="chip" style="text-align:center;min-height:46px;display:flex;align-items:center;justify-content:center"
-        aria-pressed="${t===tip}" onclick="setTip(${t})"><b class="mono">${riel(t)}</b></button>`).join('') +
-      `<button class="chip" style="text-align:center;min-height:46px;display:flex;align-items:center;justify-content:center"
-        aria-pressed="${tip===0}" onclick="setTip(0)"><b style="font-weight:500;color:var(--ink-dim)">Skip</b></button>`;
-    document.getElementById('cartTotal2').textContent = riel(total());
+         </p>`;
   }
   function setTip(t){ tip=t; drawCart(); }
 
@@ -795,7 +833,12 @@
     const who = (fulfil==='gift'
       ? document.getElementById('giftTo').value.trim()
       : document.getElementById('who').value.trim()) || 'Thon';
-    order = { who, fulfil, lines: MENU.filter(m=>cart[m.id]).map(m=>({...m,n:cart[m.id]})),
+    // gift items join the lines — she has to make them, and the wait must count them
+    const giftLines = claimed.map(c => {
+      const m = MENU.find(x => x.id === c.itemId);
+      return m ? {...m, n:1, gift:true} : null;
+    }).filter(Boolean);
+    order = { who, fulfil, lines: MENU.filter(m=>cart[m.id]).map(m=>({...m,n:cart[m.id]})).concat(giftLines),
               total: total(), tip, addr: document.getElementById('addr').value.trim(),
               code: '4172', gift: 'HC-7K2M' };
     stage = 0;
@@ -818,7 +861,13 @@
   const lineHtml = o => o.lines.map(m =>
     `<div style="display:flex;align-items:center;gap:10px">
        <span class="thumb" style="width:30px;height:30px;border-radius:.5rem">${svg(m.art)}</span>
-       <span class="km" style="font-size:.92rem">${m.n} × ${m.km}</span></div>`).join('');
+       <span style="min-width:0">
+         <span style="font-size:.92rem">${m.n} × ${m.en}</span>
+         ${ m.km ? `<span class="km" style="display:block;font-size:.8rem;color:var(--ink-dim)">${m.km}</span>` : '' }
+         ${ m.gift ? `<span class="mono" style="display:inline-block;margin-top:3px;font-size:.66rem;
+              color:var(--accent-soft);background:var(--accent-wash);border-radius:var(--r-pill);
+              padding:2px 8px">gift &mdash; already paid</span>` : '' }
+       </span></div>`).join('');
 
   function drawQueue(){
     const b = document.getElementById('queueBody');
@@ -903,22 +952,28 @@
 
   // ---- redeeming: the ITEM joins the order at 0៛. Nothing is deducted. ----
   function openClaim(){ claimOpen = true; claimError = ''; drawCart();
-    setTimeout(()=>document.getElementById('claimInput')?.focus(), 30); }
+    // both rows render the input; the one on the visible screen is the one focused
+    setTimeout(()=>{
+      const on = document.querySelector('.screen.on');
+      (on && on.querySelector('.claimInput') || document.querySelector('.claimInput'))?.focus();
+    }, 30); }
 
   const tidy = c => (c||'').toUpperCase().replace(/[^A-Z0-9]/g,'');
 
   function claim(){
-    const typed = tidy(document.getElementById('claimInput').value);
-    if(!typed){ claimError = 'Type or paste the code first.'; return drawCart(); }
-    if(!gift || gift.redeemed || tidy(gift.code) !== typed){
-      // ⛔ States the fact and stops. No scolding, no attempt counter.
-      claimError = 'That code is not one of Kanghna\'s.';
-      return drawCart();
-    }
-    claimed = gift; claimOpen = false; claimError = '';
-    drawCart();
+    const on = document.querySelector('.screen.on');
+    const box = (on && on.querySelector('.claimInput')) || document.querySelector('.claimInput');
+    const typed = tidy(box ? box.value : '');
+    const found = CODES.find(c => tidy(c.code) === typed);
+    if(!typed)                       claimError = 'Type or paste the code first.';
+    else if(!found || found.redeemed) claimError = 'That code is not one of Kanghna\'s.';
+    else if(claimed.includes(found))  claimError = 'That one is already on this order.';
+    else { claimed.push(found); claimOpen = false; claimError = ''; }
+    redraw();
   }
-  function unclaim(){ claimed = null; claimError = ''; drawCart(); }
+  function unclaim(code){ claimed = claimed.filter(c => c.code !== code); claimError=''; redraw(); }
+  // the redeem row lives on TWO screens now, and the cart footer depends on it
+  function redraw(){ drawMenu(); drawCart(); }
 
   function drawShop(){
     document.getElementById('shopBody').innerHTML = `<div class="pad">
@@ -1089,7 +1144,7 @@
   }
   function reset(){
     order=null; stage=0; cart={}; tip=1000; fulfil='pickup';
-    claimed=null; claimOpen=false; claimError='';
+    claimed=[]; claimOpen=false; claimError='';
     ['d2','d3'].forEach(i=>document.getElementById(i).classList.remove('on'));
     document.getElementById('l2').classList.remove('on');
     document.getElementById('giftOut').hidden = true;
