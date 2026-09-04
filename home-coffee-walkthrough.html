@@ -616,8 +616,12 @@
   const shop = { delivery: true };
   // A released gift code. ⛔ It carries an ITEM, never an amount — the moment it
   // holds riel it is a prepaid monetary instrument and a launch blocker.
-  let gift = null;      // {code, itemId, from, to, redeemed}
+  // ⚠️ SEEDED, deliberately. A gift code exists in the world before this page is
+  // opened — someone was sent one. Starting at null meant the redeem control was a
+  // silent no-op in the exact state every visitor begins in.
+  let gift = {code:'HC-7K2M', itemId:'americano', from:'Thon', to:'សុភា', redeemed:false};
   let claimed = null;   // the code applied to the order in front of us
+  let claimOpen = false, claimError = '';
 
   function goods(){ return MENU.reduce((s,m)=> s + (cart[m.id]||0) * m.price, 0); }
   function total(){ return goods() + tip + (fulfil==='delivery' ? FEE : 0); }
@@ -762,10 +766,22 @@
       ? `<button class="chip" style="width:100%;text-align:left" aria-pressed="true" onclick="unclaim()">
            <b>Gift code applied · ${claimed.code}</b>
            <span>Tap to remove it from this order</span></button>`
-      : `<button class="chip" style="width:100%;text-align:left" onclick="claim()">
+      : claimOpen
+      ? `<div style="display:flex;gap:8px">
+           <input class="field mono" id="claimInput" placeholder="HC-7K2M" autocapitalize="characters"
+                  spellcheck="false" aria-label="Gift code" style="flex:1;min-width:0;letter-spacing:.08em"
+                  onkeydown="if(event.key==='Enter')claim()">
+           <button class="cta center" style="width:auto;padding:0 18px" onclick="claim()">Use it</button>
+         </div>
+         ${ claimError ? `<p class="hint" style="text-align:left;margin-top:8px;color:var(--ink-dim)">${claimError}</p>` : '' }
+         <p class="hint" style="text-align:left;margin-top:8px">
+           It adds what it is for &mdash; it never takes money off the bill.
+           <a href="#" onclick="event.preventDefault();go('s-gift')"
+              style="color:var(--accent-soft)">See a gift page</a>
+         </p>`
+      : `<button class="chip" style="width:100%;text-align:left" onclick="openClaim()">
            <b>Have a gift code?</b>
-           <span>${gift && !gift.redeemed ? 'Enter or paste it — it adds what it is for'
-                                          : 'Enter or paste it at the counter or here'}</span></button>`;
+           <span>Enter or paste it &mdash; it adds what it is for</span></button>`;
     document.getElementById('tips').innerHTML = TIPS.map(t =>
       `<button class="chip" style="text-align:center;min-height:46px;display:flex;align-items:center;justify-content:center"
         aria-pressed="${t===tip}" onclick="setTip(${t})"><b class="mono">${riel(t)}</b></button>`).join('') +
@@ -886,12 +902,23 @@
   }
 
   // ---- redeeming: the ITEM joins the order at 0៛. Nothing is deducted. ----
+  function openClaim(){ claimOpen = true; claimError = ''; drawCart();
+    setTimeout(()=>document.getElementById('claimInput')?.focus(), 30); }
+
+  const tidy = c => (c||'').toUpperCase().replace(/[^A-Z0-9]/g,'');
+
   function claim(){
-    if(!gift || gift.redeemed) return;
-    claimed = gift;
+    const typed = tidy(document.getElementById('claimInput').value);
+    if(!typed){ claimError = 'Type or paste the code first.'; return drawCart(); }
+    if(!gift || gift.redeemed || tidy(gift.code) !== typed){
+      // ⛔ States the fact and stops. No scolding, no attempt counter.
+      claimError = 'That code is not one of Kanghna\'s.';
+      return drawCart();
+    }
+    claimed = gift; claimOpen = false; claimError = '';
     drawCart();
   }
-  function unclaim(){ claimed = null; drawCart(); }
+  function unclaim(){ claimed = null; claimError = ''; drawCart(); }
 
   function drawShop(){
     document.getElementById('shopBody').innerHTML = `<div class="pad">
@@ -1062,6 +1089,7 @@
   }
   function reset(){
     order=null; stage=0; cart={}; tip=1000; fulfil='pickup';
+    claimed=null; claimOpen=false; claimError='';
     ['d2','d3'].forEach(i=>document.getElementById(i).classList.remove('on'));
     document.getElementById('l2').classList.remove('on');
     document.getElementById('giftOut').hidden = true;
@@ -1094,5 +1122,5 @@
     else go(order ? 's-placed' : 's-menu');
   }
 
-  drawMenu(); drawCart(); drawQueue(); drawDrive(); drawShop(); drawPeople();
+  drawMenu(); drawCart(); drawQueue(); drawDrive(); drawShop(); drawPeople(); drawGift();
 </script>
