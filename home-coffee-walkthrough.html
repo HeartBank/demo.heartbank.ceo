@@ -257,6 +257,13 @@
             <span style="font-size:.85rem;color:var(--ink-dim)">Open · about a <b style="color:var(--ink)">10 minute wait</b></span>
           </div>
           <div id="menu"></div>
+          <!-- ⭐ On EVERY shop, paid or free, identical. It is how another vendor
+               discovers the platform exists — and because it never varies, it can
+               never mark a shop that has not bought anything. -->
+          <p style="margin:26px 0 4px;padding-top:16px;border-top:1px solid var(--line);
+                    text-align:center;font-size:.78rem;color:var(--ink-faint)">
+            Powered by <a href="https://heartbank.ceo" style="color:var(--ink-dim);text-decoration:none;font-weight:500">Heart<svg viewBox="0 0 24 24" style="width:.86em;height:.86em;display:inline-block;vertical-align:-.13em;margin:0 -.08em 0 -.03em;color:var(--accent)"><path fill="currentColor" d="M3.9743 20.0257L3.8824 18.0670C3.5430 11.1232 3.3167 6.5411 5.9896 3.8683C8.1675 1.6904 11.5899 1.6904 13.7678 3.8683C14.9981 5.0986 15.6062 6.8523 15.4719 8.5281C17.1477 8.3938 18.9014 9.0019 20.1317 10.2322C22.3096 12.4101 22.3096 15.8325 20.1317 18.0104C17.4589 20.6833 12.8768 20.4570 5.9260 20.1247L3.9743 20.0257Z"/></svg>ank<sup style="font-size:.62em;top:-.5em;position:relative">&#174;</sup></a>
+          </p>
         </div>
         <div class="foot" id="menufoot" hidden>
           <button class="cta" onclick="go('s-cart')"><span id="cartLabel">Start an order</span><span class="mono" id="cartTotal">0៛</span></button>
@@ -537,6 +544,8 @@
   let role='cust', cart={}, tip=1000, fulfil='pickup', order=null, stage=0;
   // stage — pickup: 0 queued · 1 ready(settle) | delivery: 0 queued · 1 ready · 2 riding · 3 delivered
   const FEE = 1000;
+  // Shop-level settings the owner controls. Not every shop delivers.
+  const shop = { delivery: true };
 
   function goods(){ return MENU.reduce((s,m)=> s + (cart[m.id]||0) * m.price, 0); }
   function total(){ return goods() + tip + (fulfil==='delivery' ? FEE : 0); }
@@ -622,15 +631,26 @@
 
   function bump(id,d){ cart[id]=Math.max(0,(cart[id]||0)+d); if(!cart[id]) delete cart[id]; drawMenu(); drawCart(); }
 
-  const WAYS = [
-    {id:'pickup',   t:'Pickup',    s:'~10 min'},
-    {id:'delivery', t:'Delivery',  s:'+'+riel(FEE)},
-    {id:'gift',     t:'Gift code', s:'for someone'}
-  ];
+  // ⛔ When a shop does not deliver, delivery is ABSENT — never shown disabled,
+  // greyed, or labelled "not offered". Rendering an absence is the thing the
+  // wonder-not-indictment rule forbids; the customer simply sees two ways to get it.
+  function ways(){
+    return [
+      {id:'pickup',   t:'Pickup',    s:'~10 min'},
+      shop.delivery ? {id:'delivery', t:'Delivery', s:'+'+riel(FEE)} : null,
+      {id:'gift',     t:'Gift code', s:'for someone'}
+    ].filter(Boolean);
+  }
   function setWay(w){ fulfil=w; drawCart(); }
+  function toggleDelivery(){
+    shop.delivery = !shop.delivery;
+    // a customer mid-choice must not be left on a way the shop no longer offers
+    if(!shop.delivery && fulfil === 'delivery') fulfil = 'pickup';
+    drawShop(); drawCart(); drawDrive();
+  }
 
   function drawCart(){
-    document.getElementById('fulfil').innerHTML = WAYS.map(w =>
+    document.getElementById('fulfil').innerHTML = ways().map(w =>
       `<button class="chip" aria-pressed="${w.id===fulfil}" onclick="setWay('${w.id}')">
          <b>${w.t}</b><span>${w.s}</span></button>`).join('');
     document.getElementById('whoBlock').hidden  = fulfil==='gift';
@@ -768,6 +788,24 @@
       <p class="hint" style="text-align:left;margin-top:2px">
         Your minutes are what tells a customer <b style="color:var(--ink-dim)">about 10–15 min</b>.
         Nothing here ever compares that to how long it really took.
+      </p>
+
+      <p class="lbl" style="margin:6px 0 0">How people get it</p>
+      <div class="card">
+        <div class="row">
+          <span style="min-width:0">
+            <b style="font-size:.95rem;font-weight:600">Offer delivery</b>
+            <span style="display:block;font-size:.82rem;color:var(--ink-dim);margin-top:2px">
+              ${shop.delivery ? 'Riders you approve can take orders out'
+                              : 'Pickup and gift codes only'}</span>
+          </span>
+          <button class="toggle" aria-pressed="${shop.delivery}" onclick="toggleDelivery()"
+            aria-label="Offer delivery"><i></i></button>
+        </div>
+      </div>
+      <p class="hint" style="text-align:left">
+        Turn it off and customers simply see two ways to get their order —
+        they are never shown a delivery option they cannot use.
       </p>
     </div>`;
   }
