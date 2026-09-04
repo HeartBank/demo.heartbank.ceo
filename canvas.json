@@ -298,14 +298,6 @@
       "page": "page-5"
     },
     {
-      "id": "note-counter",
-      "x": 0,
-      "y": -271,
-      "w": 460,
-      "text": "counter.heartbank.ceo — Kanghna and Reach, on a phone behind the counter.\n\nTWO QUEUES, the founder's rule: people who checked in are standing in the line and are served in arrival order; orders sent from elsewhere wait separately.\n\nTop row is the daily work. Bottom row is the owner's Shop tab, which staff do not have at all — settings split four ways so no single screen is a wall.",
-      "page": "page-3"
-    },
-    {
       "id": "note-store",
       "x": 0,
       "y": -190,
@@ -322,27 +314,19 @@
       "page": "page-1"
     },
     {
-      "id": "note-1",
-      "x": 13,
-      "y": 1420,
-      "w": 240,
-      "text": "height need to be longer vertically",
-      "page": "page-2"
-    },
-    {
-      "id": "note-2",
-      "x": 1065,
-      "y": 2881,
-      "w": 240,
-      "text": "add F3QR as payment method",
+      "id": "note-counter",
+      "x": 0,
+      "y": -271,
+      "w": 460,
+      "text": "counter.heartbank.ceo — Kanghna and Reach, on a phone behind the counter.\n\nTWO QUEUES, the founder's rule: people who checked in are standing in the line and are served in arrival order; orders sent from elsewhere wait separately.\n\nTop row is the daily work. Bottom row is the owner's Shop tab, which staff do not have at all — settings split four ways so no single screen is a wall.",
       "page": "page-3"
     },
     {
-      "id": "note-3",
-      "x": 148,
-      "y": 948,
+      "id": "note-1",
+      "x": 2516,
+      "y": 2796,
       "w": 240,
-      "text": "don't show the price, just gifted?",
+      "text": "need left and right margins",
       "page": "page-3"
     }
   ],
