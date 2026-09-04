@@ -77,6 +77,13 @@ involved at all.
 | **Delivery** | before anyone rides out | *Start making it* → *Hand it to a rider* | rider enters the door code — *"You carried coffee, not money."* |
 | **Gift code** | up front | *Release the code* | a code for **a coffee, not an amount** |
 
+⭐ **Redeeming a gift code deducts nothing.** The item joins the order at 0៛ and the line reads
+**`gift`**, never `−4,000៛`. A code that reduced a bill by riel would be a **stored-value
+instrument** — a prepaid monetary liability, and a launch blocker — and it would quietly lose value
+every time she reprices. The recipient's link opens a page with the item, the code, a **copy
+button** and a **QR** the counter can scan; ⚠️ the QR is a convenience only, and if its library
+fails to load the code is still there in large type.
+
 The owner also **runs the shop**: an owner-only tab bar opens *Shop* (price, prep minutes, sold-out
 toggle, add an item) and *People* (staff, approving riders). Mark the pizza sold out and it says so
 on the customer's menu; change the minutes and the customer's wait estimate moves.

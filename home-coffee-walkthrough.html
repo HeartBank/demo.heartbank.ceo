@@ -23,6 +23,10 @@
 <meta property="og:image:alt" content="Home Coffee, with its Khmer name above it on a dark ground.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#15803d">
+<!-- QR is a convenience for the counter, never the mechanism: if this fails to
+     load, the code itself is still on the page in large type and can be read
+     aloud or typed. Nothing depends on the CDN. -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+Khmer:wght@400;500;600&display=swap">
 <style>
   /* Tokens are brand.333.eco v1.3.0 with the .ceo green pinned: nothing invented here. */
@@ -167,6 +171,25 @@
   .field{border:1px solid var(--line-strong);border-radius:var(--r-control);padding:13px 15px;
          min-height:54px;display:flex;align-items:center;background:var(--bg);
          font-size:1.02rem;font-weight:500;width:100%;color:var(--ink)}
+  /* the gift page — the one screen a stranger opens cold */
+  .giftwrap{background:linear-gradient(180deg,var(--accent-wash),transparent 60%);
+            padding:34px 22px 26px;text-align:center;flex:1;
+            display:flex;flex-direction:column;align-items:center;gap:0}
+  .giftart{width:118px;height:118px;border-radius:50%;overflow:hidden;flex:none;
+           box-shadow:0 10px 30px rgba(20,16,30,.14);margin-bottom:20px}
+  .giftto{font-family:var(--font-display);font-size:2.3rem;font-weight:600;
+          margin:0;line-height:1.05;letter-spacing:-.02em}
+  .giftfrom{margin:8px 0 0;font-size:.96rem;color:var(--ink-dim);line-height:1.55;max-width:26ch}
+  .giftitem{margin:22px 0 0;font-size:1.05rem;font-weight:600}
+  .code{font-family:var(--font-mono);font-size:2rem;font-weight:500;letter-spacing:.12em;
+        margin:0;line-height:1}
+  .copy{border:1px solid var(--line-strong);border-radius:var(--r-pill);padding:7px 15px;
+        font-size:.82rem;font-weight:500;display:inline-flex;align-items:center;gap:7px}
+  .copy[data-done="1"]{border-color:var(--accent);color:var(--accent-soft)}
+  /* ⚠️ ALWAYS on a light ground, in both themes — a QR on a dark card will not scan. */
+  .qr{background:#fff;border-radius:1rem;padding:13px;display:inline-block;line-height:0;
+      box-shadow:0 4px 14px rgba(20,16,30,.10)}
+  .qr canvas{display:block;border-radius:.35rem}
   .tabs{display:flex;border-top:1px solid var(--line);background:var(--bg);flex:none}
   .tab{flex:1;padding:9px 4px 11px;display:flex;flex-direction:column;align-items:center;gap:3px;
        color:var(--ink-faint);font-size:.66rem;font-family:var(--font-mono);letter-spacing:.03em}
@@ -291,6 +314,10 @@
             <div class="chips" id="tips"></div>
           </div>
           <div>
+            <p class="lbl">Been given one?</p>
+            <div id="claimRow"></div>
+          </div>
+          <div>
             <p class="lbl">How you'll get it</p>
             <div class="chips" id="fulfil"></div>
           </div>
@@ -356,10 +383,12 @@
           <div class="card" id="giftOut" hidden style="border-color:var(--accent-edge);background:var(--accent-wash)">
             <p class="lbl" style="margin-bottom:6px">Their code</p>
             <p class="mono" id="giftCode" style="margin:0 0 6px;font-size:1.8rem;font-weight:500;letter-spacing:.06em">HC-7K2M</p>
-            <p style="margin:0;font-size:.83rem;color:var(--ink-dim);line-height:1.55">
-              Good for one iced coffee at Home Coffee. A coffee, not an amount — if Kanghna raises
+            <p style="margin:0 0 13px;font-size:.83rem;color:var(--ink-dim);line-height:1.55">
+              Good for one drink at Home Coffee. A coffee, not an amount — if Kanghna raises
               her prices it is still a coffee.
             </p>
+            <button class="cta center" id="giftLink" hidden onclick="go('s-gift')"
+              style="min-height:44px;font-size:.9rem">See what សុភា opens</button>
           </div>
           <div class="card">
             <p class="lbl" id="payHead">Pay when you collect</p>
@@ -415,6 +444,41 @@
           <p class="hint" style="text-align:left">
             That's the trade: you check for yourself, and nobody takes a cut of what arrives.
           </p>
+        </div>
+      </section>
+
+      <!-- ============ WHAT THE RECIPIENT OPENS ============ -->
+      <section class="screen" id="s-gift">
+        <div class="giftwrap">
+          <div class="giftart" id="giftArt"></div>
+          <p class="giftto km" id="giftTo2">សុភា</p>
+          <p class="giftfrom" id="giftFrom">Thon bought you a coffee at Home Coffee.</p>
+          <p class="giftitem" id="giftItem">Iced Americano</p>
+          <p style="margin:3px 0 0;font-size:.84rem;color:var(--ink-faint)">
+            A coffee, not an amount &mdash; it is still a coffee whatever the price does.</p>
+
+          <div class="card" style="margin-top:26px;width:100%;max-width:330px;text-align:center">
+            <p class="lbl" style="margin-bottom:11px">Show this at the counter</p>
+            <p class="code" id="giftCode2">HC-7K2M</p>
+            <p style="margin:14px 0 0">
+              <button class="copy" id="copyBtn" onclick="copyCode()">
+                <svg viewBox="0 0 24 24" style="width:15px;height:15px;fill:none;stroke:currentColor;
+                     stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round">
+                  <rect x="9" y="9" width="11" height="11" rx="2"/>
+                  <path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+                <span id="copyLabel">Copy the code</span></button>
+            </p>
+            <div style="margin-top:16px"><span class="qr"><canvas id="giftQr"></canvas></span></div>
+            <p class="hint" style="margin-top:11px">Kanghna can scan it, or you can just read it out.</p>
+          </div>
+
+          <p style="margin:22px 0 0;font-size:.86rem;color:var(--ink-dim);line-height:1.6">
+            <b style="color:var(--ink)">Home Coffee</b><br>Traeng Trayueng, by the high school</p>
+          <p style="margin:20px 0 0;font-size:.76rem;color:var(--ink-faint)">
+            Powered by Heart<svg viewBox="0 0 24 24" style="width:.86em;height:.86em;display:inline-block;vertical-align:-.13em;margin:0 -.08em 0 -.03em;color:var(--accent)"><path fill="currentColor" d="M3.9743 20.0257L3.8824 18.0670C3.5430 11.1232 3.3167 6.5411 5.9896 3.8683C8.1675 1.6904 11.5899 1.6904 13.7678 3.8683C14.9981 5.0986 15.6062 6.8523 15.4719 8.5281C17.1477 8.3938 18.9014 9.0019 20.1317 10.2322C22.3096 12.4101 22.3096 15.8325 20.1317 18.0104C17.4589 20.6833 12.8768 20.4570 5.9260 20.1247L3.9743 20.0257Z"/></svg>ank<sup style="font-size:.62em;top:-.5em;position:relative">&#174;</sup></p>
+        </div>
+        <div class="foot">
+          <button class="cta ghost center" onclick="go(role==='own'?'s-queue':'s-placed')">Back</button>
         </div>
       </section>
 
@@ -550,6 +614,10 @@
   const FEE = 1000;
   // Shop-level settings the owner controls. Not every shop delivers.
   const shop = { delivery: true };
+  // A released gift code. ⛔ It carries an ITEM, never an amount — the moment it
+  // holds riel it is a prepaid monetary instrument and a launch blocker.
+  let gift = null;      // {code, itemId, from, to, redeemed}
+  let claimed = null;   // the code applied to the order in front of us
 
   function goods(){ return MENU.reduce((s,m)=> s + (cart[m.id]||0) * m.price, 0); }
   function total(){ return goods() + tip + (fulfil==='delivery' ? FEE : 0); }
@@ -677,9 +745,27 @@
     const fee = fulfil==='delivery'
       ? `<div class="row" style="padding:5px 0"><span style="font-size:.92rem;color:var(--ink-dim)">Delivery</span>
            <span class="mono" style="font-size:.88rem;color:var(--ink-dim)">${riel(FEE)}</span></div>` : '';
-    document.getElementById('cartLines').innerHTML = rows + fee +
+    // ⛔ A gift line reads "gift", NEVER "−4,000៛". The recipient owes what is
+    // left; the coffee was never priced against their bill.
+    const gm = claimed ? MENU.find(x=>x.id===claimed.itemId) : null;
+    const giftLine = gm ? `<div class="row" style="padding:5px 0">
+         <span style="display:flex;align-items:center;gap:10px">
+           <span class="thumb" style="width:32px;height:32px;border-radius:.5rem">${svg(gm.art)}</span>
+           <span style="font-size:.92rem">${gm.en}</span></span>
+         <span class="mono" style="font-size:.78rem;color:var(--accent-soft);
+               background:var(--accent-wash);border-radius:var(--r-pill);padding:3px 9px">gift</span></div>` : '';
+    document.getElementById('cartLines').innerHTML = rows + giftLine + fee +
       `<div class="row" style="padding-top:9px;margin-top:5px;border-top:1px solid var(--line);font-weight:600">
          <span>Total</span><span class="mono">${riel(total())}</span></div>`;
+    const gc = document.getElementById('claimRow');
+    gc.innerHTML = claimed
+      ? `<button class="chip" style="width:100%;text-align:left" aria-pressed="true" onclick="unclaim()">
+           <b>Gift code applied · ${claimed.code}</b>
+           <span>Tap to remove it from this order</span></button>`
+      : `<button class="chip" style="width:100%;text-align:left" onclick="claim()">
+           <b>Have a gift code?</b>
+           <span>${gift && !gift.redeemed ? 'Enter or paste it — it adds what it is for'
+                                          : 'Enter or paste it at the counter or here'}</span></button>`;
     document.getElementById('tips').innerHTML = TIPS.map(t =>
       `<button class="chip" style="text-align:center;min-height:46px;display:flex;align-items:center;justify-content:center"
         aria-pressed="${t===tip}" onclick="setTip(${t})"><b class="mono">${riel(t)}</b></button>`).join('') +
@@ -759,6 +845,53 @@
           ? `<p class="hint" style="text-align:left">Nothing was charged. You start when they're at the front.</p>` : '' }
     </div>`;
   }
+
+  // What the recipient opens. It names what they HAVE — never what they must do
+  // by when: no expiry clock, no "unused" nag, nothing owed.
+  function drawGift(){
+    if(!gift) return;
+    const m = MENU.find(x => x.id === gift.itemId) || MENU[0];
+    document.getElementById('giftArt').innerHTML = svg(m.art);
+    document.getElementById('giftTo2').textContent = gift.to;
+    document.getElementById('giftFrom').textContent =
+      `${gift.from} bought you something at Home Coffee.`;
+    document.getElementById('giftItem').textContent = m.en;
+    document.getElementById('giftCode2').textContent = gift.code;
+    drawQr(gift.code);
+  }
+
+  // ⚠️ A convenience, never the mechanism. If QRious did not load the code is
+  // still on the page in 2rem type; we hide the empty box rather than show a gap.
+  function drawQr(text){
+    const box = document.getElementById('giftQr');
+    if(typeof QRious === 'undefined'){ box.closest('.qr').style.display = 'none'; return; }
+    new QRious({element:box, value:text, size:132, level:'M',
+                background:'#ffffff', foreground:'#16141c', padding:0});
+  }
+
+  function copyCode(){
+    const btn = document.getElementById('copyBtn'), label = document.getElementById('copyLabel');
+    const done = () => { btn.dataset.done = '1'; label.textContent = 'Copied';
+                         setTimeout(()=>{ btn.dataset.done=''; label.textContent='Copy the code'; }, 1800); };
+    try {
+      navigator.clipboard.writeText(gift.code).then(done, fallback);
+    } catch(e){ fallback(); }
+    function fallback(){
+      // older phones and any non-secure context: select it so a long-press works
+      const r = document.createRange(); r.selectNodeContents(document.getElementById('giftCode2'));
+      const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r);
+      label.textContent = 'Press and hold to copy';
+      setTimeout(()=>{ label.textContent='Copy the code'; }, 2600);
+    }
+  }
+
+  // ---- redeeming: the ITEM joins the order at 0៛. Nothing is deducted. ----
+  function claim(){
+    if(!gift || gift.redeemed) return;
+    claimed = gift;
+    drawCart();
+  }
+  function unclaim(){ claimed = null; drawCart(); }
 
   function drawShop(){
     document.getElementById('shopBody').innerHTML = `<div class="pad">
@@ -900,8 +1033,13 @@
     stage=1; drawQueue();
     ['d2','d3'].forEach(i=>document.getElementById(i).classList.add('on'));
     document.getElementById('l2').classList.add('on');
-    if(order.fulfil==='gift'){ document.getElementById('giftOut').hidden=false;
-      document.getElementById('giftCode').textContent=order.gift; }
+    if(order.fulfil==='gift'){
+      document.getElementById('giftOut').hidden=false;
+      document.getElementById('giftCode').textContent=order.gift;
+      gift = {code:order.gift, itemId:order.lines[0].id, from:'Thon', to:order.who, redeemed:false};
+      document.getElementById('giftLink').hidden = false;
+      drawGift();
+    }
   }
   function toRider(){ stage=2; drawQueue(); drawDrive(); setRole('drv'); }
   function accept(){ stage=3; drawDrive(); }
