@@ -1,7 +1,7 @@
 {
   "artboards": [
     {
-      "file": "Driver.dc.html",
+      "file": "Rider.dc.html",
       "x": 0,
       "y": 0,
       "w": 390,
@@ -273,11 +273,11 @@
   ],
   "annotations": [
     {
-      "id": "note-driver",
+      "id": "note-rider",
       "x": 0,
       "y": -170,
       "w": 460,
-      "text": "driver.heartbank.ceo — rotation over liveness.\n\nWhose turn it is, never who is best: no rating, no acceptance score, and passing is free. The route is deleted when the code is entered.",
+      "text": "rider.heartbank.ceo — rotation over liveness.\n\nWhose turn it is, never who is best: no rating, no acceptance score, and passing is free. The route is deleted when the code is entered.",
       "page": "page-4"
     },
     {
@@ -332,7 +332,7 @@
     },
     {
       "id": "page-4",
-      "name": "driver.heartbank.ceo"
+      "name": "rider.heartbank.ceo"
     },
     {
       "id": "page-5",
