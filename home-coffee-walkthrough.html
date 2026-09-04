@@ -531,17 +531,15 @@
           <p style="margin:24px 0 10px;font-family:var(--font-mono);font-size:.66rem;
                     letter-spacing:.07em;text-transform:uppercase;color:var(--accent-soft)">
             <span class="btag" style="font-size:.62rem">B-Tag</span>
-            <span style="margin-left:8px">Say thank you, if you want to</span></p>
+            <span style="margin-left:8px" id="thankEyebrow">Say thank you, if you want to</span></p>
 
           <div class="amounts" id="thankAmounts"></div>
 
           <p style="margin:14px 0 0;font-size:.86rem;color:var(--ink-dim);line-height:1.6;max-width:31ch"
              id="thankNote"></p>
 
-          <p style="margin:18px 0 0;font-size:.79rem;color:var(--ink-faint);line-height:1.6;max-width:32ch">
-            You already paid for the coffee. Asking before you had it would have made
-            this part of the price.
-          </p>
+          <p style="margin:18px 0 0;font-size:.79rem;color:var(--ink-faint);line-height:1.6;max-width:32ch"
+             id="thankWhyLate"></p>
         </div>
         <div class="foot">
           <button class="cta" id="thankSend" onclick="sendThank()">
@@ -621,6 +619,14 @@
      art:'<rect width="48" height="48" fill="#f0e6d4"/><path d="M15 12h18l-2.4 26h-13.2z" fill="#8a6038"/><path d="M15 12h18l-1.2 13h-15.6z" fill="#efe0c8"/><rect x="14" y="9.5" width="20" height="3.5" rx="1.7" fill="#f7efe2"/><rect x="19" y="15" width="6" height="6" rx="1.4" fill="#fff" opacity=".6"/>'},
     {id:'latte', en:"Hot Latte", km:'', price:5000, cat:'es', prep:3, out:false,
      art:'<rect width="48" height="48" fill="#efe3d2"/><path d="M13 18h20v13a7 7 0 0 1-7 7h-6a7 7 0 0 1-7-7z" fill="#f7f2e8"/><path d="M15 20h16v10a6 6 0 0 1-6 6h-4a6 6 0 0 1-6-6z" fill="#b98653"/><path d="M33 21h3a4 4 0 0 1 0 8h-3z" fill="none" stroke="#f7f2e8" stroke-width="2.4"/><path d="M19 12c2 2 0 4 0 5M25 11c2 2 0 4 0 5" stroke="#c9bba8" stroke-width="2" fill="none" stroke-linecap="round"/>'},
+    // ⭐ A TRUE B-Tag item: fixed price OFF for this ONE line. ⛔ Its price is not 0
+    //   and must never render as "free" — a zero says worthless, the ask says you
+    //   decide, and you decide AFTER. This is the B-Affiliate model previewed inside
+    //   a B-Vendor shop, which is what makes the two tiers ends of one continuum
+    //   rather than categories: going B-Affiliate is switching the rest of these off.
+    {id:'lastpot', en:"Last of the pot", km:'', price:null, cat:'es', prep:1, out:false,
+     head:'The last of the pot.',
+     art:'<rect width="48" height="48" fill="#efe3d2"/><path d="M11 17h22l-2.5 17a5 5 0 0 1-5 4.2h-7a5 5 0 0 1-5-4.2z" fill="#5a3a22"/><path d="M11 17h22l-.7 5h-20.6z" fill="#8a6038"/><path d="M33 20h3.5a3.5 3.5 0 0 1 0 7H33" fill="none" stroke="#5a3a22" stroke-width="2.2"/><path d="M18 10c2 2 0 4 0 5.5M25 9c2 2 0 4 0 5.5" stroke="#c9bba8" stroke-width="2" fill="none" stroke-linecap="round"/>'},
     {id:'redlemon', en:"Red Lemon Tea", km:'', price:3000, cat:'bv', prep:2, out:false,
      art:'<rect width="48" height="48" fill="#f2eeda"/><path d="M15 12h18l-2.4 26h-13.2z" fill="#c8873b"/><path d="M15 12h18l-.8 9h-16.4z" fill="#e0ab5c"/><rect x="14" y="9.5" width="20" height="3.5" rx="1.7" fill="#f6f2e4"/><circle cx="21" cy="28" r="2.6" fill="#dd5b4a"/><rect x="25" y="16" width="5" height="5" rx="1.2" fill="#fff" opacity=".5"/>'},
     {id:'greenlemon', en:"Green Lemon Tea", km:'', price:3000, cat:'bv', prep:2, out:false,
@@ -710,12 +716,19 @@
   let claimed = [];     // every code applied to the order in front of us
   let claimOpen = false, claimError = '';
 
-  function goods(){ return MENU.reduce((s,m)=> s + (cart[m.id]||0) * m.price, 0); }
+  // ⛔ A B-ask line contributes NOTHING to the bill. Its price is settled afterwards,
+  //   by the person who had it, or not at all — which is the point of it.
+  function goods(){ return MENU.reduce((s,m)=> s + (cart[m.id]||0) * (m.price || 0), 0); }
+  const asked = () => MENU.some(m => m.price === null && cart[m.id]);
   // ⛔ THE THANK IS NOT IN THE TOTAL. Asked before the goods, a tip is part of the
   //   price and the screen stands between a person and their coffee. This total is
   //   the exchange, and only the exchange; the gift comes after, on its own screen.
   function total(){ return goods() + (fulfil==='delivery' ? FEE : 0); }
   const prepaid = () => fulfil !== 'pickup';
+  // ⛔ NEVER PRINT A ZERO OVER A B-ASK. A gift-covered order really is 0៛ — someone
+  //   paid it. An unpriced one is not free, it is not yet answered, and the whole
+  //   refactor is undone the moment a total says otherwise.
+  const owed = n => (n === 0 && asked()) ? 'thanked after' : riel(n);
 
   // Her numbers, summed over what is actually ordered, banded to five minutes.
   // ⛔ A RANGE, never a countdown — and nothing anywhere compares it to what really happened.
@@ -751,7 +764,7 @@
     const n = count + claimed.length;
     document.getElementById('menufoot').hidden = !n;
     document.getElementById('cartLabel').textContent = `Start an order · ${n} item${n>1?'s':''}`;
-    document.getElementById('cartTotal').textContent = riel(goods());
+    document.getElementById('cartTotal').textContent = owed(goods());
   }
 
   function row(m){
@@ -765,7 +778,11 @@
           <span class="mono" style="font-size:.68rem;color:var(--ink-faint);margin-left:7px">~${m.prep} min</span></p>
       </div>
       <div style="text-align:right;display:flex;flex-direction:column;align-items:flex-end;gap:6px">
-        <span class="mono" style="font-weight:500;font-size:.9rem">${riel(m.price)}</span>
+        ${ m.price === null
+             ? `<span style="font-size:.8rem;color:var(--accent-soft);font-weight:600;line-height:1.25">
+                  Thank after<span style="display:block;font-size:.68rem;color:var(--ink-faint);
+                  font-weight:400">you decide, once you have it</span></span>`
+             : `<span class="mono" style="font-weight:500;font-size:.9rem">${riel(m.price)}</span>` }
         ${ m.out ? `<span style="font-size:.74rem;color:var(--ink-faint)">Sold out today</span>`
            : n ? `<div class="qty"><button onclick="bump('${m.id}',-1)" aria-label="One fewer">−</button>
                  <b class="mono" style="min-width:14px;text-align:center">${n}</b>
@@ -827,7 +844,12 @@
     document.getElementById('addrBlock').hidden = fulfil!=='delivery';
     document.getElementById('giftBlock').hidden = fulfil!=='gift';
     document.getElementById('sendLbl').textContent = prepaid() ? 'Pay and send the order' : 'Send the order';
-    document.getElementById('sendHint').textContent = total()===0
+    // ⛔ TWO WAYS TO OWE NOTHING, AND THEY ARE OPPOSITES: a gift was already paid
+    //   for; a B-ask has not been priced yet. Saying "already paid" over a B-ask
+    //   would close a question the whole design leaves open.
+    document.getElementById('sendHint').textContent = total()===0 && asked()
+      ? 'Nothing is charged now, and nothing is owed. She will ask once you have it.'
+      : total()===0
       ? 'Nothing to pay — it was already paid for.'
       : fulfil==='pickup'
       ? `Nothing is charged now — ${payLabel(pay)} when she hands it to you.`
@@ -843,7 +865,10 @@
              <span style="font-size:.92rem">${name(m)} <span style="color:var(--ink-faint)">× ${cart[m.id]}</span></span>
              ${ m.km ? `<span class="km" style="display:block;font-size:.78rem;color:var(--ink-faint)">${m.km}</span>` : '' }
            </span>
-         </span><span class="mono" style="font-size:.88rem">${riel(m.price*cart[m.id])}</span></div>`).join('');
+         </span>${ m.price === null
+             ? `<span class="mono" style="font-size:.72rem;color:var(--accent-soft);background:var(--accent-wash);
+                  border-radius:var(--r-pill);padding:3px 9px">thank after</span>`
+             : `<span class="mono" style="font-size:.88rem">${riel(m.price*cart[m.id])}</span>` }</div>`).join('');
     const fee = fulfil==='delivery'
       ? `<div class="row" style="padding:5px 0"><span style="font-size:.92rem;color:var(--ink-dim)">Delivery</span>
            <span class="mono" style="font-size:.88rem;color:var(--ink-dim)">${riel(FEE)}</span></div>` : '';
@@ -860,8 +885,8 @@
     }).join('');
     document.getElementById('cartLines').innerHTML = rows + giftLine + fee +
       `<div class="row" style="padding-top:9px;margin-top:5px;border-top:1px solid var(--line);font-weight:600">
-         <span>Total</span><span class="mono">${riel(total())}</span></div>`;
-    document.getElementById('cartTotal2').textContent = riel(total());
+         <span>Total</span><span class="mono">${owed(total())}</span></div>`;
+    document.getElementById('cartTotal2').textContent = owed(total());
 
     // nothing owed, nothing to choose
     document.getElementById('payBlock').hidden = total() === 0;
@@ -1121,7 +1146,8 @@
             <span style="min-width:0">
               <b style="display:block;font-size:.95rem;font-weight:600">${name(m)}</b>
               ${ m.km ? `<span class="km" style="display:block;font-size:.78rem;color:var(--ink-faint)">${m.km}</span>` : '' }
-              <span class="mono" style="font-size:.8rem;color:var(--ink-dim)">${riel(m.price)}</span>
+              <span class="mono" style="font-size:.8rem;color:var(--ink-dim)">${
+                m.price === null ? 'No fixed price · thanked after' : riel(m.price)}</span>
             </span></span>
           <button class="toggle" aria-pressed="${!m.out}" onclick="toggleOut('${m.id}')"
             aria-label="${m.en} available today"><i></i></button>
@@ -1278,8 +1304,8 @@
     lastChain = order.usedChain || null;
     document.getElementById('doneName').textContent = order.who + ' has it';
     document.getElementById('doneWhy').textContent =
-      'You carried coffee, not money. Kanghna owes you 1,500៛, and HeartBank® takes nothing from any of it.';
-    order=null; stage=0; cart={}; tip=1000;
+      'The rider carried coffee, not money — Kanghna settles with him directly, and HeartBank® takes nothing from any of it.';
+    order=null; stage=0; cart={}; tip=0;
     drawMenu(); drawQueue(); drawDrive(); drawThanks(); go('s-done');
   }
   // The ask lives here, after the hand-over. `tip` is only ever set on this screen.
@@ -1295,7 +1321,8 @@
     const m = (o.lines && o.lines[0]) || MENU[0];
     document.getElementById('thankArt').innerHTML = svg(m.art);
     document.getElementById('thankHead').textContent =
-      o.lines && o.lines.length > 1 ? 'Your order.' : `Your ${name(m).replace(/ · /,' ')}.`;
+      o.lines && o.lines.length > 1 ? 'Your order.'
+      : m.head || `Your ${name(m).replace(/ · /,' ')}.`;
     // ⛔ WONDER, NOT INDICTMENT: name what she DID, never what she lacks or is owed.
     document.getElementById('thankWho').textContent = o.fulfil === 'delivery'
       ? 'Kanghna made it and someone rode it across town to you.'
@@ -1305,9 +1332,19 @@
       `<button class="amt" aria-pressed="${t===tip}" onclick="setThank(${t})">
          <b>${riel(t)}</b></button>`).join('');
 
+    // ⛔ TWO ORDERS, TWO TRUE SENTENCES. Never let the priced copy run over a B-ask.
+    const bask = (o.lines || []).some(l => l.price === null);
+    document.getElementById('thankEyebrow').textContent = bask
+      ? 'What was it worth to you?'
+      : 'Say thank you, if you want to';
+    document.getElementById('thankWhyLate').textContent = bask
+      ? 'This one was never priced. You had it first so that what you give is an answer, not a fee.'
+      : 'You already paid for the coffee. Asking before you had it would have made this part of the price.';
+
     document.getElementById('thankNote').textContent = tip
       ? `Miss Aquarius℠ suggests ${riel(1000)} — she says the beans are Kâmpôt-roasted and the morning line is one person.`
-      : 'Nothing is owed. The bill is settled and this is a separate thing.';
+      : bask ? 'Nothing is owed either way. She poured it before there was any question of money.'
+             : 'Nothing is owed. The bill is settled and this is a separate thing.';
 
     // ⛔ Declining is never styled as refusal, and the send is not the only way out.
     document.getElementById('thankSend').hidden = !tip;
@@ -1354,11 +1391,11 @@
     document.getElementById('doneWhy').textContent = gift
       ? 'Paid first — the one exception on this shop, because there is nobody standing there to hand it to.'
       : 'The coffee was theirs before the money was yours. That is the whole difference.';
-    order=null; stage=0; cart={}; tip=1000;
+    order=null; stage=0; cart={}; tip=0;
     drawMenu(); drawQueue(); drawDrive(); drawThanks(); go('s-done');
   }
   function reset(){
-    order=null; stage=0; cart={}; tip=1000; fulfil='pickup'; pay='khqr';
+    order=null; stage=0; cart={}; tip=0; fulfil='pickup'; pay='khqr';
     claimed=[]; claimOpen=false; claimError=''; thanked=[]; lastChain=null;
     ['d2','d3'].forEach(i=>document.getElementById(i).classList.remove('on'));
     document.getElementById('l2').classList.remove('on');
@@ -1367,7 +1404,10 @@
     setRole('cust'); go('s-menu');
   }
 
-  const CUST=['s-menu','s-cart','s-placed'], OWN=['s-queue','s-settle','s-shop','s-people'];
+  // ⛔ 's-thank' IS A CUSTOMER SCREEN. It was in neither list, so it inherited the
+  //   role that reached it — the OWNER's, from settle-up. Kanghna was being shown a
+  //   request addressed to the person standing in front of her.
+  const CUST=['s-menu','s-cart','s-placed','s-thank'], OWN=['s-queue','s-settle','s-shop','s-people'];
   const TABS = {'s-queue':'tOrders','s-settle':'tOrders','s-shop':'tShop','s-people':'tPeople'};
   function go(id){
     const from = document.querySelector('.screen.on');
