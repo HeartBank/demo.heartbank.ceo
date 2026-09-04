@@ -116,6 +116,12 @@ the styles inside `<helmet><style>` are ordinary CSS.
 
 Design decisions here are load-bearing, not decorative:
 
+- ⭐⭐ **THE ASK COMES AFTER THE GOODS.** A B-Tag is not a zero price: the item costs what it
+  costs, and the thank is asked **once the coffee is in your hand and the bill is settled**. That
+  ordering is the whole difference from every other flow, which asks while you are still waiting
+  and the screen stands between you and what you came for. **Before the goods a tip is part of the
+  price; after them nothing is owed and anything given is a gift.** ⛔ Never move it earlier, never
+  pre-select an amount, never style declining as refusal.
 - **Goods first, payment after** — the Cambodian order. Gift codes are the paid-up-front exception,
   because there is nobody standing there to hand it to.
 - **Checking in is how you take your place in the line** — two queues, arrival order.

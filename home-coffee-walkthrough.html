@@ -172,6 +172,17 @@
          min-height:54px;display:flex;align-items:center;background:var(--bg);
          font-size:1.02rem;font-weight:500;width:100%;color:var(--ink)}
   /* the gift page — the one screen a stranger opens cold */
+  .thankwrap{background:linear-gradient(180deg,var(--accent-wash),transparent 62%);
+             padding:34px 22px 24px;text-align:center;flex:1;
+             display:flex;flex-direction:column;align-items:center}
+  .thankart{width:104px;height:104px;border-radius:50%;overflow:hidden;flex:none;
+            box-shadow:0 10px 30px rgba(20,16,30,.14);margin-bottom:18px}
+  .amounts{display:flex;gap:8px;width:100%;max-width:330px}
+  .amt{flex:1;border:1px solid var(--line-strong);border-radius:var(--r-control);
+       min-height:62px;display:flex;flex-direction:column;align-items:center;
+       justify-content:center;gap:2px;transition:border-color .14s,background .14s}
+  .amt[aria-pressed="true"]{border:2px solid var(--accent);background:var(--accent-wash)}
+  .amt b{font-family:var(--font-mono);font-size:.98rem;font-weight:500}
   .giftwrap{background:linear-gradient(180deg,var(--accent-wash),transparent 60%);
             padding:34px 22px 26px;text-align:center;flex:1;
             display:flex;flex-direction:column;align-items:center;gap:0}
@@ -305,17 +316,7 @@
         <div class="bar"><button class="back" onclick="go('s-menu')" aria-label="Back">←</button><h2>Your order</h2></div>
         <div class="pad">
           <div class="card" id="cartLines"></div>
-          <div class="card" style="border-color:var(--accent-edge);background:var(--accent-wash)">
-            <div class="row" style="justify-content:flex-start;gap:8px;margin-bottom:8px">
-              <svg viewBox="0 0 24 24" width="15" height="15" style="color:var(--accent-soft)"><path fill="currentColor" d="M3.9743 20.0257L3.8824 18.0670C3.5430 11.1232 3.3167 6.5411 5.9896 3.8683C8.1675 1.6904 11.5899 1.6904 13.7678 3.8683C14.9981 5.0986 15.6062 6.8523 15.4719 8.5281C17.1477 8.3938 18.9014 9.0019 20.1317 10.2322C22.3096 12.4101 22.3096 15.8325 20.1317 18.0104C17.4589 20.6833 12.8768 20.4570 5.9260 20.1247L3.9743 20.0257Z"/></svg>
-              <b style="font-size:.95rem">Add a thank you</b>
-            </div>
-            <p style="margin:0 0 11px;font-size:.84rem;color:var(--ink-dim);line-height:1.5">
-              Miss Aquarius℠ suggests <b style="color:var(--ink)">1,000៛</b> — the beans are roasted
-              in Kâmpôt and she serves the morning line alone.
-            </p>
-            <div class="chips" id="tips"></div>
-          </div>
+          
           <div>
             <p class="lbl">Been given one?</p>
             <div id="claimRow"></div>
@@ -513,6 +514,42 @@
         <div id="driveBody"></div>
       </section>
 
+      <!-- ============ THE ASK, AFTER THE FACT ============ -->
+      <!-- ⛔ This screen exists AFTER the goods are in the customer's hand and the
+           bill is settled. That ordering is the whole doctrine: before the goods a
+           tip is part of the price and the screen is standing in the way; after
+           them nothing is owed and anything given is a gift. Never move it earlier,
+           never pre-select an amount, never render declining as a refusal. -->
+      <section class="screen" id="s-thank">
+        <div class="thankwrap">
+          <div class="thankart" id="thankArt"></div>
+          <p style="margin:0;font-family:var(--font-display);font-size:1.72rem;font-weight:600;
+                    letter-spacing:-.02em;line-height:1.15" id="thankHead">Your coffee.</p>
+          <p style="margin:9px 0 0;font-size:.95rem;color:var(--ink-dim);line-height:1.6;max-width:28ch"
+             id="thankWho">Kanghna roasted the beans in Kâmpôt and worked the morning line on her own.</p>
+
+          <p style="margin:24px 0 10px;font-family:var(--font-mono);font-size:.66rem;
+                    letter-spacing:.07em;text-transform:uppercase;color:var(--accent-soft)">
+            <span class="btag" style="font-size:.62rem">B-Tag</span>
+            <span style="margin-left:8px">Say thank you, if you want to</span></p>
+
+          <div class="amounts" id="thankAmounts"></div>
+
+          <p style="margin:14px 0 0;font-size:.86rem;color:var(--ink-dim);line-height:1.6;max-width:31ch"
+             id="thankNote"></p>
+
+          <p style="margin:18px 0 0;font-size:.79rem;color:var(--ink-faint);line-height:1.6;max-width:32ch">
+            You already paid for the coffee. Asking before you had it would have made
+            this part of the price.
+          </p>
+        </div>
+        <div class="foot">
+          <button class="cta" id="thankSend" onclick="sendThank()">
+            <span id="thankSendLabel">Send it</span><span class="mono" id="thankSendAmt"></span></button>
+          <button class="cta ghost center" onclick="skipThank()" id="thankSkip">That's all &mdash; thank you</button>
+        </div>
+      </section>
+
       <section class="screen" id="s-done">
         <div class="pad" style="padding-top:52px;align-items:center;text-align:center;gap:10px">
           <div style="width:74px;height:74px;border-radius:50%;background:var(--accent-wash);
@@ -611,7 +648,7 @@
     {id:'birdsnest', en:"Bird's Nest Snow Dessert", km:'បង្អែមព្រឹលទឹកមាត់ត្រចៀកកាំ', price:5000, cat:'bv', prep:4, out:false,
      art:'<rect width="48" height="48" fill="#f2f0e6"/><path d="M13 22h22l-3 14a4 4 0 0 1-4 3h-8a4 4 0 0 1-4-3z" fill="#f7f4ea"/><path d="M13 22c1.5-6 5.5-9 11-9s9.5 3 11 9z" fill="#fdfcf7"/><circle cx="19" cy="28" r="1.8" fill="#dcd3bd"/><circle cx="26" cy="31" r="1.6" fill="#dcd3bd"/><circle cx="30" cy="26" r="1.4" fill="#dcd3bd"/>'}
   ];
-  const TIPS = [500, 1000, 2000];
+  const THANKS = [500, 1000, 2000];   // offered AFTER, never before
   const STAFF  = [{n:'Reach', km:'រាជ', r:'Moves orders forward — nothing else'}];
   const RIDERS = [{n:'Vichea', km:'វិជ្ជា', ok:true}, {n:'Sokha', km:'សុខា', ok:false}];
   const riel = n => n.toLocaleString('en-US') + '៛';
@@ -620,7 +657,7 @@
   const name = m => m.en + (m.size ? ' · ' + m.size : '');
   const svg = a => '<svg viewBox="0 0 48 48" style="width:100%;height:100%;display:block">' + a + '</svg>';
 
-  let role='cust', cart={}, tip=1000, fulfil='pickup', order=null, stage=0;
+  let role='cust', cart={}, tip=0, fulfil='pickup', order=null, stage=0;
   // stage — pickup: 0 queued · 1 ready(settle) | delivery: 0 queued · 1 ready · 2 riding · 3 delivered
   const FEE = 1000;
   // Shop-level settings the owner controls. Not every shop delivers.
@@ -674,7 +711,10 @@
   let claimOpen = false, claimError = '';
 
   function goods(){ return MENU.reduce((s,m)=> s + (cart[m.id]||0) * m.price, 0); }
-  function total(){ return goods() + tip + (fulfil==='delivery' ? FEE : 0); }
+  // ⛔ THE THANK IS NOT IN THE TOTAL. Asked before the goods, a tip is part of the
+  //   price and the screen stands between a person and their coffee. This total is
+  //   the exchange, and only the exchange; the gift comes after, on its own screen.
+  function total(){ return goods() + (fulfil==='delivery' ? FEE : 0); }
   const prepaid = () => fulfil !== 'pickup';
 
   // Her numbers, summed over what is actually ordered, banded to five minutes.
@@ -821,11 +861,6 @@
     document.getElementById('cartLines').innerHTML = rows + giftLine + fee +
       `<div class="row" style="padding-top:9px;margin-top:5px;border-top:1px solid var(--line);font-weight:600">
          <span>Total</span><span class="mono">${riel(total())}</span></div>`;
-    document.getElementById('tips').innerHTML = TIPS.map(t =>
-      `<button class="chip" style="text-align:center;min-height:46px;display:flex;align-items:center;justify-content:center"
-        aria-pressed="${t===tip}" onclick="setTip(${t})"><b class="mono">${riel(t)}</b></button>`).join('') +
-      `<button class="chip" style="text-align:center;min-height:46px;display:flex;align-items:center;justify-content:center"
-        aria-pressed="${tip===0}" onclick="setTip(0)"><b style="font-weight:500;color:var(--ink-dim)">Skip</b></button>`;
     document.getElementById('cartTotal2').textContent = riel(total());
 
     // nothing owed, nothing to choose
@@ -884,7 +919,6 @@
               style="color:var(--accent-soft)">See a gift page</a>
          </p>`;
   }
-  function setTip(t){ tip=t; drawCart(); }
   function setPay(p){ pay=p; drawCart(); }
 
   function place(){
@@ -1239,7 +1273,8 @@
   function toRider(){ stage=2; drawQueue(); drawDrive(); setRole('drv'); }
   function accept(){ stage=3; drawDrive(); }
   function pass(){ drawDrive(); }
-  function delivered(){
+  function delivered(){ toThank(); }
+  function finishDelivery(sent){
     lastChain = order.usedChain || null;
     document.getElementById('doneName').textContent = order.who + ' has it';
     document.getElementById('doneWhy').textContent =
@@ -1247,6 +1282,48 @@
     order=null; stage=0; cart={}; tip=1000;
     drawMenu(); drawQueue(); drawDrive(); drawThanks(); go('s-done');
   }
+  // The ask lives here, after the hand-over. `tip` is only ever set on this screen.
+  let thankOrder = null;
+  function toThank(){
+    thankOrder = order; tip = 0;
+    drawThank(); go('s-thank');
+  }
+  function setThank(n){ tip = n; drawThank(); }
+
+  function drawThank(){
+    const o = thankOrder; if(!o) return;
+    const m = (o.lines && o.lines[0]) || MENU[0];
+    document.getElementById('thankArt').innerHTML = svg(m.art);
+    document.getElementById('thankHead').textContent =
+      o.lines && o.lines.length > 1 ? 'Your order.' : `Your ${name(m).replace(/ · /,' ')}.`;
+    // ⛔ WONDER, NOT INDICTMENT: name what she DID, never what she lacks or is owed.
+    document.getElementById('thankWho').textContent = o.fulfil === 'delivery'
+      ? 'Kanghna made it and someone rode it across town to you.'
+      : 'Kanghna roasted the beans in Kâmpôt and worked the morning line on her own.';
+
+    document.getElementById('thankAmounts').innerHTML = THANKS.map(t =>
+      `<button class="amt" aria-pressed="${t===tip}" onclick="setThank(${t})">
+         <b>${riel(t)}</b></button>`).join('');
+
+    document.getElementById('thankNote').textContent = tip
+      ? `Miss Aquarius℠ suggests ${riel(1000)} — she says the beans are Kâmpôt-roasted and the morning line is one person.`
+      : 'Nothing is owed. The bill is settled and this is a separate thing.';
+
+    // ⛔ Declining is never styled as refusal, and the send is not the only way out.
+    document.getElementById('thankSend').hidden = !tip;
+    document.getElementById('thankSendAmt').textContent = tip ? riel(tip) : '';
+    document.getElementById('thankSkip').textContent = tip
+      ? 'Not this time' : "That's all — thank you";
+  }
+
+  function sendThank(){ endOrder(true); }
+  function skipThank(){ tip = 0; endOrder(false); }
+  function endOrder(sent){
+    thankSent = sent;
+    (thankOrder && thankOrder.fulfil === 'delivery' ? finishDelivery : finishOrder)(sent);
+  }
+  let thankSent = false;
+
   // ⛔ Told only on REDEMPTION — never that a code is still unused. An unused
   //   gift reported back to its giver is an absence rendered, and a debt implied.
   function drawThanks(){
@@ -1269,7 +1346,8 @@
   }
   function sayThanks(k){ if(!thanked.includes(k)) thanked.push(k); drawThanks(); drawGiftThanks(); }
 
-  function done(){
+  function done(){ toThank(); }          // the hand-over leads to the ask, not the end
+  function finishOrder(sent){
     lastChain = order.usedChain || null;
     const gift = order.fulfil==='gift';
     document.getElementById('doneName').textContent = order.who + (gift ? ' has a coffee waiting' : ' is served');
