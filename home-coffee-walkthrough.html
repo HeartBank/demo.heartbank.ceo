@@ -320,6 +320,11 @@
             <p class="lbl">Been given one?</p>
             <div id="claimRow"></div>
           </div>
+          <div id="payBlock">
+            <p class="lbl">How you'll pay</p>
+            <div class="chips" id="pays" style="flex-wrap:wrap"></div>
+            <p class="hint" id="payNote" style="text-align:left;margin-top:9px"></p>
+          </div>
           <div>
             <p class="lbl">How you'll get it</p>
             <div class="chips" id="fulfil"></div>
@@ -620,6 +625,18 @@
   const FEE = 1000;
   // Shop-level settings the owner controls. Not every shop delivers.
   const shop = { delivery: true };
+  let pay = 'khqr';
+  // ⛔ F3QR is the ONLY one of these that is not a payment rail. It moves nothing
+  // between households: it is the family's own ledger, read by the family's own
+  // shop. That is why it may never be offered to a customer outside the bank —
+  // Kiitos crossing households would BE money, which Phase 1 is built not to be.
+  const PAYS = [
+    {id:'cash', t:'Cash',  s:'at the counter'},
+    {id:'khqr', t:'KHQR',  s:'bank to bank'},
+    {id:'h3qr', t:'H3QR',  s:'Personal Wallet℠'},
+    {id:'f3qr', t:'F3QR',  s:'Personal Account℠'}
+  ];
+  const payLabel = id => (PAYS.find(p=>p.id===id)||PAYS[1]).t;
   // A released gift code. ⛔ It carries an ITEM, never an amount — the moment it
   // holds riel it is a prepaid monetary instrument and a launch blocker.
   // ⚠️ SEEDED, deliberately. Gift codes exist in the world before this page is
@@ -790,6 +807,20 @@
       `<button class="chip" style="text-align:center;min-height:46px;display:flex;align-items:center;justify-content:center"
         aria-pressed="${tip===0}" onclick="setTip(0)"><b style="font-weight:500;color:var(--ink-dim)">Skip</b></button>`;
     document.getElementById('cartTotal2').textContent = riel(total());
+
+    // nothing owed, nothing to choose
+    document.getElementById('payBlock').hidden = total() === 0;
+    document.getElementById('pays').innerHTML = PAYS.map(p =>
+      `<button class="chip" style="flex:1 1 46%;min-height:56px" aria-pressed="${p.id===pay}"
+        onclick="setPay('${p.id}')"><b>${p.t}</b><span>${p.s}</span></button>`).join('');
+    document.getElementById('payNote').textContent =
+      pay === 'f3qr'
+        ? 'Your own family bank. Only for people in #kampuchea — Kanghna\'s shop can see her family\'s accounts and no one else\'s.'
+      : pay === 'h3qr'
+        ? 'Straight into her Personal Wallet℠. Never her Re-Tip Fund℠ — what you owe is not a gift.'
+      : pay === 'cash'
+        ? 'Hand it over when she hands the order over.'
+        : 'Bank to bank, directly to Kanghna. HeartBank® never holds it.';
     document.getElementById('claimRow').innerHTML = claimHtml();
     document.getElementById('claimRowTop').innerHTML = claimHtml(true);
   }
@@ -834,6 +865,7 @@
          </p>`;
   }
   function setTip(t){ tip=t; drawCart(); }
+  function setPay(p){ pay=p; drawCart(); }
 
   function place(){
     const who = (fulfil==='gift'
@@ -844,7 +876,7 @@
       const m = MENU.find(x => x.id === c.itemId);
       return m ? {...m, n:1, gift:true} : null;
     }).filter(Boolean);
-    order = { who, fulfil, lines: MENU.filter(m=>cart[m.id]).map(m=>({...m,n:cart[m.id]})).concat(giftLines),
+    order = { who, fulfil, pay, lines: MENU.filter(m=>cart[m.id]).map(m=>({...m,n:cart[m.id]})).concat(giftLines),
               total: total(), tip, addr: document.getElementById('addr').value.trim(),
               code: '4172', gift: 'HC-7K2M' };
     stage = 0;
@@ -887,7 +919,9 @@
       return;
     }
     const way = order.fulfil==='gift' ? 'Gift code · paid'
-              : order.fulfil==='delivery' ? 'Delivery · paid' : 'KHQR at pickup';
+              : order.fulfil==='delivery' ? `Delivery · paid by ${payLabel(order.pay)}`
+              : order.total===0 ? 'Nothing to pay'
+              : `${payLabel(order.pay)} at pickup`;
     const action = stage===0
       ? `<button class="cta center" onclick="advance()">${order.fulfil==='gift'?'Release the code':'Start making it'}</button>`
       : order.fulfil==='delivery'
@@ -1015,6 +1049,16 @@
         Your minutes are what tells a customer <b style="color:var(--ink-dim)">about 10–15 min</b>.
         Nothing here ever compares that to how long it really took.
       </p>
+
+      <p class="lbl" style="margin:6px 0 0">Paid with your family bank</p>
+      <div class="card">
+        <p style="margin:0 0 6px;font-size:.9rem;line-height:1.55">
+          <b>F3QR</b> lets Reach spend his <b>Personal Account℠</b> here — what he has earned
+          being kind at home, spent at his mother's shop.</p>
+        <p style="margin:0;font-size:.82rem;color:var(--ink-dim);line-height:1.55">
+          ⛔ It is <b>not takings</b>. No money came in: you gave your own child a drink and the
+          family ledger recorded it. It is listed apart from your sales for that reason.</p>
+      </div>
 
       <p class="lbl" style="margin:6px 0 0">How people get it</p>
       <div class="card">
@@ -1150,7 +1194,7 @@
     drawMenu(); drawQueue(); drawDrive(); go('s-done');
   }
   function reset(){
-    order=null; stage=0; cart={}; tip=1000; fulfil='pickup';
+    order=null; stage=0; cart={}; tip=1000; fulfil='pickup'; pay='khqr';
     claimed=[]; claimOpen=false; claimError='';
     ['d2','d3'].forEach(i=>document.getElementById(i).classList.remove('on'));
     document.getElementById('l2').classList.remove('on');
