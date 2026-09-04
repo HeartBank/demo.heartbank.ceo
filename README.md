@@ -14,11 +14,19 @@ quietly serves the older screens. ⭐ **Extract it first and diff against these 
 identical and 1 differing is what a clean re-seed looks like; anything else means someone saved in
 the GUI and you are about to discard their work.
 
-⚠️ **Not searchable, but fully shareable.** Every page carries `noindex,nofollow`; `robots.txt`
-**deliberately allows crawling**. ⛔ **Do not "tighten" it to `Disallow: /`** — that breaks link
-previews (Messenger, WhatsApp and Telegram crawlers respect robots.txt, so the card loses its title
-and image) *and* hides the `noindex` from the crawler that would obey it, which is how a disallowed
-page ends up indexed with no snippet. The reason is written into `robots.txt` itself.
+⚠️ **Not searchable, but fully shareable — and there is deliberately NO `robots.txt`.**
+⛔⛔ **Do not add one.** Its only possible effect is to *subtract* permission, and every failure mode
+here is expensive: a `Disallow` breaks link previews outright (Messenger, WhatsApp and Telegram
+crawlers all respect robots.txt, so the card loses its title and image), it *also* hides the page's
+own `noindex` from the crawler that would have obeyed it, and **Facebook caches the file per host
+for about a day** — so a wrong one costs 24 hours on the exact channel a demo travels through.
+⭐ Absence means allow, universally, with no parser to disagree with. **The sibling GitHub Pages
+site `brand.333.eco` has no robots.txt and its preview card built on the first attempt**, which is
+what settled it.
+
+**Search exclusion lives in the pages instead, by named crawler** — `googlebot`, `bingbot`, `slurp`,
+`yandex` each `noindex,nofollow`, and ⛔ **no blanket `<meta name="robots">`**, because that form
+addresses *every* robot and a preview crawler can read it as "do not process this page".
 
 **Link previews** come from `og.png` / `og-walkthrough.png`, rendered by `build-og.py` from the
 site's own tokens and fonts via headless Chrome — 1200×630, regenerate after a copy change.
