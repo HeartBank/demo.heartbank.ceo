@@ -471,13 +471,17 @@
             <p class="hint" style="margin-top:11px">Kanghna can scan it, or you can just read it out.</p>
           </div>
 
+          <!-- ⭐ A thank belongs to the GIVING, not the redeeming: you thank someone
+               when they hand you something, not when you finally drink it. -->
+          <div id="giftThanks" style="width:100%;max-width:330px;margin-top:16px;text-align:left"></div>
+
           <p style="margin:22px 0 0;font-size:.86rem;color:var(--ink-dim);line-height:1.6">
             <b style="color:var(--ink)">Home Coffee</b><br>Traeng Trayueng, by the high school</p>
           <p style="margin:20px 0 0;font-size:.76rem;color:var(--ink-faint)">
             Powered by Heart<svg viewBox="0 0 24 24" style="width:.86em;height:.86em;display:inline-block;vertical-align:-.13em;margin:0 -.08em 0 -.03em;color:var(--accent)"><path fill="currentColor" d="M3.9743 20.0257L3.8824 18.0670C3.5430 11.1232 3.3167 6.5411 5.9896 3.8683C8.1675 1.6904 11.5899 1.6904 13.7678 3.8683C14.9981 5.0986 15.6062 6.8523 15.4719 8.5281C17.1477 8.3938 18.9014 9.0019 20.1317 10.2322C22.3096 12.4101 22.3096 15.8325 20.1317 18.0104C17.4589 20.6833 12.8768 20.4570 5.9260 20.1247L3.9743 20.0257Z"/></svg>ank<sup style="font-size:.62em;top:-.5em;position:relative">&#174;</sup></p>
         </div>
         <div class="foot">
-          <button class="cta ghost center" onclick="go(role==='own'?'s-queue':'s-placed')">Back</button>
+          <button class="cta ghost center" onclick="go(giftBackTo)">Back</button>
         </div>
       </section>
 
@@ -642,6 +646,10 @@
   //   thanking a person you have not been told exists is not thanks, it is routing.
   // ⛔ Anonymity here is a gift of CREDIT, not privacy: it exists so the re-giver
   //   is the one who appears generous. Never render it as "unknown" or "hidden".
+  // ⭐ Founder 2026-09-04: anonymity reaches the RE-GIVER as well. A code can be
+  //   dropped to a recipient OR to a re-giver without either learning who paid —
+  //   e.g. attached to an anonymous re-thank on a B-Short℠. So `anon` is a property
+  //   of the CODE, not of one relationship, and it is never partially lifted.
   const CODES = [
     {code:'HC-7K2M', itemId:'americano',  from:'Thon',  via:null,    anon:false, to:'សុភា', redeemed:false},
     {code:'HC-3B9P', itemId:'birdsnest',  from:'Reach', via:null,    anon:false, to:'សុភា', redeemed:false},
@@ -654,6 +662,9 @@
            : (c.via ? {key:'from', label:c.from, sub:'who paid for it'} : null)
   ].filter(Boolean);
   let thanked = [], lastChain = null;   // survives order being cleared
+  // ⚠️ The gift page is reachable from the menu, the cart and the placed screen.
+  //    Guessing the origin from `role` sent people to a screen with no order on it.
+  let giftBackTo = 's-menu';
   let gift = CODES[0];  // the one THIS gift page was opened with
   let claimed = [];     // every code applied to the order in front of us
   let claimOpen = false, claimError = '';
@@ -975,6 +986,21 @@
     document.getElementById('giftItem').textContent = m.en;
     document.getElementById('giftCode2').textContent = gift.code;
     drawQr(gift.code);
+    drawGiftThanks();
+  }
+
+  function drawGiftThanks(){
+    const box = document.getElementById('giftThanks');
+    if(!gift){ box.innerHTML = ''; return; }
+    const people = thankable(gift).length ? thankable(gift)
+                 : [{key:'from', label:gift.from, sub:'who bought it for you'}];
+    box.innerHTML = people.map(p => `
+      <button class="chip" style="width:100%;text-align:left;margin-bottom:7px"
+        aria-pressed="${thanked.includes(p.key)}" onclick="sayThanks('${p.key}')">
+        <b>${thanked.includes(p.key) ? 'Thanked ' : 'Say thank you to '}${p.label}</b>
+        <span>${thanked.includes(p.key) ? 'They will see it' : p.sub}</span></button>`).join('')
+      + `<p class="hint" style="text-align:left;margin-top:2px">
+           You need not wait until you have drunk it.</p>`;
   }
 
   // ⚠️ A convenience, never the mechanism. If QRious did not load the code is
@@ -1217,7 +1243,7 @@
                   : 'A thank costs nothing and is the only thing that travels back.' }
       </p>`;
   }
-  function sayThanks(k){ if(!thanked.includes(k)) thanked.push(k); drawThanks(); }
+  function sayThanks(k){ if(!thanked.includes(k)) thanked.push(k); drawThanks(); drawGiftThanks(); }
 
   function done(){
     lastChain = order.usedChain || null;
@@ -1242,6 +1268,8 @@
   const CUST=['s-menu','s-cart','s-placed'], OWN=['s-queue','s-settle','s-shop','s-people'];
   const TABS = {'s-queue':'tOrders','s-settle':'tOrders','s-shop':'tShop','s-people':'tPeople'};
   function go(id){
+    const from = document.querySelector('.screen.on');
+    if(id === 's-gift' && from && from.id !== 's-gift') giftBackTo = from.id;
     document.querySelectorAll('.screen').forEach(s => s.classList.toggle('on', s.id===id));
     document.getElementById('scroll').scrollTop = 0;
     const r = CUST.includes(id) ? 'cust' : OWN.includes(id) ? 'own' : id==='s-drive' ? 'drv' : role;
