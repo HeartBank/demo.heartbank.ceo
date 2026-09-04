@@ -530,8 +530,8 @@
 
           <p style="margin:24px 0 10px;font-family:var(--font-mono);font-size:.66rem;
                     letter-spacing:.07em;text-transform:uppercase;color:var(--accent-soft)">
-            <span class="btag" style="font-size:.62rem">B-Tag</span>
-            <span style="margin-left:8px" id="thankEyebrow">Say thank you, if you want to</span></p>
+            <span class="btag" style="font-size:.62rem" id="thankBadge">B-Tag</span>
+            <span id="thankEyebrow">Say thank you, if you want to</span></p>
 
           <div class="amounts" id="thankAmounts"></div>
 
@@ -774,8 +774,9 @@
       <div style="min-width:0">
         <p style="margin:0;font-weight:600;font-size:.95rem;line-height:1.35">${m.en}</p>
         ${ m.km ? `<p class="km" style="margin:1px 0 0;font-size:.82rem;color:var(--ink-dim)">${m.km}</p>` : '' }
-        <p style="margin:5px 0 0"><span class="btag">B-Tag</span>
-          <span class="mono" style="font-size:.68rem;color:var(--ink-faint);margin-left:7px">~${m.prep} min</span></p>
+        <p style="margin:5px 0 0">${ m.price === null ? `<span class="btag">B-Tag</span>` : '' }
+          <span class="mono" style="font-size:.68rem;color:var(--ink-faint);${
+            m.price === null ? 'margin-left:7px' : ''}">~${m.prep} min</span></p>
       </div>
       <div style="text-align:right;display:flex;flex-direction:column;align-items:flex-end;gap:6px">
         ${ m.price === null
@@ -798,8 +799,7 @@
       <div class="thumb">${svg(sizes[0].art)}</div>
       <div style="min-width:0">
         <p style="margin:0;font-weight:600;font-size:.95rem">${sizes[0].en}</p>
-        <p style="margin:5px 0 9px"><span class="btag">B-Tag</span>
-          <span class="mono" style="font-size:.68rem;color:var(--ink-faint);margin-left:7px">~${sizes[0].prep}–${sizes[sizes.length-1].prep} min</span></p>
+        <p style="margin:5px 0 9px"><span class="mono" style="font-size:.68rem;color:var(--ink-faint)">~${sizes[0].prep}–${sizes[sizes.length-1].prep} min</span></p>
         <div style="display:flex;gap:5px">
           ${sizes.map(m => {
             const n = cart[m.id] || 0;
@@ -1334,6 +1334,8 @@
 
     // ⛔ TWO ORDERS, TWO TRUE SENTENCES. Never let the priced copy run over a B-ask.
     const bask = (o.lines || []).some(l => l.price === null);
+    document.getElementById('thankBadge').hidden = !bask;
+    document.getElementById('thankEyebrow').style.marginLeft = bask ? '8px' : '0';
     document.getElementById('thankEyebrow').textContent = bask
       ? 'What was it worth to you?'
       : 'Say thank you, if you want to';
