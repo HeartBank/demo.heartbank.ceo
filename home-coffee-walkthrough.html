@@ -474,6 +474,10 @@
           <!-- ⭐ A thank belongs to the GIVING, not the redeeming: you thank someone
                when they hand you something, not when you finally drink it. -->
           <div id="giftThanks" style="width:100%;max-width:330px;margin-top:16px;text-align:left"></div>
+          <!-- Each gift is its own link in reality. The walkthrough holds two, so
+               the chained/anonymous one is reachable by tapping rather than only
+               by editing state — which is how it was unreachable to begin with. -->
+          <div id="giftSwitch" style="width:100%;max-width:330px;margin-top:18px"></div>
 
           <p style="margin:22px 0 0;font-size:.86rem;color:var(--ink-dim);line-height:1.6">
             <b style="color:var(--ink)">Home Coffee</b><br>Traeng Trayueng, by the high school</p>
@@ -987,6 +991,26 @@
     document.getElementById('giftCode2').textContent = gift.code;
     drawQr(gift.code);
     drawGiftThanks();
+    drawGiftSwitch();
+  }
+
+  function drawGiftSwitch(){
+    const other = CODES.find(c => c !== gift && (!!c.via) !== (!!gift.via)) || CODES.find(c => c !== gift);
+    if(!other) return;
+    const label = other.via
+      ? `the one ${other.via} passed on`
+      : `the one ${other.from} sent straight to ${other.to}`;
+    document.getElementById('giftSwitch').innerHTML = `
+      <p class="hint" style="text-align:left;margin:0 0 7px">
+        Every gift is its own link. This walkthrough holds two.</p>
+      <button class="chip" style="width:100%;text-align:left" onclick="openGift('${other.code}')">
+        <b>Open ${label}</b>
+        <span>${other.anon ? 'the one whose payer is not named' : 'a plain gift, no one in between'}</span>
+      </button>`;
+  }
+  function openGift(code){
+    const c = CODES.find(x => x.code === code); if(!c) return;
+    gift = c; thanked = []; drawGift();
   }
 
   function drawGiftThanks(){
