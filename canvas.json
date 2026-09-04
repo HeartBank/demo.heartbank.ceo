@@ -320,6 +320,30 @@
       "w": 460,
       "text": "heartbank.ceo — the root.\n\nWho HeartBank is → who's near you → open your own. The whole path a shop owner walks before they have a shop.",
       "page": "page-1"
+    },
+    {
+      "id": "note-1",
+      "x": 13,
+      "y": 1420,
+      "w": 240,
+      "text": "height need to be longer vertically",
+      "page": "page-2"
+    },
+    {
+      "id": "note-2",
+      "x": 1065,
+      "y": 2881,
+      "w": 240,
+      "text": "add F3QR as payment method",
+      "page": "page-3"
+    },
+    {
+      "id": "note-3",
+      "x": 148,
+      "y": 948,
+      "w": 240,
+      "text": "don't show the price, just gifted?",
+      "page": "page-3"
     }
   ],
   "launch": {
