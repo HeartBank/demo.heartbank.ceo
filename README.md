@@ -60,6 +60,11 @@ then `python3 build-index.py`.
 
 `home-coffee-walkthrough.html` — built for Kanghna, who runs Home Coffee.
 
+⭐ **The menu is HERS**, given 2026-09-03: 20 items in three categories, at her prices. ⛔ **Where she
+wrote English, it says English** — most items have no Khmer name yet, and none was invented to fill
+the gap. Her Khmer appears exactly where she wrote it (the two category headers, and four items).
+⚠️ **Preparation minutes are the only invented field**, placeholders for her to set.
+
 ⭐ **Unlike the artboards, this one just works.** Open it — no build step, no placeholder script.
 **Three roles share one order**: an order placed as **អតិថិជន** appears in the **អ្នក** queue, and a
 delivery then appears to **អ្នកដឹក**. The choice of *pickup · delivery · gift code* changes what
