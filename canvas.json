@@ -305,17 +305,40 @@
       "page": "page-2"
     },
     {
+      "id": "note-1",
+      "x": 530,
+      "y": 1310,
+      "w": 240,
+      "text": "cut off",
+      "page": "page-2"
+    },
+    {
+      "id": "note-2",
+      "x": 1522,
+      "y": 970,
+      "w": 240,
+      "text": "missing F3QR",
+      "page": "page-2"
+    },
+    {
       "id": "note-root",
       "x": 0,
       "y": -180,
       "w": 460,
       "text": "heartbank.ceo — the root.\n\nWho HeartBank is → who's near you → open your own. The whole path a shop owner walks before they have a shop.",
       "page": "page-1"
+    },
+    {
+      "id": "note-3",
+      "x": 2170,
+      "y": 714,
+      "w": 240,
+      "text": "missing F3QR"
     }
   ],
   "launch": {
     "view": "canvas",
-    "page": "page-3"
+    "page": "page-5"
   },
   "pages": [
     {

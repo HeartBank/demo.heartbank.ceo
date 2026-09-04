@@ -352,16 +352,7 @@
               A coffee, not an amount — and paid now, because there is nothing to hand you first.
             </p>
           </div>
-          <div>
-            <p class="lbl" id="payLbl">Pay when you collect</p>
-            <div class="card" style="border:2px solid var(--accent)">
-              <div class="row" style="justify-content:flex-start;gap:12px">
-                <div style="width:34px;height:34px;border-radius:8px;background:var(--ink);flex:none;display:flex;align-items:center;justify-content:center;color:var(--bg);font-family:var(--font-mono);font-size:.58rem">QR</div>
-                <div><b style="font-size:.93rem;display:block">KHQR</b>
-                  <span style="font-size:.78rem;color:var(--ink-dim)">Straight to her bank</span></div>
-              </div>
-            </div>
-          </div>
+          
         </div>
         <div class="foot">
           <button class="cta" onclick="place()"><span id="sendLbl">Send the order</span><span class="mono" id="cartTotal2">0៛</span></button>
@@ -765,12 +756,11 @@
     document.getElementById('whoBlock').hidden  = fulfil==='gift';
     document.getElementById('addrBlock').hidden = fulfil!=='delivery';
     document.getElementById('giftBlock').hidden = fulfil!=='gift';
-    document.getElementById('payLbl').textContent = prepaid() ? 'Pay now' : 'Pay when you collect';
     document.getElementById('sendLbl').textContent = prepaid() ? 'Pay and send the order' : 'Send the order';
     document.getElementById('sendHint').textContent = total()===0
       ? 'Nothing to pay — it was already paid for.'
       : fulfil==='pickup'
-      ? 'Nothing is charged now. You pay when she hands it to you.'
+      ? `Nothing is charged now — ${payLabel(pay)} when she hands it to you.`
       : fulfil==='delivery'
         ? 'Paid before anyone rides out, so whoever brings it carries no money.'
         : 'Paid up front — there is nothing to hand you first.';
