@@ -517,6 +517,7 @@
           <p id="doneWhy" style="margin:0;font-size:.92rem;color:var(--ink-dim);line-height:1.55;max-width:32ch">
             The coffee was theirs before the money was yours. That is the whole difference.
           </p>
+          <div id="thanksBox" hidden style="width:100%;text-align:left"></div>
         </div>
         <div class="foot">
           <button class="cta center" onclick="reset()">Run it again</button>
@@ -635,10 +636,24 @@
   // no-op in the exact state every visitor begins in.
   // ⭐ TWO of them, because a person can be given more than one and refusing the
   // second would be arbitrary — three paper vouchers hand over as easily as one.
+  // ⭐ A code carries a CHAIN, not just a giver. `from` paid for it; `via` chose
+  //   who receives it. When `anon` is set the NAME is withheld and the CHAIN is
+  //   not — the recipient is told someone asked Reach to pass it on, because
+  //   thanking a person you have not been told exists is not thanks, it is routing.
+  // ⛔ Anonymity here is a gift of CREDIT, not privacy: it exists so the re-giver
+  //   is the one who appears generous. Never render it as "unknown" or "hidden".
   const CODES = [
-    {code:'HC-7K2M', itemId:'americano', from:'Thon',  to:'សុភា', redeemed:false},
-    {code:'HC-3B9P', itemId:'birdsnest', from:'Reach', to:'សុភា', redeemed:false}
+    {code:'HC-7K2M', itemId:'americano',  from:'Thon',  via:null,    anon:false, to:'សុភា', redeemed:false},
+    {code:'HC-3B9P', itemId:'birdsnest',  from:'Reach', via:null,    anon:false, to:'សុភា', redeemed:false},
+    {code:'HC-9F4T', itemId:'greenmilk',  from:'Thon',  via:'Reach', anon:true,  to:null,   redeemed:false}
   ];
+  // who a thank can reach: the re-giver by name, the payer even when unnamed
+  const thankable = c => [
+    c.via ? {key:'via',  label:c.via,                     sub:'who gave it to you'} : null,
+    c.anon ? {key:'from', label:'Whoever paid for it',    sub:'they chose not to be named'}
+           : (c.via ? {key:'from', label:c.from, sub:'who paid for it'} : null)
+  ].filter(Boolean);
+  let thanked = [], lastChain = null;   // survives order being cleared
   let gift = CODES[0];  // the one THIS gift page was opened with
   let claimed = [];     // every code applied to the order in front of us
   let claimOpen = false, claimError = '';
@@ -866,7 +881,8 @@
       const m = MENU.find(x => x.id === c.itemId);
       return m ? {...m, n:1, gift:true} : null;
     }).filter(Boolean);
-    order = { who, fulfil, pay, lines: MENU.filter(m=>cart[m.id]).map(m=>({...m,n:cart[m.id]})).concat(giftLines),
+    const chained = claimed.find(c => c.via);
+    order = { who, fulfil, pay, usedChain: chained || null, lines: MENU.filter(m=>cart[m.id]).map(m=>({...m,n:cart[m.id]})).concat(giftLines),
               total: total(), tip, addr: document.getElementById('addr').value.trim(),
               code: '4172', gift: 'HC-7K2M' };
     stage = 0;
@@ -947,9 +963,15 @@
     if(!gift) return;
     const m = MENU.find(x => x.id === gift.itemId) || MENU[0];
     document.getElementById('giftArt').innerHTML = svg(m.art);
-    document.getElementById('giftTo2').textContent = gift.to;
-    document.getElementById('giftFrom').textContent =
-      `${gift.from} bought you something at Home Coffee.`;
+    document.getElementById('giftTo2').textContent = gift.to || 'For you';
+    document.getElementById('giftFrom').innerHTML = gift.via
+      ? `<b style="color:var(--ink)">${gift.via}</b> wanted you to have this.` +
+        (gift.anon
+          ? `<span style="display:block;margin-top:5px;font-size:.86rem;color:var(--ink-faint)">
+               Someone asked ${gift.via} to pass it on. They chose not to be named.</span>`
+          : `<span style="display:block;margin-top:5px;font-size:.86rem;color:var(--ink-faint)">
+               ${gift.from} gave it to ${gift.via} to pass on.</span>`)
+      : `${gift.from} bought you something at Home Coffee.`;
     document.getElementById('giftItem').textContent = m.en;
     document.getElementById('giftCode2').textContent = gift.code;
     drawQr(gift.code);
@@ -1168,24 +1190,48 @@
   function accept(){ stage=3; drawDrive(); }
   function pass(){ drawDrive(); }
   function delivered(){
+    lastChain = order.usedChain || null;
     document.getElementById('doneName').textContent = order.who + ' has it';
     document.getElementById('doneWhy').textContent =
       'You carried coffee, not money. Kanghna owes you 1,500៛, and HeartBank® takes nothing from any of it.';
     order=null; stage=0; cart={}; tip=1000;
-    drawMenu(); drawQueue(); drawDrive(); go('s-done');
+    drawMenu(); drawQueue(); drawDrive(); drawThanks(); go('s-done');
   }
+  // ⛔ Told only on REDEMPTION — never that a code is still unused. An unused
+  //   gift reported back to its giver is an absence rendered, and a debt implied.
+  function drawThanks(){
+    const c = lastChain;
+    const box = document.getElementById('thanksBox');
+    if(!c){ box.hidden = true; return; }
+    box.hidden = false;
+    const people = thankable(c);
+    box.innerHTML = `
+      <p class="lbl" style="margin:22px 0 8px">Both of them were told you had it</p>
+      ${people.map(p => `
+        <button class="chip" style="width:100%;text-align:left;margin-bottom:7px"
+          aria-pressed="${thanked.includes(p.key)}" onclick="sayThanks('${p.key}')">
+          <b>${thanked.includes(p.key) ? 'Thanked ' : 'Say thank you to '}${p.label}</b>
+          <span>${thanked.includes(p.key) ? 'They will see it' : p.sub}</span></button>`).join('')}
+      <p class="hint" style="text-align:left;margin-top:4px">
+        ${ c.anon ? 'You can thank whoever paid without knowing who they are — it reaches them.'
+                  : 'A thank costs nothing and is the only thing that travels back.' }
+      </p>`;
+  }
+  function sayThanks(k){ if(!thanked.includes(k)) thanked.push(k); drawThanks(); }
+
   function done(){
+    lastChain = order.usedChain || null;
     const gift = order.fulfil==='gift';
     document.getElementById('doneName').textContent = order.who + (gift ? ' has a coffee waiting' : ' is served');
     document.getElementById('doneWhy').textContent = gift
       ? 'Paid first — the one exception on this shop, because there is nobody standing there to hand it to.'
       : 'The coffee was theirs before the money was yours. That is the whole difference.';
     order=null; stage=0; cart={}; tip=1000;
-    drawMenu(); drawQueue(); drawDrive(); go('s-done');
+    drawMenu(); drawQueue(); drawDrive(); drawThanks(); go('s-done');
   }
   function reset(){
     order=null; stage=0; cart={}; tip=1000; fulfil='pickup'; pay='khqr';
-    claimed=[]; claimOpen=false; claimError='';
+    claimed=[]; claimOpen=false; claimError=''; thanked=[]; lastChain=null;
     ['d2','d3'].forEach(i=>document.getElementById(i).classList.remove('on'));
     document.getElementById('l2').classList.remove('on');
     document.getElementById('giftOut').hidden = true;

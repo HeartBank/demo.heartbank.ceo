@@ -85,6 +85,14 @@ involved at all.
 | **Delivery** | before anyone rides out | *Start making it* → *Hand it to a rider* | rider enters the door code — *"You carried coffee, not money."* |
 | **Gift code** | up front | *Release the code* | a code for **a coffee, not an amount** |
 
+⭐ **A gift code can carry a CHAIN.** One person pays, another chooses who receives it — the
+Re-Tip Jar℠ in physical form. When the payer is anonymous the **name** is withheld and the **chain
+is not**: the recipient is told someone asked the re-giver to pass it on, because thanking a person
+you have not been told exists is routing, not thanks. ⛔ **Anonymity here is a gift of credit, not
+privacy** — it exists so the re-giver is the one who appears generous. On redemption **both** are
+told, and **both can be thanked, the unnamed payer included.** ⛔ Never report a code that has *not*
+been redeemed.
+
 ⭐ **Redeeming a gift code deducts nothing.** The item joins the order at 0៛ and the line reads
 **`gift`**, never `−4,000៛`. A code that reduced a bill by riel would be a **stored-value
 instrument** — a prepaid monetary liability, and a launch blocker — and it would quietly lose value
