@@ -99,14 +99,27 @@
   @media (prefers-reduced-motion:reduce){.screen.on{animation:none}.role{transition:none}}
 
   /* ---- on a phone the page IS the app: no frame around a frame ---- */
+  /* ⛔⛔ AND NO NESTED SCROLLER. The desktop layout scrolls INSIDE .scroll, which
+     works only because .phone has a fixed height there. On mobile .wrap uses
+     min-height — a FLOOR, not a height — so once content exceeds the viewport
+     .wrap grows, .phone{flex:1} grows with it, and .scroll ends up exactly as
+     tall as its own content: nothing to scroll inside, while
+     overscroll-behavior:contain stops the touch reaching the page. The result
+     is a screen that cannot be scrolled at all, in either direction.
+     So on mobile the DOCUMENT scrolls, which is what a phone does natively. */
   @media (max-width:430px){
     .wrap{min-height:100dvh;padding:14px 0 0;gap:12px}
     .lede{padding:0 16px}
     .lede h1{font-size:1.28rem}
     .lede p{font-size:.83rem}
     .roles{width:auto;max-width:none;align-self:stretch;margin:0 12px}
-    .phone{max-width:none;height:auto;flex:1;min-height:0;border-radius:0;
+    .phone{max-width:none;height:auto;flex:none;border-radius:0;
            border-left:0;border-right:0;border-bottom:0;box-shadow:none}
+    .scroll{overflow:visible;flex:none;overscroll-behavior:auto}
+    .screen{min-height:0}
+    .bar{top:0}
+    .foot{position:sticky;bottom:0}
+    .tabs{position:sticky;bottom:0;z-index:3}
     .note{padding:0 16px 18px;margin-top:0}
   }
 
