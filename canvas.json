@@ -278,6 +278,69 @@
       "w": 390,
       "h": 900,
       "title": "Welcome gift"
+    },
+    {
+      "file": "Reminter.dc.html",
+      "x": 0,
+      "y": 3700,
+      "w": 390,
+      "h": 1180,
+      "title": "6 · A gift to pass on",
+      "page": "page-2"
+    },
+    {
+      "file": "ReGift.dc.html",
+      "x": 490,
+      "y": 3700,
+      "w": 390,
+      "h": 1020,
+      "title": "7 · Yours to give",
+      "page": "page-2"
+    },
+    {
+      "file": "GiftAnon.dc.html",
+      "x": 980,
+      "y": 3700,
+      "w": 390,
+      "h": 1080,
+      "title": "7b · Someone asked",
+      "page": "page-2"
+    },
+    {
+      "file": "GiftClaim.dc.html",
+      "x": 1470,
+      "y": 3700,
+      "w": 390,
+      "h": 900,
+      "title": "8 · Yours",
+      "page": "page-2"
+    },
+    {
+      "file": "Lapsed.dc.html",
+      "x": 1960,
+      "y": 3700,
+      "w": 390,
+      "h": 820,
+      "title": "9 · That one lapsed",
+      "page": "page-2"
+    },
+    {
+      "file": "SettingsGiftPayout.dc.html",
+      "x": 3920,
+      "y": 1860,
+      "w": 390,
+      "h": 1000,
+      "title": "Where gifts land",
+      "page": "page-3"
+    },
+    {
+      "file": "AdminCalling.dc.html",
+      "x": 2800,
+      "y": 2060,
+      "w": 1280,
+      "h": 900,
+      "title": "Calling",
+      "page": "page-5"
     }
   ],
   "annotations": [
@@ -328,6 +391,14 @@
       "w": 240,
       "text": "need left and right margins",
       "page": "page-3"
+    },
+    {
+      "id": "note-gift",
+      "x": 0,
+      "y": 3520,
+      "w": 460,
+      "page": "page-2",
+      "text": "B-Gift℠ / B-ReGift℠ — one instrument, three stages.\n\nThe payer cannot use it. The re-giver cannot use it — there is no redeem control on that screen, absent rather than disabled. Only the person it is finally given to can.\n\nNothing anywhere counts down."
     }
   ],
   "launch": {

@@ -155,6 +155,32 @@ Design decisions here are load-bearing, not decorative:
 and the **B-Emblem™** — a heart rotated 45° into a bistable capital B, inline SVG with
 `fill="currentColor"`, rotation baked into the path. The `.ceo` accent is a pinned green.
 
+## The gift instrument — seven screens (added 2026-09-08, roadmap A76)
+
+`Reminter` · `ReGift` · `GiftAnon` · `GiftClaim` · `Lapsed` on `<tag>.heartbank.ceo`;
+`SettingsGiftPayout` on `counter.`; `AdminCalling` on `admin.`
+
+**What they argue**, in the order they are walked:
+
+- **The payer cannot use what they paid for.** The Re-minter issues; it never redeems.
+- **Neither can the person who carries it.** `ReGift` has **no redeem control at all** — absent, not
+  disabled. That single absence is the whole claim of the instrument, and it is one line of interface.
+- **Only the person it is finally given to can use it**, and their claim carries no clock: *yours for
+  as long as Home Coffee is open* — a fact about the shop, not a deadline.
+- **Nothing counts down anywhere**, at any stage. The lapse is stated once, after the fact: *that one
+  lapsed; here is a new one in its memory* — never *your gift flowed onward*.
+- **Anonymous keeps the chain and drops the name** — the empty seat reads *someone*, never *unknown*.
+- **The owner has two settings, not three**, and consenting to a Pool gift IS entering the rotation.
+- **A gift from the Pool is drawn as indistinguishable from a neighbour's**, side by side, because
+  that is the design.
+
+⚠️ **No Khmer yet on these seven.** The rest of the customer-facing set carries it; these were drawn
+in English rather than inventing translations nobody has read. Khmer for them is owed before anything
+is shown to a customer.
+
+⚠️ `HC-7K2M` is a legible placeholder. A bearer code needs real entropy and rate limiting in the same
+commit that makes it redeemable.
+
 ## Rebuilding the canvas
 
 The artboards seed into a copy of the Claude Design payload and publish as an Artifact:

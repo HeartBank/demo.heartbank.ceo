@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1280">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+Khmer:wght@400;500;600&display=swap">
+  <style>
+    :root{
+      --bg:#fcfbfe; --surface:#f4f1fb; --surface-2:#ebe7f5;
+      --line:rgba(20,16,30,.12); --line-strong:rgba(20,16,30,.28);
+      --ink:#16141c; --ink-dim:#5b5766; --ink-faint:#8b8796;
+      --accent:#15803d; --accent-soft:#106430; --accent-ink:#ffffff;
+      --accent-wash:rgba(16,100,48,.10); --accent-edge:rgba(16,100,48,.25);
+      --font-display:"Newsreader",Georgia,serif;
+      --font-text:"IBM Plex Sans",ui-sans-serif,system-ui,sans-serif;
+      --font-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+      --font-khmer:"Noto Sans Khmer",sans-serif;
+      --r-card:1.25rem; --r-control:1rem; --r-pill:999px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-text);font-size:16px;line-height:1.6}
+    a{color:var(--accent-soft);text-decoration:none} a:hover{color:var(--accent)}
+    .km{font-family:var(--font-khmer);line-height:1.5}
+    .lbl{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;
+         color:var(--ink-faint);margin:0 0 11px}
+    .card{background:var(--bg);border:1px solid var(--line);border-radius:var(--r-card);padding:16px 17px}
+    .cta{display:flex;align-items:center;justify-content:center;min-height:54px;border-radius:var(--r-control);
+         background:var(--accent);color:var(--accent-ink);font-weight:600;font-size:1rem}
+    .ghost{display:flex;align-items:center;justify-content:center;min-height:50px;border-radius:var(--r-control);
+           border:1px solid var(--line-strong);color:var(--ink-dim);font-weight:500;font-size:.95rem}
+    .note{margin:0;font-size:.79rem;color:var(--ink-faint);line-height:1.55}
+    .rule{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.05em;text-transform:uppercase;
+          color:var(--ink-faint);border:1px dashed var(--line-strong);border-radius:.55rem;padding:7px 9px;margin:0}
+  </style>
+</helmet>
+
+<div style="width:1280px;min-height:900px;display:flex;background:var(--surface)">
+
+  <aside style="width:210px;flex:none;background:var(--bg);border-right:1px solid var(--line);
+                padding:22px 0;display:flex;flex-direction:column">
+    <div style="padding:0 22px 22px;display:flex;align-items:center;gap:9px">
+      <svg viewBox="0 0 24 24" width="19" height="19" style="color:var(--accent)"><path fill="currentColor" d="M3.9743 20.0257L3.8824 18.0670C3.5430 11.1232 3.3167 6.5000 12 6.5000C20.6833 6.5000 20.4570 11.1232 20.1176 18.0670L20.0257 20.0257Z"></path></svg>
+      <span style="font-family:var(--font-mono);font-size:.76rem;letter-spacing:.04em">admin</span>
+    </div>
+    <nav style="display:flex;flex-direction:column">
+      <span style="padding:9px 22px;font-size:.9rem;color:var(--ink-dim);border-left:3px solid transparent">Platform</span>
+      <span style="padding:9px 22px;font-size:.9rem;color:var(--ink-dim);border-left:3px solid transparent">Shops</span>
+      <span style="padding:9px 22px;font-size:.9rem;color:var(--ink-dim);border-left:3px solid transparent">Reports</span>
+      <span style="padding:9px 22px;font-size:.9rem;color:var(--ink-dim);border-left:3px solid transparent">Themes</span>
+      <span style="padding:9px 22px;font-size:.9rem;color:var(--ink-dim);border-left:3px solid transparent">Recommendation</span>
+      <span style="padding:9px 22px;font-size:.9rem;background:var(--accent-wash);color:var(--accent-soft);
+                   font-weight:500;border-left:3px solid var(--accent)">Calling</span>
+    </nav>
+  </aside>
+
+  <main style="flex:1;min-width:0;padding:30px 34px;display:flex;flex-direction:column;gap:22px">
+    <div>
+      <h1 style="font-family:var(--font-display);font-size:1.85rem;font-weight:500;
+                 letter-spacing:-.02em;margin:0 0 3px">The calling</h1>
+      <p style="margin:0;color:var(--ink-dim);font-size:.94rem">
+        Which shops the Pool gives through. Equal chance, drawn once, order sealed for the season.
+      </p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:20px;align-items:start">
+
+      <div style="display:flex;flex-direction:column;gap:14px">
+
+        <!-- COUNTS ARE PUBLIC. the ORDER is not, until the reset. -->
+        <div class="card">
+          <p class="lbl">This season</p>
+          <div style="display:flex;gap:34px;flex-wrap:wrap">
+            <div>
+              <p style="margin:0;font-family:var(--font-mono);font-size:2rem;font-weight:500;line-height:1.1">146</p>
+              <p style="margin:3px 0 0;font-size:.85rem;color:var(--ink-dim)">shops in the rotation</p>
+            </div>
+            <div>
+              <p style="margin:0;font-family:var(--font-mono);font-size:2rem;font-weight:500;line-height:1.1">38</p>
+              <p style="margin:3px 0 0;font-size:.85rem;color:var(--ink-dim)">called so far</p>
+            </div>
+            <div>
+              <p style="margin:0;font-family:var(--font-mono);font-size:2rem;font-weight:500;line-height:1.1">38</p>
+              <p style="margin:3px 0 0;font-size:.85rem;color:var(--ink-dim)">claims issued</p>
+            </div>
+          </div>
+          <p class="note" style="margin-top:14px">
+            Counts are public because they are the shape of the thing. Who is next is not.
+          </p>
+        </div>
+
+        <!-- THE SEAL. a commitment now, the whole order at the reset. -->
+        <div class="card" style="background:var(--surface-2);border-color:transparent">
+          <p class="lbl">The order</p>
+          <p style="margin:0 0 12px;font-size:.95rem;line-height:1.6">
+            Sealed until 7 January. The draw was made once, at the reset, from a seed committed
+            before the season opened.
+          </p>
+          <p style="margin:0;font-family:var(--font-mono);font-size:.8rem;color:var(--ink-dim);
+                    word-break:break-all;line-height:1.5">
+            commitment &#183; 9f2c41d7a0be5533c1e88a4b7d0f6291ac35be74
+          </p>
+          <p class="note" style="margin-top:12px">
+            Published now so the Aquarian Sangha can check the order against it in January.
+            An order you can read in advance is an order that can be sold.
+          </p>
+        </div>
+
+        <!-- WHAT THE SHOP SEES: the invariant, drawn as the absence of a difference. -->
+        <div class="card">
+          <p class="lbl">What the shop sees</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+            <div style="border:1px solid var(--line);border-radius:var(--r-control);padding:14px 15px">
+              <p style="margin:0 0 9px;font-family:var(--font-mono);font-size:.66rem;letter-spacing:.05em;
+                        text-transform:uppercase;color:var(--ink-faint)">A neighbour's gift</p>
+              <p style="margin:0;font-weight:600;font-size:.95rem">Iced Americano</p>
+              <p style="margin:3px 0 0;font-size:.83rem;color:var(--ink-dim)">Paid &#183; from someone</p>
+            </div>
+            <div style="border:1px solid var(--line);border-radius:var(--r-control);padding:14px 15px">
+              <p style="margin:0 0 9px;font-family:var(--font-mono);font-size:.66rem;letter-spacing:.05em;
+                        text-transform:uppercase;color:var(--ink-faint)">A gift from the Pool</p>
+              <p style="margin:0;font-weight:600;font-size:.95rem">Iced Americano</p>
+              <p style="margin:3px 0 0;font-size:.83rem;color:var(--ink-dim)">Paid &#183; from someone</p>
+            </div>
+          </div>
+          <p style="margin:14px 0 0;font-size:.9rem;line-height:1.6">
+            There is no difference between these two cards. That is the design, not an omission.
+          </p>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <div class="card">
+          <p class="lbl"><!-- sig-ok: the card says the quota is never metered TO anyone; naming the refusal, not rendering it -->A shop at its quota</p>
+          <p style="margin:0;font-size:.92rem;color:var(--ink-dim);line-height:1.6">
+            <!-- sig-ok: this card exists to say the quota is NEVER rendered to anyone; the word names the refusal -->
+            It is simply not in the list to be drawn from. Nothing is shown to the owner, here or
+            on their own screen &#8212; there is no &#8220;you have reached your limit&#8221; anywhere in this product.
+          </p>
+        </div>
+        <div class="card">
+          <p class="lbl">Not settings</p>
+          <p style="margin:0;font-size:.92rem;color:var(--ink-dim);line-height:1.6">
+            There is no control on this page to favour a shop, to weight the draw, to reorder it, or
+            to see it early. Not disabled &#8212; absent. And it will not be added later.
+          </p>
+        </div>
+        <div class="card">
+          <p class="lbl">The cap</p>
+          <p style="margin:0;font-size:.92rem;color:var(--ink-dim);line-height:1.6">
+            Counted per verified person who owns a shop, never per shop and never per account.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:10px;margin-top:6px">
+      <p class="rule">Writes <b>issued</b> with the payer recorded privately as the Pool &#8212; a field that reaches no screen, here or at the shop</p>
+      <p class="rule">Never renders: the order before the reset, a rank of shops, a rate, or any tell separating her gift from a person&#8217;s</p>
+    </div>
+  </main>
+</div>
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=390">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+Khmer:wght@400;500;600&display=swap">
+  <style>
+    :root{
+      --bg:#fcfbfe; --surface:#f4f1fb; --surface-2:#ebe7f5;
+      --line:rgba(20,16,30,.12); --line-strong:rgba(20,16,30,.28);
+      --ink:#16141c; --ink-dim:#5b5766; --ink-faint:#8b8796;
+      --accent:#15803d; --accent-soft:#106430; --accent-ink:#ffffff;
+      --accent-wash:rgba(16,100,48,.10); --accent-edge:rgba(16,100,48,.25);
+      --font-display:"Newsreader",Georgia,serif;
+      --font-text:"IBM Plex Sans",ui-sans-serif,system-ui,sans-serif;
+      --font-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+      --font-khmer:"Noto Sans Khmer",sans-serif;
+      --r-card:1.25rem; --r-control:1rem; --r-pill:999px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-text);font-size:16px;line-height:1.6}
+    a{color:var(--accent-soft);text-decoration:none} a:hover{color:var(--accent)}
+    .km{font-family:var(--font-khmer);line-height:1.5}
+    .lbl{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;
+         color:var(--ink-faint);margin:0 0 11px}
+    .card{background:var(--bg);border:1px solid var(--line);border-radius:var(--r-card);padding:16px 17px}
+    .cta{display:flex;align-items:center;justify-content:center;min-height:54px;border-radius:var(--r-control);
+         background:var(--accent);color:var(--accent-ink);font-weight:600;font-size:1rem}
+    .ghost{display:flex;align-items:center;justify-content:center;min-height:50px;border-radius:var(--r-control);
+           border:1px solid var(--line-strong);color:var(--ink-dim);font-weight:500;font-size:.95rem}
+    .note{margin:0;font-size:.79rem;color:var(--ink-faint);line-height:1.55}
+    .rule{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.05em;text-transform:uppercase;
+          color:var(--ink-faint);border:1px dashed var(--line-strong);border-radius:.55rem;padding:7px 9px;margin:0}
+  </style>
+</helmet>
+
+<div style="width:390px;min-height:820px;display:flex;flex-direction:column;background:var(--bg)">
+
+  <div style="display:flex;align-items:center;gap:14px;padding:18px 20px;border-bottom:1px solid var(--line)">
+    <span style="font-family:var(--font-display);font-size:1.15rem;font-weight:600">That one lapsed</span>
+  </div>
+
+  <div style="padding:26px 20px;display:flex;flex-direction:column;gap:24px">
+
+    <!-- the copy is inherited verbatim from chronicle's lapsed-hour rule. -->
+    <div>
+      <p style="margin:0;font-family:var(--font-display);font-size:1.44rem;line-height:1.38;font-weight:500">
+        That one lapsed.<br>Here is a new one in its memory.
+      </p>
+      <p style="margin:12px 0 0;font-size:.9rem;color:var(--ink-dim);line-height:1.6">
+        The coffee you sent for Reach to pass on did not find anyone. Nothing was spent, and nothing is owed.
+      </p>
+    </div>
+
+    <div class="card">
+      <div style="display:flex;align-items:center;gap:14px">
+        <div style="width:48px;height:48px;border-radius:.7rem;overflow:hidden;flex:none;opacity:.5">
+          <svg viewBox="0 0 48 48" style="width:100%;height:100%;display:block">
+            <rect width="48" height="48" fill="#eceaf3"></rect>
+            <path d="M14 14h20l-2 22a4 4 0 0 1-4 4h-8a4 4 0 0 1-4-4z" fill="#fdfcff" stroke="#9a94a8" stroke-width="1.4"></path>
+            <rect x="12" y="11" width="24" height="4" rx="2" fill="#9a94a8"></rect>
+          </svg>
+        </div>
+        <div style="min-width:0">
+          <p style="margin:0;font-weight:500;font-size:.95rem;color:var(--ink-dim)">Iced Americano</p>
+          <p style="margin:2px 0 0;font-size:.81rem;color:var(--ink-faint)">Sent 2 Sept &#183; lapsed</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta">Send a new one</div>
+    <div class="ghost">Not now</div>
+
+    <p class="note" style="text-align:center">
+      A new one is a new gift, not this one revived.
+    </p>
+
+  </div>
+
+  <div style="margin-top:auto;padding:22px 16px 24px;display:flex;flex-direction:column;gap:10px">
+    <p class="rule">The holder is told. Home Coffee is not &#8212; the shop has no list of what is waiting to lapse, and no forecast of it. That is not a setting, and never will be</p>
+    <p class="rule">Writes <b>lapsed</b> from the server sweep &#183; <b>reminted</b> creates a NEW record linked to this one</p>
+    <p class="rule"><!-- sig-ok: the footer ENUMERATES what this surface may never render -->Never renders: a countdown before this screen, or &#8220;your gift flowed onward&#8221; on it</p>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

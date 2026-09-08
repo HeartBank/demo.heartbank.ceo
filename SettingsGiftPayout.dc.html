@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=390">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+Khmer:wght@400;500;600&display=swap">
+  <style>
+    :root{
+      --bg:#fcfbfe; --surface:#f4f1fb; --surface-2:#ebe7f5;
+      --line:rgba(20,16,30,.12); --line-strong:rgba(20,16,30,.28);
+      --ink:#16141c; --ink-dim:#5b5766; --ink-faint:#8b8796;
+      --accent:#15803d; --accent-soft:#106430; --accent-ink:#ffffff;
+      --accent-wash:rgba(16,100,48,.10); --accent-edge:rgba(16,100,48,.25);
+      --font-display:"Newsreader",Georgia,serif;
+      --font-text:"IBM Plex Sans",ui-sans-serif,system-ui,sans-serif;
+      --font-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+      --font-khmer:"Noto Sans Khmer",sans-serif;
+      --r-card:1.25rem; --r-control:1rem; --r-pill:999px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-text);font-size:16px;line-height:1.6}
+    a{color:var(--accent-soft);text-decoration:none} a:hover{color:var(--accent)}
+    .km{font-family:var(--font-khmer);line-height:1.5}
+    .lbl{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;
+         color:var(--ink-faint);margin:0 0 11px}
+    .card{background:var(--bg);border:1px solid var(--line);border-radius:var(--r-card);padding:16px 17px}
+    .cta{display:flex;align-items:center;justify-content:center;min-height:54px;border-radius:var(--r-control);
+         background:var(--accent);color:var(--accent-ink);font-weight:600;font-size:1rem}
+    .ghost{display:flex;align-items:center;justify-content:center;min-height:50px;border-radius:var(--r-control);
+           border:1px solid var(--line-strong);color:var(--ink-dim);font-weight:500;font-size:.95rem}
+    .note{margin:0;font-size:.79rem;color:var(--ink-faint);line-height:1.55}
+    .rule{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.05em;text-transform:uppercase;
+          color:var(--ink-faint);border:1px dashed var(--line-strong);border-radius:.55rem;padding:7px 9px;margin:0}
+  </style>
+</helmet>
+
+<div style="width:390px;min-height:1000px;display:flex;flex-direction:column;background:var(--surface)">
+
+  <div style="background:var(--bg);padding:16px 20px;border-bottom:1px solid var(--line);
+              display:flex;align-items:center;justify-content:space-between;gap:12px">
+    <div style="display:flex;align-items:center;gap:13px;min-width:0">
+      <span style="font-size:1.4rem;color:var(--ink-dim);cursor:pointer;line-height:1">&#8592;</span>
+      <span style="font-family:var(--font-display);font-size:1.12rem;font-weight:600">Where gifts land</span>
+    </div>
+    <span style="font-family:var(--font-mono);font-size:.66rem;letter-spacing:.04em;
+                 border:1px solid var(--accent-edge);color:var(--accent-soft);background:var(--accent-wash);
+                 border-radius:var(--r-pill);padding:4px 10px;white-space:nowrap">KANGHNA &#183; OWNER</span>
+  </div>
+
+  <div style="padding:18px 16px 0;display:flex;flex-direction:column;gap:18px">
+
+    <!-- SETTING ONE: where a HUMAN gift-code payment lands. two choices. never a third. -->
+    <div class="card">
+      <p class="lbl">When someone buys a gift code</p>
+      <div style="display:flex;gap:9px">
+        <div style="flex:1;border:2px solid var(--accent);border-radius:var(--r-control);padding:13px 12px;min-height:86px">
+          <p style="margin:0;font-weight:600;font-size:.92rem">Your wallet</p>
+          <p style="margin:3px 0 0;font-size:.78rem;color:var(--ink-dim)">Money you can take out</p>
+        </div>
+        <div style="flex:1;border:1px solid var(--line);border-radius:var(--r-control);padding:13px 12px;min-height:86px">
+          <p style="margin:0;font-weight:500;font-size:.92rem;color:var(--ink-dim)">Your Re-Tip Fund&#8480;</p>
+          <p style="margin:3px 0 0;font-size:.78rem;color:var(--ink-faint)">Yours to give onward, not to withdraw</p>
+        </div>
+      </div>
+      <p class="note" style="margin-top:12px">Two doors. There is no third.</p>
+    </div>
+
+    <!-- SETTING TWO: one consent. agreeing to the credit IS entering the rotation. -->
+    <div class="card">
+      <p class="lbl">Gifts from the Aquarian Pool&#8480;</p>
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:14px">
+        <div style="min-width:0">
+          <p style="margin:0;font-size:.95rem;font-weight:500;line-height:1.5">
+            Let Miss Aquarius&#8480; thank your shop into your Fund
+          </p>
+          <p style="margin:5px 0 0;font-size:.83rem;color:var(--ink-dim);line-height:1.55">
+            Your gift is thanked with the capacity to give again.
+          </p>
+        </div>
+        <span style="width:46px;height:27px;border-radius:var(--r-pill);background:var(--accent);
+                     position:relative;display:block;flex:none">
+          <span style="position:absolute;top:3px;right:3px;width:21px;height:21px;border-radius:50%;background:#fff"></span>
+        </span>
+      </div>
+      <div style="height:1px;background:var(--line);margin:14px 0"></div>
+      <p style="margin:0;font-size:.85rem;color:var(--ink-dim);line-height:1.6">
+        Saying yes puts your shop in the rotation. Every Fund empties on 7 January &#8212; this one too.
+      </p>
+      <p class="note" style="margin-top:9px">Said once, here, at the moment you agree.</p>
+    </div>
+
+    <!-- the refusal, printed on the surface where it would be violated. -->
+    <div class="card" style="background:var(--surface-2);border-color:transparent">
+      <p style="margin:0;font-size:.87rem;color:var(--ink-dim);line-height:1.6">
+        You will never see which gifts came from the Pool. They arrive the way any anonymous gift
+        arrives, because they are one.
+      </p>
+    </div>
+
+  </div>
+
+  <div style="margin-top:auto;padding:22px 16px 24px;display:flex;flex-direction:column;gap:10px">
+    <p class="rule">Writes <b>giftPayout</b> and <b>poolConsent</b> &#183; one consent, never a separate &#8220;mode&#8221;</p>
+    <p class="rule">Never renders: &#8220;Miss Aquarius pays you&#8221;, a Pool balance, or any mark distinguishing her gift from a person&#8217;s</p>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>
