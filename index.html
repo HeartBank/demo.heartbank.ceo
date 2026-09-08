@@ -20,7 +20,7 @@
 <meta property="og:url" content="https://demo.heartbank.ceo/">
 <meta property="og:site_name" content="HeartBank Shops">
 <meta property="og:title" content="HeartBank&#174; Shops">
-<meta property="og:description" content="A storefront platform, drawn screen by screen — 30 artboards across five surfaces, plus a walkthrough you can use. Home Coffee is the first shop.">
+<meta property="og:description" content="A storefront platform, drawn screen by screen — every artboard on one wall, plus a walkthrough you can use. Home Coffee is the first shop.">
 <meta property="og:image" content="https://demo.heartbank.ceo/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -109,6 +109,15 @@
          background:var(--accent-wash);border-radius:var(--r-card);padding:22px 24px;
          margin:30px 0 44px;transition:background .16s}
   .start:hover{background:var(--accent-edge)}
+  .wall-link{display:block;text-decoration:none;color:inherit;border:1px solid var(--line-strong);
+       background:var(--surface);border-radius:var(--r-card);padding:20px 22px;margin:-14px 0 34px}
+  .wall-link:hover{border-color:var(--accent-edge);background:var(--accent-wash)}
+  .wall-link .kicker{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.09em;
+       text-transform:uppercase;color:var(--ink-faint);display:block;margin-bottom:7px}
+  .wall-link h2{font-family:var(--font-display);font-size:1.35rem;font-weight:600;margin:0 0 7px}
+  .wall-link p{margin:0;color:var(--ink-dim);font-size:.94rem;line-height:1.6;max-width:52ch}
+  .wall-link .go{display:inline-flex;align-items:center;gap:7px;margin-top:12px;
+       color:var(--accent-soft);font-weight:500;font-size:.94rem}
   .start .kicker{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.09em;
        text-transform:uppercase;color:var(--accent-soft);display:block;margin-bottom:7px}
   .start h2{font-family:var(--font-display);font-size:1.6rem;font-weight:600;margin:0 0 7px}
@@ -153,6 +162,14 @@
       across town. Three roles, one order, three ways to pay. It works; nothing in it charges
       anyone.</p>
     <span class="go">Open the walkthrough &rarr;</span>
+  </a>
+
+  <a class="wall-link" href="./wall.html">
+    <span class="kicker">All of it at once</span>
+    <h2>The wall</h2>
+    <p>Every artboard on one pan-and-zoom surface, grouped by the site it belongs to &mdash; the
+      whole design in one view, read-only.</p>
+    <span class="go">Open the wall &rarr;</span>
   </a>
 
       <section class="surface">
