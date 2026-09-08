@@ -14,6 +14,20 @@ quietly serves the older screens. ⭐ **Extract it first and diff against these 
 identical and 1 differing is what a clean re-seed looks like; anything else means someone saved in
 the GUI and you are about to discard their work.
 
+**The published walkthrough** — the same `home-coffee-walkthrough.html`, as an Artifact:
+<https://claude.ai/code/artifact/44bf0941-28cd-433e-b997-8b6009ed68bd>
+⛔ **Republish to that URL, never without it** — publishing without the `url` mints a NEW artifact,
+and a duplicate is indistinguishable from the original in any listing (title, icon, date and
+artboard count all match). One such twin was created and deleted, 2026-09-08. ⭐ **These two URLs
+are recorded HERE because this file is the only git-tracked place either of them exists.**
+⚠️ **Neither artifact is itself in git, and that is deliberate:** the payload is *generated* from
+these artboards and `canvas.json`, so committing it would be a second copy of a live surface —
+it would drift the moment anyone saved in the GUI. **What must never be lost is the source and the
+identifier, and both are here.**
+
+⭐ **The founder hands out `https://demo.heartbank.ceo`** (2026-09-08) — not an artifact URL. The
+site is the environment that DELIVERS; the artifacts are where the artboards are authored.
+
 ⚠️ **Not searchable, but fully shareable — and there is deliberately NO `robots.txt`.**
 ⛔⛔ **Do not add one.** Its only possible effect is to *subtract* permission, and every failure mode
 here is expensive: a `Disallow` breaks link previews outright (Messenger, WhatsApp and Telegram
