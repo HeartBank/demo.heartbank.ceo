@@ -102,6 +102,7 @@ out = """<!doctype html>
        letter-spacing:.04em;text-transform:uppercase;color:var(--ink-faint);
        background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:6px 12px}
 </style>
+<script src="./analytics.js"></script>
 </head>
 <body>
 <header>

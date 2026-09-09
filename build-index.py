@@ -205,6 +205,7 @@ TEMPLATE = r"""<!doctype html>
   footer b{color:var(--ink-dim);font-weight:500}
   @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
+<script src="./analytics.js"></script>
 </head>
 <body>
 <div class="wrap">
