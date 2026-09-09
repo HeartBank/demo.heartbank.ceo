@@ -253,3 +253,8 @@ TEMPLATE = r"""<!doctype html>
 
 if __name__ == "__main__":
     main()
+
+# Re-stamp the analytics reference from the file's own hash, so a tracker
+# change can never be served stale to a browser that cached the old copy.
+import subprocess as _sp
+_sp.run(["python3", os.path.join(HERE, "stamp-analytics.py")], check=True)

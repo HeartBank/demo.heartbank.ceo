@@ -199,3 +199,8 @@ out = """<!doctype html>
 out = out.replace("__TABS__", "".join(tabs)).replace("__PAGES__", "".join(frames))
 io.open(os.path.join(HERE, "wall.html"), "w", encoding="utf-8").write(out)
 print("wall.html written — %d artboards, %d notes, %d pages" % (len(boards), len(notes), len(pages)))
+
+# Re-stamp the analytics reference from the file's own hash, so a tracker
+# change can never be served stale to a browser that cached the old copy.
+import subprocess as _sp
+_sp.run(["python3", os.path.join(HERE, "stamp-analytics.py")], check=True)
