@@ -117,7 +117,14 @@
     .lede h1{font-size:1.28rem}
     .lede p{font-size:.83rem}
     .roles{width:auto;max-width:none;align-self:stretch;margin:0 12px}
-    .phone{max-width:none;height:auto;flex:none;border-radius:0;
+    /* ⛔⛔ overflow MUST return to visible here. .phone carries overflow:hidden to clip
+       children to its 26px radius on desktop; on mobile the radius is 0 and the side
+       borders are gone, so it clips NOTHING — but it still makes .phone the nearest
+       SCROLL CONTAINER, and .phone is height:auto, so a position:sticky descendant has
+       ZERO scrollable extent to stick within. The bar then lands at the end of the
+       content instead of floating. Safari follows the spec here; Chrome tolerated it,
+       which is why this shipped looking fine on one engine and broken on the other. */
+    .phone{max-width:none;height:auto;flex:none;border-radius:0;overflow:visible;
            border-left:0;border-right:0;border-bottom:0;box-shadow:none}
     .scroll{overflow:visible;flex:none;overscroll-behavior:auto}
     .screen{min-height:0}
