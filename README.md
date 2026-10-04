@@ -105,7 +105,7 @@ involved at all.
 | **Gift code** | up front | *Release the code* | a code for **a coffee, not an amount** |
 
 ⭐ **A gift code can carry a CHAIN.** One person pays, another chooses who receives it — the
-Re-Tip Jar℠ in physical form. When the payer is anonymous the **name** is withheld and the **chain
+Re-Thank Foundation℠ in physical form. When the payer is anonymous the **name** is withheld and the **chain
 is not**: the recipient is told someone asked the re-giver to pass it on, because thanking a person
 you have not been told exists is routing, not thanks. ⛔ **Anonymity here is a gift of credit, not
 privacy** — it exists so the re-giver is the one who appears generous. On redemption **both** are
