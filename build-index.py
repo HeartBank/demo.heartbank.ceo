@@ -21,7 +21,15 @@ BLURB = {
     "page-4": "A rider's two screens. Whose turn it is, never who is best.",
     "page-5": "The platform operator's surface — desktop width. Most of what matters here is "
               "what it refuses to contain.",
+    "page-6": "A gift code from a family shop, attached to a thank in HeartBank® Treasury — "
+              "the banker's switches, the sender, the person who receives it, the thank that "
+              "comes back, and where the code lands at the shop. Treasury's own design; the gift "
+              "itself in the shop's.",
 }
+
+
+# The surface count in the header is derived too — it said "five" by hand until a sixth page arrived.
+WORDS = {3: "three", 4: "four", 5: "five", 6: "six", 7: "seven", 8: "eight", 9: "nine"}
 
 
 def main():
@@ -55,7 +63,8 @@ def main():
                                       b=html.escape(BLURB.get(pid, "")), r=rows))
 
     out = TEMPLATE.replace("{{SECTIONS}}", "\n\n".join(sections)) \
-                  .replace("{{COUNT}}", str(len(boards)))
+                  .replace("{{COUNT}}", str(len(boards)))\
+                  .replace("{{SURFACES}}", WORDS.get(len(canvas["pages"]), str(len(canvas["pages"]))))
     io.open(os.path.join(HERE, "index.html"), "w", encoding="utf-8").write(out)
     print("index.html written — %d artboards across %d surfaces"
           % (len(boards), len(canvas["pages"])))
@@ -215,7 +224,7 @@ TEMPLATE = r"""<!doctype html>
          It beats because a page header is CHROME; it would not beside a person's name. -->
     <h1>Heart<svg class="emblem beating" viewBox="0 0 24 24" role="img" aria-label="B"><path fill="currentColor" d="M3.9743 20.0257L3.8824 18.0670C3.5430 11.1232 3.3167 6.5411 5.9896 3.8683C8.1675 1.6904 11.5899 1.6904 13.7678 3.8683C14.9981 5.0986 15.6062 6.8523 15.4719 8.5281C17.1477 8.3938 18.9014 9.0019 20.1317 10.2322C22.3096 12.4101 22.3096 15.8325 20.1317 18.0104C17.4589 20.6833 12.8768 20.4570 5.9260 20.1247L3.9743 20.0257Z"/></svg>ank<span class="reg">&#174;</span> Shops</h1>
     <p class="sub">Design source for a storefront platform on <span class="mono">heartbank.ceo</span>
-      — {{COUNT}} artboards across five surfaces, plus a walkthrough you can actually use.
+      — {{COUNT}} artboards across {{SURFACES}} surfaces, plus a walkthrough you can actually use.
       Home Coffee is the first shop.</p>
   </header>
 

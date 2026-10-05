@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=390">
+  <script src="./support.js"></script>
+  <script src="./analytics.js?v=77336f4a"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@400;500;600;700;900&family=Newsreader:opsz,wght@6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <style>
+    :root{
+      /* Treasury: Tailwind defaults, as the app ships them */
+      --g50:#f9fafb; --g100:#f3f4f6; --g200:#e5e7eb; --g300:#d1d5db; --g400:#9ca3af; --g500:#6b7280;
+      --g600:#4b5563; --g700:#374151; --g900:#111827;
+      --y50:#fefce8; --y300:#fde047; --y500:#eab308; --y600:#ca8a04; --y700:#a16207;
+      --p50:#faf5ff; --p200:#e9d5ff; --p500:#a855f7; --p600:#9333ea;
+      --sans:"Noto Sans Khmer",ui-sans-serif,system-ui,sans-serif;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--g200);color:var(--g900);font-family:var(--sans);font-size:16px;line-height:1.5}
+    .km{font-family:"Noto Sans Khmer",sans-serif}
+    .tcard{background:#fff;border-radius:.5rem;box-shadow:0 1px 3px rgba(0,0,0,.1),0 1px 2px rgba(0,0,0,.06)}
+    .h1{margin:0;font-size:1.25rem;font-weight:700;letter-spacing:-.01em;color:var(--g900)}
+    .flbl{display:block;margin:0 0 4px;font-size:.875rem;font-weight:500;color:var(--g900)}
+    .inp{width:100%;padding:8px 12px;font-size:1rem;color:var(--g900);background:var(--g50);border:1px solid var(--g300);border-radius:.5rem;min-height:42px}
+    .xs{font-size:.75rem;color:var(--g500);margin:0}
+    .sm{font-size:.875rem;margin:0}
+    .ybtn{display:flex;align-items:center;justify-content:center;padding:9px 16px;font-size:.875rem;font-weight:500;color:#fff;background:var(--y500);border-radius:.5rem}
+    .ypill{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;font-size:.875rem;font-weight:500;color:var(--y700);background:var(--y50);border:1px solid var(--y300);border-radius:.5rem}
+    .rule{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.62rem;letter-spacing:.05em;text-transform:uppercase;
+          color:var(--g500);border:1px dashed var(--g400);border-radius:.55rem;padding:7px 9px;margin:0;background:rgba(255,255,255,.5)}
+    .state{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.64rem;letter-spacing:.06em;text-transform:uppercase;color:var(--y700);margin:0}
+    /* ---- the shops components (shared.333.eco/web/gift/), in the shop's own design ---- */
+    .sx{--bg:#fcfbfe;--surface:#f4f1fb;--surface-2:#ebe7f5;--line:rgba(20,16,30,.12);--line-strong:rgba(20,16,30,.28);
+        --ink:#16141c;--ink-dim:#5b5766;--ink-faint:#8b8796;--r-card:1.25rem;--r-control:1rem;
+        --accent:#15803d;--accent-soft:#106430;--accent-ink:#fff;--accent-wash:rgba(16,100,48,.10);--accent-edge:rgba(16,100,48,.25);
+        font-family:"IBM Plex Sans",ui-sans-serif,system-ui,sans-serif;color:var(--ink);line-height:1.55}
+    .sx .disp{font-family:"Newsreader",Georgia,serif;font-weight:600;letter-spacing:-.01em}
+    .sx .mono{font-family:"IBM Plex Mono",ui-monospace,monospace}
+    .sx .lbl{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.64rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint);margin:0}
+    .sx .dim{color:var(--ink-dim)} .sx .faint{color:var(--ink-faint)}
+    .sx .soft{color:var(--accent-soft);font-weight:500}
+    .sx-gift{border:1px solid var(--accent-edge);background:var(--accent-wash);border-radius:var(--r-card);padding:14px 15px}
+    .sx-seg{flex:1;border:1px solid var(--line);border-radius:var(--r-control);padding:10px;text-align:center;font-size:.88rem;color:var(--ink-dim);background:var(--bg)}
+    .sx-seg.on{border:2px solid var(--accent);background:var(--accent-wash);color:var(--accent-soft);font-weight:600}
+    .sx-go{display:flex;align-items:center;justify-content:space-between;min-height:52px;border-radius:var(--r-control);
+           background:var(--accent);color:var(--accent-ink);font-weight:600;font-size:.98rem;padding:0 20px}
+    .stepper{display:flex;align-items:center;gap:10px}
+    .stepper span.b{width:30px;height:30px;border-radius:50%;border:1px solid var(--line-strong);display:flex;align-items:center;justify-content:center;color:var(--ink-dim);font-size:1rem}
+  </style>
+</helmet>
+
+<div style="width:390px;min-height:844px;display:flex;flex-direction:column;background:var(--g200)"><!-- T2 · the shop picker. Treasury's sheet chrome (retip-sheet.ts), the rows in each shop's own theme. -->
+<div style="height:150px;background:rgba(0,0,0,.6);position:relative"><div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.08),transparent)"></div></div><div style="background:#fff;border-radius:1rem 1rem 0 0;margin-top:-16px;position:relative;flex:1;display:flex;flex-direction:column"><div style="position:relative;padding:16px 16px 12px;border-bottom:1px solid var(--g200)"><p style="margin:0;font-size:1.25rem;font-weight:700">&#127873; A gift code from&hellip;</p><p class="xs" style="margin-top:2px">One shop per gift</p><span style="position:absolute;top:12px;right:12px;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--g500);font-size:1.1rem">&#10005;</span></div><div style="padding:16px;display:flex;flex-direction:column;gap:10px"><div class="sx" style="display:flex;align-items:center;gap:13px;padding:13px 14px;border:1px solid var(--line);border-radius:var(--r-card);background:var(--bg)"><div style="width:52px;height:52px;border-radius:.9rem;overflow:hidden;flex:none"><svg viewBox="0 0 48 48" style="width:100%;height:100%;display:block"><rect width="48" height="48" fill="#e7efd9"/><rect x="8" y="18" width="32" height="22" fill="#fdfcff"/><path d="M6 18l4-8h28l4 8z" fill="#15803d"/><rect x="20" y="27" width="8" height="13" fill="#6f4a2e"/><rect x="11" y="23" width="7" height="6" fill="#bfe0c9"/><rect x="30" y="23" width="7" height="6" fill="#bfe0c9"/></svg></div><div style="min-width:0;flex:1"><p class="disp" style="margin:0;font-size:1.08rem;line-height:1.2">Home Coffee</p><p class="km dim" style="margin:1px 0 0;font-size:.82rem">កាហ្វេ​ផ្ទះ</p><p class="mono faint" style="margin:2px 0 0;font-size:.66rem">homecoffee.heartbank.ceo</p></div><span class="faint" style="font-size:1.2rem;flex:none">&rsaquo;</span></div><div class="sx" style="--accent:#e85d04;--accent-soft:#8a3802;--accent-ink:#16141c;--accent-wash:rgba(232,93,4,.10);--accent-edge:rgba(232,93,4,.26);display:flex;align-items:center;gap:13px;padding:13px 14px;border:1px solid var(--line);border-radius:var(--r-card);background:var(--bg)"><div style="width:52px;height:52px;border-radius:.9rem;overflow:hidden;flex:none"><svg viewBox="0 0 48 48" style="width:100%;height:100%;display:block"><rect width="48" height="48" fill="#fbe7cf"/><ellipse cx="24" cy="27" rx="12" ry="10" fill="#f2a62c"/><ellipse cx="20" cy="24" rx="4" ry="3" fill="#f8cf6e"/><path d="M24 17q3-6 9-6q-2 5-9 6z" fill="#3f8a3a"/></svg></div><div style="min-width:0;flex:1"><p class="disp" style="margin:0;font-size:1.08rem;line-height:1.2">Mango &amp; Me</p><p class="mono faint" style="margin:2px 0 0;font-size:.66rem">mangome.heartbank.ceo</p></div><span class="faint" style="font-size:1.2rem;flex:none">&rsaquo;</span></div><div class="sx" style="--accent:#c8102e;--accent-soft:#9c0c24;--accent-wash:rgba(200,16,46,.09);--accent-edge:rgba(200,16,46,.24);display:flex;align-items:center;gap:13px;padding:13px 14px;border:1px solid var(--line);border-radius:var(--r-card);background:var(--bg)"><div style="width:52px;height:52px;border-radius:.9rem;overflow:hidden;flex:none"><svg viewBox="0 0 48 48" style="width:100%;height:100%;display:block"><rect width="48" height="48" fill="#f6dfe0"/><path d="M9 24h30a15 13 0 0 1-30 0z" fill="#c8102e"/><path d="M12 24q4-7 8 0q4-7 8 0q4-7 8 0" stroke="#f3e2b8" stroke-width="2" fill="none"/><rect x="27" y="7" width="2" height="18" rx="1" fill="#6b4a2a" transform="rotate(18 28 16)"/><rect x="31" y="7" width="2" height="18" rx="1" fill="#6b4a2a" transform="rotate(26 32 16)"/></svg></div><div style="min-width:0;flex:1"><p class="disp" style="margin:0;font-size:1.08rem;line-height:1.2">Sovann Noodles</p><p class="mono faint" style="margin:2px 0 0;font-size:.66rem">sovann.heartbank.ceo</p></div><span class="faint" style="font-size:1.2rem;flex:none">&rsaquo;</span></div><p class="xs" style="text-align:center;margin-top:4px">Shops your family banker has switched on, A to Z.</p><div style="margin:6px 0 0;border-top:1px dashed var(--line-strong);padding-top:14px"><p class="state">One shop &mdash; no list: the door names it and opens its menu</p></div><div style="margin-top:4px"><div class="sx" style="border:1px dashed var(--accent-edge);border-radius:var(--r-card);padding:13px 15px;display:flex;align-items:center;gap:12px"><span style="width:38px;height:38px;border-radius:50%;background:var(--accent-wash);display:flex;align-items:center;justify-content:center;font-size:1.15rem;flex:none">&#127873;</span><div style="min-width:0;flex:1"><p style="margin:0;font-weight:600;font-size:.95rem">Add a gift code</p><p class="dim" style="margin:1px 0 0;font-size:.8rem">From Home Coffee, for Sophea</p></div><span class="faint" style="font-size:1.2rem">&rsaquo;</span></div></div></div></div><div style="padding:18px 16px 22px;display:flex;flex-direction:column;gap:8px"><p class="rule">Order: A to Z. Never popular, never recent, never a count</p><p class="rule">One shop per gift &mdash; never a cart across shops</p><p class="rule">Listed only if: switched on by the banker &middot; the owner's H3QR door open &middot; something giftable</p><p class="rule">[ PLACEHOLDER SHOPS ] Mango &amp; Me and Sovann Noodles are invented for the drawing</p></div></div>
+</x-dc>
+</body>
+</html>

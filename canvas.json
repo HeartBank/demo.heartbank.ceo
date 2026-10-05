@@ -341,6 +341,141 @@
       "h": 900,
       "title": "Calling",
       "page": "page-5"
+    },
+    {
+      "file": "TreasuryBanker.dc.html",
+      "page": "page-6",
+      "x": 0,
+      "y": 0,
+      "w": 390,
+      "h": 1300,
+      "title": "T8 · Shops for gift codes (banker)"
+    },
+    {
+      "file": "TreasuryThank.dc.html",
+      "page": "page-6",
+      "x": 490,
+      "y": 0,
+      "w": 390,
+      "h": 2070,
+      "title": "T1 · /thank, a gift attached"
+    },
+    {
+      "file": "TreasuryShops.dc.html",
+      "page": "page-6",
+      "x": 980,
+      "y": 0,
+      "w": 390,
+      "h": 930,
+      "title": "T2 · Which shop"
+    },
+    {
+      "file": "TreasuryItems.dc.html",
+      "page": "page-6",
+      "x": 1470,
+      "y": 0,
+      "w": 390,
+      "h": 1100,
+      "title": "T3 · The menu, giftable only"
+    },
+    {
+      "file": "TreasuryBox.dc.html",
+      "page": "page-6",
+      "x": 1960,
+      "y": 0,
+      "w": 390,
+      "h": 1085,
+      "title": "T3 · A box"
+    },
+    {
+      "file": "TreasuryTotal.dc.html",
+      "page": "page-6",
+      "x": 2450,
+      "y": 0,
+      "w": 390,
+      "h": 1308,
+      "title": "T4 · What only the payer sees"
+    },
+    {
+      "file": "TreasuryRefusals.dc.html",
+      "page": "page-6",
+      "x": 2940,
+      "y": 0,
+      "w": 390,
+      "h": 1452,
+      "title": "T5 · Refusals"
+    },
+    {
+      "file": "TreasuryReceived.dc.html",
+      "page": "page-6",
+      "x": 0,
+      "y": 2230,
+      "w": 390,
+      "h": 1106,
+      "title": "T6 · The thank, with its gift"
+    },
+    {
+      "file": "TreasuryGiftSheet.dc.html",
+      "page": "page-6",
+      "x": 490,
+      "y": 2230,
+      "w": 390,
+      "h": 960,
+      "title": "T6 · Yours"
+    },
+    {
+      "file": "TreasuryReGift.dc.html",
+      "page": "page-6",
+      "x": 980,
+      "y": 2230,
+      "w": 390,
+      "h": 844,
+      "title": "T6 · Yours to give (M2)"
+    },
+    {
+      "file": "TreasuryThankBack.dc.html",
+      "page": "page-6",
+      "x": 1470,
+      "y": 2230,
+      "w": 390,
+      "h": 1482,
+      "title": "T7 · The thank-back"
+    },
+    {
+      "file": "TreasuryShopPage.dc.html",
+      "page": "page-6",
+      "x": 1960,
+      "y": 2230,
+      "w": 390,
+      "h": 1470,
+      "title": "S1 · The shop's gift page"
+    },
+    {
+      "file": "TreasuryAtOnce.dc.html",
+      "page": "page-6",
+      "x": 2450,
+      "y": 2230,
+      "w": 390,
+      "h": 1136,
+      "title": "S2 · Storefront: the code at once"
+    },
+    {
+      "file": "TreasuryRetip.dc.html",
+      "page": "page-6",
+      "x": 0,
+      "y": 3880,
+      "w": 390,
+      "h": 1278,
+      "title": "T9 · Re-tip with a gift (M2)"
+    },
+    {
+      "file": "TreasuryCapture.dc.html",
+      "page": "page-6",
+      "x": 490,
+      "y": 3880,
+      "w": 390,
+      "h": 1834,
+      "title": "T10 · Anonymous thank-back (M2)"
     }
   ],
   "annotations": [
@@ -425,6 +560,10 @@
     {
       "id": "page-5",
       "name": "admin.heartbank.ceo"
+    },
+    {
+      "id": "page-6",
+      "name": "thank.heartbank.org · gift codes"
     }
   ]
 }

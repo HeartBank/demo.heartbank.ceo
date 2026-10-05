@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=390">
+  <script src="./support.js"></script>
+  <script src="./analytics.js?v=77336f4a"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@400;500;600;700;900&family=Newsreader:opsz,wght@6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <style>
+    :root{
+      /* Treasury: Tailwind defaults, as the app ships them */
+      --g50:#f9fafb; --g100:#f3f4f6; --g200:#e5e7eb; --g300:#d1d5db; --g400:#9ca3af; --g500:#6b7280;
+      --g600:#4b5563; --g700:#374151; --g900:#111827;
+      --y50:#fefce8; --y300:#fde047; --y500:#eab308; --y600:#ca8a04; --y700:#a16207;
+      --p50:#faf5ff; --p200:#e9d5ff; --p500:#a855f7; --p600:#9333ea;
+      --sans:"Noto Sans Khmer",ui-sans-serif,system-ui,sans-serif;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--g200);color:var(--g900);font-family:var(--sans);font-size:16px;line-height:1.5}
+    .km{font-family:"Noto Sans Khmer",sans-serif}
+    .tcard{background:#fff;border-radius:.5rem;box-shadow:0 1px 3px rgba(0,0,0,.1),0 1px 2px rgba(0,0,0,.06)}
+    .h1{margin:0;font-size:1.25rem;font-weight:700;letter-spacing:-.01em;color:var(--g900)}
+    .flbl{display:block;margin:0 0 4px;font-size:.875rem;font-weight:500;color:var(--g900)}
+    .inp{width:100%;padding:8px 12px;font-size:1rem;color:var(--g900);background:var(--g50);border:1px solid var(--g300);border-radius:.5rem;min-height:42px}
+    .xs{font-size:.75rem;color:var(--g500);margin:0}
+    .sm{font-size:.875rem;margin:0}
+    .ybtn{display:flex;align-items:center;justify-content:center;padding:9px 16px;font-size:.875rem;font-weight:500;color:#fff;background:var(--y500);border-radius:.5rem}
+    .ypill{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;font-size:.875rem;font-weight:500;color:var(--y700);background:var(--y50);border:1px solid var(--y300);border-radius:.5rem}
+    .rule{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.62rem;letter-spacing:.05em;text-transform:uppercase;
+          color:var(--g500);border:1px dashed var(--g400);border-radius:.55rem;padding:7px 9px;margin:0;background:rgba(255,255,255,.5)}
+    .state{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.64rem;letter-spacing:.06em;text-transform:uppercase;color:var(--y700);margin:0}
+    /* ---- the shops components (shared.333.eco/web/gift/), in the shop's own design ---- */
+    .sx{--bg:#fcfbfe;--surface:#f4f1fb;--surface-2:#ebe7f5;--line:rgba(20,16,30,.12);--line-strong:rgba(20,16,30,.28);
+        --ink:#16141c;--ink-dim:#5b5766;--ink-faint:#8b8796;--r-card:1.25rem;--r-control:1rem;
+        --accent:#15803d;--accent-soft:#106430;--accent-ink:#fff;--accent-wash:rgba(16,100,48,.10);--accent-edge:rgba(16,100,48,.25);
+        font-family:"IBM Plex Sans",ui-sans-serif,system-ui,sans-serif;color:var(--ink);line-height:1.55}
+    .sx .disp{font-family:"Newsreader",Georgia,serif;font-weight:600;letter-spacing:-.01em}
+    .sx .mono{font-family:"IBM Plex Mono",ui-monospace,monospace}
+    .sx .lbl{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.64rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint);margin:0}
+    .sx .dim{color:var(--ink-dim)} .sx .faint{color:var(--ink-faint)}
+    .sx .soft{color:var(--accent-soft);font-weight:500}
+    .sx-gift{border:1px solid var(--accent-edge);background:var(--accent-wash);border-radius:var(--r-card);padding:14px 15px}
+    .sx-seg{flex:1;border:1px solid var(--line);border-radius:var(--r-control);padding:10px;text-align:center;font-size:.88rem;color:var(--ink-dim);background:var(--bg)}
+    .sx-seg.on{border:2px solid var(--accent);background:var(--accent-wash);color:var(--accent-soft);font-weight:600}
+    .sx-go{display:flex;align-items:center;justify-content:space-between;min-height:52px;border-radius:var(--r-control);
+           background:var(--accent);color:var(--accent-ink);font-weight:600;font-size:.98rem;padding:0 20px}
+    .stepper{display:flex;align-items:center;gap:10px}
+    .stepper span.b{width:30px;height:30px;border-radius:50%;border:1px solid var(--line-strong);display:flex;align-items:center;justify-content:center;color:var(--ink-dim);font-size:1rem}
+  </style>
+</helmet>
+
+<div style="width:390px;min-height:844px;display:flex;flex-direction:column;background:#000"><!-- T6a · the thank as it is seen — on /shorts. Everyone who can see the thank sees WHAT and WHERE
+     on a row of its own. Only the holder's row opens anything. -->
+<div style="position:relative;height:700px;background:#000;overflow:hidden"><div style="position:absolute;inset:0"><svg viewBox="0 0 90 160" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block"><rect width="90" height="160" fill="#2a2320"/><rect y="96" width="90" height="64" fill="#3b2f28"/><circle cx="45" cy="62" r="17" fill="#b9825a"/><path d="M28 58a17 17 0 0 1 34 0c0-11-8-18-17-18s-17 7-17 18z" fill="#1f1a1d"/><path d="M14 160c3-28 15-44 31-44s28 16 31 44z" fill="#2f5f8a"/><rect x="58" y="104" width="14" height="20" rx="2" fill="#e9dcc6"/><rect x="58" y="104" width="14" height="7" fill="#cfa87a"/></svg></div><div style="position:absolute;right:10px;bottom:190px;display:flex;flex-direction:column;align-items:center;gap:16px;color:#fff"><div style="text-align:center"><div style="width:40px;height:40px;border-radius:50%;overflow:hidden;flex:none"><svg viewBox="0 0 40 40" style="width:100%;height:100%;display:block"><circle cx="20" cy="20" r="20" fill="#dcd3f0"/><path d="M6 40c1.6-7 7-11 14-11s12.4 4 14 11z" fill="#3f7f5a"/><circle cx="20" cy="16" r="7.2" fill="#c98f5f"/><path d="M20 6a7.4 7.4 0 0 0-7.4 7.4c2-1.2 4.4-4 7.4-4s5.4 2.2 7.4 3.4A7.4 7.4 0 0 0 20 6z" fill="#2b2431"/></svg></div><p style="margin:3px 0 0;font-size:.62rem">@dara</p></div><div style="text-align:center"><span style="width:52px;height:52px;border-radius:50%;background:rgba(255,215,0,.3);display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" style="width:26px;height:26px;fill:#ffd700"><path d="M12 21s-7.5-4.6-9.6-9.2C.7 8.1 2.6 4 6.4 4c2.3 0 4 1.3 5.6 3.3C13.6 5.3 15.3 4 17.6 4c3.8 0 5.7 4.1 4 7.8C19.5 16.4 12 21 12 21z"/></svg></span><p style="margin:2px 0 0;font-size:.75rem">Re-Thank</p></div><span style="width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center;font-size:.6rem;font-family:'IBM Plex Mono',monospace">QR</span></div><div style="position:absolute;left:0;right:0;bottom:0;padding:16px 16px 22px;color:#fff;background:linear-gradient(to top,rgba(0,0,0,.78),transparent)"><p style="margin:0 0 14px;font-size:.875rem;opacity:.85">&#128155; Token of Appreciation &bull; To <b>@sophea</b></p><p style="margin:0;font-size:.875rem;line-height:1.4;max-width:300px">Thank you for staying late to help me move the shelves.</p><div style="display:flex;align-items:center;gap:10px;margin-top:14px;padding:8px 10px;border-radius:.75rem;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18)"><div style="display:flex;align-items:center;flex:none"><span style="width:30px;height:30px;border-radius:50%;overflow:hidden;flex:none;display:block;border:2px solid #fff;box-shadow:0 3px 9px rgba(20,16,30,.16);z-index:10;position:relative"><svg viewBox="0 0 48 48" style="width:100%;height:100%;display:block"><rect width="48" height="48" fill="#e9dcc6"/><path d="M15 12h18l-2.4 26h-13.2z" fill="#4a2c17"/><path d="M15 12h18l-.9 10h-16.2z" fill="#cfa87a"/><rect x="14" y="9.5" width="20" height="3.5" rx="1.7" fill="#f2e6d4"/><rect x="19" y="15" width="6" height="6" rx="1.4" fill="#fff" opacity=".55"/><rect x="29" y="4" width="3" height="14" rx="1.5" fill="#d8503c" transform="rotate(12 30 11)"/></svg></span></div><span style="font-size:.84rem;font-weight:500">Iced Americano &middot; Home Coffee</span><span style="margin-left:auto;opacity:.7;font-size:1.1rem">&rsaquo;</span></div><div style="display:flex;justify-content:space-between;font-size:.75rem;margin-top:18px;opacity:.65"><i>&#128205; Phnom Penh</i><span>&#128106; 2h</span></div></div></div><div style="background:var(--g200);flex:1;padding:16px 16px 0"><div style="margin:6px 0 0;border-top:1px dashed var(--line-strong);padding-top:14px"><p class="state">The same row, to everyone else who can see it</p></div><div style="background:#111;border-radius:.75rem;padding:4px 14px 14px;color:#fff;margin-top:10px"><div style="display:flex;align-items:center;gap:10px;margin-top:14px;padding:8px 10px;border-radius:.75rem;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18)"><div style="display:flex;align-items:center;flex:none"><span style="width:30px;height:30px;border-radius:50%;overflow:hidden;flex:none;display:block;border:2px solid #fff;box-shadow:0 3px 9px rgba(20,16,30,.16);z-index:10;position:relative"><svg viewBox="0 0 48 48" style="width:100%;height:100%;display:block"><rect width="48" height="48" fill="#e9dcc6"/><path d="M15 12h18l-2.4 26h-13.2z" fill="#4a2c17"/><path d="M15 12h18l-.9 10h-16.2z" fill="#cfa87a"/><rect x="14" y="9.5" width="20" height="3.5" rx="1.7" fill="#f2e6d4"/><rect x="19" y="15" width="6" height="6" rx="1.4" fill="#fff" opacity=".55"/><rect x="29" y="4" width="3" height="14" rx="1.5" fill="#d8503c" transform="rotate(12 30 11)"/></svg></span></div><span style="font-size:.84rem;font-weight:500">Iced Americano &middot; Home Coffee</span></div><p style="margin:8px 0 0;font-size:.75rem;opacity:.6">Not a button. No code, no price, nothing about whether it was used.</p></div></div><div style="background:var(--g200)"><div style="padding:18px 16px 22px;display:flex;flex-direction:column;gap:8px"><p class="rule">The gift row is its OWN row &mdash; never on the title row</p><p class="rule">The title row's existing Kiitos and money figures are A313's to fix &mdash; not redrawn here</p><p class="rule">The sender sees the same row on their own thank, and nothing ever tells them whether it was used</p><p class="rule">[ PLACEHOLDER VIDEO ]</p></div></div></div>
+</x-dc>
+</body>
+</html>

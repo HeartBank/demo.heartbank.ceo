@@ -68,7 +68,7 @@ name and order on these screens exists to draw the design.
 | `index.html` | the front door — **generated**, see below |
 | `home-coffee-walkthrough.html` | the clickable walkthrough |
 | `*.dc.html` | one artboard each — a self-contained page with inline styles |
-| `canvas.json` | layout: positions, the five pages, the sticky notes |
+| `canvas.json` | layout: positions, the pages (one per surface), the sticky notes |
 | `build-index.py` | regenerates `index.html` from `canvas.json` |
 | `build-wall.py` | regenerates `wall.html` — every artboard on one pan/zoom surface, grouped by page |
 | `build-og.py` | renders the two 1200×630 link-preview cards with headless Chrome |
@@ -185,6 +185,36 @@ is shown to a customer.
 
 ⚠️ `HC-7K2M` is a legible placeholder. A bearer code needs real entropy and rate limiting in the same
 commit that makes it redeemable.
+
+## Gift codes in Treasury — fifteen screens (added 2026-10-05, roadmap A312)
+
+The sixth page, `thank.heartbank.org · gift codes`: a gift code from a shop attached to a thank in
+HeartBank® Treasury. Every `Treasury*.dc.html` file. **T1–T10** are Treasury screens, drawn in
+**Treasury's own design** (Tailwind's default palette, white cards on grey, yellow actions, Noto Sans
+Khmer) because that is the app they will be built in. **The gift itself** — the shop rows, the menu, the
+code — is drawn **in the shop's design and theme**, because those pieces are the shop's components,
+shared into Treasury. **S1–S2** are the two places it lands on `<tag>.heartbank.ceo`.
+
+**What they argue:**
+
+- **The gift is a thing, not an amount.** Everyone who can see the thank sees *what* and *where*
+  (*Iced Americano · Home Coffee*), on a row of its own. **Only the person it is for sees the code.**
+- **The price is the payer's alone.** It shows on their own screen before they press Send and in their
+  own account history afterwards — never on the thank, never added to a tip, never beside a Kiitos.
+- **Refusals are facts, said once.** Nothing is charged, nothing is sent, and the sentence names the
+  shop or the account, never the person.
+- **The banker's switch is a human check, not decoration.** A shop names its family itself, so the
+  list shows who each shop is *paid to*. Off by default.
+- **The thank that comes back carries no tip** — a tip to the person who paid for your coffee would
+  pay them back for it. Words, video, and a donation to their Re-Thank Foundation℠ stay.
+- **An anonymous giver is thanked through a fixed mask, `@******`**, and nothing on the gift ever says
+  whether it was thanked.
+- **When nothing qualifies, the door is simply absent** — never a line about why.
+
+⚠️ **Dara, Sophea, Bopha and Vanna are invented, and so are `Mango & Me`, `Sovann Noodles`, `@srey`
+and `@sovann`.** Home Coffee and her menu are hers. ⚠️ **The B-QRs are real** — drawn by the
+`brand.333.eco` recipe and decoded before commit — and point at gift pages for placeholder codes.
+⚠️ **No Khmer on these screens yet** beyond her shop's name, for the same reason as the seven above.
 
 ## Rebuilding the canvas
 
