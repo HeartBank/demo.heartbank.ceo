@@ -684,8 +684,8 @@
   const PAYS = [
     {id:'cash', t:'Cash',  s:'at the counter'},
     {id:'khqr', t:'KHQR',  s:'bank to bank'},
-    {id:'h3qr', t:'H3QR',  s:'Personal Wallet℠'},
-    {id:'f3qr', t:'F3QR',  s:'Personal Account℠'}
+    {id:'h3qr', t:'H3QR #kampuchea',  s:'Personal Account℠'},
+    {id:'family', t:'H3QR #family',  s:'Personal Account℠'}
   ];
   const payLabel = id => (PAYS.find(p=>p.id===id)||PAYS[1]).t;
   // A released gift code. ⛔ It carries an ITEM, never an amount — the moment it
@@ -902,10 +902,10 @@
       `<button class="chip" style="flex:1 1 46%;min-height:56px" aria-pressed="${p.id===pay}"
         onclick="setPay('${p.id}')"><b>${p.t}</b><span>${p.s}</span></button>`).join('');
     document.getElementById('payNote').textContent =
-      pay === 'f3qr'
+      pay === 'family'
         ? 'Your own family bank — #lyfamily. Kanghna\'s shop can see her own family\'s accounts and no one else\'s.'
       : pay === 'h3qr'
-        ? 'Straight into her Personal Wallet℠. Never her Re-Thank Fund℠ — what you owe is not a gift.'
+        ? 'Straight into her Personal Account℠. Never her Re-Thank Fund℠ — what you owe is not a gift.'
       : pay === 'cash'
         ? 'Hand it over when she hands the order over.'
         : 'Bank to bank, directly to Kanghna. HeartBank® never holds it.';
@@ -1183,7 +1183,7 @@
       <p class="lbl" style="margin:6px 0 0">Paid with your family bank</p>
       <div class="card">
         <p style="margin:0 0 6px;font-size:.9rem;line-height:1.55">
-          <b>F3QR</b> lets Reach spend his <b>Personal Account℠</b> here — what he has earned
+          <b>H3QR #family</b> lets Reach spend his <b>Personal Account℠</b> here — what he has earned
           being kind at home, spent at his mother's shop.</p>
         <p style="margin:0;font-size:.82rem;color:var(--ink-dim);line-height:1.55">
           ⛔ It is <b>not takings</b>. No money came in: you gave your own child a drink and the
