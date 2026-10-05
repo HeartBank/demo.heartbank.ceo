@@ -1,0 +1,728 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script src="./analytics.js?v=77336f4a"></script>
+<title>Treasury Gift Walkthrough</title>
+<!-- Kept out of SEARCH by naming the search crawlers, NOT with a blanket robots meta: the blanket
+     form addresses every robot, and a link-preview crawler can read it as "do not process this page". -->
+<meta name="googlebot" content="noindex,nofollow">
+<meta name="bingbot" content="noindex,nofollow">
+<meta name="slurp" content="noindex,nofollow">
+<meta name="yandex" content="noindex,nofollow">
+<!-- og:image must be ABSOLUTE, or the card has no image on every platform. -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://demo.heartbank.ceo/treasury-gift-walkthrough.html">
+<meta property="og:site_name" content="HeartBank Shops">
+<meta property="og:title" content="A gift with a thank — a walkthrough">
+<meta property="og:description" content="Switch a family shop on, thank someone with a coffee instead of a tip, open the code, thank them back. Drawings, not the bank — nothing here charges anyone.">
+<meta property="og:image" content="https://demo.heartbank.ceo/og-treasury.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A gift with a thank, in large serif type on a dark ground, under the HeartBank Treasury name.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#15803d">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+Khmer:wght@400;500;600;700;900&display=swap">
+<style>
+  /* Layout: the demo site's stage (shops tokens) around a phone that renders HeartBank Treasury in
+     its OWN design — Tailwind's default greys and yellow-500 — with the gift pieces in the shop's. */
+  :root{
+    --bg:#fcfbfe; --surface:#f4f1fb; --surface-2:#ebe7f5;
+    --line:rgba(20,16,30,.12); --line-strong:rgba(20,16,30,.28);
+    --ink:#16141c; --ink-dim:#5b5766; --ink-faint:#8b8796;
+    --accent:#15803d; --accent-soft:#106430; --accent-ink:#ffffff;
+    --accent-wash:rgba(16,100,48,.10); --accent-edge:rgba(16,100,48,.25);
+    --stage:#e9e5f0;
+    --font-display:"Newsreader",Georgia,serif;
+    --font-text:"IBM Plex Sans",ui-sans-serif,system-ui,sans-serif;
+    --font-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+    --font-km:"Noto Sans Khmer","IBM Plex Sans",sans-serif;
+    --r-card:1.25rem; --r-control:1rem; --r-pill:999px;
+    /* Treasury, as the app ships it */
+    --t-sans:"Noto Sans Khmer",ui-sans-serif,system-ui,sans-serif;
+    --t-ground:#e5e7eb; --t-card:#ffffff; --t-ink:#111827; --t-dim:#6b7280; --t-faint:#9ca3af;
+    --t-line:#e5e7eb; --t-field:#f9fafb; --t-field-line:#d1d5db; --t-chip:#f3f4f6;
+    --t-yellow:#eab308; --t-yellow-ink:#ffffff; --t-pill:#fefce8; --t-pill-line:#fde047; --t-pill-ink:#a16207;
+    --t-purple:#9333ea; --t-purple-wash:#faf5ff; --t-purple-line:#e9d5ff; --t-fact:#f3f4f6;
+  }
+  @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){
+    --bg:#0a0a0f; --surface:#17171d; --surface-2:#1f1f27;
+    --line:rgba(255,255,255,.08); --line-strong:rgba(255,255,255,.18);
+    --ink:#f5f5f7; --ink-dim:#9b9ba5; --ink-faint:#6b6b76;
+    --accent:#3fa564; --accent-soft:#96c6a8; --accent-ink:#08130c;
+    --accent-wash:rgba(63,165,100,.14); --accent-edge:rgba(63,165,100,.32);
+    --stage:#121218;
+    --t-ground:#4b5563; --t-card:#1f2937; --t-ink:#f9fafb; --t-dim:#9ca3af; --t-faint:#6b7280;
+    --t-line:#374151; --t-field:#374151; --t-field-line:#4b5563; --t-chip:#374151;
+    --t-pill:rgba(113,63,18,.25); --t-pill-line:#a16207; --t-pill-ink:#facc15;
+    --t-purple-wash:rgba(88,28,135,.3); --t-purple-line:#6b21a8; --t-fact:#374151;
+    color-scheme:dark;
+  }}
+  :root[data-theme="dark"]{
+    --bg:#0a0a0f; --surface:#17171d; --surface-2:#1f1f27;
+    --line:rgba(255,255,255,.08); --line-strong:rgba(255,255,255,.18);
+    --ink:#f5f5f7; --ink-dim:#9b9ba5; --ink-faint:#6b6b76;
+    --accent:#3fa564; --accent-soft:#96c6a8; --accent-ink:#08130c;
+    --accent-wash:rgba(63,165,100,.14); --accent-edge:rgba(63,165,100,.32);
+    --stage:#121218;
+    --t-ground:#4b5563; --t-card:#1f2937; --t-ink:#f9fafb; --t-dim:#9ca3af; --t-faint:#6b7280;
+    --t-line:#374151; --t-field:#374151; --t-field-line:#4b5563; --t-chip:#374151;
+    --t-pill:rgba(113,63,18,.25); --t-pill-line:#a16207; --t-pill-ink:#facc15;
+    --t-purple-wash:rgba(88,28,135,.3); --t-purple-line:#6b21a8; --t-fact:#374151;
+    color-scheme:dark;
+  }
+  *{box-sizing:border-box}
+  /* ⚠️ Not decorative: without it any class that sets display beats the UA's [hidden]. */
+  [hidden]{display:none!important}
+  body{margin:0;background:var(--stage);color:var(--ink);font-family:var(--font-text);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  button{font:inherit;cursor:pointer;border:none;background:none;color:inherit;padding:0;text-align:inherit}
+  button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .mono{font-family:var(--font-mono);font-variant-numeric:tabular-nums}
+  .km{font-family:var(--font-km)}
+
+  /* ---- the stage ---- */
+  .wrap{min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:20px 16px 40px;gap:14px}
+  .lede{max-width:430px;width:100%;text-align:center}
+  .lede h1{font-family:var(--font-display);font-size:1.5rem;font-weight:600;margin:0 0 4px;letter-spacing:-.02em;text-wrap:balance}
+  .lede p{margin:0;font-size:.88rem;color:var(--ink-dim);line-height:1.5}
+  .roles{display:flex;gap:6px;background:var(--surface);border-radius:var(--r-pill);padding:5px;width:100%;max-width:430px}
+  .role{flex:1;min-height:46px;border-radius:var(--r-pill);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;color:var(--ink-dim);text-align:center}
+  .role[aria-pressed="true"]{background:var(--bg);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.09)}
+  .role b{font-size:.96rem;font-weight:600}
+  .role span{font-size:.66rem;letter-spacing:.04em;text-transform:uppercase;font-family:var(--font-mono)}
+  .guide{max-width:430px;width:100%;background:var(--bg);border:1px solid var(--line);border-radius:var(--r-card);padding:12px 15px;font-size:.86rem;line-height:1.5}
+  .guide .end{margin:0 0 6px;font-family:var(--font-display);font-size:1.06rem;font-weight:600;letter-spacing:-.01em;color:var(--accent-soft)}
+  .guide p{margin:0}
+  .guide .gr{display:flex;justify-content:space-between;gap:10px;align-items:baseline;margin-top:6px}
+  .guide .reset{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-faint);flex:none}
+
+  /* ---- the phone ---- */
+  .phone{width:100%;max-width:390px;background:var(--t-ground);border-radius:26px;overflow:hidden;border:1px solid var(--line);
+         box-shadow:0 18px 50px rgba(20,16,30,.16);display:flex;flex-direction:column;height:min(780px,80vh);color:var(--t-ink);font-family:var(--t-sans);line-height:1.5}
+  .scroll{flex:1;overflow-y:auto;overscroll-behavior:contain;display:flex;flex-direction:column}
+  @media (max-width:430px){
+    .wrap{min-height:100dvh;padding:14px 0 0;gap:10px}
+    .lede,.guide{padding-left:16px;padding-right:16px}
+    .guide{border-radius:0;border-left:0;border-right:0}
+    .roles{width:auto;max-width:none;align-self:stretch;margin:0 12px}
+    /* ⛔ No nested scroller on a phone, and no overflow:hidden on .phone: either one leaves a sticky
+       bar nothing to stick within. On mobile the DOCUMENT scrolls. */
+    .phone{max-width:none;height:auto;flex:none;border-radius:0;overflow:visible;border-left:0;border-right:0;border-bottom:0;box-shadow:none}
+    .scroll{overflow:visible;flex:none;overscroll-behavior:auto}
+    .foot{position:sticky;bottom:0}
+  }
+
+  /* ---- Treasury pieces ---- */
+  .thead{background:var(--t-card);border-bottom:1px solid var(--t-line);padding:12px 14px;display:flex;align-items:center;justify-content:space-between;flex:none}
+  .thead .t{display:flex;align-items:center;gap:9px;font-size:1.4rem;font-weight:600}
+  .thead sub{font-size:.72rem;color:var(--t-faint);margin-left:3px}
+  .tnav{display:flex;gap:6px;padding:10px 12px 0;flex-wrap:wrap;flex:none}
+  .tnav button{font-size:.78rem;padding:5px 11px;border-radius:999px;background:var(--t-card);color:var(--t-dim);border:1px solid var(--t-line)}
+  .tnav button[aria-current="true"]{background:var(--t-pill);color:var(--t-pill-ink);border-color:var(--t-pill-line);font-weight:600}
+  .body{padding:16px 14px 20px;display:flex;flex-direction:column;gap:14px;flex:1}
+  .card{background:var(--t-card);border-radius:.5rem;box-shadow:0 1px 3px rgba(0,0,0,.1);padding:20px 18px;display:flex;flex-direction:column;gap:14px}
+  .h1{margin:0;font-size:1.2rem;font-weight:700}
+  .lbl{display:block;margin:0 0 4px;font-size:.86rem;font-weight:500}
+  .inp{width:100%;padding:8px 11px;font:inherit;font-size:1rem;color:var(--t-ink);background:var(--t-field);border:1px solid var(--t-field-line);border-radius:.5rem}
+  textarea.inp{resize:none;min-height:74px}
+  .xs{font-size:.75rem;color:var(--t-dim);margin:0}
+  .sm{font-size:.86rem;margin:0}
+  .ybtn{display:flex;align-items:center;justify-content:center;gap:4px;width:100%;padding:10px 14px;font-size:.88rem;font-weight:500;color:var(--t-yellow-ink);background:var(--t-yellow);border-radius:.5rem;text-align:center}
+  .pbtn{background:var(--t-purple);font-weight:700}
+  .ypill{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;font-size:.84rem;font-weight:500;color:var(--t-pill-ink);background:var(--t-pill);border:1px solid var(--t-pill-line);border-radius:.5rem;align-self:flex-start}
+  .fact{padding:11px 13px;background:var(--t-fact);border-radius:.5rem;font-size:.86rem}
+  .fact .xs{margin-top:3px}
+  .hearts{display:flex;gap:9px;justify-content:center;background:var(--t-card);border-radius:.5rem;box-shadow:0 1px 3px rgba(0,0,0,.1);padding:12px 8px}
+  .hearts button{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+  .hearts button[aria-pressed="true"]{box-shadow:0 0 0 1px var(--t-card),0 0 0 2px var(--t-faint)}
+  .video{height:200px;width:113px;border-radius:.75rem;overflow:clip;background:#000;margin:0 auto;position:relative}
+  .video .tag{position:absolute;left:0;right:0;bottom:6px;text-align:center;font-family:var(--font-mono);font-size:.55rem;letter-spacing:.04em;color:#fff;opacity:.8}
+  .pin{display:flex;justify-content:space-between;gap:12px;padding:7px 11px;background:var(--t-field);border-radius:.5rem;font-size:.86rem}
+  .pin span:last-child{font-size:.74rem;color:#ca8a04}
+  .row{display:flex;align-items:center;gap:11px;padding:11px 12px;border:1px solid var(--t-line);border-radius:.5rem;background:var(--t-card);width:100%}
+  .row .grow{min-width:0;flex:1}
+  .toggle{width:44px;height:24px;border-radius:999px;background:var(--t-line);position:relative;flex:none}
+  .toggle i{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:50%;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.2)}
+  .toggle[aria-checked="true"]{background:var(--t-yellow)}
+  .toggle[aria-checked="true"] i{left:auto;right:2px}
+  .seg{display:flex;border:1px solid var(--t-field-line);border-radius:.5rem;overflow:clip;font-size:.8rem}
+  .seg button{flex:1;padding:8px 6px;text-align:center;background:var(--t-field);color:var(--t-dim);white-space:nowrap}
+  .seg button[aria-pressed="true"]{background:var(--t-purple);color:#fff;font-weight:600}
+  .sheet-dim{height:46px;background:rgba(0,0,0,.6);flex:none}
+  .sheet{background:var(--t-card);border-radius:1rem 1rem 0 0;margin-top:-14px;flex:1;display:flex;flex-direction:column;position:relative}
+  .sheet-h{position:relative;padding:15px 50px 11px 16px;border-bottom:1px solid var(--t-line)}
+  .sheet-h .x{position:absolute;top:10px;right:10px;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--t-dim);font-size:1rem}
+  .sheet-b{padding:14px 16px 20px;display:flex;flex-direction:column;gap:12px;flex:1}
+  .short{position:relative;background:#000;border-radius:.75rem;overflow:clip;min-height:470px;color:#fff;display:flex;flex-direction:column;justify-content:flex-end}
+  .short .bgv{position:absolute;inset:0}
+  .short .ov{position:relative;padding:14px 14px 18px;background:linear-gradient(to top,rgba(0,0,0,.82),rgba(0,0,0,.35) 70%,transparent)}
+  .short .rail{position:absolute;right:10px;top:150px;display:flex;flex-direction:column;align-items:center;gap:14px;font-size:.66rem;text-align:center}
+  .short .rt{width:50px;height:50px;border-radius:50%;background:rgba(255,215,0,.3);display:flex;align-items:center;justify-content:center}
+  .giftrow{display:flex;align-items:center;gap:10px;margin-top:12px;padding:8px 10px;border-radius:.75rem;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);width:100%;color:#fff}
+  .note-in{display:flex;align-items:flex-start;gap:11px;padding:11px 12px;border:1px solid var(--t-line);border-radius:.5rem;background:var(--t-card);width:100%}
+  .rules{margin:0;padding:0 2px;font-family:var(--font-mono);font-size:.6rem;letter-spacing:.04em;text-transform:uppercase;color:var(--t-dim)}
+
+  /* ---- the shop's pieces (shared.333.eco/web/gift/), in the shop's design ---- */
+  .sx{font-family:var(--font-text);color:var(--ink);line-height:1.55}
+  .sx .disp{font-family:var(--font-display);font-weight:600;letter-spacing:-.01em}
+  .sx .dim{color:var(--ink-dim)} .sx .faint{color:var(--ink-faint)}
+  .sx .soft{color:var(--accent-soft);font-weight:500}
+  .sx .lbl2{font-family:var(--font-mono);font-size:.64rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint);margin:0}
+  .sx-gift{border:1px solid var(--accent-edge);background:var(--accent-wash);border-radius:var(--r-card);padding:13px 14px}
+  .sx-row{display:flex;align-items:center;gap:12px;padding:11px 13px;border:1px solid var(--line);border-radius:var(--r-card);background:var(--bg);width:100%;color:var(--ink)}
+  .sx-door{display:flex;align-items:center;gap:12px;padding:12px 14px;border:1px dashed var(--accent-edge);border-radius:var(--r-card);background:var(--bg);width:100%;color:var(--ink)}
+  .sx-seg{display:flex;gap:8px}
+  .sx-seg button{flex:1;border:1px solid var(--line);border-radius:var(--r-control);padding:9px 6px;text-align:center;font-size:.86rem;color:var(--ink-dim);background:var(--bg)}
+  .sx-seg button[aria-pressed="true"]{border:2px solid var(--accent);background:var(--accent-wash);color:var(--accent-soft);font-weight:600}
+  .sx-go{display:flex;align-items:center;justify-content:space-between;width:100%;min-height:50px;border-radius:var(--r-control);background:var(--accent);color:var(--accent-ink);font-weight:600;font-size:.96rem;padding:0 18px}
+  .step{width:30px;height:30px;border-radius:50%;border:1px solid var(--line-strong);display:flex;align-items:center;justify-content:center;color:var(--ink-dim);font-size:1rem;flex:none}
+  .thumb{border-radius:50%;overflow:clip;flex:none;display:block}
+  .thumb svg,.face svg{width:100%;height:100%;display:block}
+  .face{border-radius:50%;overflow:clip;flex:none;display:block}
+  .box{display:flex;align-items:center;justify-content:center}
+  .box .thumb{border:2px solid var(--bg);box-shadow:0 3px 9px rgba(20,16,30,.16);position:relative}
+  .codecard{border:1px solid var(--line);border-radius:var(--r-card);padding:15px;text-align:center;background:var(--bg)}
+  .bqr{width:176px;height:176px;margin:10px auto 4px;background:#fff;padding:8px;border-radius:.6rem}
+  .foot{background:var(--t-card);border-top:1px solid var(--t-line);padding:10px 14px 14px;flex:none}
+  /* The entry motion starts from a VISIBLE frame: a hidden tab or a thumbnail freezes it there. */
+  @media (prefers-reduced-motion:no-preference){.screen-in{animation:in .2s ease-out}@keyframes in{from{transform:translateY(4px)}to{transform:none}}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="lede">
+    <h1>A gift with a thank</h1>
+    <p>A coffee from a family shop, attached to a thank in HeartBank&reg; Treasury. Switch between the three
+       people below. Drawings, not the bank &mdash; nothing here charges anyone.</p>
+  </div>
+  <div class="roles" role="group" aria-label="Whose phone">
+    <button class="role" id="r-bopha" data-role="bopha"><b>Bopha</b><span>the banker</span></button>
+    <button class="role" id="r-dara" data-role="dara"><b>Dara</b><span>gives</span></button>
+    <button class="role" id="r-sophea" data-role="sophea"><b>Sophea</b><span>receives</span></button>
+  </div>
+  <div class="guide" id="guide" aria-live="polite"></div>
+  <div class="phone"><div class="scroll" id="phone"></div></div>
+</div>
+
+<script>
+"use strict";
+const ITEMS = {"americano": {"en": "Iced Americano", "price": 4000, "art": "<rect width=\"48\" height=\"48\" fill=\"#e9dcc6\"/><path d=\"M15 12h18l-2.4 26h-13.2z\" fill=\"#4a2c17\"/><path d=\"M15 12h18l-.9 10h-16.2z\" fill=\"#cfa87a\"/><rect x=\"14\" y=\"9.5\" width=\"20\" height=\"3.5\" rx=\"1.7\" fill=\"#f2e6d4\"/><rect x=\"19\" y=\"15\" width=\"6\" height=\"6\" rx=\"1.4\" fill=\"#fff\" opacity=\".55\"/><rect x=\"29\" y=\"4\" width=\"3\" height=\"14\" rx=\"1.5\" fill=\"#d8503c\" transform=\"rotate(12 30 11)\"/>"}, "condensed": {"en": "Iced Condensed Milk Coffee", "price": 5000, "art": "<rect width=\"48\" height=\"48\" fill=\"#f0e6d4\"/><path d=\"M15 12h18l-2.4 26h-13.2z\" fill=\"#8a6038\"/><path d=\"M15 12h18l-1.2 13h-15.6z\" fill=\"#efe0c8\"/><rect x=\"14\" y=\"9.5\" width=\"20\" height=\"3.5\" rx=\"1.7\" fill=\"#f7efe2\"/><rect x=\"19\" y=\"15\" width=\"6\" height=\"6\" rx=\"1.4\" fill=\"#fff\" opacity=\".6\"/>"}, "matchalatte": {"en": "Matcha Latte", "price": 6000, "art": "<rect width=\"48\" height=\"48\" fill=\"#e7efd9\"/><path d=\"M15 12h18l-2.4 26h-13.2z\" fill=\"#7d9c4a\"/><path d=\"M15 12h18l-1.1 12h-15.8z\" fill=\"#d9e6bf\"/><rect x=\"14\" y=\"9.5\" width=\"20\" height=\"3.5\" rx=\"1.7\" fill=\"#f0f5e6\"/><rect x=\"19\" y=\"16\" width=\"6\" height=\"5\" rx=\"1.3\" fill=\"#fff\" opacity=\".5\"/>"}, "passionsoda": {"en": "Passion Soda", "price": 5000, "art": "<rect width=\"48\" height=\"48\" fill=\"#f6ecda\"/><path d=\"M15 12h18l-2.4 26h-13.2z\" fill=\"#e8a33c\"/><rect x=\"14\" y=\"9.5\" width=\"20\" height=\"3.5\" rx=\"1.7\" fill=\"#f9f2e4\"/><circle cx=\"20\" cy=\"22\" r=\"1.6\" fill=\"#fff\" opacity=\".7\"/><circle cx=\"26\" cy=\"26\" r=\"1.4\" fill=\"#fff\" opacity=\".7\"/><circle cx=\"23\" cy=\"18\" r=\"1.2\" fill=\"#fff\" opacity=\".7\"/><circle cx=\"28\" cy=\"20\" r=\"1.1\" fill=\"#fff\" opacity=\".7\"/>"}, "redlemon": {"en": "Red Lemon Tea", "price": 3000, "art": "<rect width=\"48\" height=\"48\" fill=\"#f2eeda\"/><path d=\"M15 12h18l-2.4 26h-13.2z\" fill=\"#c8873b\"/><path d=\"M15 12h18l-.8 9h-16.4z\" fill=\"#e0ab5c\"/><rect x=\"14\" y=\"9.5\" width=\"20\" height=\"3.5\" rx=\"1.7\" fill=\"#f6f2e4\"/><circle cx=\"21\" cy=\"28\" r=\"2.6\" fill=\"#dd5b4a\"/><rect x=\"25\" y=\"16\" width=\"5\" height=\"5\" rx=\"1.2\" fill=\"#fff\" opacity=\".5\"/>"}, "pizza-mini": {"en": "Pizza", "price": 5000, "art": "<rect width=\"48\" height=\"48\" fill=\"#f6ead2\"/><path d=\"M24 6 L41 38 H7 Z\" fill=\"#e8b657\"/><path d=\"M24 11 L37 36 H11 Z\" fill=\"#dd8a3c\"/><path d=\"M7 38h34l1.5 4H5.5z\" fill=\"#c07a3a\"/><circle cx=\"24\" cy=\"22\" r=\"3.2\" fill=\"#c0392b\"/><circle cx=\"17\" cy=\"31\" r=\"2.6\" fill=\"#c0392b\"/><circle cx=\"31\" cy=\"31\" r=\"2.6\" fill=\"#c0392b\"/>"}};
+const BQR = "<svg viewBox=\"0 0 200 200\" style=\"width:100%;height:100%;display:block\" role=\"img\" aria-label=\"Green B-QR\"><rect width=\"200\" height=\"200\" fill=\"#ffffff\"/><g transform=\"translate(-32.27 -17.23) scale(10.4)\"><clipPath id=\"bq34m9gr\"><path d=\"M3.9743 20.0257L3.8824 18.0670C3.5430 11.1232 3.3167 6.5411 5.9896 3.8683C8.1675 1.6904 11.5899 1.6904 13.7678 3.8683C14.9981 5.0986 15.6062 6.8523 15.4719 8.5281C17.1477 8.3938 18.9014 9.0019 20.1317 10.2322C22.3096 12.4101 22.3096 15.8325 20.1317 18.0104C17.4589 20.6833 12.8768 20.4570 5.9260 20.1247L3.9743 20.0257Z\"/></clipPath><g clip-path=\"url(#bq34m9gr)\" fill=\"#14532d\"><rect x=\"9.06\" y=\"2.52\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.62\" y=\"2.52\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.89\" y=\"2.52\" width=\"0.23\" height=\"0.23\"/><rect x=\"10.72\" y=\"2.52\" width=\"0.23\" height=\"0.23\"/><rect x=\"7.96\" y=\"2.8\" width=\"0.23\" height=\"0.23\"/><rect x=\"8.23\" y=\"2.8\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.89\" y=\"2.8\" width=\"0.23\" height=\"0.23\"/><rect x=\"10.17\" y=\"2.8\" width=\"0.23\" height=\"0.23\"/><rect x=\"11\" y=\"2.8\" width=\"0.23\" height=\"0.23\"/><rect x=\"7.4\" y=\"3.08\" width=\"0.23\" height=\"0.23\"/><rect x=\"7.68\" y=\"3.08\" width=\"0.23\" height=\"0.23\"/><rect x=\"8.23\" y=\"3.08\" width=\"0.23\" height=\"0.23\"/><rect x=\"8.79\" y=\"3.08\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.06\" y=\"3.08\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.62\" y=\"3.08\" width=\"0.23\" height=\"0.23\"/><rect x=\"10.17\" y=\"3.08\" width=\"0.23\" height=\"0.23\"/><rect x=\"10.72\" y=\"3.08\" width=\"0.23\" height=\"0.23\"/><rect x=\"11.28\" y=\"3.08\" width=\"0.23\" height=\"0.23\"/><rect x=\"11.83\" y=\"3.08\" width=\"0.23\" height=\"0.23\"/><rect x=\"12.11\" y=\"3.08\" width=\"0.23\" height=\"0.23\"/><rect x=\"6.85\" y=\"3.35\" width=\"0.23\" height=\"0.23\"/><rect x=\"7.13\" y=\"3.35\" width=\"0.23\" height=\"0.23\"/><rect x=\"7.68\" y=\"3.35\" width=\"0.23\" height=\"0.23\"/><rect x=\"8.51\" y=\"3.35\" width=\"0.23\" height=\"0.23\"/><rect x=\"8.79\" y=\"3.35\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.62\" y=\"3.35\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.89\" y=\"3.35\" width=\"0.23\" height=\"0.23\"/><rect x=\"10.72\" y=\"3.35\" width=\"0.23\" height=\"0.23\"/><rect x=\"11\" y=\"3.35\" width=\"0.23\" height=\"0.23\"/><rect x=\"11.56\" y=\"3.35\" width=\"0.23\" height=\"0.23\"/><rect x=\"11.83\" y=\"3.35\" width=\"0.23\" height=\"0.23\"/><rect x=\"12.39\" y=\"3.35\" width=\"0.23\" height=\"0.23\"/><rect x=\"12.66\" y=\"3.35\" width=\"0.23\" height=\"0.23\"/><rect x=\"6.57\" y=\"3.63\" width=\"0.23\" height=\"0.23\"/><rect x=\"6.85\" y=\"3.63\" width=\"0.23\" height=\"0.23\"/><rect x=\"7.4\" y=\"3.63\" width=\"0.23\" height=\"0.23\"/><rect x=\"8.23\" y=\"3.63\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.06\" y=\"3.63\" width=\"0.23\" height=\"0.23\"/><rect x=\"11.28\" y=\"3.63\" width=\"0.23\" height=\"0.23\"/><rect x=\"12.39\" y=\"3.63\" width=\"0.23\" height=\"0.23\"/><rect x=\"6.3\" y=\"3.91\" width=\"0.23\" height=\"0.23\"/><rect x=\"6.57\" y=\"3.91\" width=\"0.23\" height=\"0.23\"/><rect x=\"7.4\" y=\"3.91\" width=\"0.23\" height=\"0.23\"/><rect x=\"7.68\" y=\"3.91\" width=\"0.23\" height=\"0.23\"/><rect x=\"8.51\" y=\"3.91\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.06\" y=\"3.91\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.34\" y=\"3.91\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.89\" y=\"3.91\" width=\"0.23\" height=\"0.23\"/><rect x=\"10.17\" y=\"3.91\" width=\"0.23\" height=\"0.23\"/><rect x=\"11\" y=\"3.91\" width=\"0.23\" height=\"0.23\"/><rect x=\"11.28\" y=\"3.91\" width=\"0.23\" height=\"0.23\"/><rect x=\"11.83\" y=\"3.91\" width=\"0.23\" height=\"0.23\"/><rect x=\"12.11\" y=\"3.91\" width=\"0.23\" height=\"0.23\"/><rect x=\"12.94\" y=\"3.91\" width=\"0.23\" height=\"0.23\"/><rect x=\"13.22\" y=\"3.91\" width=\"0.23\" height=\"0.23\"/><rect x=\"6.02\" y=\"4.18\" width=\"0.23\" height=\"0.23\"/><rect x=\"7.13\" y=\"4.18\" width=\"0.23\" height=\"0.23\"/><rect x=\"7.68\" y=\"4.18\" width=\"0.23\" height=\"0.23\"/><rect x=\"7.96\" y=\"4.18\" width=\"0.23\" height=\"0.23\"/><rect x=\"8.51\" y=\"4.18\" width=\"0.23\" height=\"0.23\"/><rect x=\"8.79\" y=\"4.18\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.62\" y=\"4.18\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.89\" y=\"4.18\" width=\"0.23\" height=\"0.23\"/><rect x=\"10.45\" y=\"4.18\" width=\"0.23\" height=\"0.23\"/><rect x=\"11\" y=\"4.18\" width=\"0.23\" height=\"0.23\"/><rect x=\"11.56\" y=\"4.18\" width=\"0.23\" height=\"0.23\"/><rect x=\"12.11\" y=\"4.18\" width=\"0.23\" height=\"0.23\"/><rect x=\"12.66\" y=\"4.18\" width=\"0.23\" height=\"0.23\"/><rect x=\"13.22\" y=\"4.18\" width=\"0.23\" height=\"0.23\"/><rect x=\"5.74\" y=\"4.46\" width=\"0.23\" height=\"0.23\"/><rect x=\"6.02\" y=\"4.46\" width=\"0.23\" height=\"0.23\"/><rect x=\"6.85\" y=\"4.46\" width=\"0.23\" height=\"0.23\"/><rect x=\"7.13\" y=\"4.46\" width=\"0.23\" height=\"0.23\"/><rect x=\"8.23\" y=\"4.46\" width=\"0.23\" height=\"0.23\"/><rect x=\"8.79\" y=\"4.46\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.06\" y=\"4.46\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.62\" y=\"4.46\" width=\"0.23\" height=\"0.23\"/><rect x=\"10.17\" y=\"4.46\" width=\"0.23\" height=\"0.23\"/><rect x=\"11.28\" y=\"4.46\" width=\"0.23\" height=\"0.23\"/><rect x=\"11.83\" y=\"4.46\" width=\"0.23\" height=\"0.23\"/><rect x=\"13.49\" y=\"4.46\" width=\"0.23\" height=\"0.23\"/><rect x=\"13.77\" y=\"4.46\" width=\"0.23\" height=\"0.23\"/><rect x=\"5.47\" y=\"4.74\" width=\"0.23\" height=\"0.23\"/><rect x=\"5.74\" y=\"4.74\" width=\"0.23\" height=\"0.23\"/><rect x=\"7.4\" y=\"4.74\" width=\"0.23\" height=\"0.23\"/><rect x=\"7.68\" y=\"4.74\" width=\"0.23\" height=\"0.23\"/><rect x=\"8.23\" y=\"4.74\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.89\" y=\"4.74\" width=\"0.23\" height=\"0.23\"/><rect x=\"10.17\" y=\"4.74\" width=\"0.23\" height=\"0.23\"/><rect x=\"10.72\" y=\"4.74\" width=\"0.23\" height=\"0.23\"/><rect x=\"12.66\" y=\"4.74\" width=\"0.23\" height=\"0.23\"/><rect x=\"12.94\" y=\"4.74\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.05\" y=\"4.74\" width=\"0.23\" height=\"0.23\"/><rect x=\"5.47\" y=\"5.01\" width=\"0.23\" height=\"0.23\"/><rect x=\"6.3\" y=\"5.01\" width=\"0.23\" height=\"0.23\"/><rect x=\"6.57\" y=\"5.01\" width=\"0.23\" height=\"0.23\"/><rect x=\"7.13\" y=\"5.01\" width=\"0.23\" height=\"0.23\"/><rect x=\"7.96\" y=\"5.01\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.06\" y=\"5.01\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.34\" y=\"5.01\" width=\"0.23\" height=\"0.23\"/><rect x=\"10.72\" y=\"5.01\" width=\"0.23\" height=\"0.23\"/><rect x=\"11.28\" y=\"5.01\" width=\"0.23\" height=\"0.23\"/><rect x=\"12.39\" y=\"5.01\" width=\"0.23\" height=\"0.23\"/><rect x=\"12.94\" y=\"5.01\" width=\"0.23\" height=\"0.23\"/><rect x=\"13.49\" y=\"5.01\" width=\"0.23\" height=\"0.23\"/><rect x=\"5.19\" y=\"5.29\" width=\"0.23\" height=\"0.23\"/><rect x=\"6.3\" y=\"5.29\" width=\"0.23\" height=\"0.23\"/><rect x=\"6.57\" y=\"5.29\" width=\"0.23\" height=\"0.23\"/><rect x=\"7.13\" y=\"5.29\" width=\"0.23\" height=\"0.23\"/><rect x=\"7.4\" y=\"5.29\" width=\"0.23\" height=\"0.23\"/><rect x=\"8.23\" y=\"5.29\" width=\"0.23\" height=\"0.23\"/><rect x=\"8.51\" y=\"5.29\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.06\" y=\"5.29\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.34\" y=\"5.29\" width=\"0.23\" height=\"0.23\"/><rect x=\"10.17\" y=\"5.29\" width=\"0.23\" height=\"0.23\"/><rect x=\"10.45\" y=\"5.29\" width=\"0.23\" height=\"0.23\"/><rect x=\"11\" y=\"5.29\" width=\"0.23\" height=\"0.23\"/><rect x=\"11.56\" y=\"5.29\" width=\"0.23\" height=\"0.23\"/><rect x=\"12.39\" y=\"5.29\" width=\"0.23\" height=\"0.23\"/><rect x=\"13.22\" y=\"5.29\" width=\"0.23\" height=\"0.23\"/><rect x=\"13.77\" y=\"5.29\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.05\" y=\"5.29\" width=\"0.23\" height=\"0.23\"/><rect x=\"5.47\" y=\"5.57\" width=\"0.23\" height=\"0.23\"/><rect x=\"6.02\" y=\"5.57\" width=\"0.23\" height=\"0.23\"/><rect x=\"7.4\" y=\"5.57\" width=\"0.23\" height=\"0.23\"/><rect x=\"7.68\" y=\"5.57\" width=\"0.23\" height=\"0.23\"/><rect x=\"8.23\" y=\"5.57\" width=\"0.23\" height=\"0.23\"/><rect x=\"8.51\" y=\"5.57\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.89\" y=\"5.57\" width=\"0.23\" height=\"0.23\"/><rect x=\"10.45\" y=\"5.57\" width=\"0.23\" height=\"0.23\"/><rect x=\"10.72\" y=\"5.57\" width=\"0.23\" height=\"0.23\"/><rect x=\"11.28\" y=\"5.57\" width=\"0.23\" height=\"0.23\"/><rect x=\"11.56\" y=\"5.57\" width=\"0.23\" height=\"0.23\"/><rect x=\"12.94\" y=\"5.57\" width=\"0.23\" height=\"0.23\"/><rect x=\"13.77\" y=\"5.57\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.05\" y=\"5.57\" width=\"0.23\" height=\"0.23\"/><rect x=\"5.74\" y=\"5.85\" width=\"0.23\" height=\"0.23\"/><rect x=\"6.3\" y=\"5.85\" width=\"0.23\" height=\"0.23\"/><rect x=\"7.13\" y=\"5.85\" width=\"0.23\" height=\"0.23\"/><rect x=\"8.79\" y=\"5.85\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.34\" y=\"5.85\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.89\" y=\"5.85\" width=\"0.23\" height=\"0.23\"/><rect x=\"10.17\" y=\"5.85\" width=\"0.23\" height=\"0.23\"/><rect x=\"11\" y=\"5.85\" width=\"0.23\" height=\"0.23\"/><rect x=\"11.28\" y=\"5.85\" width=\"0.23\" height=\"0.23\"/><rect x=\"12.11\" y=\"5.85\" width=\"0.23\" height=\"0.23\"/><rect x=\"12.39\" y=\"5.85\" width=\"0.23\" height=\"0.23\"/><rect x=\"13.49\" y=\"5.85\" width=\"0.23\" height=\"0.23\"/><rect x=\"6.02\" y=\"6.12\" width=\"0.23\" height=\"0.23\"/><rect x=\"6.3\" y=\"6.12\" width=\"0.23\" height=\"0.23\"/><rect x=\"7.68\" y=\"6.12\" width=\"0.23\" height=\"0.23\"/><rect x=\"7.96\" y=\"6.12\" width=\"0.23\" height=\"0.23\"/><rect x=\"8.79\" y=\"6.12\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.06\" y=\"6.12\" width=\"0.23\" height=\"0.23\"/><rect x=\"10.17\" y=\"6.12\" width=\"0.23\" height=\"0.23\"/><rect x=\"10.45\" y=\"6.12\" width=\"0.23\" height=\"0.23\"/><rect x=\"11\" y=\"6.12\" width=\"0.23\" height=\"0.23\"/><rect x=\"11.56\" y=\"6.12\" width=\"0.23\" height=\"0.23\"/><rect x=\"12.66\" y=\"6.12\" width=\"0.23\" height=\"0.23\"/><rect x=\"12.94\" y=\"6.12\" width=\"0.23\" height=\"0.23\"/><rect x=\"13.77\" y=\"6.12\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.91\" y=\"6.4\" width=\"0.23\" height=\"0.23\"/><rect x=\"5.19\" y=\"6.4\" width=\"0.23\" height=\"0.23\"/><rect x=\"6.02\" y=\"6.4\" width=\"0.23\" height=\"0.23\"/><rect x=\"6.57\" y=\"6.4\" width=\"0.23\" height=\"0.23\"/><rect x=\"7.13\" y=\"6.4\" width=\"0.23\" height=\"0.23\"/><rect x=\"7.4\" y=\"6.4\" width=\"0.23\" height=\"0.23\"/><rect x=\"8.51\" y=\"6.4\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.06\" y=\"6.4\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.34\" y=\"6.4\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.89\" y=\"6.4\" width=\"0.23\" height=\"0.23\"/><rect x=\"11.28\" y=\"6.4\" width=\"0.23\" height=\"0.23\"/><rect x=\"11.83\" y=\"6.4\" width=\"0.23\" height=\"0.23\"/><rect x=\"12.11\" y=\"6.4\" width=\"0.23\" height=\"0.23\"/><rect x=\"12.66\" y=\"6.4\" width=\"0.23\" height=\"0.23\"/><rect x=\"12.94\" y=\"6.4\" width=\"0.23\" height=\"0.23\"/><rect x=\"13.49\" y=\"6.4\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.05\" y=\"6.4\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.32\" y=\"6.4\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.63\" y=\"6.68\" width=\"0.23\" height=\"0.23\"/><rect x=\"5.19\" y=\"6.68\" width=\"0.23\" height=\"0.23\"/><rect x=\"5.47\" y=\"6.68\" width=\"0.23\" height=\"0.23\"/><rect x=\"6.57\" y=\"6.68\" width=\"0.23\" height=\"0.23\"/><rect x=\"6.85\" y=\"6.68\" width=\"0.23\" height=\"0.23\"/><rect x=\"7.68\" y=\"6.68\" width=\"0.23\" height=\"0.23\"/><rect x=\"7.96\" y=\"6.68\" width=\"0.23\" height=\"0.23\"/><rect x=\"8.79\" y=\"6.68\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.62\" y=\"6.68\" width=\"0.23\" height=\"0.23\"/><rect x=\"10.17\" y=\"6.68\" width=\"0.23\" height=\"0.23\"/><rect x=\"10.72\" y=\"6.68\" width=\"0.23\" height=\"0.23\"/><rect x=\"11\" y=\"6.68\" width=\"0.23\" height=\"0.23\"/><rect x=\"11.83\" y=\"6.68\" width=\"0.23\" height=\"0.23\"/><rect x=\"12.11\" y=\"6.68\" width=\"0.23\" height=\"0.23\"/><rect x=\"13.22\" y=\"6.68\" width=\"0.23\" height=\"0.23\"/><rect x=\"13.77\" y=\"6.68\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.6\" y=\"6.68\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.88\" y=\"6.68\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.63\" y=\"6.95\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.91\" y=\"6.95\" width=\"0.23\" height=\"0.23\"/><rect x=\"5.47\" y=\"6.95\" width=\"0.23\" height=\"0.23\"/><rect x=\"5.74\" y=\"6.95\" width=\"0.23\" height=\"0.23\"/><rect x=\"6.85\" y=\"6.95\" width=\"0.23\" height=\"0.23\"/><rect x=\"7.13\" y=\"6.95\" width=\"0.23\" height=\"0.23\"/><rect x=\"7.68\" y=\"6.95\" width=\"0.23\" height=\"0.23\"/><rect x=\"8.79\" y=\"6.95\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.89\" y=\"6.95\" width=\"0.23\" height=\"0.23\"/><rect x=\"10.45\" y=\"6.95\" width=\"0.23\" height=\"0.23\"/><rect x=\"10.72\" y=\"6.95\" width=\"0.23\" height=\"0.23\"/><rect x=\"11.28\" y=\"6.95\" width=\"0.23\" height=\"0.23\"/><rect x=\"12.39\" y=\"6.95\" width=\"0.23\" height=\"0.23\"/><rect x=\"12.66\" y=\"6.95\" width=\"0.23\" height=\"0.23\"/><rect x=\"13.22\" y=\"6.95\" width=\"0.23\" height=\"0.23\"/><rect x=\"13.49\" y=\"6.95\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.05\" y=\"6.95\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.32\" y=\"6.95\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.36\" y=\"7.23\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.91\" y=\"7.23\" width=\"0.23\" height=\"0.23\"/><rect x=\"6.02\" y=\"7.23\" width=\"0.23\" height=\"0.23\"/><rect x=\"6.57\" y=\"7.23\" width=\"0.23\" height=\"0.23\"/><rect x=\"7.13\" y=\"7.23\" width=\"0.23\" height=\"0.23\"/><rect x=\"7.4\" y=\"7.23\" width=\"0.23\" height=\"0.23\"/><rect x=\"8.23\" y=\"7.23\" width=\"0.23\" height=\"0.23\"/><rect x=\"8.51\" y=\"7.23\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.06\" y=\"7.23\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.89\" y=\"7.23\" width=\"0.23\" height=\"0.23\"/><rect x=\"10.17\" y=\"7.23\" width=\"0.23\" height=\"0.23\"/><rect x=\"11\" y=\"7.23\" width=\"0.23\" height=\"0.23\"/><rect x=\"11.28\" y=\"7.23\" width=\"0.23\" height=\"0.23\"/><rect x=\"12.39\" y=\"7.23\" width=\"0.23\" height=\"0.23\"/><rect x=\"12.66\" y=\"7.23\" width=\"0.23\" height=\"0.23\"/><rect x=\"13.77\" y=\"7.23\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.05\" y=\"7.23\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.88\" y=\"7.23\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.63\" y=\"7.51\" width=\"0.23\" height=\"0.23\"/><rect x=\"5.47\" y=\"7.51\" width=\"0.23\" height=\"0.23\"/><rect x=\"5.74\" y=\"7.51\" width=\"0.23\" height=\"0.23\"/><rect x=\"7.96\" y=\"7.51\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.06\" y=\"7.51\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.34\" y=\"7.51\" width=\"0.23\" height=\"0.23\"/><rect x=\"10.45\" y=\"7.51\" width=\"0.23\" height=\"0.23\"/><rect x=\"10.72\" y=\"7.51\" width=\"0.23\" height=\"0.23\"/><rect x=\"11.56\" y=\"7.51\" width=\"0.23\" height=\"0.23\"/><rect x=\"12.11\" y=\"7.51\" width=\"0.23\" height=\"0.23\"/><rect x=\"12.94\" y=\"7.51\" width=\"0.23\" height=\"0.23\"/><rect x=\"13.22\" y=\"7.51\" width=\"0.23\" height=\"0.23\"/><rect x=\"13.77\" y=\"7.51\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.32\" y=\"7.51\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.6\" y=\"7.51\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.36\" y=\"7.78\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.91\" y=\"7.78\" width=\"0.23\" height=\"0.23\"/><rect x=\"5.19\" y=\"7.78\" width=\"0.23\" height=\"0.23\"/><rect x=\"6.02\" y=\"7.78\" width=\"0.23\" height=\"0.23\"/><rect x=\"6.3\" y=\"7.78\" width=\"0.23\" height=\"0.23\"/><rect x=\"7.4\" y=\"7.78\" width=\"0.23\" height=\"0.23\"/><rect x=\"7.96\" y=\"7.78\" width=\"0.23\" height=\"0.23\"/><rect x=\"8.23\" y=\"7.78\" width=\"0.23\" height=\"0.23\"/><rect x=\"8.79\" y=\"7.78\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.62\" y=\"7.78\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.89\" y=\"7.78\" width=\"0.23\" height=\"0.23\"/><rect x=\"10.45\" y=\"7.78\" width=\"0.23\" height=\"0.23\"/><rect x=\"10.72\" y=\"7.78\" width=\"0.23\" height=\"0.23\"/><rect x=\"11.83\" y=\"7.78\" width=\"0.23\" height=\"0.23\"/><rect x=\"12.11\" y=\"7.78\" width=\"0.23\" height=\"0.23\"/><rect x=\"12.66\" y=\"7.78\" width=\"0.23\" height=\"0.23\"/><rect x=\"12.94\" y=\"7.78\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.05\" y=\"7.78\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.32\" y=\"7.78\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.88\" y=\"7.78\" width=\"0.23\" height=\"0.23\"/><rect x=\"5.19\" y=\"8.06\" width=\"0.23\" height=\"0.23\"/><rect x=\"5.74\" y=\"8.06\" width=\"0.23\" height=\"0.23\"/><rect x=\"6.02\" y=\"8.06\" width=\"0.23\" height=\"0.23\"/><rect x=\"6.57\" y=\"8.06\" width=\"0.23\" height=\"0.23\"/><rect x=\"7.13\" y=\"8.06\" width=\"0.23\" height=\"0.23\"/><rect x=\"7.4\" y=\"8.06\" width=\"0.23\" height=\"0.23\"/><rect x=\"8.79\" y=\"8.06\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.06\" y=\"8.06\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.62\" y=\"8.06\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.89\" y=\"8.06\" width=\"0.23\" height=\"0.23\"/><rect x=\"11\" y=\"8.06\" width=\"0.23\" height=\"0.23\"/><rect x=\"11.56\" y=\"8.06\" width=\"0.23\" height=\"0.23\"/><rect x=\"11.83\" y=\"8.06\" width=\"0.23\" height=\"0.23\"/><rect x=\"12.39\" y=\"8.06\" width=\"0.23\" height=\"0.23\"/><rect x=\"12.66\" y=\"8.06\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.36\" y=\"8.34\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.63\" y=\"8.34\" width=\"0.23\" height=\"0.23\"/><rect x=\"5.74\" y=\"8.34\" width=\"0.23\" height=\"0.23\"/><rect x=\"6.57\" y=\"8.34\" width=\"0.23\" height=\"0.23\"/><rect x=\"7.13\" y=\"8.34\" width=\"0.23\" height=\"0.23\"/><rect x=\"8.23\" y=\"8.34\" width=\"0.23\" height=\"0.23\"/><rect x=\"10.17\" y=\"8.34\" width=\"0.23\" height=\"0.23\"/><rect x=\"10.72\" y=\"8.34\" width=\"0.23\" height=\"0.23\"/><rect x=\"11.56\" y=\"8.34\" width=\"0.23\" height=\"0.23\"/><rect x=\"12.39\" y=\"8.34\" width=\"0.23\" height=\"0.23\"/><rect x=\"12.94\" y=\"8.34\" width=\"0.23\" height=\"0.23\"/><rect x=\"13.22\" y=\"8.34\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.05\" y=\"8.34\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.88\" y=\"8.34\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.08\" y=\"8.61\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.36\" y=\"8.61\" width=\"0.23\" height=\"0.23\"/><rect x=\"5.19\" y=\"8.61\" width=\"0.23\" height=\"0.23\"/><rect x=\"5.47\" y=\"8.61\" width=\"0.23\" height=\"0.23\"/><rect x=\"7.96\" y=\"8.61\" width=\"0.23\" height=\"0.23\"/><rect x=\"8.79\" y=\"8.61\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.34\" y=\"8.61\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.62\" y=\"8.61\" width=\"0.23\" height=\"0.23\"/><rect x=\"11\" y=\"8.61\" width=\"0.23\" height=\"0.23\"/><rect x=\"11.28\" y=\"8.61\" width=\"0.23\" height=\"0.23\"/><rect x=\"11.83\" y=\"8.61\" width=\"0.23\" height=\"0.23\"/><rect x=\"12.11\" y=\"8.61\" width=\"0.23\" height=\"0.23\"/><rect x=\"12.94\" y=\"8.61\" width=\"0.23\" height=\"0.23\"/><rect x=\"13.22\" y=\"8.61\" width=\"0.23\" height=\"0.23\"/><rect x=\"13.77\" y=\"8.61\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.6\" y=\"8.61\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.88\" y=\"8.61\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.08\" y=\"8.89\" width=\"0.23\" height=\"0.23\"/><rect x=\"5.19\" y=\"8.89\" width=\"0.23\" height=\"0.23\"/><rect x=\"5.47\" y=\"8.89\" width=\"0.23\" height=\"0.23\"/><rect x=\"6.02\" y=\"8.89\" width=\"0.23\" height=\"0.23\"/><rect x=\"6.3\" y=\"8.89\" width=\"0.23\" height=\"0.23\"/><rect x=\"6.85\" y=\"8.89\" width=\"0.23\" height=\"0.23\"/><rect x=\"7.13\" y=\"8.89\" width=\"0.23\" height=\"0.23\"/><rect x=\"7.68\" y=\"8.89\" width=\"0.23\" height=\"0.23\"/><rect x=\"8.23\" y=\"8.89\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.06\" y=\"8.89\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.34\" y=\"8.89\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.89\" y=\"8.89\" width=\"0.23\" height=\"0.23\"/><rect x=\"10.17\" y=\"8.89\" width=\"0.23\" height=\"0.23\"/><rect x=\"10.72\" y=\"8.89\" width=\"0.23\" height=\"0.23\"/><rect x=\"11\" y=\"8.89\" width=\"0.23\" height=\"0.23\"/><rect x=\"12.11\" y=\"8.89\" width=\"0.23\" height=\"0.23\"/><rect x=\"12.39\" y=\"8.89\" width=\"0.23\" height=\"0.23\"/><rect x=\"13.49\" y=\"8.89\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.15\" y=\"8.89\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.98\" y=\"8.89\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.54\" y=\"8.89\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.82\" y=\"8.89\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.91\" y=\"9.17\" width=\"0.23\" height=\"0.23\"/><rect x=\"5.74\" y=\"9.17\" width=\"0.23\" height=\"0.23\"/><rect x=\"6.85\" y=\"9.17\" width=\"0.23\" height=\"0.23\"/><rect x=\"7.13\" y=\"9.17\" width=\"0.23\" height=\"0.23\"/><rect x=\"7.68\" y=\"9.17\" width=\"0.23\" height=\"0.23\"/><rect x=\"8.23\" y=\"9.17\" width=\"0.23\" height=\"0.23\"/><rect x=\"8.51\" y=\"9.17\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.06\" y=\"9.17\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.62\" y=\"9.17\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.89\" y=\"9.17\" width=\"0.23\" height=\"0.23\"/><rect x=\"10.72\" y=\"9.17\" width=\"0.23\" height=\"0.23\"/><rect x=\"11.83\" y=\"9.17\" width=\"0.23\" height=\"0.23\"/><rect x=\"12.94\" y=\"9.17\" width=\"0.23\" height=\"0.23\"/><rect x=\"13.22\" y=\"9.17\" width=\"0.23\" height=\"0.23\"/><rect x=\"13.77\" y=\"9.17\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.05\" y=\"9.17\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.6\" y=\"9.17\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.43\" y=\"9.17\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.98\" y=\"9.17\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.54\" y=\"9.17\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.82\" y=\"9.17\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.37\" y=\"9.17\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.65\" y=\"9.17\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.08\" y=\"9.44\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.63\" y=\"9.44\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.88\" y=\"9.44\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.43\" y=\"9.44\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.71\" y=\"9.44\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.26\" y=\"9.44\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.37\" y=\"9.44\" width=\"0.23\" height=\"0.23\"/><rect x=\"18.2\" y=\"9.44\" width=\"0.23\" height=\"0.23\"/><rect x=\"18.48\" y=\"9.44\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.36\" y=\"9.72\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.63\" y=\"9.72\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.6\" y=\"9.72\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.88\" y=\"9.72\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.98\" y=\"9.72\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.26\" y=\"9.72\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.09\" y=\"9.72\" width=\"0.23\" height=\"0.23\"/><rect x=\"18.2\" y=\"9.72\" width=\"0.23\" height=\"0.23\"/><rect x=\"18.48\" y=\"9.72\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.6\" y=\"10\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.15\" y=\"10\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.54\" y=\"10\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.37\" y=\"10\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.92\" y=\"10\" width=\"0.23\" height=\"0.23\"/><rect x=\"18.75\" y=\"10\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.03\" y=\"10\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.08\" y=\"10.27\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.36\" y=\"10.27\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.88\" y=\"10.27\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.15\" y=\"10.27\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.71\" y=\"10.27\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.54\" y=\"10.27\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.82\" y=\"10.27\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.65\" y=\"10.27\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.92\" y=\"10.27\" width=\"0.23\" height=\"0.23\"/><rect x=\"18.48\" y=\"10.27\" width=\"0.23\" height=\"0.23\"/><rect x=\"18.75\" y=\"10.27\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.31\" y=\"10.27\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.58\" y=\"10.27\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.08\" y=\"10.55\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.36\" y=\"10.55\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.6\" y=\"10.55\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.88\" y=\"10.55\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.98\" y=\"10.55\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.82\" y=\"10.55\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.37\" y=\"10.55\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.65\" y=\"10.55\" width=\"0.23\" height=\"0.23\"/><rect x=\"18.48\" y=\"10.55\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.03\" y=\"10.55\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.31\" y=\"10.55\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.63\" y=\"10.83\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.6\" y=\"10.83\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.43\" y=\"10.83\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.71\" y=\"10.83\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.26\" y=\"10.83\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.54\" y=\"10.83\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.09\" y=\"10.83\" width=\"0.23\" height=\"0.23\"/><rect x=\"18.2\" y=\"10.83\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.03\" y=\"10.83\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.86\" y=\"10.83\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.08\" y=\"11.1\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.36\" y=\"11.1\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.88\" y=\"11.1\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.15\" y=\"11.1\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.71\" y=\"11.1\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.98\" y=\"11.1\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.54\" y=\"11.1\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.82\" y=\"11.1\" width=\"0.23\" height=\"0.23\"/><rect x=\"18.2\" y=\"11.1\" width=\"0.23\" height=\"0.23\"/><rect x=\"18.48\" y=\"11.1\" width=\"0.23\" height=\"0.23\"/><rect x=\"20.14\" y=\"11.1\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.08\" y=\"11.38\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.36\" y=\"11.38\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.98\" y=\"11.38\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.26\" y=\"11.38\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.82\" y=\"11.38\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.37\" y=\"11.38\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.65\" y=\"11.38\" width=\"0.23\" height=\"0.23\"/><rect x=\"18.48\" y=\"11.38\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.03\" y=\"11.38\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.31\" y=\"11.38\" width=\"0.23\" height=\"0.23\"/><rect x=\"20.14\" y=\"11.38\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.88\" y=\"11.66\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.15\" y=\"11.66\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.09\" y=\"11.66\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.37\" y=\"11.66\" width=\"0.23\" height=\"0.23\"/><rect x=\"18.2\" y=\"11.66\" width=\"0.23\" height=\"0.23\"/><rect x=\"18.75\" y=\"11.66\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.03\" y=\"11.66\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.58\" y=\"11.66\" width=\"0.23\" height=\"0.23\"/><rect x=\"20.69\" y=\"11.66\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.36\" y=\"11.94\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.63\" y=\"11.94\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.15\" y=\"11.94\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.43\" y=\"11.94\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.98\" y=\"11.94\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.54\" y=\"11.94\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.82\" y=\"11.94\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.65\" y=\"11.94\" width=\"0.23\" height=\"0.23\"/><rect x=\"18.75\" y=\"11.94\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.31\" y=\"11.94\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.58\" y=\"11.94\" width=\"0.23\" height=\"0.23\"/><rect x=\"20.14\" y=\"11.94\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.08\" y=\"12.21\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.36\" y=\"12.21\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.43\" y=\"12.21\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.71\" y=\"12.21\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.09\" y=\"12.21\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.65\" y=\"12.21\" width=\"0.23\" height=\"0.23\"/><rect x=\"18.48\" y=\"12.21\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.86\" y=\"12.21\" width=\"0.23\" height=\"0.23\"/><rect x=\"20.41\" y=\"12.21\" width=\"0.23\" height=\"0.23\"/><rect x=\"20.97\" y=\"12.21\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.08\" y=\"12.49\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.63\" y=\"12.49\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.15\" y=\"12.49\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.71\" y=\"12.49\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.98\" y=\"12.49\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.54\" y=\"12.49\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.82\" y=\"12.49\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.92\" y=\"12.49\" width=\"0.23\" height=\"0.23\"/><rect x=\"18.2\" y=\"12.49\" width=\"0.23\" height=\"0.23\"/><rect x=\"18.75\" y=\"12.49\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.03\" y=\"12.49\" width=\"0.23\" height=\"0.23\"/><rect x=\"20.14\" y=\"12.49\" width=\"0.23\" height=\"0.23\"/><rect x=\"20.97\" y=\"12.49\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.63\" y=\"12.77\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.6\" y=\"12.77\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.15\" y=\"12.77\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.26\" y=\"12.77\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.54\" y=\"12.77\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.09\" y=\"12.77\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.37\" y=\"12.77\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.92\" y=\"12.77\" width=\"0.23\" height=\"0.23\"/><rect x=\"18.48\" y=\"12.77\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.03\" y=\"12.77\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.86\" y=\"12.77\" width=\"0.23\" height=\"0.23\"/><rect x=\"20.14\" y=\"12.77\" width=\"0.23\" height=\"0.23\"/><rect x=\"20.69\" y=\"12.77\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.08\" y=\"13.04\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.36\" y=\"13.04\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.43\" y=\"13.04\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.26\" y=\"13.04\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.09\" y=\"13.04\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.37\" y=\"13.04\" width=\"0.23\" height=\"0.23\"/><rect x=\"18.2\" y=\"13.04\" width=\"0.23\" height=\"0.23\"/><rect x=\"18.75\" y=\"13.04\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.31\" y=\"13.04\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.58\" y=\"13.04\" width=\"0.23\" height=\"0.23\"/><rect x=\"20.41\" y=\"13.04\" width=\"0.23\" height=\"0.23\"/><rect x=\"20.69\" y=\"13.04\" width=\"0.23\" height=\"0.23\"/><rect x=\"21.24\" y=\"13.04\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.63\" y=\"13.32\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.88\" y=\"13.32\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.15\" y=\"13.32\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.71\" y=\"13.32\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.98\" y=\"13.32\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.54\" y=\"13.32\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.82\" y=\"13.32\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.92\" y=\"13.32\" width=\"0.23\" height=\"0.23\"/><rect x=\"18.48\" y=\"13.32\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.03\" y=\"13.32\" width=\"0.23\" height=\"0.23\"/><rect x=\"20.41\" y=\"13.32\" width=\"0.23\" height=\"0.23\"/><rect x=\"21.24\" y=\"13.32\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.08\" y=\"13.6\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.63\" y=\"13.6\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.6\" y=\"13.6\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.98\" y=\"13.6\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.54\" y=\"13.6\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.82\" y=\"13.6\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.65\" y=\"13.6\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.92\" y=\"13.6\" width=\"0.23\" height=\"0.23\"/><rect x=\"18.75\" y=\"13.6\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.03\" y=\"13.6\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.58\" y=\"13.6\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.86\" y=\"13.6\" width=\"0.23\" height=\"0.23\"/><rect x=\"20.97\" y=\"13.6\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.08\" y=\"13.87\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.36\" y=\"13.87\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.6\" y=\"13.87\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.88\" y=\"13.87\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.43\" y=\"13.87\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.71\" y=\"13.87\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.26\" y=\"13.87\" width=\"0.23\" height=\"0.23\"/><rect x=\"18.2\" y=\"13.87\" width=\"0.23\" height=\"0.23\"/><rect x=\"18.48\" y=\"13.87\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.31\" y=\"13.87\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.86\" y=\"13.87\" width=\"0.23\" height=\"0.23\"/><rect x=\"20.41\" y=\"13.87\" width=\"0.23\" height=\"0.23\"/><rect x=\"20.97\" y=\"13.87\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.36\" y=\"14.15\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.63\" y=\"14.15\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.88\" y=\"14.15\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.26\" y=\"14.15\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.54\" y=\"14.15\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.09\" y=\"14.15\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.37\" y=\"14.15\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.92\" y=\"14.15\" width=\"0.23\" height=\"0.23\"/><rect x=\"18.75\" y=\"14.15\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.03\" y=\"14.15\" width=\"0.23\" height=\"0.23\"/><rect x=\"20.14\" y=\"14.15\" width=\"0.23\" height=\"0.23\"/><rect x=\"20.41\" y=\"14.15\" width=\"0.23\" height=\"0.23\"/><rect x=\"21.24\" y=\"14.15\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.08\" y=\"14.43\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.6\" y=\"14.43\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.15\" y=\"14.43\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.43\" y=\"14.43\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.98\" y=\"14.43\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.54\" y=\"14.43\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.82\" y=\"14.43\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.37\" y=\"14.43\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.92\" y=\"14.43\" width=\"0.23\" height=\"0.23\"/><rect x=\"18.2\" y=\"14.43\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.03\" y=\"14.43\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.31\" y=\"14.43\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.86\" y=\"14.43\" width=\"0.23\" height=\"0.23\"/><rect x=\"20.14\" y=\"14.43\" width=\"0.23\" height=\"0.23\"/><rect x=\"20.69\" y=\"14.43\" width=\"0.23\" height=\"0.23\"/><rect x=\"20.97\" y=\"14.43\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.08\" y=\"14.7\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.36\" y=\"14.7\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.88\" y=\"14.7\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.43\" y=\"14.7\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.71\" y=\"14.7\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.26\" y=\"14.7\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.82\" y=\"14.7\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.09\" y=\"14.7\" width=\"0.23\" height=\"0.23\"/><rect x=\"18.2\" y=\"14.7\" width=\"0.23\" height=\"0.23\"/><rect x=\"18.48\" y=\"14.7\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.58\" y=\"14.7\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.86\" y=\"14.7\" width=\"0.23\" height=\"0.23\"/><rect x=\"20.69\" y=\"14.7\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.63\" y=\"14.98\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.15\" y=\"14.98\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.71\" y=\"14.98\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.98\" y=\"14.98\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.54\" y=\"14.98\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.09\" y=\"14.98\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.37\" y=\"14.98\" width=\"0.23\" height=\"0.23\"/><rect x=\"18.48\" y=\"14.98\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.03\" y=\"14.98\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.58\" y=\"14.98\" width=\"0.23\" height=\"0.23\"/><rect x=\"20.14\" y=\"14.98\" width=\"0.23\" height=\"0.23\"/><rect x=\"20.97\" y=\"14.98\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.08\" y=\"15.26\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.63\" y=\"15.26\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.15\" y=\"15.26\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.98\" y=\"15.26\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.26\" y=\"15.26\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.82\" y=\"15.26\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.37\" y=\"15.26\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.92\" y=\"15.26\" width=\"0.23\" height=\"0.23\"/><rect x=\"18.2\" y=\"15.26\" width=\"0.23\" height=\"0.23\"/><rect x=\"18.75\" y=\"15.26\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.03\" y=\"15.26\" width=\"0.23\" height=\"0.23\"/><rect x=\"20.69\" y=\"15.26\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.88\" y=\"15.53\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.43\" y=\"15.53\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.26\" y=\"15.53\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.54\" y=\"15.53\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.65\" y=\"15.53\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.92\" y=\"15.53\" width=\"0.23\" height=\"0.23\"/><rect x=\"18.48\" y=\"15.53\" width=\"0.23\" height=\"0.23\"/><rect x=\"18.75\" y=\"15.53\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.86\" y=\"15.53\" width=\"0.23\" height=\"0.23\"/><rect x=\"20.14\" y=\"15.53\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.08\" y=\"15.81\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.63\" y=\"15.81\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.6\" y=\"15.81\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.88\" y=\"15.81\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.43\" y=\"15.81\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.71\" y=\"15.81\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.54\" y=\"15.81\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.82\" y=\"15.81\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.37\" y=\"15.81\" width=\"0.23\" height=\"0.23\"/><rect x=\"18.2\" y=\"15.81\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.31\" y=\"15.81\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.58\" y=\"15.81\" width=\"0.23\" height=\"0.23\"/><rect x=\"20.14\" y=\"15.81\" width=\"0.23\" height=\"0.23\"/><rect x=\"20.41\" y=\"15.81\" width=\"0.23\" height=\"0.23\"/><rect x=\"20.97\" y=\"15.81\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.08\" y=\"16.09\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.6\" y=\"16.09\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.15\" y=\"16.09\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.71\" y=\"16.09\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.98\" y=\"16.09\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.37\" y=\"16.09\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.92\" y=\"16.09\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.31\" y=\"16.09\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.58\" y=\"16.09\" width=\"0.23\" height=\"0.23\"/><rect x=\"20.41\" y=\"16.09\" width=\"0.23\" height=\"0.23\"/><rect x=\"20.69\" y=\"16.09\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.36\" y=\"16.36\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.63\" y=\"16.36\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.88\" y=\"16.36\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.15\" y=\"16.36\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.98\" y=\"16.36\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.26\" y=\"16.36\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.82\" y=\"16.36\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.09\" y=\"16.36\" width=\"0.23\" height=\"0.23\"/><rect x=\"18.75\" y=\"16.36\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.03\" y=\"16.36\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.86\" y=\"16.36\" width=\"0.23\" height=\"0.23\"/><rect x=\"20.69\" y=\"16.36\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.08\" y=\"16.64\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.36\" y=\"16.64\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.6\" y=\"16.64\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.43\" y=\"16.64\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.26\" y=\"16.64\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.82\" y=\"16.64\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.09\" y=\"16.64\" width=\"0.23\" height=\"0.23\"/><rect x=\"18.48\" y=\"16.64\" width=\"0.23\" height=\"0.23\"/><rect x=\"18.75\" y=\"16.64\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.31\" y=\"16.64\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.58\" y=\"16.64\" width=\"0.23\" height=\"0.23\"/><rect x=\"20.14\" y=\"16.64\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.6\" y=\"16.92\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.88\" y=\"16.92\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.43\" y=\"16.92\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.98\" y=\"16.92\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.54\" y=\"16.92\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.37\" y=\"16.92\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.03\" y=\"16.92\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.31\" y=\"16.92\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.86\" y=\"16.92\" width=\"0.23\" height=\"0.23\"/><rect x=\"20.41\" y=\"16.92\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.08\" y=\"17.2\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.36\" y=\"17.2\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.88\" y=\"17.2\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.71\" y=\"17.2\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.09\" y=\"17.2\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.37\" y=\"17.2\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.03\" y=\"17.2\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.58\" y=\"17.2\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.86\" y=\"17.2\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.08\" y=\"17.47\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.36\" y=\"17.47\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.6\" y=\"17.47\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.15\" y=\"17.47\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.43\" y=\"17.47\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.26\" y=\"17.47\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.82\" y=\"17.47\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.09\" y=\"17.47\" width=\"0.23\" height=\"0.23\"/><rect x=\"18.2\" y=\"17.47\" width=\"0.23\" height=\"0.23\"/><rect x=\"18.48\" y=\"17.47\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.31\" y=\"17.47\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.63\" y=\"17.75\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.6\" y=\"17.75\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.88\" y=\"17.75\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.26\" y=\"17.75\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.54\" y=\"17.75\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.37\" y=\"17.75\" width=\"0.23\" height=\"0.23\"/><rect x=\"18.2\" y=\"17.75\" width=\"0.23\" height=\"0.23\"/><rect x=\"18.48\" y=\"17.75\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.03\" y=\"17.75\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.58\" y=\"17.75\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.36\" y=\"18.03\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.63\" y=\"18.03\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.88\" y=\"18.03\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.15\" y=\"18.03\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.98\" y=\"18.03\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.82\" y=\"18.03\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.09\" y=\"18.03\" width=\"0.23\" height=\"0.23\"/><rect x=\"18.75\" y=\"18.03\" width=\"0.23\" height=\"0.23\"/><rect x=\"19.03\" y=\"18.03\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.36\" y=\"18.3\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.43\" y=\"18.3\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.26\" y=\"18.3\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.54\" y=\"18.3\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.09\" y=\"18.3\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.65\" y=\"18.3\" width=\"0.23\" height=\"0.23\"/><rect x=\"18.2\" y=\"18.3\" width=\"0.23\" height=\"0.23\"/><rect x=\"18.75\" y=\"18.3\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.63\" y=\"18.58\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.6\" y=\"18.58\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.88\" y=\"18.58\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.43\" y=\"18.58\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.71\" y=\"18.58\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.26\" y=\"18.58\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.54\" y=\"18.58\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.37\" y=\"18.58\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.65\" y=\"18.58\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.36\" y=\"18.86\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.6\" y=\"18.86\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.88\" y=\"18.86\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.82\" y=\"18.86\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.09\" y=\"18.86\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.92\" y=\"18.86\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.63\" y=\"19.13\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.91\" y=\"19.13\" width=\"0.23\" height=\"0.23\"/><rect x=\"5.47\" y=\"19.13\" width=\"0.23\" height=\"0.23\"/><rect x=\"5.74\" y=\"19.13\" width=\"0.23\" height=\"0.23\"/><rect x=\"6.3\" y=\"19.13\" width=\"0.23\" height=\"0.23\"/><rect x=\"6.57\" y=\"19.13\" width=\"0.23\" height=\"0.23\"/><rect x=\"7.4\" y=\"19.13\" width=\"0.23\" height=\"0.23\"/><rect x=\"7.68\" y=\"19.13\" width=\"0.23\" height=\"0.23\"/><rect x=\"8.51\" y=\"19.13\" width=\"0.23\" height=\"0.23\"/><rect x=\"8.79\" y=\"19.13\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.34\" y=\"19.13\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.62\" y=\"19.13\" width=\"0.23\" height=\"0.23\"/><rect x=\"10.17\" y=\"19.13\" width=\"0.23\" height=\"0.23\"/><rect x=\"10.45\" y=\"19.13\" width=\"0.23\" height=\"0.23\"/><rect x=\"11.56\" y=\"19.13\" width=\"0.23\" height=\"0.23\"/><rect x=\"11.83\" y=\"19.13\" width=\"0.23\" height=\"0.23\"/><rect x=\"12.66\" y=\"19.13\" width=\"0.23\" height=\"0.23\"/><rect x=\"12.94\" y=\"19.13\" width=\"0.23\" height=\"0.23\"/><rect x=\"13.49\" y=\"19.13\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.05\" y=\"19.13\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.32\" y=\"19.13\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.98\" y=\"19.13\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.26\" y=\"19.13\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.09\" y=\"19.13\" width=\"0.23\" height=\"0.23\"/><rect x=\"17.37\" y=\"19.13\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.36\" y=\"19.41\" width=\"0.23\" height=\"0.23\"/><rect x=\"4.63\" y=\"19.41\" width=\"0.23\" height=\"0.23\"/><rect x=\"5.19\" y=\"19.41\" width=\"0.23\" height=\"0.23\"/><rect x=\"5.47\" y=\"19.41\" width=\"0.23\" height=\"0.23\"/><rect x=\"6.02\" y=\"19.41\" width=\"0.23\" height=\"0.23\"/><rect x=\"6.3\" y=\"19.41\" width=\"0.23\" height=\"0.23\"/><rect x=\"6.85\" y=\"19.41\" width=\"0.23\" height=\"0.23\"/><rect x=\"7.68\" y=\"19.41\" width=\"0.23\" height=\"0.23\"/><rect x=\"8.23\" y=\"19.41\" width=\"0.23\" height=\"0.23\"/><rect x=\"8.51\" y=\"19.41\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.34\" y=\"19.41\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.62\" y=\"19.41\" width=\"0.23\" height=\"0.23\"/><rect x=\"10.17\" y=\"19.41\" width=\"0.23\" height=\"0.23\"/><rect x=\"10.45\" y=\"19.41\" width=\"0.23\" height=\"0.23\"/><rect x=\"11\" y=\"19.41\" width=\"0.23\" height=\"0.23\"/><rect x=\"11.28\" y=\"19.41\" width=\"0.23\" height=\"0.23\"/><rect x=\"11.83\" y=\"19.41\" width=\"0.23\" height=\"0.23\"/><rect x=\"12.66\" y=\"19.41\" width=\"0.23\" height=\"0.23\"/><rect x=\"12.94\" y=\"19.41\" width=\"0.23\" height=\"0.23\"/><rect x=\"13.77\" y=\"19.41\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.6\" y=\"19.41\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.43\" y=\"19.41\" width=\"0.23\" height=\"0.23\"/><rect x=\"15.98\" y=\"19.41\" width=\"0.23\" height=\"0.23\"/><rect x=\"16.26\" y=\"19.41\" width=\"0.23\" height=\"0.23\"/><rect x=\"5.19\" y=\"19.69\" width=\"0.23\" height=\"0.23\"/><rect x=\"5.74\" y=\"19.69\" width=\"0.23\" height=\"0.23\"/><rect x=\"6.85\" y=\"19.69\" width=\"0.23\" height=\"0.23\"/><rect x=\"7.4\" y=\"19.69\" width=\"0.23\" height=\"0.23\"/><rect x=\"8.23\" y=\"19.69\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.06\" y=\"19.69\" width=\"0.23\" height=\"0.23\"/><rect x=\"9.89\" y=\"19.69\" width=\"0.23\" height=\"0.23\"/><rect x=\"10.72\" y=\"19.69\" width=\"0.23\" height=\"0.23\"/><rect x=\"11.28\" y=\"19.69\" width=\"0.23\" height=\"0.23\"/><rect x=\"12.11\" y=\"19.69\" width=\"0.23\" height=\"0.23\"/><rect x=\"12.39\" y=\"19.69\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.05\" y=\"19.69\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.6\" y=\"19.69\" width=\"0.23\" height=\"0.23\"/><rect x=\"14.88\" y=\"19.69\" width=\"0.23\" height=\"0.23\"/></g><path d=\"M3.9743 20.0257L3.8824 18.0670C3.5430 11.1232 3.3167 6.5411 5.9896 3.8683C8.1675 1.6904 11.5899 1.6904 13.7678 3.8683C14.9981 5.0986 15.6062 6.8523 15.4719 8.5281C17.1477 8.3938 18.9014 9.0019 20.1317 10.2322C22.3096 12.4101 22.3096 15.8325 20.1317 18.0104C17.4589 20.6833 12.8768 20.4570 5.9260 20.1247L3.9743 20.0257Z\" fill=\"none\" stroke=\"#14532d\" stroke-width=\"0.16\" stroke-linejoin=\"round\"/><g fill=\"#14532d\"><rect x=\"5.17\" y=\"9.7\" width=\"1.94\" height=\"0.28\"/><rect x=\"8.21\" y=\"9.7\" width=\"0.28\" height=\"0.28\"/><rect x=\"8.76\" y=\"9.7\" width=\"0.28\" height=\"0.28\"/><rect x=\"9.6\" y=\"9.7\" width=\"1.66\" height=\"0.28\"/><rect x=\"11.53\" y=\"9.7\" width=\"0.28\" height=\"0.28\"/><rect x=\"12.36\" y=\"9.7\" width=\"1.94\" height=\"0.28\"/><rect x=\"5.17\" y=\"9.98\" width=\"0.28\" height=\"0.28\"/><rect x=\"6.83\" y=\"9.98\" width=\"0.28\" height=\"0.28\"/><rect x=\"7.66\" y=\"9.98\" width=\"0.56\" height=\"0.28\"/><rect x=\"8.49\" y=\"9.98\" width=\"1.11\" height=\"0.28\"/><rect x=\"9.87\" y=\"9.98\" width=\"0.28\" height=\"0.28\"/><rect x=\"10.7\" y=\"9.98\" width=\"0.28\" height=\"0.28\"/><rect x=\"11.26\" y=\"9.98\" width=\"0.28\" height=\"0.28\"/><rect x=\"12.36\" y=\"9.98\" width=\"0.28\" height=\"0.28\"/><rect x=\"14.02\" y=\"9.98\" width=\"0.28\" height=\"0.28\"/><rect x=\"5.17\" y=\"10.25\" width=\"0.28\" height=\"0.28\"/><rect x=\"5.72\" y=\"10.25\" width=\"0.83\" height=\"0.28\"/><rect x=\"6.83\" y=\"10.25\" width=\"0.28\" height=\"0.28\"/><rect x=\"7.38\" y=\"10.25\" width=\"0.28\" height=\"0.28\"/><rect x=\"8.76\" y=\"10.25\" width=\"0.28\" height=\"0.28\"/><rect x=\"9.6\" y=\"10.25\" width=\"0.83\" height=\"0.28\"/><rect x=\"10.7\" y=\"10.25\" width=\"0.56\" height=\"0.28\"/><rect x=\"11.53\" y=\"10.25\" width=\"0.56\" height=\"0.28\"/><rect x=\"12.36\" y=\"10.25\" width=\"0.28\" height=\"0.28\"/><rect x=\"12.92\" y=\"10.25\" width=\"0.83\" height=\"0.28\"/><rect x=\"14.02\" y=\"10.25\" width=\"0.28\" height=\"0.28\"/><rect x=\"5.17\" y=\"10.53\" width=\"0.28\" height=\"0.28\"/><rect x=\"5.72\" y=\"10.53\" width=\"0.83\" height=\"0.28\"/><rect x=\"6.83\" y=\"10.53\" width=\"0.28\" height=\"0.28\"/><rect x=\"7.38\" y=\"10.53\" width=\"0.28\" height=\"0.28\"/><rect x=\"7.93\" y=\"10.53\" width=\"0.28\" height=\"0.28\"/><rect x=\"9.04\" y=\"10.53\" width=\"0.28\" height=\"0.28\"/><rect x=\"9.6\" y=\"10.53\" width=\"0.28\" height=\"0.28\"/><rect x=\"10.7\" y=\"10.53\" width=\"0.28\" height=\"0.28\"/><rect x=\"12.36\" y=\"10.53\" width=\"0.28\" height=\"0.28\"/><rect x=\"12.92\" y=\"10.53\" width=\"0.83\" height=\"0.28\"/><rect x=\"14.02\" y=\"10.53\" width=\"0.28\" height=\"0.28\"/><rect x=\"5.17\" y=\"10.81\" width=\"0.28\" height=\"0.28\"/><rect x=\"5.72\" y=\"10.81\" width=\"0.83\" height=\"0.28\"/><rect x=\"6.83\" y=\"10.81\" width=\"0.28\" height=\"0.28\"/><rect x=\"7.38\" y=\"10.81\" width=\"0.28\" height=\"0.28\"/><rect x=\"8.21\" y=\"10.81\" width=\"0.28\" height=\"0.28\"/><rect x=\"9.32\" y=\"10.81\" width=\"0.28\" height=\"0.28\"/><rect x=\"10.15\" y=\"10.81\" width=\"0.28\" height=\"0.28\"/><rect x=\"11.26\" y=\"10.81\" width=\"0.28\" height=\"0.28\"/><rect x=\"12.36\" y=\"10.81\" width=\"0.28\" height=\"0.28\"/><rect x=\"12.92\" y=\"10.81\" width=\"0.83\" height=\"0.28\"/><rect x=\"14.02\" y=\"10.81\" width=\"0.28\" height=\"0.28\"/><rect x=\"5.17\" y=\"11.08\" width=\"0.28\" height=\"0.28\"/><rect x=\"6.83\" y=\"11.08\" width=\"0.28\" height=\"0.28\"/><rect x=\"7.38\" y=\"11.08\" width=\"0.28\" height=\"0.28\"/><rect x=\"7.93\" y=\"11.08\" width=\"0.28\" height=\"0.28\"/><rect x=\"8.49\" y=\"11.08\" width=\"0.56\" height=\"0.28\"/><rect x=\"9.32\" y=\"11.08\" width=\"0.56\" height=\"0.28\"/><rect x=\"10.15\" y=\"11.08\" width=\"0.28\" height=\"0.28\"/><rect x=\"10.7\" y=\"11.08\" width=\"0.28\" height=\"0.28\"/><rect x=\"11.26\" y=\"11.08\" width=\"0.83\" height=\"0.28\"/><rect x=\"12.36\" y=\"11.08\" width=\"0.28\" height=\"0.28\"/><rect x=\"14.02\" y=\"11.08\" width=\"0.28\" height=\"0.28\"/><rect x=\"5.17\" y=\"11.36\" width=\"1.94\" height=\"0.28\"/><rect x=\"7.38\" y=\"11.36\" width=\"0.28\" height=\"0.28\"/><rect x=\"7.93\" y=\"11.36\" width=\"0.28\" height=\"0.28\"/><rect x=\"8.49\" y=\"11.36\" width=\"0.28\" height=\"0.28\"/><rect x=\"9.04\" y=\"11.36\" width=\"0.28\" height=\"0.28\"/><rect x=\"9.6\" y=\"11.36\" width=\"0.28\" height=\"0.28\"/><rect x=\"10.15\" y=\"11.36\" width=\"0.28\" height=\"0.28\"/><rect x=\"10.7\" y=\"11.36\" width=\"0.28\" height=\"0.28\"/><rect x=\"11.26\" y=\"11.36\" width=\"0.28\" height=\"0.28\"/><rect x=\"11.81\" y=\"11.36\" width=\"0.28\" height=\"0.28\"/><rect x=\"12.36\" y=\"11.36\" width=\"1.94\" height=\"0.28\"/><rect x=\"7.38\" y=\"11.64\" width=\"0.28\" height=\"0.28\"/><rect x=\"8.21\" y=\"11.64\" width=\"0.28\" height=\"0.28\"/><rect x=\"9.04\" y=\"11.64\" width=\"0.56\" height=\"0.28\"/><rect x=\"10.98\" y=\"11.64\" width=\"0.56\" height=\"0.28\"/><rect x=\"5.17\" y=\"11.91\" width=\"0.28\" height=\"0.28\"/><rect x=\"5.72\" y=\"11.91\" width=\"1.39\" height=\"0.28\"/><rect x=\"7.93\" y=\"11.91\" width=\"0.28\" height=\"0.28\"/><rect x=\"8.49\" y=\"11.91\" width=\"1.11\" height=\"0.28\"/><rect x=\"9.87\" y=\"11.91\" width=\"0.28\" height=\"0.28\"/><rect x=\"11.26\" y=\"11.91\" width=\"0.83\" height=\"0.28\"/><rect x=\"12.36\" y=\"11.91\" width=\"1.39\" height=\"0.28\"/><rect x=\"5.17\" y=\"12.19\" width=\"0.28\" height=\"0.28\"/><rect x=\"6\" y=\"12.19\" width=\"0.56\" height=\"0.28\"/><rect x=\"7.1\" y=\"12.19\" width=\"0.28\" height=\"0.28\"/><rect x=\"7.66\" y=\"12.19\" width=\"0.28\" height=\"0.28\"/><rect x=\"8.21\" y=\"12.19\" width=\"0.28\" height=\"0.28\"/><rect x=\"10.43\" y=\"12.19\" width=\"0.83\" height=\"0.28\"/><rect x=\"11.53\" y=\"12.19\" width=\"0.28\" height=\"0.28\"/><rect x=\"12.36\" y=\"12.19\" width=\"0.56\" height=\"0.28\"/><rect x=\"13.19\" y=\"12.19\" width=\"0.56\" height=\"0.28\"/><rect x=\"14.02\" y=\"12.19\" width=\"0.28\" height=\"0.28\"/><rect x=\"5.17\" y=\"12.47\" width=\"0.28\" height=\"0.28\"/><rect x=\"6.55\" y=\"12.47\" width=\"0.56\" height=\"0.28\"/><rect x=\"7.38\" y=\"12.47\" width=\"0.83\" height=\"0.28\"/><rect x=\"9.32\" y=\"12.47\" width=\"0.56\" height=\"0.28\"/><rect x=\"10.15\" y=\"12.47\" width=\"0.28\" height=\"0.28\"/><rect x=\"10.98\" y=\"12.47\" width=\"0.56\" height=\"0.28\"/><rect x=\"12.09\" y=\"12.47\" width=\"0.56\" height=\"0.28\"/><rect x=\"12.92\" y=\"12.47\" width=\"0.28\" height=\"0.28\"/><rect x=\"13.47\" y=\"12.47\" width=\"0.28\" height=\"0.28\"/><rect x=\"5.72\" y=\"12.74\" width=\"0.28\" height=\"0.28\"/><rect x=\"6.27\" y=\"12.74\" width=\"0.28\" height=\"0.28\"/><rect x=\"7.93\" y=\"12.74\" width=\"0.28\" height=\"0.28\"/><rect x=\"8.49\" y=\"12.74\" width=\"0.28\" height=\"0.28\"/><rect x=\"9.04\" y=\"12.74\" width=\"0.28\" height=\"0.28\"/><rect x=\"10.98\" y=\"12.74\" width=\"0.28\" height=\"0.28\"/><rect x=\"12.09\" y=\"12.74\" width=\"0.56\" height=\"0.28\"/><rect x=\"12.92\" y=\"12.74\" width=\"1.39\" height=\"0.28\"/><rect x=\"5.17\" y=\"13.02\" width=\"0.56\" height=\"0.28\"/><rect x=\"6.55\" y=\"13.02\" width=\"1.66\" height=\"0.28\"/><rect x=\"8.49\" y=\"13.02\" width=\"0.28\" height=\"0.28\"/><rect x=\"10.15\" y=\"13.02\" width=\"0.56\" height=\"0.28\"/><rect x=\"10.98\" y=\"13.02\" width=\"0.28\" height=\"0.28\"/><rect x=\"11.81\" y=\"13.02\" width=\"0.28\" height=\"0.28\"/><rect x=\"12.64\" y=\"13.02\" width=\"0.28\" height=\"0.28\"/><rect x=\"13.19\" y=\"13.02\" width=\"0.28\" height=\"0.28\"/><rect x=\"13.75\" y=\"13.02\" width=\"0.56\" height=\"0.28\"/><rect x=\"6.27\" y=\"13.3\" width=\"0.56\" height=\"0.28\"/><rect x=\"7.38\" y=\"13.3\" width=\"0.28\" height=\"0.28\"/><rect x=\"8.21\" y=\"13.3\" width=\"1.66\" height=\"0.28\"/><rect x=\"10.7\" y=\"13.3\" width=\"0.56\" height=\"0.28\"/><rect x=\"11.81\" y=\"13.3\" width=\"0.28\" height=\"0.28\"/><rect x=\"13.47\" y=\"13.3\" width=\"0.83\" height=\"0.28\"/><rect x=\"5.17\" y=\"13.57\" width=\"0.28\" height=\"0.28\"/><rect x=\"5.72\" y=\"13.57\" width=\"0.83\" height=\"0.28\"/><rect x=\"6.83\" y=\"13.57\" width=\"0.28\" height=\"0.28\"/><rect x=\"7.38\" y=\"13.57\" width=\"0.56\" height=\"0.28\"/><rect x=\"8.76\" y=\"13.57\" width=\"0.28\" height=\"0.28\"/><rect x=\"9.87\" y=\"13.57\" width=\"0.83\" height=\"0.28\"/><rect x=\"11.26\" y=\"13.57\" width=\"0.28\" height=\"0.28\"/><rect x=\"11.81\" y=\"13.57\" width=\"0.83\" height=\"0.28\"/><rect x=\"13.19\" y=\"13.57\" width=\"0.28\" height=\"0.28\"/><rect x=\"13.75\" y=\"13.57\" width=\"0.28\" height=\"0.28\"/><rect x=\"5.17\" y=\"13.85\" width=\"1.39\" height=\"0.28\"/><rect x=\"9.6\" y=\"13.85\" width=\"0.28\" height=\"0.28\"/><rect x=\"10.15\" y=\"13.85\" width=\"1.11\" height=\"0.28\"/><rect x=\"11.81\" y=\"13.85\" width=\"1.11\" height=\"0.28\"/><rect x=\"13.19\" y=\"13.85\" width=\"0.56\" height=\"0.28\"/><rect x=\"5.17\" y=\"14.13\" width=\"0.56\" height=\"0.28\"/><rect x=\"6.83\" y=\"14.13\" width=\"0.56\" height=\"0.28\"/><rect x=\"9.04\" y=\"14.13\" width=\"0.28\" height=\"0.28\"/><rect x=\"9.87\" y=\"14.13\" width=\"0.28\" height=\"0.28\"/><rect x=\"10.43\" y=\"14.13\" width=\"0.28\" height=\"0.28\"/><rect x=\"11.26\" y=\"14.13\" width=\"1.11\" height=\"0.28\"/><rect x=\"12.64\" y=\"14.13\" width=\"0.56\" height=\"0.28\"/><rect x=\"14.02\" y=\"14.13\" width=\"0.28\" height=\"0.28\"/><rect x=\"5.44\" y=\"14.4\" width=\"0.83\" height=\"0.28\"/><rect x=\"6.55\" y=\"14.4\" width=\"0.28\" height=\"0.28\"/><rect x=\"7.1\" y=\"14.4\" width=\"0.28\" height=\"0.28\"/><rect x=\"8.21\" y=\"14.4\" width=\"0.56\" height=\"0.28\"/><rect x=\"9.6\" y=\"14.4\" width=\"0.56\" height=\"0.28\"/><rect x=\"10.43\" y=\"14.4\" width=\"0.56\" height=\"0.28\"/><rect x=\"11.53\" y=\"14.4\" width=\"0.28\" height=\"0.28\"/><rect x=\"12.36\" y=\"14.4\" width=\"0.56\" height=\"0.28\"/><rect x=\"13.19\" y=\"14.4\" width=\"0.56\" height=\"0.28\"/><rect x=\"14.02\" y=\"14.4\" width=\"0.28\" height=\"0.28\"/><rect x=\"5.17\" y=\"14.68\" width=\"0.28\" height=\"0.28\"/><rect x=\"5.72\" y=\"14.68\" width=\"0.56\" height=\"0.28\"/><rect x=\"6.55\" y=\"14.68\" width=\"1.66\" height=\"0.28\"/><rect x=\"8.49\" y=\"14.68\" width=\"0.28\" height=\"0.28\"/><rect x=\"9.04\" y=\"14.68\" width=\"0.56\" height=\"0.28\"/><rect x=\"9.87\" y=\"14.68\" width=\"0.28\" height=\"0.28\"/><rect x=\"11.26\" y=\"14.68\" width=\"0.28\" height=\"0.28\"/><rect x=\"12.09\" y=\"14.68\" width=\"1.11\" height=\"0.28\"/><rect x=\"13.47\" y=\"14.68\" width=\"0.28\" height=\"0.28\"/><rect x=\"5.17\" y=\"14.96\" width=\"0.56\" height=\"0.28\"/><rect x=\"6\" y=\"14.96\" width=\"0.28\" height=\"0.28\"/><rect x=\"6.55\" y=\"14.96\" width=\"0.28\" height=\"0.28\"/><rect x=\"7.1\" y=\"14.96\" width=\"0.28\" height=\"0.28\"/><rect x=\"7.66\" y=\"14.96\" width=\"0.56\" height=\"0.28\"/><rect x=\"8.49\" y=\"14.96\" width=\"0.56\" height=\"0.28\"/><rect x=\"9.6\" y=\"14.96\" width=\"1.39\" height=\"0.28\"/><rect x=\"12.36\" y=\"14.96\" width=\"1.94\" height=\"0.28\"/><rect x=\"5.17\" y=\"15.24\" width=\"0.28\" height=\"0.28\"/><rect x=\"6.83\" y=\"15.24\" width=\"1.11\" height=\"0.28\"/><rect x=\"8.76\" y=\"15.24\" width=\"0.28\" height=\"0.28\"/><rect x=\"9.6\" y=\"15.24\" width=\"0.28\" height=\"0.28\"/><rect x=\"10.43\" y=\"15.24\" width=\"1.39\" height=\"0.28\"/><rect x=\"12.64\" y=\"15.24\" width=\"0.83\" height=\"0.28\"/><rect x=\"13.75\" y=\"15.24\" width=\"0.56\" height=\"0.28\"/><rect x=\"5.17\" y=\"15.51\" width=\"0.28\" height=\"0.28\"/><rect x=\"5.72\" y=\"15.51\" width=\"0.56\" height=\"0.28\"/><rect x=\"6.55\" y=\"15.51\" width=\"0.28\" height=\"0.28\"/><rect x=\"7.38\" y=\"15.51\" width=\"1.39\" height=\"0.28\"/><rect x=\"9.04\" y=\"15.51\" width=\"0.56\" height=\"0.28\"/><rect x=\"10.15\" y=\"15.51\" width=\"0.28\" height=\"0.28\"/><rect x=\"10.98\" y=\"15.51\" width=\"0.28\" height=\"0.28\"/><rect x=\"12.09\" y=\"15.51\" width=\"0.28\" height=\"0.28\"/><rect x=\"13.19\" y=\"15.51\" width=\"0.56\" height=\"0.28\"/><rect x=\"14.02\" y=\"15.51\" width=\"0.28\" height=\"0.28\"/><rect x=\"5.17\" y=\"15.79\" width=\"0.28\" height=\"0.28\"/><rect x=\"5.72\" y=\"15.79\" width=\"0.28\" height=\"0.28\"/><rect x=\"6.27\" y=\"15.79\" width=\"1.39\" height=\"0.28\"/><rect x=\"7.93\" y=\"15.79\" width=\"0.28\" height=\"0.28\"/><rect x=\"8.49\" y=\"15.79\" width=\"0.28\" height=\"0.28\"/><rect x=\"9.04\" y=\"15.79\" width=\"0.83\" height=\"0.28\"/><rect x=\"10.7\" y=\"15.79\" width=\"0.28\" height=\"0.28\"/><rect x=\"11.26\" y=\"15.79\" width=\"0.83\" height=\"0.28\"/><rect x=\"12.36\" y=\"15.79\" width=\"0.56\" height=\"0.28\"/><rect x=\"13.19\" y=\"15.79\" width=\"0.28\" height=\"0.28\"/><rect x=\"13.75\" y=\"15.79\" width=\"0.28\" height=\"0.28\"/><rect x=\"5.17\" y=\"16.07\" width=\"0.28\" height=\"0.28\"/><rect x=\"5.72\" y=\"16.07\" width=\"0.83\" height=\"0.28\"/><rect x=\"7.1\" y=\"16.07\" width=\"1.66\" height=\"0.28\"/><rect x=\"9.04\" y=\"16.07\" width=\"0.56\" height=\"0.28\"/><rect x=\"10.15\" y=\"16.07\" width=\"0.28\" height=\"0.28\"/><rect x=\"10.98\" y=\"16.07\" width=\"0.28\" height=\"0.28\"/><rect x=\"12.64\" y=\"16.07\" width=\"0.28\" height=\"0.28\"/><rect x=\"13.47\" y=\"16.07\" width=\"0.28\" height=\"0.28\"/><rect x=\"5.17\" y=\"16.34\" width=\"0.28\" height=\"0.28\"/><rect x=\"5.72\" y=\"16.34\" width=\"0.83\" height=\"0.28\"/><rect x=\"6.83\" y=\"16.34\" width=\"0.28\" height=\"0.28\"/><rect x=\"7.38\" y=\"16.34\" width=\"0.56\" height=\"0.28\"/><rect x=\"8.21\" y=\"16.34\" width=\"1.39\" height=\"0.28\"/><rect x=\"9.87\" y=\"16.34\" width=\"0.28\" height=\"0.28\"/><rect x=\"11.26\" y=\"16.34\" width=\"2.22\" height=\"0.28\"/><rect x=\"13.75\" y=\"16.34\" width=\"0.28\" height=\"0.28\"/><rect x=\"7.38\" y=\"16.62\" width=\"0.28\" height=\"0.28\"/><rect x=\"8.21\" y=\"16.62\" width=\"1.11\" height=\"0.28\"/><rect x=\"9.6\" y=\"16.62\" width=\"0.28\" height=\"0.28\"/><rect x=\"10.15\" y=\"16.62\" width=\"0.56\" height=\"0.28\"/><rect x=\"10.98\" y=\"16.62\" width=\"0.28\" height=\"0.28\"/><rect x=\"11.81\" y=\"16.62\" width=\"0.28\" height=\"0.28\"/><rect x=\"12.92\" y=\"16.62\" width=\"0.28\" height=\"0.28\"/><rect x=\"13.47\" y=\"16.62\" width=\"0.28\" height=\"0.28\"/><rect x=\"14.02\" y=\"16.62\" width=\"0.28\" height=\"0.28\"/><rect x=\"5.17\" y=\"16.9\" width=\"1.94\" height=\"0.28\"/><rect x=\"7.93\" y=\"16.9\" width=\"0.56\" height=\"0.28\"/><rect x=\"9.04\" y=\"16.9\" width=\"0.83\" height=\"0.28\"/><rect x=\"10.15\" y=\"16.9\" width=\"0.28\" height=\"0.28\"/><rect x=\"10.7\" y=\"16.9\" width=\"0.56\" height=\"0.28\"/><rect x=\"11.53\" y=\"16.9\" width=\"0.56\" height=\"0.28\"/><rect x=\"12.36\" y=\"16.9\" width=\"0.28\" height=\"0.28\"/><rect x=\"12.92\" y=\"16.9\" width=\"0.28\" height=\"0.28\"/><rect x=\"13.47\" y=\"16.9\" width=\"0.56\" height=\"0.28\"/><rect x=\"5.17\" y=\"17.17\" width=\"0.28\" height=\"0.28\"/><rect x=\"6.83\" y=\"17.17\" width=\"0.28\" height=\"0.28\"/><rect x=\"7.38\" y=\"17.17\" width=\"0.28\" height=\"0.28\"/><rect x=\"7.93\" y=\"17.17\" width=\"1.11\" height=\"0.28\"/><rect x=\"9.32\" y=\"17.17\" width=\"0.28\" height=\"0.28\"/><rect x=\"10.7\" y=\"17.17\" width=\"1.39\" height=\"0.28\"/><rect x=\"12.92\" y=\"17.17\" width=\"1.11\" height=\"0.28\"/><rect x=\"5.17\" y=\"17.45\" width=\"0.28\" height=\"0.28\"/><rect x=\"5.72\" y=\"17.45\" width=\"0.83\" height=\"0.28\"/><rect x=\"6.83\" y=\"17.45\" width=\"0.28\" height=\"0.28\"/><rect x=\"7.38\" y=\"17.45\" width=\"0.28\" height=\"0.28\"/><rect x=\"7.93\" y=\"17.45\" width=\"0.28\" height=\"0.28\"/><rect x=\"9.04\" y=\"17.45\" width=\"0.56\" height=\"0.28\"/><rect x=\"10.15\" y=\"17.45\" width=\"0.28\" height=\"0.28\"/><rect x=\"10.98\" y=\"17.45\" width=\"0.28\" height=\"0.28\"/><rect x=\"11.81\" y=\"17.45\" width=\"1.66\" height=\"0.28\"/><rect x=\"13.75\" y=\"17.45\" width=\"0.28\" height=\"0.28\"/><rect x=\"5.17\" y=\"17.73\" width=\"0.28\" height=\"0.28\"/><rect x=\"5.72\" y=\"17.73\" width=\"0.83\" height=\"0.28\"/><rect x=\"6.83\" y=\"17.73\" width=\"0.28\" height=\"0.28\"/><rect x=\"7.38\" y=\"17.73\" width=\"0.28\" height=\"0.28\"/><rect x=\"7.93\" y=\"17.73\" width=\"0.56\" height=\"0.28\"/><rect x=\"8.76\" y=\"17.73\" width=\"1.11\" height=\"0.28\"/><rect x=\"10.7\" y=\"17.73\" width=\"1.11\" height=\"0.28\"/><rect x=\"12.09\" y=\"17.73\" width=\"0.28\" height=\"0.28\"/><rect x=\"12.92\" y=\"17.73\" width=\"0.56\" height=\"0.28\"/><rect x=\"14.02\" y=\"17.73\" width=\"0.28\" height=\"0.28\"/><rect x=\"5.17\" y=\"18\" width=\"0.28\" height=\"0.28\"/><rect x=\"5.72\" y=\"18\" width=\"0.83\" height=\"0.28\"/><rect x=\"6.83\" y=\"18\" width=\"0.28\" height=\"0.28\"/><rect x=\"7.38\" y=\"18\" width=\"1.11\" height=\"0.28\"/><rect x=\"9.87\" y=\"18\" width=\"0.83\" height=\"0.28\"/><rect x=\"10.98\" y=\"18\" width=\"0.83\" height=\"0.28\"/><rect x=\"12.36\" y=\"18\" width=\"0.56\" height=\"0.28\"/><rect x=\"13.19\" y=\"18\" width=\"0.56\" height=\"0.28\"/><rect x=\"5.17\" y=\"18.28\" width=\"0.28\" height=\"0.28\"/><rect x=\"6.83\" y=\"18.28\" width=\"0.28\" height=\"0.28\"/><rect x=\"7.93\" y=\"18.28\" width=\"0.28\" height=\"0.28\"/><rect x=\"8.49\" y=\"18.28\" width=\"0.28\" height=\"0.28\"/><rect x=\"9.6\" y=\"18.28\" width=\"0.28\" height=\"0.28\"/><rect x=\"10.15\" y=\"18.28\" width=\"1.39\" height=\"0.28\"/><rect x=\"11.81\" y=\"18.28\" width=\"0.28\" height=\"0.28\"/><rect x=\"12.92\" y=\"18.28\" width=\"0.28\" height=\"0.28\"/><rect x=\"13.47\" y=\"18.28\" width=\"0.28\" height=\"0.28\"/><rect x=\"5.17\" y=\"18.56\" width=\"1.94\" height=\"0.28\"/><rect x=\"7.38\" y=\"18.56\" width=\"1.11\" height=\"0.28\"/><rect x=\"8.76\" y=\"18.56\" width=\"0.56\" height=\"0.28\"/><rect x=\"9.87\" y=\"18.56\" width=\"0.28\" height=\"0.28\"/><rect x=\"10.43\" y=\"18.56\" width=\"0.28\" height=\"0.28\"/><rect x=\"11.26\" y=\"18.56\" width=\"0.56\" height=\"0.28\"/><rect x=\"12.36\" y=\"18.56\" width=\"0.56\" height=\"0.28\"/><rect x=\"13.75\" y=\"18.56\" width=\"0.28\" height=\"0.28\"/></g></g></svg>";
+const CODE = "7K2M QX9R 4PHT";
+
+const THEME_FIRE = "--accent:#e85d04;--accent-soft:#8a3802;--accent-ink:#16141c;--accent-wash:rgba(232,93,4,.10);--accent-edge:rgba(232,93,4,.26);";
+const THEME_RUBY = "--accent:#c8102e;--accent-soft:#9c0c24;--accent-wash:rgba(200,16,46,.09);--accent-edge:rgba(200,16,46,.24);";
+const SHOPS = {
+  homecoffee: {name:"Home Coffee", km:"កាហ្វេ​ផ្ទះ", host:"homecoffee.heartbank.ceo", payee:"kanghna", theme:"",
+               menu:["americano","condensed","matchalatte","passionsoda","redlemon","pizza-mini"],
+               art:'<rect width="48" height="48" fill="#e7efd9"/><rect x="8" y="18" width="32" height="22" fill="#fdfcff"/><path d="M6 18l4-8h28l4 8z" fill="#15803d"/><rect x="20" y="27" width="8" height="13" fill="#6f4a2e"/><rect x="11" y="23" width="7" height="6" fill="#bfe0c9"/><rect x="30" y="23" width="7" height="6" fill="#bfe0c9"/>'},
+  mangome:    {name:"Mango & Me", km:"", host:"mangome.heartbank.ceo", payee:"srey", theme:THEME_FIRE,
+               menu:["mangorice","mangoshake"],
+               art:'<rect width="48" height="48" fill="#fbe7cf"/><ellipse cx="24" cy="27" rx="12" ry="10" fill="#f2a62c"/><ellipse cx="20" cy="24" rx="4" ry="3" fill="#f8cf6e"/><path d="M24 17q3-6 9-6q-2 5-9 6z" fill="#3f8a3a"/>'},
+  sovann:     {name:"Sovann Noodles", km:"", host:"sovann.heartbank.ceo", payee:"sovann", theme:THEME_RUBY,
+               menu:["kuyteav","friednoodle"],
+               art:'<rect width="48" height="48" fill="#f6dfe0"/><path d="M9 24h30a15 13 0 0 1-30 0z" fill="#c8102e"/><path d="M12 24q4-7 8 0q4-7 8 0q4-7 8 0" stroke="#f3e2b8" stroke-width="2" fill="none"/><rect x="27" y="7" width="2" height="18" rx="1" fill="#6b4a2a" transform="rotate(18 28 16)"/><rect x="31" y="7" width="2" height="18" rx="1" fill="#6b4a2a" transform="rotate(26 32 16)"/>'}
+};
+// The two invented shops' menus — drawn for the walkthrough only.
+Object.assign(ITEMS, {
+  "mangorice": {en:"Mango Sticky Rice", price:6000, art:'<rect width="48" height="48" fill="#fbecd6"/><ellipse cx="24" cy="33" rx="15" ry="6" fill="#fdfcff"/><ellipse cx="20" cy="29" rx="9" ry="5" fill="#f4f1e8"/><path d="M24 24c6-5 13-4 14 0-3 4-9 5-14 0z" fill="#f2a62c"/>'},
+  "mangoshake": {en:"Mango Shake", price:5000, art:'<rect width="48" height="48" fill="#fbe7cf"/><path d="M15 12h18l-2.4 26h-13.2z" fill="#f2a62c"/><rect x="14" y="9.5" width="20" height="3.5" rx="1.7" fill="#fdf2dc"/><rect x="29" y="4" width="3" height="14" rx="1.5" fill="#3f8a3a" transform="rotate(12 30 11)"/>'},
+  "kuyteav": {en:"Kuy Teav", price:7000, art:'<rect width="48" height="48" fill="#f6dfe0"/><path d="M8 24h32a16 13 0 0 1-32 0z" fill="#fdfcff" stroke="#c8102e" stroke-width="1.4"/><path d="M12 25q4-5 8 0q4-5 8 0q4-5 8 0" stroke="#e8c88a" stroke-width="2" fill="none"/><circle cx="18" cy="23" r="2" fill="#7fae5a"/>'},
+  "friednoodle": {en:"Fried Noodles", price:6000, art:'<rect width="48" height="48" fill="#f6e6d6"/><ellipse cx="24" cy="30" rx="16" ry="8" fill="#fdfcff"/><path d="M12 29q4-6 8-1q4-6 8-1q4-6 8-1" stroke="#c98a3c" stroke-width="2.4" fill="none"/><circle cx="30" cy="26" r="2" fill="#d8503c"/>'}
+});
+ITEMS["pizza-mini"].en = "Pizza · Mini";
+
+const PEOPLE = {
+  bopha:  {name:"Bopha",  ground:"#f3e3d3", top:"#b4533a", skin:"#b9825a", hair:"#3a2a22", piece:"bun"},
+  dara:   {name:"Dara",   ground:"#dcd3f0", top:"#3f7f5a", skin:"#c98f5f", hair:"#2b2431", piece:"short"},
+  sophea: {name:"Sophea", ground:"#efe6f4", top:"#7b5fa0", skin:"#d8ab84", hair:"#2f2119", piece:"long"},
+  kanghna:{name:"Kanghna",ground:"#e9e3f6", top:"#15803d", skin:"#d2a07a", hair:"#241a17", piece:"ponytail"},
+  srey:   {name:"Srey",   ground:"#fde9d6", top:"#c2410c", skin:"#c4916a", hair:"#2a1f1a", piece:"long"},
+  sovann: {name:"Sovann", ground:"#dfe9f3", top:"#2f5f8a", skin:"#c18a5c", hair:"#1f1a1d", piece:"cap"}
+};
+const MEMBERS = ["bopha", "dara", "sophea"];
+const HEARTS = [["#fee2e2","#dc2626"],["#ffedd5","#f97316"],["#fef9c3","#facc15"],["#dcfce7","#22c55e"],["#dbeafe","#3b82f6"],["#e0e7ff","#818cf8"],["#f3e8ff","#a855f7"]];
+const VIDEO = '<svg viewBox="0 0 90 160" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block"><rect width="90" height="160" fill="#2a2320"/><rect y="96" width="90" height="64" fill="#3b2f28"/><circle cx="45" cy="62" r="17" fill="#b9825a"/><path d="M28 58a17 17 0 0 1 34 0c0-11-8-18-17-18s-17 7-17 18z" fill="#1f1a1d"/><path d="M14 160c3-28 15-44 31-44s28 16 31 44z" fill="#2f5f8a"/><rect x="58" y="104" width="14" height="20" rx="2" fill="#e9dcc6"/><rect x="58" y="104" width="14" height="7" fill="#cfa87a"/></svg>';
+
+/* ------------------------------------------------------------------ helpers */
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const riel = (n) => n.toLocaleString("en-US") + "៛";
+const nm = (who) => PEOPLE[who].name;
+function heart(col, px) { return '<svg viewBox="0 0 24 24" width="' + px + '" height="' + px + '" aria-hidden="true"><path fill="' + col + '" d="M12 21s-7.5-4.6-9.6-9.2C.7 8.1 2.6 4 6.4 4c2.3 0 4 1.3 5.6 3.3C13.6 5.3 15.3 4 17.6 4c3.8 0 5.7 4.1 4 7.8C19.5 16.4 12 21 12 21z"/></svg>'; }
+function face(who, px) {
+  const p = PEOPLE[who];
+  const hair = {
+    short: '<path d="M20 6a7.4 7.4 0 0 0-7.4 7.4c2-1.2 4.4-4 7.4-4s5.4 2.2 7.4 3.4A7.4 7.4 0 0 0 20 6z" fill="' + p.hair + '"/>',
+    long: '<path d="M12.4 14.6a7.6 7.6 0 0 1 15.2 0c0-4.4-3.4-7.2-7.6-7.2s-7.6 2.8-7.6 7.2z" fill="' + p.hair + '"/><path d="M11.4 14q-1.2 9 1 14h-4q-2.4 -7 -.6 -14z" fill="' + p.hair + '"/><path d="M28.6 14q1.2 9 -1 14h4q2.4 -7 .6 -14z" fill="' + p.hair + '"/>',
+    bun: '<circle cx="20" cy="6.4" r="3.6" fill="' + p.hair + '"/><path d="M12.6 14a7.4 7.4 0 0 1 14.8 0c0-3.8-3.2-6.6-7.4-6.6s-7.4 2.8-7.4 6.6z" fill="' + p.hair + '"/>',
+    cap: '<path d="M12.2 13.6a7.8 7.8 0 0 1 15.6 0z" fill="' + p.top + '"/><rect x="24" y="12.2" width="7.4" height="2.4" rx="1.2" fill="' + p.top + '"/>',
+    ponytail: '<path d="M12.6 14a7.4 7.4 0 0 1 14.8 0c0-3.8-3.2-6.6-7.4-6.6s-7.4 2.8-7.4 6.6z" fill="' + p.hair + '"/><path d="M27 10q5 3 3.4 10q-1.6-4-4-6z" fill="' + p.hair + '"/>'
+  }[p.piece];
+  return '<span class="face" style="width:' + px + 'px;height:' + px + 'px"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="' + p.ground + '"/><path d="M6 40c1.6-7 7-11 14-11s12.4 4 14 11z" fill="' + p.top + '"/><circle cx="20" cy="16" r="7.2" fill="' + p.skin + '"/>' + hair + '</svg></span>';
+}
+const sq = (id, px) => '<span class="thumb" style="width:' + px + 'px;height:' + px + 'px;border-radius:.8rem"><svg viewBox="0 0 48 48" aria-hidden="true">' + ITEMS[id].art + '</svg></span>';
+const thumb = (id, px) => '<span class="thumb" style="width:' + px + 'px;height:' + px + 'px"><svg viewBox="0 0 48 48" aria-hidden="true">' + ITEMS[id].art + '</svg></span>';
+function units(lines) { return Object.values(lines).reduce((a, b) => a + b, 0); }
+function flat(lines) { const out = []; Object.keys(lines).forEach((id) => { for (let i = 0; i < lines[id]; i++) out.push(id); }); return out; }
+function box(lines, px) {
+  return '<span class="box">' + flat(lines).slice(0, 3).map((id, n) =>
+    '<span class="thumb" style="width:' + px + 'px;height:' + px + 'px;' + (n ? 'margin-left:-' + Math.round(px * .32) + 'px;' : '') + 'z-index:' + (10 - n) + '"><svg viewBox="0 0 48 48" aria-hidden="true">' + ITEMS[id].art + '</svg></span>').join("") + '</span>';
+}
+function what(lines) {
+  const ids = Object.keys(lines).filter((id) => lines[id] > 0);
+  return ids.map((id) => ITEMS[id].en + (lines[id] > 1 ? " ×" + lines[id] : "")).join(" · ");
+}
+const price = (shop, lines) => Object.keys(lines).reduce((s, id) => s + ITEMS[id].price * lines[id], 0);
+const byShopThenItem = (a, b) => (SHOPS[a.shop].name + what(a.lines)).localeCompare(SHOPS[b.shop].name + what(b.lines));
+
+/* ------------------------------------------------------------------ state */
+let S, U;
+function fresh() {
+  S = {
+    role: "bopha",
+    on: {homecoffee:false, mangome:false, sovann:false},
+    account: {bopha: 30000, dara: 20000, sophea: 8000},      // Personal Accounts, riel
+    foundation: {bopha: 6000, dara: 0, sophea: 0},           // Re-Thank Foundation
+    thanks: [], gifts: {}, retips: [], atm: {bopha:[], dara:[], sophea:[]}, notes: {bopha:[], dara:[], sophea:[]},
+    seq: 0, ending: "", opened: false, thankedBack: false
+  };
+  U = {bopha:{view:"family"}, dara:{view:"compose", c:compose("dara", "sophea")}, sophea:{view:"inbox"}};
+}
+function compose(from, to, extra) {
+  return Object.assign({from, to, heart:2, note: from === "dara" ? "Thank you for staying late to help me move the shelves." : "",
+                        tip:"", donation:"", mode:"tip", gift:null, giftThank:null, err:""}, extra || {});
+}
+const id = (p) => p + (++S.seq);
+const u = () => U[S.role];
+function heldBy(who) { return Object.values(S.gifts).filter((g) => g.kind === "b-regift" && g.holder === who && g.state === "open").sort(byShopThenItem); }
+function shopsOn() { return Object.keys(S.on).filter((k) => S.on[k]).sort((a, b) => SHOPS[a].name.localeCompare(SHOPS[b].name)); }
+function doorOpen(who) { return heldBy(who).length > 0 || shopsOn().length > 0; }
+function note(who, n) { if (who !== undefined) S.notes[who].unshift(n); }
+
+/* ------------------------------------------------------------------ chrome */
+function header(back) {
+  return '<div class="thead"><span class="t">' +
+    (back ? '<button data-a="back" aria-label="Back"><svg viewBox="0 0 512 512" width="28" height="28" fill="#6b7280" aria-hidden="true"><path d="M512 256A256 256 0 1 0 0 256a256 256 0 1 0 512 0zM271 135c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-87 87 87 87c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0L167 273c-9.4-9.4-9.4-24.6 0-33.9L271 135z"/></svg></button>' : '') +
+    'Treasury<sub>beta</sub></span><span style="display:flex;gap:12px">' +
+    '<svg viewBox="0 0 448 512" width="24" height="24" fill="#eab308" aria-hidden="true"><path d="M224 0c-17.7 0-32 14.3-32 32v19.2C119 66 64 130.6 64 208v18.8c0 47-17.3 92.4-48.5 127.6l-7.4 8.3c-8.4 9.4-10.4 22.9-5.3 34.4S19.4 416 32 416h384c12.6 0 24-7.4 29.2-18.9s3.1-25-5.3-34.4l-7.4-8.3c-31.2-35.2-48.5-80.5-48.5-127.6V208c0-77.4-55-142-128-156.8V32c0-17.7-14.3-32-32-32zm45.3 493.3c12-12 18.7-28.3 18.7-45.3H160c0 17 6.7 33.3 18.7 45.3S207 512 224 512s33.3-6.7 45.3-18.7z"/></svg></span></div>';
+}
+function nav() {
+  const r = S.role, v = u().view;
+  const tabs = (r === "bopha" ? [["family","Family Bank"]] : []).concat([["inbox","Notifications"],["members","Thank someone"],["atm","Account"]]);
+  return '<div class="tnav">' + tabs.map(([k, l]) => '<button data-a="tab" data-x="' + k + '" aria-current="' + (v === k) + '">' + l + '</button>').join("") + '</div>';
+}
+function sheet(title, body, foot) {
+  return '<div class="sheet-dim"></div><div class="sheet screen-in"><div class="sheet-h">' + title +
+    '<button class="x" data-a="close" aria-label="Close">✕</button></div><div class="sheet-b">' + body + '</div>' + (foot || '') + '</div>';
+}
+
+/* ------------------------------------------------------------------ the gift pieces (the shop's design) */
+function giftBlock(g, holderLine, removeAct) {
+  const lines = g.lines, shop = SHOPS[g.shop];
+  return '<div class="sx sx-gift" style="' + shop.theme + '"><div style="display:flex;align-items:center;gap:11px">' + box(lines, 38) +
+    '<div style="min-width:0;flex:1"><p class="disp" style="margin:0;font-size:1rem;line-height:1.25">' + esc(what(lines)) + '</p>' +
+    '<p class="dim" style="margin:1px 0 0;font-size:.8rem">' + esc(shop.name) + (g.payer ? ' · from ' + nm(g.via || g.payer) : '') + '</p></div>' +
+    (removeAct ? '<button class="soft" style="font-size:.84rem;flex:none" data-a="' + removeAct + '">Remove</button>' : '') + '</div>' +
+    (holderLine ? '<p class="dim" style="margin:9px 0 0;font-size:.8rem">' + holderLine + '</p>' : '') + '</div>';
+}
+function door(sub, act) {
+  return '<button class="sx sx-door" data-a="' + act + '"><span style="width:36px;height:36px;border-radius:50%;background:var(--accent-wash);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex:none">🎁</span>' +
+    '<span style="min-width:0;flex:1;text-align:left"><span style="display:block;font-weight:600;font-size:.94rem">Or give a gift code</span><span class="dim" style="display:block;font-size:.8rem">' + sub + '</span></span><span class="faint">›</span></button>';
+}
+// The attached gift, resolved: a purchase draft or a held B-ReGift.
+function draftView(d) {
+  if (!d) return null;
+  if (d.src === "held") { const g = S.gifts[d.giftId]; return {shop: g.shop, lines: g.lines, payer: g.payer, via: g.via, held: true}; }
+  return {shop: d.shop, lines: d.lines, held: false, keep: d.keep};
+}
+
+/* ------------------------------------------------------------------ views */
+const V = {};
+
+V.family = function () {
+  const rows = ["homecoffee", "mangome", "sovann"].map((k) => {
+    const s = SHOPS[k];
+    return '<div style="display:flex;align-items:center;gap:11px;padding:10px 0;border-bottom:1px solid var(--t-line)">' +
+      '<span class="thumb" style="width:42px;height:42px;border-radius:.7rem"><svg viewBox="0 0 48 48" aria-hidden="true">' + s.art + '</svg></span>' +
+      '<span style="min-width:0;flex:1"><span style="display:block;font-size:.94rem;font-weight:500">' + esc(s.name) + '</span>' +
+      '<span class="xs" style="display:flex;align-items:center;gap:5px;margin-top:2px">paid to ' + face(s.payee, 16) + '<b style="font-weight:600;color:var(--t-ink)">@' + s.payee + '</b></span></span>' +
+      '<button class="toggle" role="switch" aria-checked="' + S.on[k] + '" aria-label="' + esc(s.name) + ' for gift codes" data-a="switch" data-x="' + k + '"><i></i></button></div>';
+  }).join("");
+  return '<div class="body screen-in"><div class="card"><p class="h1">🏦 Kampuchea</p>' +
+    '<p class="xs">Bank name, hashtag, exchange rate and family status sit above this, as they do today.</p>' +
+    '<div style="padding:14px;background:var(--t-field);border-radius:.5rem;display:flex;flex-direction:column;gap:4px">' +
+    '<p style="margin:0;font-size:1rem;font-weight:500">Shops for gift codes</p>' +
+    '<p class="sm" style="color:var(--t-dim)">Shops that name #kampuchea and take H3QR. A shop names its family itself, so check who it is paid to before you switch it on.</p>' +
+    rows + '<p class="xs" style="margin-top:6px">Members see only the shops switched on.</p></div></div></div>';
+};
+
+V.inbox = function () {
+  const ns = S.notes[S.role];
+  const list = ns.length ? ns.map((n, i) =>
+    '<button class="note-in" data-a="note" data-x="' + i + '"><span style="font-size:1.9rem;line-height:1">' + (n.gift ? "🎁" : "💛") + '</span>' +
+    '<span style="min-width:0;flex:1"><span style="display:block;font-size:.86rem;font-weight:600">' + esc(n.title) + '</span>' +
+    '<span class="xs" style="display:block;margin-top:1px;color:var(--t-ink)">' + esc(n.text) + '</span><span class="xs" style="display:block">#kampuchea · just now</span></span></button>').join("")
+    : '<p class="sm" style="color:var(--t-dim);text-align:center;padding:30px 0">Nothing here yet.</p>';
+  return '<div class="body screen-in"><div class="card" style="gap:10px"><p class="h1">Notifications</p>' + list + '</div></div>';
+};
+
+V.members = function () {
+  const others = MEMBERS.filter((m) => m !== S.role);
+  const c = u().pass ? 'Give ' + esc(what(S.gifts[u().pass].lines)) + ' to…' : 'Who do you want to thank?';
+  return '<div class="body screen-in"><div class="card" style="gap:10px"><p class="h1">' + c + '</p>' +
+    others.map((m) => '<button class="row" data-a="pick-member" data-x="' + m + '">' + face(m, 36) +
+      '<span class="grow" style="font-weight:600">' + nm(m) + '<span class="xs" style="display:block;font-weight:400">@' + m + '</span></span><span style="color:var(--t-faint)">›</span></button>').join("") +
+    '</div></div>';
+};
+
+V.atm = function () {
+  const r = S.role, rows = S.atm[r];
+  return '<div class="body screen-in"><div class="card"><p class="h1">🏧 Your account</p>' +
+    '<div style="display:flex;justify-content:space-between" class="sm"><span>Personal Account</span><b class="mono">' + riel(S.account[r]) + '</b></div>' +
+    '<div style="display:flex;justify-content:space-between" class="sm"><span>Re-Thank Foundation</span><b class="mono">' + riel(S.foundation[r]) + '</b></div>' +
+    '<div style="border-top:1px solid var(--t-line);padding-top:10px;display:flex;flex-direction:column;gap:8px">' +
+    (rows.length ? rows.map((x) => '<div style="display:flex;justify-content:space-between;gap:10px" class="sm"><span>' + esc(x.what) + '</span><b class="mono" style="font-weight:600">' + (x.amt < 0 ? "−" : "+") + riel(Math.abs(x.amt)) + '</b></div>').join("")
+      : '<p class="xs">No transactions yet.</p>') +
+    '</div><p class="xs">This history is the only place a gift’s price is written down.</p></div></div>';
+};
+
+V.compose = function () {
+  const c = u().c, to = c.to, d = draftView(c.gift);
+  const hearts = '<div class="hearts">' + HEARTS.map((h, i) => '<button style="background:' + h[0] + '" data-a="heart" data-x="' + i + '" aria-pressed="' + (c.heart === i) + '" aria-label="Heart ' + (i + 1) + '">' + heart(h[1], 20) + '</button>').join("") + '</div>';
+  let value = "";
+  if (c.mode === "donate") {
+    // ⭐ The thank-back: a donation or nothing. No tip (it would pay the giver back) and no gift door (a coffee back for a coffee nets the same way).
+    value = '<div><label class="lbl" for="don">🧧 Donate to <b style="font-weight:900">' + nm(to) + '</b>’s Re-Thank Foundation</label>' +
+      '<div style="display:flex;align-items:center;gap:8px"><input class="inp mono" id="don" inputmode="numeric" placeholder="Optional" data-in="donation" value="' + esc(c.donation) + '"><span class="sm" style="color:var(--t-dim)">KHR</span></div></div>' +
+      '<p class="xs" style="margin-top:-8px">Your B-Account Balance: <b>' + riel(S.account[c.from]) + '</b> KHR</p>';
+  } else if (d) {
+    const holder = d.keep === "pass" ? "For " + nm(to) + " to give. There is no code to redeem." : "For " + nm(to) + ". Only " + nm(to) + " sees the code.";
+    value = giftBlock(d, holder, "remove-gift") +
+      (d.held ? '<p class="xs" style="margin-top:-6px">Already paid for. Sending it moves nothing from your account.</p>'
+              : '<p class="xs" style="margin-top:-6px;color:var(--t-ink)">Paid from your Personal Account when you send: <b>' + riel(price(d.shop, d.lines)) + '</b>. Only you see this figure.</p>') +
+      '<p class="xs" style="margin-top:-8px">Your B-Account Balance: <b>' + riel(S.account[c.from]) + '</b> KHR</p>';
+  } else {
+    value = '<div><label class="lbl" for="tip">💰 Tip to <b style="font-weight:900">' + nm(to) + '</b>’s Personal B-Account</label>' +
+      '<div style="display:flex;align-items:center;gap:8px"><input class="inp mono" id="tip" inputmode="numeric" placeholder="Optional" data-in="tip" value="' + esc(c.tip) + '"><span class="sm" style="color:var(--t-dim)">KHR</span></div></div>' +
+      '<p class="xs" style="margin-top:-8px">Your B-Account Balance: <b>' + riel(S.account[c.from]) + '</b> KHR</p>' +
+      // ⛔ ABSENT when nothing qualifies — never a line about why.
+      (doorOpen(c.from) ? door("Instead of a tip — something from a shop, for " + nm(to), "open-door") : "");
+  }
+  const ref = c.giftThank ? (() => { const g = S.gifts[c.giftThank]; return '<div class="sx" style="display:flex;justify-content:center"><span style="display:inline-flex;align-items:center;gap:8px;padding:4px 12px 4px 5px;border-radius:999px;background:var(--accent-wash);border:1px solid var(--accent-edge)">' + box(g.lines, 22) + '<span style="font-size:.8rem">For the ' + esc(what(g.lines)) + ' · ' + esc(SHOPS[g.shop].name) + '</span></span></div>'; })() : "";
+  return '<div class="body screen-in"><div style="text-align:center">' +
+    '<span style="display:inline-block;border-radius:50%;border:5px solid #22c55e;box-shadow:0 0 0 5px #a855f7;margin:6px 0 8px">' + face(to, 96) + '</span>' +
+    '<p style="margin:0;font-size:1.1rem;font-weight:700">' + nm(to) + '</p></div>' + ref + hearts +
+    '<div class="video">' + VIDEO + '<span class="tag">[ A RECORDED VIDEO ]</span></div>' +
+    '<div class="card"><p class="h1">💛 Token of Appreciation</p>' +
+    '<div><label class="lbl" for="note">Thank You Note</label><textarea class="inp" id="note" data-in="note" placeholder="Add an optional note...">' + esc(c.note) + '</textarea></div>' +
+    value +
+    '<div><span class="lbl">Visibility</span><div class="inp" style="display:flex;justify-content:space-between"><span>👪 Family</span><span style="color:var(--t-faint)">▾</span></div></div>' +
+    '<div class="pin"><span>📍 Phnom Penh</span><span>Re-pin</span></div>' +
+    (c.err ? '<div class="fact">' + c.err + '</div>' : '') +
+    '</div><button class="ybtn" data-a="send">Send Token of Appreciation</button></div>';
+};
+
+V.door = function () {
+  const held = heldBy(S.role);
+  const on = shopsOn();
+  const heldRows = held.map((g) => '<button class="sx sx-row" style="' + SHOPS[g.shop].theme + '" data-a="use-held" data-x="' + g.id + '">' + box(g.lines, 44) +
+    '<span style="min-width:0;flex:1;text-align:left"><span class="disp" style="display:block;font-size:1.02rem">' + esc(what(g.lines)) + '</span>' +
+    '<span class="dim" style="display:block;font-size:.8rem">' + esc(SHOPS[g.shop].name) + ' · from ' + nm(g.via || g.payer) + '</span></span><span class="faint">›</span></button>').join("");
+  const shopRows = on.map((k) => { const s = SHOPS[k]; return '<button class="sx sx-row" style="' + s.theme + '" data-a="pick-shop" data-x="' + k + '">' +
+    '<span class="thumb" style="width:48px;height:48px;border-radius:.85rem"><svg viewBox="0 0 48 48" aria-hidden="true">' + s.art + '</svg></span>' +
+    '<span style="min-width:0;flex:1;text-align:left"><span class="disp" style="display:block;font-size:1.06rem;line-height:1.2">' + esc(s.name) + '</span>' +
+    (s.km ? '<span class="km dim" style="display:block;font-size:.8rem">' + s.km + '</span>' : '') +
+    '<span class="mono faint" style="display:block;font-size:.64rem">' + s.host + '</span></span><span class="faint">›</span></button>'; }).join("");
+  const body = (held.length ? '<p class="sx lbl2">Yours to give</p>' + heldRows + '<p class="xs">Already paid for. Giving one moves nothing from your account.</p>' : '') +
+    (on.length ? '<p class="sx lbl2" style="margin-top:4px">From a shop</p>' + shopRows + '<p class="xs" style="text-align:center">Shops your family banker has switched on, A to Z.</p>' : '');
+  return sheet('<p style="margin:0;font-size:1.15rem;font-weight:700">🎁 A gift code</p><p class="xs">One per send</p>', body);
+};
+
+V.menu = function () {
+  const p = u().pick, s = SHOPS[p.shop], n = units(p.lines);
+  const forName = p.ctx === "compose" ? nm(u().c.to) : null;
+  const items = s.menu.map((idd) => { const q = p.lines[idd] || 0, it = ITEMS[idd];
+    return '<div style="display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)">' + sq(idd, 56) +
+      '<span style="min-width:0;flex:1"><span style="display:block;font-weight:500;font-size:.94rem">' + esc(it.en) + '</span><span class="mono dim" style="display:block;font-size:.82rem">' + riel(it.price) + '</span></span>' +
+      (q ? '<button class="step" data-a="qty" data-x="' + idd + '" data-y="-1" aria-label="One fewer">−</button><span class="mono" style="min-width:16px;text-align:center">' + q + '</span>' : '') +
+      '<button class="step" data-a="qty" data-x="' + idd + '" data-y="1" aria-label="One more"' + (n >= 31 ? ' disabled' : '') + '>+</button></div>'; }).join("");
+  const keepA = forName ? "For " + forName : "Theirs to keep", keepB = forName ? "For " + forName + " to give" : "Theirs to give";
+  const body = '<div class="sx" style="' + s.theme + 'display:flex;flex-direction:column;gap:12px">' +
+    '<div><p class="lbl2" style="margin-bottom:7px">Who keeps it</p><div class="sx-seg"><button data-a="keep" data-x="have" aria-pressed="' + (p.keep === "have") + '">' + esc(keepA) + '</button><button data-a="keep" data-x="pass" aria-pressed="' + (p.keep === "pass") + '">' + esc(keepB) + '</button></div>' +
+    '<p class="faint" style="margin:6px 0 0;font-size:.78rem">' + (p.keep === "pass" ? "They pass it on to someone in the family, and the code is that person’s." : "They show the code at the counter.") + '</p></div>' +
+    '<div>' + items + '</div>' +
+    (n ? '<div class="sx-gift" style="text-align:center">' + box(p.lines, 54) + '<p class="disp" style="margin:8px 0 0;font-size:1rem">' + (n > 1 ? n + " things, one code" : esc(what(p.lines))) + '</p></div>' : '') + '</div>';
+  const foot = n ? '<div class="sx foot" style="' + s.theme + 'background:var(--bg);border-top:1px solid var(--line)"><button class="sx-go" data-a="attach"><span>' + (p.ctx === "compose" ? "Add to the thank" : "Add to the re-thank") + '</span><span class="mono">' + riel(price(p.shop, p.lines)) + '</span></button>' +
+    '<p class="faint" style="text-align:center;margin:7px 0 0;font-size:.76rem">Nothing is paid until you send.</p></div>' : '';
+  const title = '<div class="sx" style="display:flex;align-items:center;gap:11px"><span class="thumb" style="width:40px;height:40px;border-radius:.75rem"><svg viewBox="0 0 48 48" aria-hidden="true">' + s.art + '</svg></span>' +
+    '<span><span class="disp" style="display:block;font-size:1.2rem;line-height:1.15">' + esc(s.name) + '</span>' + (s.km ? '<span class="km dim" style="display:block;font-size:.78rem">' + s.km + '</span>' : '') + '</span></div>';
+  return sheet(title, body, foot);
+};
+
+function shortCard(t) {
+  const g = t.gift ? S.gifts[t.gift] : null;
+  const mine = g && g.holder === S.role && g.state === "open";
+  const row = g ? '<button class="giftrow" ' + (mine ? 'data-a="open-gift" data-x="' + g.id + '"' : 'disabled') + '>' + box(g.lines, 28) +
+    '<span style="font-size:.84rem;font-weight:500;text-align:left">' + esc(what(g.lines)) + ' · ' + esc(SHOPS[g.shop].name) + '</span>' + (mine ? '<span style="margin-left:auto;opacity:.7">›</span>' : '') + '</button>' : '';
+  const canRetip = MEMBERS.includes(S.role) && S.role !== t.from && S.role !== t.to;
+  return '<div class="short"><div class="bgv">' + VIDEO + '</div>' +
+    '<div class="rail"><span>' + face(t.from, 40) + '<span style="display:block;margin-top:2px">@' + t.from + '</span></span>' +
+    (canRetip ? '<button data-a="retip" style="color:#fff"><span class="rt">' + heart("#ffd700", 24) + '</span><span style="display:block;margin-top:2px">Re-Thank</span></button>' : '') + '</div>' +
+    '<div class="ov"><p style="margin:0 0 10px;font-size:.84rem;opacity:.85">💛 Token of Appreciation • To <b>@' + t.to + '</b></p>' +
+    '<p style="margin:0;font-size:.88rem;line-height:1.4;max-width:280px">' + esc(t.note || "") + '</p>' + row +
+    '<div style="display:flex;justify-content:space-between;font-size:.72rem;margin-top:14px;opacity:.65"><i>📍 Phnom Penh</i><span>👪 now</span></div></div></div>';
+}
+V.short = function () {
+  const t = S.thanks.find((x) => x.id === u().cur);
+  if (!t) return V.inbox();
+  const g = t.gift ? S.gifts[t.gift] : null;
+  const hint = g && g.holder === S.role && g.state === "open" ? '<p class="xs" style="text-align:center">Tap the gift to open it.</p>' : '';
+  return '<div class="body screen-in">' + (u().flash ? '<div class="fact" style="background:var(--t-pill);color:var(--t-pill-ink)">' + u().flash + '</div>' : '') + shortCard(t) + hint + '</div>';
+};
+
+V.gift = function () {
+  const g = S.gifts[u().gift], s = SHOPS[g.shop];
+  const from = g.via ? nm(g.payer) + " gave it to " + nm(g.via) + " to pass on." : nm(g.payer) + " bought you this at " + s.name + ".";
+  let body;
+  if (g.kind === "b-regift") {
+    const first = u().firstLook;
+    body = '<div class="sx" style="' + s.theme + 'display:flex;flex-direction:column;gap:14px;text-align:center;padding-top:6px">' + box(g.lines, 88) +
+      '<div><p class="disp" style="margin:0;font-size:1.35rem">' + esc(what(g.lines)) + '</p><p class="dim" style="margin:2px 0 0;font-size:.9rem">From ' + nm(g.payer) + ', at ' + esc(s.name) + '.</p></div>' +
+      '<p style="margin:4px 0 0;font-size:1.04rem">This one is yours to give.</p>' +
+      '<button class="sx-go" style="justify-content:center" data-a="give-it">Give it</button>' +
+      // ⭐ Said ONCE, at first look, in the storefront's paid form (founder 2026-10-05). ⛔ Never again, no date, nothing that ticks.
+      (first ? '<p class="faint" style="margin:0;font-size:.84rem">You have a month to pass it on. If you do not, it goes back to ' + nm(g.payer) + ' to send again.</p>' : '') +
+      '<p class="faint" style="margin:0;font-size:.78rem">Give it attaches it to a thank, to whoever you choose in the family.</p></div>';
+    return sheet('<p style="margin:0;font-size:1.15rem;font-weight:700">🎁 Yours to give</p>', body);
+  }
+  const doors = (g.via ? [g.via, g.payer] : [g.payer]).map((p) => '<button class="soft" style="font-size:.92rem" data-a="thank-back" data-x="' + p + '">Thank ' + nm(p) + '</button>').join("");
+  body = '<div class="sx" style="' + s.theme + 'display:flex;flex-direction:column;gap:14px">' +
+    '<div style="text-align:center">' + box(g.lines, 88) + '<p class="disp" style="margin:10px 0 0;font-size:1.35rem">' + esc(what(g.lines)) + '</p>' +
+    '<p class="dim" style="margin:2px 0 0;font-size:.9rem">' + esc(from) + '</p></div>' +
+    '<div class="codecard"><p class="lbl2" style="margin-bottom:6px">Show this at the counter</p><p class="mono" style="margin:0;font-size:1.4rem;letter-spacing:.08em;font-weight:500">' + CODE + '</p>' +
+    '<div class="bqr">' + BQR + '</div><p class="faint" style="margin:0;font-size:.7rem">[ placeholder code — every gift in this walkthrough shows the same one ]</p></div>' +
+    '<div style="background:var(--surface);border-radius:var(--r-card);padding:13px 15px"><p style="margin:0;font-size:.94rem">Good for ' + esc(what(g.lines)) + ' at ' + esc(s.name) + ', for as long as ' + esc(s.name) + ' is open.</p></div>' +
+    // ⛔ Quiet doors, no prompt, no default text, no reminder — and nothing anywhere says whether a thank came back.
+    '<div style="display:flex;gap:22px">' + doors + '</div></div>';
+  return sheet('<p style="margin:0;font-size:1.15rem;font-weight:700">🎁 Yours</p>', body);
+};
+
+V.retip = function () {
+  const t = S.thanks.find((x) => x.id === u().cur), r = u().rt, me = S.role;
+  const done = new Set(S.retips.filter((x) => x.parent === t.id && x.from === me).map((x) => x.to));
+  const left = [t.from, t.to].filter((p) => p !== me && !done.has(p));
+  const total = (t.tip || 0) + S.retips.filter((x) => x.parent === t.id && x.kind === "money").reduce((a, x) => a + x.amt, 0);
+  const flows = [];
+  if (t.tip) flows.push([t.from, t.to, "Tip", riel(t.tip)]);
+  S.retips.filter((x) => x.parent === t.id).forEach((x) => flows.push([x.from, x.to, "Re-Thank", x.kind === "money" ? riel(x.amt) : "🎁 " + what(S.gifts[x.gift].lines)]));
+  const flowRows = flows.map((f) => '<div style="display:flex;align-items:center;gap:8px;padding:9px 0;border-bottom:1px solid var(--t-line)">' + face(f[0], 26) + '<span class="xs">@' + f[0] + '</span><span style="color:var(--t-faint)">→</span>' + face(f[1], 26) + '<span class="xs">@' + f[1] + '</span>' +
+    '<span style="margin-left:auto;text-align:right"><span class="xs" style="display:block;font-size:.6rem">' + f[2] + '</span><b style="font-size:.86rem">' + esc(f[3]) + '</b></span></div>').join("");
+  const role = (p) => p === t.from ? "Sender" : "Recipient";
+  let body = (flowRows || '<p class="xs" style="text-align:center">Be the first to re-thank!</p>') +
+    '<div style="display:flex;align-items:center;gap:8px;padding:7px 10px;border-radius:.5rem;background:var(--t-purple-wash);border:1px solid var(--t-purple-line)">' + face(me, 26) + '<span><span class="sm" style="display:block">Re-thanking as <b style="font-weight:900">@' + me + '</b></span><span class="xs">Kampuchea</span></span></div>';
+  if (!left.length) {
+    body += '<p class="sm" style="text-align:center;color:var(--t-dim);padding:14px 0">You have re-thanked everyone</p>';
+  } else {
+    body += '<span class="ypill">📍 Phnom Penh</span>' +
+      '<div class="seg" role="group" aria-label="Re-thank with"><button data-a="rt-mode" data-x="money" aria-pressed="' + (r.mode === "money") + '">🫶 Re-Thank with Money</button><button data-a="rt-mode" data-x="gift" aria-pressed="' + (r.mode === "gift") + '">🎁 Re-Thank with a Gift</button></div>';
+    if (r.mode === "money") {
+      body += '<p class="xs">Your Re-Thank Foundation Balance: ' + riel(S.foundation[me]) + ' · then your B-Account</p>' +
+        '<div style="display:flex;align-items:center;gap:8px"><input class="inp mono" id="rtamt" inputmode="numeric" placeholder="Enter a re-thank amount" data-in="rtamt" value="' + esc(r.amt) + '"><span class="sm" style="color:var(--t-dim)">KHR</span></div>';
+      const a = parseInt(r.amt, 10);
+      if (a > 0) {
+        body += left.map((p) => '<button class="ybtn" data-a="rt-send" data-x="' + p + '">Re-Thank ' + role(p) + ' <b style="font-weight:900">@' + p + '</b> — <b style="font-weight:900">' + riel(a) + '</b></button>').join("") +
+          (left.length > 1 ? '<button class="ybtn pbtn" data-a="rt-all">Re-Thank All (' + left.length + ') — ' + riel(a * left.length) + ' total</button>' : '');
+      }
+    } else {
+      const d = draftView(r.gift);
+      if (d) {
+        body += giftBlock(d, "Only the person you give it to sees the code.", "rt-remove") +
+          (d.held ? '<p class="xs">Already paid for. Sending it moves nothing from your account.</p>' : '<p class="xs" style="color:var(--t-ink)">Paid from your Personal Account when you send: <b>' + riel(price(d.shop, d.lines)) + '</b>. Only you see this figure.</p>') +
+          left.map((p) => '<button class="ybtn" data-a="rt-gift" data-x="' + p + '">Re-Thank ' + role(p) + ' <b style="font-weight:900">@' + p + '</b> — 🎁</button>').join("");
+      } else if (doorOpen(me)) {
+        body += door("A coffee instead of money — for one person here", "rt-door");
+      } else {
+        body += '<p class="xs">Gift codes come from shops your family banker switches on.</p>';
+      }
+    }
+    if (r.err) body += '<div class="fact">' + r.err + '</div>';
+  }
+  const title = '<p style="margin:0;display:flex;align-items:baseline;gap:8px"><span style="font-size:1.7rem;font-weight:900">🐷 ' + riel(total) + '</span><span style="font-size:1rem;font-weight:600;color:var(--t-faint)">Total</span></p>';
+  return sheet(title, body);
+};
+
+/* ------------------------------------------------------------------ actions */
+const A = {};
+function go(view, extra) { Object.assign(u(), {view, flash: ""}, extra || {}); render(true); }
+A.tab = (k) => { if (k === "members") u().pass = null; go(k); };
+A.back = () => { const home = S.role === "bopha" ? "family" : "inbox"; go(home); };
+A.close = () => {
+  const x = u();
+  if (x.view === "menu" || x.view === "door") return go(x.pick.ctx === "compose" ? "compose" : "retip");
+  if ((x.view === "retip" || x.view === "gift") && S.thanks.some((t) => t.id === x.cur)) return go("short");
+  go("inbox");
+};
+A["switch"] = (k) => { S.on[k] = !S.on[k]; render(); };
+A.heart = (i) => { u().c.heart = +i; render(); };
+A["open-door"] = () => openDoor("compose");
+A["rt-door"] = () => openDoor("retip");
+function openDoor(ctx) {
+  const held = heldBy(S.role), on = shopsOn();
+  if (!held.length && on.length === 1) return go("menu", {pick: {ctx, shop: on[0], lines: {}, keep: "have"}});
+  go("door", {pick: {ctx, lines: {}, keep: "have"}});
+}
+A["pick-shop"] = (k) => { u().pick.shop = k; u().pick.lines = {}; go("menu"); };
+A.qty = (idd, dy) => { const l = u().pick.lines, n = (l[idd] || 0) + (+dy); if (n <= 0) delete l[idd]; else if (units(l) < 31 || +dy < 0) l[idd] = n; render(); };
+A.keep = (k) => { u().pick.keep = k; render(); };
+A.attach = () => {
+  const p = u().pick, g = {src: "buy", shop: p.shop, lines: Object.assign({}, p.lines), keep: p.keep};
+  if (p.ctx === "compose") { u().c.gift = g; u().c.tip = ""; u().c.err = ""; go("compose"); }
+  else { u().rt.gift = g; u().rt.err = ""; go("retip"); }
+};
+A["use-held"] = (gid) => {
+  const p = u().pick, g = {src: "held", giftId: gid};
+  if (p.ctx === "compose") { u().c.gift = g; u().c.tip = ""; u().c.err = ""; go("compose"); }
+  else { u().rt.gift = g; u().rt.err = ""; go("retip"); }
+};
+A["remove-gift"] = () => { u().c.gift = null; u().c.err = ""; render(); };
+A["rt-remove"] = () => { u().rt.gift = null; u().rt.err = ""; render(); };
+
+// Place a gift for `holder`, paid by `from` (or pass a held one). Returns the gift id, or a refusal sentence.
+function placeGift(from, holder, d) {
+  if (d.src === "held") {
+    const g = S.gifts[d.giftId];
+    if (!g || g.state !== "open") return {err: "That one has already gone."};
+    g.state = "passed";
+    const nid = id("g");
+    S.gifts[nid] = {id: nid, kind: "b-gift", shop: g.shop, lines: g.lines, payer: g.payer, via: from, holder, state: "open"};
+    return {gift: nid};
+  }
+  const total = price(d.shop, d.lines);
+  if (S.account[from] < total) return {err: "Your Personal Account has " + riel(S.account[from]) + " — this gift is " + riel(total) + "."};
+  S.account[from] -= total;
+  S.atm[from].unshift({what: "Payment · " + SHOPS[d.shop].host, amt: -total});
+  const nid = id("g");
+  S.gifts[nid] = {id: nid, kind: d.keep === "pass" ? "b-regift" : "b-gift", shop: d.shop, lines: d.lines, payer: from, via: null, holder, state: "open"};
+  return {gift: nid};
+}
+
+A.send = () => {
+  const c = u().c, from = c.from, to = c.to;
+  c.err = "";
+  const tip = parseInt(c.tip, 10) || 0, don = parseInt(c.donation, 10) || 0;
+  if (c.mode !== "donate" && tip > 0 && c.gift) { c.err = "One kind of value per thank."; return render(); }   // unreachable by design; the server refuses it too
+  if (tip > S.account[from] || don > S.account[from]) { c.err = "Your Personal Account has " + riel(S.account[from]) + "."; return render(); }
+  let gid = null;
+  if (c.gift) { const r = placeGift(from, to, c.gift); if (r.err) { c.err = r.err; return render(); } gid = r.gift; }
+  if (tip) { S.account[from] -= tip; S.account[to] += tip; S.atm[from].unshift({what: "Tip · @" + to, amt: -tip}); S.atm[to].unshift({what: "Tip · @" + from, amt: tip}); }
+  if (don) { S.account[from] -= don; S.foundation[to] += don; S.atm[from].unshift({what: "Donation · @" + to + "’s Re-Thank Foundation", amt: -don}); }
+  const t = {id: id("t"), from, to, note: c.note, heart: c.heart, tip, gift: gid, backFor: c.giftThank};
+  S.thanks.unshift(t);
+  const g = gid ? S.gifts[gid] : null;
+  note(to, {title: "Token of Appreciation", text: nm(from) + " thanked You" + (g ? " · with a gift from " + SHOPS[g.shop].name : ""), thank: t.id});
+  MEMBERS.filter((m) => m !== from && m !== to).forEach((m) => note(m, {title: "About Your Family", text: nm(from) + " thanked " + nm(to), thank: t.id}));
+  if (c.giftThank) S.thankedBack = true;
+  if (c.gift && c.gift.src === "held") S.ending = "Sophea passed it on. A gift held to give becomes someone’s the moment it is given.";
+  else if (c.giftThank) S.ending = "A coffee, not an amount — and the thanks came back with no price on it.";
+  U[from].c = compose(from, from === "dara" ? "sophea" : MEMBERS.find((m) => m !== from));
+  go("short", {cur: t.id, flash: "Sent."});
+};
+
+A.note = (i) => {
+  const n = S.notes[S.role][+i];
+  go("short", {cur: n.thank, flash: ""});
+};
+A["open-gift"] = (gid) => {
+  const g = S.gifts[gid];
+  const first = !g.looked; g.looked = true;
+  if (S.role === "sophea") S.opened = true;
+  go("gift", {gift: gid, firstLook: first});
+};
+A["thank-back"] = (p) => { U[S.role].c = compose(S.role, p, {mode: "donate", giftThank: u().gift}); go("compose"); };
+A["give-it"] = () => { go("members", {pass: u().gift}); };
+A["pick-member"] = (m) => {
+  const x = u();
+  x.c = compose(S.role, m, x.pass ? {gift: {src: "held", giftId: x.pass}} : {});
+  x.pass = null;
+  go("compose");
+};
+A.retip = () => go("retip", {rt: {mode: "money", amt: "", gift: null, err: ""}});
+A["rt-mode"] = (k) => { u().rt.mode = k; u().rt.err = ""; render(); };
+function retipMoney(to, amt) {
+  const me = S.role, t = S.thanks.find((x) => x.id === u().cur);
+  const fromFund = Math.min(S.foundation[me], amt), fromAcct = amt - fromFund;
+  if (fromAcct > S.account[me]) return "Need " + riel(fromAcct - S.account[me]) + " more — B-Account empty";
+  S.foundation[me] -= fromFund; S.account[me] -= fromAcct; S.account[to] += amt;
+  S.atm[me].unshift({what: "Re-Thank · @" + to, amt: -amt}); S.atm[to].unshift({what: "Re-Thank · @" + me, amt: amt});
+  S.retips.push({parent: t.id, from: me, to, kind: "money", amt});
+  note(to, {title: "Re-Thank", text: nm(me) + " re-thanked You", thank: t.id});
+  return "";
+}
+A["rt-send"] = (p) => { const r = u().rt; r.err = retipMoney(p, parseInt(r.amt, 10)); render(); };
+A["rt-all"] = () => {
+  const r = u().rt, t = S.thanks.find((x) => x.id === u().cur), me = S.role, a = parseInt(r.amt, 10);
+  const done = new Set(S.retips.filter((x) => x.parent === t.id && x.from === me).map((x) => x.to));
+  for (const p of [t.from, t.to].filter((q) => q !== me && !done.has(q))) { r.err = retipMoney(p, a); if (r.err) break; }
+  render();
+};
+A["rt-gift"] = (p) => {
+  const r = u().rt, t = S.thanks.find((x) => x.id === u().cur), me = S.role;
+  const res = placeGift(me, p, r.gift);
+  if (res.err) { r.err = res.err; return render(); }
+  S.retips.push({parent: t.id, from: me, to: p, kind: "gift", gift: res.gift});
+  const g = S.gifts[res.gift];
+  note(p, {title: "Re-Thank", text: nm(me) + " re-thanked You with a gift from " + SHOPS[g.shop].name, thank: t.id, gift: res.gift});
+  r.gift = null; r.mode = "money";
+  S.ending = "One send per person: a re-thank with money or with a gift, never both.";
+  render();
+};
+// A gift that came with a re-thank opens from its notification.
+const _note = A.note;
+A.note = (i) => { const n = S.notes[S.role][+i]; if (n.gift && S.gifts[n.gift].holder === S.role && S.gifts[n.gift].state === "open") { u().cur = n.thank; return A["open-gift"](n.gift); } _note(i); };
+A.reset = () => { fresh(); render(true); };
+
+/* ------------------------------------------------------------------ guide */
+function guide() {
+  const gave = S.thanks.some((t) => t.gift && t.from === "dara");
+  let next;
+  if (!shopsOn().length) next = "Start as <b>Bopha</b>, the family’s banker. Switch Home Coffee on for #kampuchea — check who it is paid to first.";
+  else if (!gave) next = "Now be <b>Dara</b>. Thank Sophea with a gift code instead of a tip: tap <i>Or give a gift code</i>.";
+  else if (!S.opened) next = "Now be <b>Sophea</b>. Open the thank from Dara in Notifications and tap the gift.";
+  else if (!S.thankedBack) next = "Sophea can thank Dara back from the gift: words, and a donation if she likes. Never a tip.";
+  else next = "More to try: as Bopha, open the short and re-thank each person once — with money or with a gift. Or give Sophea a gift <i>to give</i>, and pass it on.";
+  return (S.ending ? '<p class="end">' + S.ending + '</p>' : '') + '<div class="gr"><p>' + next + '</p><button class="reset" data-a="reset">Start over</button></div>';
+}
+
+/* ------------------------------------------------------------------ render */
+function render(top) {
+  const x = u();
+  const isSheet = ["door", "menu", "gift", "retip"].includes(x.view);
+  const ph = document.getElementById("phone");
+  ph.innerHTML = header(x.view !== "family" && x.view !== "inbox") + (isSheet ? "" : nav()) + V[x.view]();
+  ["bopha", "dara", "sophea"].forEach((r) => document.getElementById("r-" + r).setAttribute("aria-pressed", S.role === r));
+  document.getElementById("guide").innerHTML = guide();
+  if (top) { ph.scrollTop = 0; if (window.innerWidth <= 430) { const y = ph.getBoundingClientRect().top + window.scrollY - 8; if (window.scrollY > y) window.scrollTo(0, y); } }
+}
+
+document.addEventListener("click", (e) => {
+  const r = e.target.closest("[data-role]");
+  if (r) { S.role = r.dataset.role; render(true); return; }
+  const b = e.target.closest("[data-a]");
+  if (!b || b.disabled) return;
+  const f = A[b.dataset.a];
+  if (f) f(b.dataset.x, b.dataset.y);
+});
+document.addEventListener("input", (e) => {
+  const k = e.target.dataset && e.target.dataset.in;
+  if (!k) return;
+  const x = u();
+  if (k === "rtamt") { x.rt.amt = e.target.value.replace(/[^0-9]/g, ""); const pos = e.target.selectionStart; render(); const el = document.getElementById("rtamt"); if (el) { el.focus(); el.setSelectionRange(pos, pos); } return; }
+  x.c[k] = k === "note" ? e.target.value : e.target.value.replace(/[^0-9]/g, "");
+});
+
+fresh();
+render(true);
+</script>
+</body>
+</html>

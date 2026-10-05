@@ -28,6 +28,15 @@ BLURB = {
 }
 
 
+# A surface may carry its own clickable walkthrough, shown at the top of its section.
+WALK = {
+    "page-6": ("treasury-gift-walkthrough.html", "A gift with a thank",
+               "Switch a family shop on as the banker, thank someone with a coffee instead of a "
+               "tip, open the code as the person it is for, and thank them back. It works; "
+               "nothing in it charges anyone."),
+}
+
+
 # The surface count in the header is derived too — it said "five" by hand until a sixth page arrived.
 WORDS = {3: "three", 4: "four", 5: "five", 6: "six", 7: "seven", 8: "eight", 9: "nine"}
 
@@ -58,9 +67,13 @@ def main():
             '      <section class="surface">\n'
             '        <h2 class="mono">{n}</h2>\n'
             '        <p class="blurb">{b}</p>\n'
-            '{r}\n'
+            '{w}{r}\n'
             '      </section>'.format(n=html.escape(name),
-                                      b=html.escape(BLURB.get(pid, "")), r=rows))
+                                      b=html.escape(BLURB.get(pid, "")), r=rows,
+                                      w=('        <a class="start walk" href="./{0}"><span class="kicker">Walk it</span>'
+                                         '<h2>{1}</h2><p>{2}</p><span class="go">Open the walkthrough &rarr;</span></a>\n'
+                                         .format(html.escape(WALK[pid][0]), html.escape(WALK[pid][1]), html.escape(WALK[pid][2]))
+                                         if pid in WALK else "")))
 
     out = TEMPLATE.replace("{{SECTIONS}}", "\n\n".join(sections)) \
                   .replace("{{COUNT}}", str(len(boards)))\
@@ -181,6 +194,9 @@ TEMPLATE = r"""<!doctype html>
          background:var(--accent-wash);border-radius:var(--r-card);padding:22px 24px;
          margin:30px 0 44px;transition:background .16s}
   .start:hover{background:var(--accent-edge)}
+  /* a surface's own walkthrough, inside its section — smaller than the front door's Start here */
+  .start.walk{margin:6px 0 18px;padding:18px 20px}
+  .start.walk h2{font-size:1.3rem}
   .wall-link{display:block;text-decoration:none;color:inherit;border:1px solid var(--line-strong);
        background:var(--surface);border-radius:var(--r-card);padding:20px 22px;margin:-14px 0 34px}
   .wall-link:hover{border-color:var(--accent-edge);background:var(--accent-wash)}

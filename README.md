@@ -67,11 +67,12 @@ name and order on these screens exists to draw the design.
 |---|---|
 | `index.html` | the front door — **generated**, see below |
 | `home-coffee-walkthrough.html` | the clickable walkthrough |
+| `treasury-gift-walkthrough.html` | the Treasury gift walkthrough — banker, giver, receiver on one shared state |
 | `*.dc.html` | one artboard each — a self-contained page with inline styles |
 | `canvas.json` | layout: positions, the pages (one per surface), the sticky notes |
 | `build-index.py` | regenerates `index.html` from `canvas.json` |
 | `build-wall.py` | regenerates `wall.html` — every artboard on one pan/zoom surface, grouped by page |
-| `build-og.py` | renders the two 1200×630 link-preview cards with headless Chrome |
+| `build-og.py` | renders the 1200×630 link-preview cards with headless Chrome (`python3 build-og.py og-treasury.png` for one) |
 | `og*.png` | the preview cards themselves — **generated**, do not hand-edit |
 | `support.js` | a no-op; the canvas editor injects the real one at render time |
 
@@ -215,6 +216,14 @@ shared into Treasury. **S1–S2** are the two places it lands on `<tag>.heartban
 and `@sovann`.** Home Coffee and her menu are hers. ⚠️ **The B-QRs are real** — drawn by the
 `brand.333.eco` recipe and decoded before commit — and point at gift pages for placeholder codes.
 ⚠️ **No Khmer on these screens yet** beyond her shop's name, for the same reason as the seven above.
+
+**The walkthrough, `treasury-gift-walkthrough.html`** (phase 3) — three people on one state: **Bopha** switches a shop
+on, **Dara** thanks Sophea with a gift instead of a tip, **Sophea** opens the code and thanks Dara back. Also: a
+refusal when the Personal Account is short, a gift *to give* passed on, several held gifts listed A to Z, and the
+re-tip sheet sending once per person. The front door links it from the Treasury section (`WALK` in `build-index.py`).
+⚠️ Every gift shows the same placeholder code and its real B-QR. ⚠️ The page is generated: its template, the item art
+and the B-QR are spliced together by a script kept outside this repo, so **edit the HTML here** if you change it, and
+run `node --check` on its `<script>` before every push.
 
 ## Rebuilding the canvas
 

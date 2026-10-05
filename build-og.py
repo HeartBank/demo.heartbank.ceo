@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Render the Open Graph link-preview cards to PNG.
 
-    python3 build-og.py     ->  og.png  and  og-walkthrough.png
+    python3 build-og.py     ->  og.png · og-walkthrough.png · og-treasury.png
+    python3 build-og.py og-treasury.png      ->  just that one
 
 Both are 1200x630, the size every platform crops from. They are rendered by
 headless Chrome from the same tokens, fonts and emblem path the site uses, so a
@@ -66,13 +67,22 @@ CARDS = {
               '<h1 style="font-size:104px">Home Coffee</h1>'
               '<p>Order it, make it, ride it across town — three roles, one order. '
               'Nothing here charges anyone.</p></div>',
+
+    "og-treasury.png": '<div class="inner">'
+              '<p style="font-size:30px;color:#3fa564;margin-bottom:14px">Heart' + emblem() + 'ank<span class="reg">&#174;</span> Treasury</p>'
+              '<h1 style="font-size:104px">A gift with a thank</h1>'
+              '<p>A coffee instead of a tip, from a shop the family switched on. '
+              'Nothing here charges anyone.</p></div>',
 }
 
 
 def main():
     if not os.path.exists(CHROME):
         sys.exit("Chrome not found at %s — render the cards elsewhere." % CHROME)
+    only = set(sys.argv[1:])
     for name, body in CARDS.items():
+        if only and name not in only:
+            continue
         with tempfile.TemporaryDirectory() as tmp:
             src = os.path.join(tmp, "card.html")
             io.open(src, "w", encoding="utf-8").write(SHELL.replace("{BODY}", body))

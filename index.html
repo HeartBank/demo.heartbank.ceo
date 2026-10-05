@@ -109,6 +109,9 @@
          background:var(--accent-wash);border-radius:var(--r-card);padding:22px 24px;
          margin:30px 0 44px;transition:background .16s}
   .start:hover{background:var(--accent-edge)}
+  /* a surface's own walkthrough, inside its section — smaller than the front door's Start here */
+  .start.walk{margin:6px 0 18px;padding:18px 20px}
+  .start.walk h2{font-size:1.3rem}
   .wall-link{display:block;text-decoration:none;color:inherit;border:1px solid var(--line-strong);
        background:var(--surface);border-radius:var(--r-card);padding:20px 22px;margin:-14px 0 34px}
   .wall-link:hover{border-color:var(--accent-edge);background:var(--accent-wash)}
@@ -239,6 +242,7 @@
       <section class="surface">
         <h2 class="mono">thank.heartbank.org · gift codes</h2>
         <p class="blurb">A gift code from a family shop, attached to a thank in HeartBank® Treasury — the banker&#x27;s switches, the sender, the person who receives it, the thank that comes back, and where the code lands at the shop. Treasury&#x27;s own design; the gift itself in the shop&#x27;s.</p>
+        <a class="start walk" href="./treasury-gift-walkthrough.html"><span class="kicker">Walk it</span><h2>A gift with a thank</h2><p>Switch a family shop on as the banker, thank someone with a coffee instead of a tip, open the code as the person it is for, and thank them back. It works; nothing in it charges anyone.</p><span class="go">Open the walkthrough &rarr;</span></a>
         <a class="board" href="./TreasuryBanker.dc.html"><span class="t">T8 · Shops for gift codes (banker)</span><span class="d mono">390×1300</span></a>
         <a class="board" href="./TreasuryThank.dc.html"><span class="t">T1 · /thank, a gift attached</span><span class="d mono">390×2078</span></a>
         <a class="board" href="./TreasuryShops.dc.html"><span class="t">T2 · Which shop</span><span class="d mono">390×1336</span></a>
