@@ -357,7 +357,7 @@
       "x": 490,
       "y": 0,
       "w": 390,
-      "h": 2070,
+      "h": 2078,
       "title": "T1 · /thank, a gift attached"
     },
     {
@@ -366,7 +366,7 @@
       "x": 980,
       "y": 0,
       "w": 390,
-      "h": 930,
+      "h": 1336,
       "title": "T2 · Which shop"
     },
     {
@@ -393,7 +393,7 @@
       "x": 2450,
       "y": 0,
       "w": 390,
-      "h": 1308,
+      "h": 1456,
       "title": "T4 · What only the payer sees"
     },
     {
@@ -402,14 +402,14 @@
       "x": 2940,
       "y": 0,
       "w": 390,
-      "h": 1452,
+      "h": 1496,
       "title": "T5 · Refusals"
     },
     {
       "file": "TreasuryReceived.dc.html",
       "page": "page-6",
       "x": 0,
-      "y": 2230,
+      "y": 2238,
       "w": 390,
       "h": 1106,
       "title": "T6 · The thank, with its gift"
@@ -418,16 +418,16 @@
       "file": "TreasuryGiftSheet.dc.html",
       "page": "page-6",
       "x": 490,
-      "y": 2230,
+      "y": 2238,
       "w": 390,
-      "h": 960,
+      "h": 1176,
       "title": "T6 · Yours"
     },
     {
       "file": "TreasuryReGift.dc.html",
       "page": "page-6",
       "x": 980,
-      "y": 2230,
+      "y": 2238,
       "w": 390,
       "h": 844,
       "title": "T6 · Yours to give (M2)"
@@ -436,16 +436,16 @@
       "file": "TreasuryThankBack.dc.html",
       "page": "page-6",
       "x": 1470,
-      "y": 2230,
+      "y": 2238,
       "w": 390,
-      "h": 1482,
+      "h": 1552,
       "title": "T7 · The thank-back"
     },
     {
       "file": "TreasuryShopPage.dc.html",
       "page": "page-6",
       "x": 1960,
-      "y": 2230,
+      "y": 2238,
       "w": 390,
       "h": 1470,
       "title": "S1 · The shop's gift page"
@@ -454,7 +454,7 @@
       "file": "TreasuryAtOnce.dc.html",
       "page": "page-6",
       "x": 2450,
-      "y": 2230,
+      "y": 2238,
       "w": 390,
       "h": 1136,
       "title": "S2 · Storefront: the code at once"
@@ -463,16 +463,16 @@
       "file": "TreasuryRetip.dc.html",
       "page": "page-6",
       "x": 0,
-      "y": 3880,
+      "y": 3950,
       "w": 390,
-      "h": 1278,
+      "h": 1506,
       "title": "T9 · Re-tip with a gift (M2)"
     },
     {
       "file": "TreasuryCapture.dc.html",
       "page": "page-6",
       "x": 490,
-      "y": 3880,
+      "y": 3950,
       "w": 390,
       "h": 1834,
       "title": "T10 · Anonymous thank-back (M2)"
