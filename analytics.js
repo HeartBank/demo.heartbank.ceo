@@ -10,7 +10,7 @@
 // (founder, 2026-09-09) — appropriate for a DESIGN-REVIEW site whose whole purpose
 // is learning which screens and controls a real person actually touches.
 // ⛔⛔ NEVER copy this variant onto a PRODUCT surface, and the reason got STRONGER on
-// 2026-09-09 when clicks went to one-push-each: on thank.heartbank.org it would mean
+// 2026-09-09 when clicks went to one-push-each (BATCHED again 2026-10-04, below): on thank.heartbank.org it would mean
 // recording a real family's every tap inside a gratitude app AND pushing a
 // notification for each one. A different act entirely, and never asked for.
 (function () {
@@ -72,28 +72,24 @@
 
     post("page_view", { path: location.pathname, ref: document.referrer });
 
-    // ---- every click, ONE EVENT EACH ----
+    // ---- every click, BATCHED into one event per visit ----
     //
-    // ⭐ FOUNDER-RULED 2026-09-09, overriding the substrate's batching: *"it'll be
-    // mostly kanghna and maybe a few family members, so send me a push for every
-    // click."* Each click is its own `events` write, so each fires onEventCreated
-    // (thonly.org functions/src/track.ts) → an FCM push. That is the intent: on a
-    // link handed to about three people, a ping per click is a live feed of the
-    // review, not noise.
+    // ⭐⭐ FOUNDER-RULED 2026-10-04: *"turn on batch push notification for
+    // demo.heartbank.ceo"* — the condition the 2026-09-09 per-click ruling rested on
+    // (a small, known audience; *"mostly kanghna and maybe a few family members"*)
+    // was the one its own comment said changes silently, so this is the revert it
+    // named: BATCHING, from git history (efb29fa), with the per-click version's
+    // screen context kept inside each entry.
     //
-    // ⛔⛔ THE CONDITION THIS RESTS ON, AND IT IS THE ONE THAT CHANGES SILENTLY:
-    // A SMALL, KNOWN AUDIENCE. If this link is ever shared more widely — posted,
-    // forwarded past the pilot family, or handed to a second shop — REVERT TO
-    // BATCHING (git history has it) or exempt the event server-side the way
-    // song_play and corpus_* are. Their comments state the failure mode exactly:
-    // "a push per event would make this channel unreadable inside a day."
+    // ⚠️⚠️ WHY BATCHED, and do not "simplify" this back into a post() per click
+    // without a ruling: every write to `events` fires onEventCreated (thonly.org
+    // functions/src/track.ts) → an FCM PUSH TO THE ADMIN'S PHONE. Only song_play and
+    // corpus_* are exempt, and their comments say why: "a push per event would make
+    // this channel unreadable inside a day". A 30-screen walkthrough would ring 30+
+    // times. ONE EVENT PER VISIT keeps every click AND rings once — when the visitor
+    // leaves the page (pagehide / hidden), with the whole sequence in the body.
+    var clicks = [];
     var t0 = Date.now();
-
-    function page() {
-        // All pages sit at the root here, so the basename identifies the page and
-        // keeps the notification short.
-        return location.pathname.split("/").pop() || "index";
-    }
 
     function label(el) {
         // Cheapest stable identifier, in order of usefulness for a design review.
@@ -120,40 +116,56 @@
                     }
                 }
             }
+            var secs = Math.round((Date.now() - t0) / 1000) + "s ";
+            // Background clicks still count — "all clicks" means all — but they get
+            // a TAG-ONLY label: document.body.click() otherwise captured 40
+            // characters of page copy, noise that eats the payload budget.
             var interactive = !!el;
             if (!el) el = e.target.nodeType === 1 ? e.target : null;
             if (!el) return;
-
-            var secs = String(Math.round((Date.now() - t0) / 1000));
-
-            // Background clicks still count — "all clicks" means all — but they get
-            // a TAG-ONLY label. Found by running it: document.body.click() otherwise
-            // captured 40 characters of page copy as its label, which is noise.
             if (!interactive) {
-                post("demo_click", {
-                    on: "·" + el.tagName.toLowerCase(),
-                    page: page(),
-                    at: secs
-                });
+                clicks.push(secs + "·" + el.tagName.toLowerCase());
                 return;
             }
-
             var a = el.closest && el.closest("a[href]");
-            // ⭐ KEY ORDER IS THE NOTIFICATION'S READING ORDER, not a style choice:
-            // the push body is `Object.values(data).join(", ")` (track.ts), so
-            // whatever is inserted first is what shows on a phone's lock screen.
-            // The thing CLICKED leads; the page identifier trails.
-            var d = { on: label(el) };
-            // The walkthrough routes internally, so the visible screen is the most
-            // useful context there and no navigation records it.
+            // The walkthrough routes internally, so the visible screen is the
+            // context no navigation records (kept from the per-click version).
             var screen = document.querySelector(".screen.on");
-            if (screen && screen.id) d.screen = screen.id;
-            d.page = page();
-            d.at = secs;
-            if (a) d.href = a.getAttribute("href");
-            post("demo_click", d);
+            clicks.push(
+                secs + label(el) +
+                    (screen && screen.id ? " @" + screen.id : "") +
+                    (a ? " →" + a.getAttribute("href") : "")
+            );
         },
         true // capture: a handler that stops propagation must not hide the click
     );
 
+    // ⭐ Sends what is pending and starts over, so a visitor who switches away and
+    // comes back has the later clicks sent on the next leave too (the 9/09 batch
+    // sent once per page load and dropped them). pagehide and visibilitychange both
+    // fire on leaving; the second finds nothing pending and sends nothing.
+    function flush() {
+        if (!clicks.length) return;
+        // The endpoint coerces data into at most 20 keys × 300 chars, so pack the
+        // sequence into numbered chunks rather than one oversized field. ⭐ The
+        // page and the count lead: the push body is Object.values(data).join(", ").
+        var data = {
+            page: location.pathname.split("/").pop() || "index",
+            n: String(clicks.length),
+            secs: String(Math.round((Date.now() - t0) / 1000))
+        };
+        var seq = clicks.join(" | ");
+        clicks = [];
+        for (var i = 0; i < 16 && seq.length; i++) {
+            data["c" + i] = seq.slice(0, 300);
+            seq = seq.slice(300);
+        }
+        post("demo_clicks", data);
+    }
+
+    // pagehide is the reliable one on iOS Safari, where unload never fires.
+    addEventListener("pagehide", flush);
+    addEventListener("visibilitychange", function () {
+        if (document.visibilityState === "hidden") flush();
+    });
 })();
