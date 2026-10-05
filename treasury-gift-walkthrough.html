@@ -465,12 +465,15 @@ function shortCard(t) {
   const mine = g && g.holder === S.role && g.state === "open";
   const row = g ? '<button class="giftrow" ' + (mine ? 'data-a="open-gift" data-x="' + g.id + '"' : 'disabled') + '>' + box(g.lines, 28) +
     '<span style="font-size:.84rem;font-weight:500;text-align:left">' + esc(what(g.lines)) + ' · ' + esc(SHOPS[g.shop].name) + '</span>' + (mine ? '<span style="margin-left:auto;opacity:.7">›</span>' : '') + '</button>' : '';
+  // ⭐ The public mark is on the PASS, never on the gift where it was given (founder 2026-10-05): a finished act, so a gift never
+  //   passed reads exactly like one kept. ⛔ Never "to give" on the first thank.
+  const mark = g && g.via && t.from === g.via ? '<p style="margin:6px 0 0 4px;font-size:.76rem;opacity:.8">From ' + nm(g.payer) + ', passed on by ' + nm(g.via) + '</p>' : '';
   const canRetip = MEMBERS.includes(S.role) && S.role !== t.from && S.role !== t.to;
   return '<div class="short"><div class="bgv">' + VIDEO + '</div>' +
     '<div class="rail"><span>' + face(t.from, 40) + '<span style="display:block;margin-top:2px">@' + t.from + '</span></span>' +
     (canRetip ? '<button data-a="retip" style="color:#fff"><span class="rt">' + heart("#ffd700", 24) + '</span><span style="display:block;margin-top:2px">Re-Thank</span></button>' : '') + '</div>' +
     '<div class="ov"><p style="margin:0 0 10px;font-size:.84rem;opacity:.85">💛 Token of Appreciation • To <b>@' + t.to + '</b></p>' +
-    '<p style="margin:0;font-size:.88rem;line-height:1.4;max-width:280px">' + esc(t.note || "") + '</p>' + row +
+    '<p style="margin:0;font-size:.88rem;line-height:1.4;max-width:280px">' + esc(t.note || "") + '</p>' + row + mark +
     '<div style="display:flex;justify-content:space-between;font-size:.72rem;margin-top:14px;opacity:.65"><i>📍 Phnom Penh</i><span>👪 now</span></div></div></div>';
 }
 V.short = function () {
