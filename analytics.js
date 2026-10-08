@@ -63,7 +63,11 @@
                     event: event,
                     data: data,
                     deviceId: deviceId,
-                    location: Intl.DateTimeFormat().resolvedOptions().timeZone
+                    location: Intl.DateTimeFormat().resolvedOptions().timeZone,
+                    // A369: true under automation (navigator.webdriver — /safari's
+                    // simulator, a headless crawler). /api/track stores it, the
+                    // admin push skips the row and /estate classes it machine.
+                    wd: navigator.webdriver === true
                 }),
                 keepalive: true
             }).catch(function () {});
