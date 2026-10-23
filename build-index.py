@@ -25,6 +25,9 @@ BLURB = {
               "the banker's switches, the sender, the person who receives it, the thank that "
               "comes back, and where the code lands at the shop. Treasury's own design; the gift "
               "itself in the shop's.",
+    "page-7": "B-Treat: when one person has thanked another with an hour, their family's kitty covers one item for the "
+              "person receiving it at a shop the banker chose. The banker's items, the B-Date's door, both phones at the "
+              "shop, the counter's line and the ledger row. Nothing here is live.",
 }
 
 

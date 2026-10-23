@@ -476,6 +476,60 @@
       "w": 390,
       "h": 1834,
       "title": "T10 · Anonymous thank-back (M2)"
+    },
+    {
+      "file": "TreatBanker.dc.html",
+      "page": "page-7",
+      "x": 0,
+      "y": 0,
+      "w": 390,
+      "h": 1230,
+      "title": "T11 · /family: the banker's B-Treat items"
+    },
+    {
+      "file": "TreatDate.dc.html",
+      "page": "page-7",
+      "x": 490,
+      "y": 0,
+      "w": 390,
+      "h": 1050,
+      "title": "T12 · A live B-Date: Treat at the shop"
+    },
+    {
+      "file": "TreatPick.dc.html",
+      "page": "page-7",
+      "x": 980,
+      "y": 0,
+      "w": 390,
+      "h": 1050,
+      "title": "S3 · Storefront: both check in, the recipient picks"
+    },
+    {
+      "file": "TreatGiver.dc.html",
+      "page": "page-7",
+      "x": 1470,
+      "y": 0,
+      "w": 390,
+      "h": 930,
+      "title": "S4 · Storefront: the giver's order"
+    },
+    {
+      "file": "TreatCounter.dc.html",
+      "page": "page-7",
+      "x": 1960,
+      "y": 0,
+      "w": 390,
+      "h": 844,
+      "title": "C4 · Counter: a Family treat line"
+    },
+    {
+      "file": "TreatAtm.dc.html",
+      "page": "page-7",
+      "x": 2450,
+      "y": 0,
+      "w": 390,
+      "h": 844,
+      "title": "T13 · /atm: the kitty pays the shop"
     }
   ],
   "annotations": [
@@ -564,6 +618,10 @@
     {
       "id": "page-6",
       "name": "thank.heartbank.org · gift codes"
+    },
+    {
+      "id": "page-7",
+      "name": "B-Treat · thank.heartbank.org × <tag>.heartbank.ceo"
     }
   ]
 }
