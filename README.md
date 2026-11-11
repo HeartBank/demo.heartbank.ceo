@@ -1,5 +1,7 @@
 # demo.heartbank.ceo
 
+> ⚠️ **2026-11-11: these drawings are a dated record, not a source.** Once a surface is live, the live site is the record of what exists; no live site is generated from these files or checked against them any more (founder: *"deprecate all source drawings everywhere; keeping the demo in sync is unrealistic"*; `/build` Default 18). A redesign starts from the live code.
+
 Design source for **HeartBank Shops** — a storefront platform on `heartbank.ceo`, drawn
 2026-08-31 → 09-03. **31 artboards across five surfaces**, plus a clickable walkthrough.
 
