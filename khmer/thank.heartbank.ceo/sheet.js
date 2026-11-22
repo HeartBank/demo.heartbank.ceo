@@ -17,18 +17,18 @@ const store = {
 };
 
 // ⭐ THE UI LANGUAGE (founder 2026-11-22: "Add English/khmer language toggle"): the tool's OWN words show in one language;
-//   the entries under review always show both. Order (/build Default 3): the stored choice → a phone set to Khmer → Cambodia's
-//   time zone (the last tiebreak) → English. Kept on this device only.
+//   the entries under review always show both. boot.js read it before the first paint (stored → a Khmer phone → Cambodia's time
+//   zone → English); kept on this device only.
 const UI_KEY = "khmer-review:ui";
-let ui = (() => {
-  const s = store.get(UI_KEY);
-  if (s === "km" || s === "en") return s;
-  if ((navigator.languages ?? [navigator.language]).some((l) => /^km\b/i.test(l ?? ""))) return "km";
-  try { if (Intl.DateTimeFormat().resolvedOptions().timeZone === "Asia/Phnom_Penh") return "km"; } catch {}
-  return "en";
-})();
+let ui = document.documentElement.dataset.ui === "km" ? "km" : "en";
 const applyUi = () => { document.documentElement.dataset.ui = ui; document.documentElement.lang = ui; };
 applyUi();
+// ⭐ LIGHT OR DARK (founder 2026-11-22: "add dark mode toggle to the header (language toggle on left, dark mode toggle on right
+//   side, space between)" — his call over /build Default 6's footer, for these pages): the same as this device (the default; the
+//   CSS follows the system) · light · dark. boot.js applied a stored choice before the first paint; kept on this device only.
+const SCHEME_KEY = "khmer-review:scheme";
+let scheme = ["light", "dark"].includes(document.documentElement.dataset.scheme) ? document.documentElement.dataset.scheme : "auto";
+const applyScheme = () => { if (scheme === "auto") delete document.documentElement.dataset.scheme; else document.documentElement.dataset.scheme = scheme; };
 
 let T = {};
 const el = (tag, attrs = {}, ...kids) => {
@@ -69,13 +69,32 @@ async function loadRows() {
 function reindex() { byKey = new Map(); for (const r of rows) { const a = byKey.get(r.key); if (a) a.push(r); else byKey.set(r.key, [r]); } }
 const st = (e) => stateOf(e, byKey.get(e.key) ?? []);
 
+// the three light/dark pictures, drawn as SVG nodes (no markup string; the page's CSP allows no inline style or script)
+function schemeIcon(kind) {
+  const NS = "http://www.w3.org/2000/svg";
+  const svg = document.createElementNS(NS, "svg");
+  for (const [k, v] of Object.entries({ viewBox: "0 0 24 24", width: "18", height: "18", fill: "none", stroke: "currentColor", "stroke-width": "2", "stroke-linecap": "round", "aria-hidden": "true" })) svg.setAttribute(k, v);
+  const add = (tag, attrs) => { const n = document.createElementNS(NS, tag); for (const [k, v] of Object.entries(attrs)) n.setAttribute(k, v); svg.append(n); };
+  if (kind === "light") { add("circle", { cx: "12", cy: "12", r: "4" }); for (let i = 0; i < 8; i++) { const a = (i * Math.PI) / 4; add("line", { x1: String(12 + 7 * Math.cos(a)), y1: String(12 + 7 * Math.sin(a)), x2: String(12 + 9.5 * Math.cos(a)), y2: String(12 + 9.5 * Math.sin(a)) }); } }
+  else if (kind === "dark") add("path", { d: "M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z" });
+  else { add("circle", { cx: "12", cy: "12", r: "8" }); add("path", { d: "M12 4a8 8 0 0 1 0 16z", fill: "currentColor", stroke: "none" }); }
+  return svg;
+}
+
+// the header's row: the language on the left, light/dark on the right
 function langs() {
   const box = document.getElementById("langs");
   if (!box) return;
+  const word = (k) => (ui === "km" ? T[k][0] : T[k][1]);
   const pick = (l) => { ui = l; store.set(UI_KEY, l); applyUi(); render(); };
-  box.replaceChildren(el("div", { class: "langs", role: "group", "aria-label": ui === "km" ? T.language[0] : T.language[1] },
-    el("button", { type: "button", lang: "km", "aria-pressed": String(ui === "km"), onclick: () => pick("km") }, "ខ្មែរ"),
-    el("button", { type: "button", lang: "en", "aria-pressed": String(ui === "en"), onclick: () => pick("en") }, "English")));
+  const pickScheme = (k) => { scheme = k; if (k === "auto") store.del(SCHEME_KEY); else store.set(SCHEME_KEY, k); applyScheme(); langs(); };
+  box.replaceChildren(
+    el("div", { class: "langs", role: "group", "aria-label": word("language") },
+      el("button", { type: "button", lang: "km", "aria-pressed": String(ui === "km"), onclick: () => pick("km") }, "ខ្មែរ"),
+      el("button", { type: "button", lang: "en", "aria-pressed": String(ui === "en"), onclick: () => pick("en") }, "English")),
+    el("div", { class: "langs scheme", role: "group", "aria-label": word("scheme") },
+      ...[["auto", "schemeAuto"], ["light", "schemeLight"], ["dark", "schemeDark"]].map(([k, w]) =>
+        el("button", { type: "button", "data-scheme": k, "aria-pressed": String(scheme === k), "aria-label": word(w), title: word(w), onclick: () => pickScheme(k) }, schemeIcon(k)))));
 }
 
 function header() {

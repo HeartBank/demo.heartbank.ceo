@@ -8,10 +8,14 @@
   --ok: #166534; --ok-bg: #ecfdf3; --warn: #92400e; --warn-bg: #fff7ed;
   color-scheme: light dark;
 }
+/* dark: the device's choice unless light was chosen here, or dark chosen here (⛔ keep the two blocks identical: selftest) */
 @media (prefers-color-scheme: dark) {
-  :root { --ink: #ece9f4; --dim: #c5c0d2; --faint: #a6a1b3; --line: #3a3646; --paper: #121017; --card: #1a1721; --soft: #24202d;
+  :root:not([data-scheme="light"]) { --ink: #ece9f4; --dim: #c5c0d2; --faint: #a6a1b3; --line: #3a3646; --paper: #121017; --card: #1a1721; --soft: #24202d;
     --ok: #86efac; --ok-bg: #0f2a1a; --warn: #fdba74; --warn-bg: #2b1a0c; }
 }
+:root[data-scheme="dark"] { --ink: #ece9f4; --dim: #c5c0d2; --faint: #a6a1b3; --line: #3a3646; --paper: #121017; --card: #1a1721; --soft: #24202d;
+    --ok: #86efac; --ok-bg: #0f2a1a; --warn: #fdba74; --warn-bg: #2b1a0c; color-scheme: dark; }
+:root[data-scheme="light"] { color-scheme: light; }
 
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
@@ -107,7 +111,9 @@ textarea.kmbox { font-size: 19px; line-height: 1.9; }
 /* the UI language: the tool's own words in one language (the entries under review keep both); no script = both */
 html[data-ui="km"] .ui-en, html[data-ui="en"] .ui-km { display: none !important; }
 html[data-ui="en"] .bi .ui-en { font-size: 1em; color: inherit; }
-.top { display: flex; justify-content: flex-end; margin: 0 0 6px; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin: 0 0 6px; }
+.langs.scheme button { display: inline-flex; align-items: center; justify-content: center; min-width: 40px; padding: 4px 10px; color: var(--ink); }
+.langs.scheme button[aria-pressed="true"] { color: var(--paper); }
 .langs { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; padding: 3px; gap: 2px; background: var(--paper); }
 .langs button { min-height: 36px; padding: 4px 14px; border: 0; border-radius: 999px; background: transparent; font-size: 15px; }
 .langs button[aria-pressed="true"] { background: var(--ink); color: var(--paper); font-weight: 600; }

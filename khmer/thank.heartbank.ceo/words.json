@@ -144,6 +144,26 @@
      "en": "Language",
      "km": "ភាសា",
      "status": "draft"
+    },
+    "scheme": {
+     "en": "Light or dark",
+     "km": "ភ្លឺ ឬងងឹត",
+     "status": "draft"
+    },
+    "schemeAuto": {
+     "en": "Same as this device",
+     "km": "ដូចឧបករណ៍នេះ",
+     "status": "draft"
+    },
+    "schemeLight": {
+     "en": "Light",
+     "km": "ភ្លឺ",
+     "status": "draft"
+    },
+    "schemeDark": {
+     "en": "Dark",
+     "km": "ងងឹត",
+     "status": "draft"
     }
    },
    "name_km": "ទំព័រពិនិត្យ · ប៊ូតុង និងស្លាក"
