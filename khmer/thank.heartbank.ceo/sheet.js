@@ -54,7 +54,7 @@ const marked = (s, lang) => {
 };
 const day = (ms) => { const d = new Date(ms); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`; };
 
-let shots = null, sheet, entries, rows = [], byKey = new Map(), role = null, online = true, filter = "all", query = "", open = null, lastLoad = 0;
+let shots = null, sheet, entries, rows = [], byKey = new Map(), role = null, myName = null, online = true, filter = "all", query = "", open = null, lastLoad = 0;
 
 async function loadRows() {
   // the admin's link reads the export, which names each reviewer; everyone else reads the public rows, which name no one
@@ -95,6 +95,10 @@ function langs() {
     el("div", { class: "langs scheme", role: "group", "aria-label": word("scheme") },
       ...[["auto", "schemeAuto"], ["light", "schemeLight"], ["dark", "schemeDark"]].map(([k, w]) =>
         el("button", { type: "button", "data-scheme": k, "aria-pressed": String(scheme === k), "aria-label": word(w), title: word(w), onclick: () => pickScheme(k) }, schemeIcon(k)))));
+  // the link holder's OWN name at the left (founder 2026-11-22: "show the current reviewer's name in the header on the left
+  //   side"); /v1/me gives it to that link alone. No link, or a canceled one: nothing.
+  const me = document.getElementById("me");
+  if (me) me.textContent = myName ? (ui === "km" ? myName.km : myName.en) : "";
 }
 
 function header() {
@@ -341,6 +345,7 @@ async function main() {
   if (TOKEN) {
     const me = await fetch(`${API}/v1/me`, { headers: { authorization: "Bearer " + TOKEN }, cache: "no-store" }).then((r) => (r.ok ? r.json() : null)).catch(() => null);
     role = me?.role ?? null;
+    myName = me?.name ?? null;
   }
   try { rows = await loadRows(); } catch { online = false; }
   reindex();

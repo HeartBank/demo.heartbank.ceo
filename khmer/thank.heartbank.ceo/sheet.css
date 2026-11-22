@@ -111,7 +111,10 @@ textarea.kmbox { font-size: 19px; line-height: 1.9; }
 /* the UI language: the tool's own words in one language (the entries under review keep both); no script = both */
 html[data-ui="km"] .ui-en, html[data-ui="en"] .ui-km { display: none !important; }
 html[data-ui="en"] .bi .ui-en { font-size: 1em; color: inherit; }
-.top { display: flex; justify-content: flex-end; flex-wrap: wrap; align-items: center; gap: 8px; margin: 0 0 6px; }   /* both toggles at the right (founder 2026-11-22) */
+/* the header row: the link holder's own name at the left, both toggles at the right (founder 2026-11-22) */
+.top { display: flex; justify-content: space-between; flex-wrap: wrap; align-items: center; gap: 8px; margin: 0 0 6px; }
+.toggles { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; margin-left: auto; }
+.me { font-weight: 600; font-size: 15px; }
 .langs.scheme button { display: inline-flex; align-items: center; justify-content: center; min-width: 40px; padding: 4px 10px; color: var(--ink); }
 .langs.scheme button[aria-pressed="true"] { color: var(--paper); }
 .langs { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; padding: 3px; gap: 2px; background: var(--paper); }
