@@ -315,6 +315,172 @@
     }
    },
    "name_km": "ទំព័រដើម · translate.333.eco"
+  },
+  {
+   "name": "Task pages · typing and choosing (private tasks)",
+   "entries": {
+    "homeTasks": {
+     "en": "Your tasks",
+     "km": "កិច្ចការរបស់អ្នក",
+     "status": "draft"
+    },
+    "taskAll": {
+     "en": "All tasks",
+     "km": "កិច្ចការទាំងអស់",
+     "status": "draft"
+    },
+    "taskPrivate": {
+     "en": "Private: the pictures and what you enter here open only with your own link or the founder's.",
+     "km": "ឯកជន៖ រូបភាព និងអ្វីដែលអ្នកបញ្ចូលនៅទីនេះ បើកបានតែជាមួយតំណផ្ទាល់ខ្លួនរបស់អ្នក ឬតំណរបស់ស្ថាបនិកប៉ុណ្ណោះ។",
+     "status": "draft"
+    },
+    "taskNeedLink": {
+     "en": "Open this page from your own link.",
+     "km": "សូមបើកទំព័រនេះពីតំណផ្ទាល់ខ្លួនរបស់អ្នក។",
+     "status": "draft"
+    },
+    "taskNotYours": {
+     "en": "This link cannot open this task.",
+     "km": "តំណនេះមិនអាចបើកកិច្ចការនេះបានទេ។",
+     "status": "draft"
+    },
+    "typeLede": {
+     "en": "Type each page from its picture, exactly as printed: everything on the page, from top to bottom, keeping the line breaks.",
+     "km": "សូមវាយទំព័រនីមួយៗតាមរូបភាពរបស់វា ឲ្យដូចការបោះពុម្ពទាំងស្រុង៖ អ្វីៗទាំងអស់នៅលើទំព័រ ពីលើចុះក្រោម ដោយរក្សាការចុះបន្ទាត់ដដែល។",
+     "status": "draft"
+    },
+    "typeWhy": {
+     "en": "These pages test how well the reading tool reads other printings. Please type only what you see, and do not correct the print.",
+     "km": "ទំព័រទាំងនេះសម្រាប់សាកល្បងថា ឧបករណ៍អានអាចអានការបោះពុម្ពផ្សេងៗបានល្អប៉ុណ្ណា។ សូមវាយតែអ្វីដែលអ្នកឃើញ ហើយកុំកែការបោះពុម្ព។",
+     "status": "draft"
+    },
+    "typeAtthakatha": {
+     "en": "Pāli commentary (aṭṭhakathā)",
+     "km": "អដ្ឋកថា (បាលី)",
+     "status": "draft"
+    },
+    "typeTika": {
+     "en": "Pāli sub-commentary (ṭīkā)",
+     "km": "ដីកា (បាលី)",
+     "status": "draft"
+    },
+    "typeKhmer2009": {
+     "en": "The Tipiṭaka translated with its commentaries (2009 series)",
+     "km": "ព្រះត្រៃបិដក ប្រែរួមនឹងអដ្ឋកថា (ឆ្នាំ ២០០៩)",
+     "status": "draft"
+    },
+    "pageN": {
+     "en": "Page {n} of {of}",
+     "km": "ទំព័រទី {n} នៃ {of}",
+     "status": "draft"
+    },
+    "pdfPage": {
+     "en": "PDF page {page}",
+     "km": "ទំព័រ PDF ទី {page}",
+     "status": "draft"
+    },
+    "pagesDone": {
+     "en": "{a} of {b} pages done",
+     "km": "រួចរាល់ {a} ក្នុងចំណោម {b} ទំព័រ",
+     "status": "draft"
+    },
+    "pageDone": {
+     "en": "Done",
+     "km": "រួចរាល់",
+     "status": "draft"
+    },
+    "pageTodo": {
+     "en": "Not typed yet",
+     "km": "មិនទាន់វាយ",
+     "status": "draft"
+    },
+    "yourTyping": {
+     "en": "Your typing",
+     "km": "អត្ថបទដែលអ្នកវាយ",
+     "status": "draft"
+    },
+    "zoomIn": {
+     "en": "Bigger picture",
+     "km": "ពង្រីករូបភាព",
+     "status": "draft"
+    },
+    "zoomOut": {
+     "en": "Fit the picture",
+     "km": "បង្រួមរូបភាព",
+     "status": "draft"
+    },
+    "prev": {
+     "en": "Previous",
+     "km": "មុន",
+     "status": "draft"
+    },
+    "next": {
+     "en": "Next",
+     "km": "បន្ទាប់",
+     "status": "draft"
+    },
+    "chooseLede": {
+     "en": "Each of these pages was saved twice, and the versions differ. Look at the picture of the page and choose the version that matches it.",
+     "km": "ទំព័រនីមួយៗខាងក្រោមត្រូវបានរក្សាទុកពីរដង ហើយកំណែទាំងនោះខុសគ្នា។ សូមមើលរូបភាពទំព័រ ហើយជ្រើសរើសកំណែដែលត្រូវនឹងវា។",
+     "status": "draft"
+    },
+    "chooseDiff": {
+     "en": "Where the versions differ is highlighted.",
+     "km": "កន្លែងដែលកំណែខុសគ្នា ត្រូវបានគូសពណ៌។",
+     "status": "draft"
+    },
+    "volPage": {
+     "en": "Volume {volume} · PDF page {pdf} · {leaf}",
+     "km": "ភាគ {volume} · ទំព័រ PDF ទី {pdf} · {leaf}",
+     "status": "draft"
+    },
+    "leafPali": {
+     "en": "Pāli",
+     "km": "បាលី",
+     "status": "draft"
+    },
+    "leafKhmer": {
+     "en": "Khmer",
+     "km": "ខ្មែរ",
+     "status": "draft"
+    },
+    "savedOn": {
+     "en": "Saved {date}",
+     "km": "រក្សាទុកថ្ងៃ {date}",
+     "status": "draft"
+    },
+    "newest": {
+     "en": "newest",
+     "km": "ថ្មីបំផុត",
+     "status": "draft"
+    },
+    "thisOne": {
+     "en": "This one matches the page",
+     "km": "កំណែនេះត្រូវនឹងទំព័រ",
+     "status": "draft"
+    },
+    "neither": {
+     "en": "Neither matches",
+     "km": "គ្មានកំណែណាត្រូវទេ",
+     "status": "draft"
+    },
+    "chosen": {
+     "en": "Your choice",
+     "km": "ជម្រើសរបស់អ្នក",
+     "status": "draft"
+    },
+    "choicesDone": {
+     "en": "{a} of {b} pages chosen",
+     "km": "បានជ្រើសរើស {a} ក្នុងចំណោម {b} ទំព័រ",
+     "status": "draft"
+    },
+    "machineReading": {
+     "en": "a machine reading from an early experiment, not typed",
+     "km": "ការអានដោយម៉ាស៊ីន ពីការសាកល្បងដំបូង មិនមែនជាការវាយទេ",
+     "status": "draft"
+    }
+   },
+   "name_km": "ទំព័រកិច្ចការ · ការវាយ និងការជ្រើសរើស (កិច្ចការឯកជន)"
   }
  ]
 }
