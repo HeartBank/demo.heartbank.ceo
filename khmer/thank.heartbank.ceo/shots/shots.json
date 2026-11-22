@@ -1,5 +1,5 @@
 {
- "made": "2026-11-22T08:06:04.204Z",
+ "made": "2026-11-22T08:15:14.848Z",
  "viewport": {
   "width": 390,
   "height": 844
@@ -209,6 +209,26 @@
    "url": "/?tag=homecoffee",
    "found": 0,
    "images": 0
+  },
+  "people-add-staff": {
+   "url": "/?tag=homecoffee",
+   "found": 11,
+   "images": 1
+  },
+  "people-add-rider": {
+   "url": "/?tag=homecoffee",
+   "found": 0,
+   "images": 0
+  },
+  "people-add-coowner": {
+   "url": "/?tag=homecoffee",
+   "found": 0,
+   "images": 0
+  },
+  "menu-new-item": {
+   "url": "/?tag=homecoffee",
+   "found": 2,
+   "images": 1
   },
   "counter-set-sales": {
    "url": "/?tag=homecoffee",
@@ -4920,6 +4940,97 @@
    "w": 350,
    "h": 21
   },
+  "role.coowner": {
+   "img": "people-add-staff-0.webp",
+   "x": 61,
+   "y": 446,
+   "w": 55,
+   "h": 19
+  },
+  "role.lower.coowner": {
+   "img": "people-add-staff-0.webp",
+   "x": 61,
+   "y": 446,
+   "w": 55,
+   "h": 19
+  },
+  "ppl.addTitle": {
+   "img": "people-add-staff-0.webp",
+   "x": 38,
+   "y": 155,
+   "w": 314,
+   "h": 26
+  },
+  "ppl.name": {
+   "img": "people-add-staff-0.webp",
+   "x": 38,
+   "y": 193,
+   "w": 314,
+   "h": 23
+  },
+  "ppl.phone": {
+   "img": "people-add-staff-0.webp",
+   "x": 38,
+   "y": 283,
+   "w": 314,
+   "h": 23
+  },
+  "ppl.role": {
+   "img": "people-add-staff-0.webp",
+   "x": 38,
+   "y": 418,
+   "w": 93,
+   "h": 23
+  },
+  "ppl.roleStaff": {
+   "img": "people-add-staff-0.webp",
+   "x": 61,
+   "y": 496,
+   "w": 238,
+   "h": 21
+  },
+  "ppl.roleRider": {
+   "img": "people-add-staff-0.webp",
+   "x": 61,
+   "y": 525,
+   "w": 161,
+   "h": 21
+  },
+  "ppl.phoneKept": {
+   "img": "people-add-staff-0.webp",
+   "x": 38,
+   "y": 368,
+   "w": 314,
+   "h": 38
+  },
+  "ppl.send": {
+   "img": "people-add-staff-0.webp",
+   "x": 38,
+   "y": 558,
+   "w": 230,
+   "h": 48
+  },
+  "ppl.roleOwner": {
+   "img": "people-add-staff-0.webp",
+   "x": 61,
+   "y": 446,
+   "w": 291,
+   "h": 42
+  },
+  "ph.add": {
+   "img": "menu-new-item-0.webp",
+   "x": 136,
+   "y": 445,
+   "w": 60,
+   "h": 22
+  },
+  "pf.add": {
+   "img": "menu-new-item-0.webp",
+   "x": 136,
+   "y": 445,
+   "w": 60,
+   "h": 22
+  },
   "sl.sales": {
    "img": "counter-set-sales-0.webp",
    "x": 38,
@@ -8134,8 +8245,6 @@
   "fd.out",
   "fd.outAt",
   "wt.continue",
-  "role.coowner",
-  "role.lower.coowner",
   "common.they",
   "common.them",
   "common.otherNumber",
@@ -8309,14 +8418,6 @@
   "ppl.wagesStop",
   "ppl.wagesHow",
   "ppl.marksNow",
-  "ppl.addTitle",
-  "ppl.name",
-  "ppl.phone",
-  "ppl.role",
-  "ppl.roleStaff",
-  "ppl.roleRider",
-  "ppl.phoneKept",
-  "ppl.send",
   "ppl.sentStaff",
   "ppl.sentRider",
   "ppl.pending",
@@ -8336,7 +8437,6 @@
   "ppl.message",
   "ppl.selfOff",
   "ppl.staffGiftBad",
-  "ppl.roleOwner",
   "ppl.sentOwner",
   "ppl.operatorSeat",
   "ss.inEnglish",
@@ -8571,7 +8671,6 @@
   "ph.cropHowYou",
   "ph.cropZoom",
   "ph.cropUse",
-  "ph.add",
   "ph.working",
   "ph.pending",
   "ph.errCap",
@@ -8673,7 +8772,6 @@
   "hb.errName",
   "hb.errFamily",
   "hb.errSame",
-  "pf.add",
   "pf.working",
   "pf.err",
   "pr.nameWho",

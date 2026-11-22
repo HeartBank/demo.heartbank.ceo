@@ -5,7 +5,7 @@
  "about": "The shops app: the storefront customers order from, the shop's own counter and rider app, gifts, notifications and the team's console.",
  "accent": "#14532d",
  "made": "2026-11-22",
- "commit": "24b726a",
+ "commit": "26e2b5f",
  "groups": [
   {
    "name": "The storefront (customers) · menu, under the shop name (open)",
