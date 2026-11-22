@@ -145,7 +145,8 @@
      "km": "ភាសា",
      "status": "draft"
     }
-   }
+   },
+   "name_km": "ទំព័រពិនិត្យ · ប៊ូតុង និងស្លាក"
   },
   {
    "name": "Review page · messages",
@@ -210,7 +211,8 @@
      "km": "ចុច «រក្សាទុក» ម្តងទៀត ដើម្បីរក្សាទុកតាមដែលបានសរសេរ។",
      "status": "draft"
     }
-   }
+   },
+   "name_km": "ទំព័រពិនិត្យ · សារ"
   },
   {
    "name": "Review page · instructions and footer",
@@ -259,8 +261,14 @@
      "en": "This page needs JavaScript to save. It can still be printed for a review on paper.",
      "km": "ទំព័រនេះត្រូវការ JavaScript ដើម្បីរក្សាទុក។ អ្នកនៅតែអាចបោះពុម្ពវា ដើម្បីពិនិត្យលើក្រដាសបាន។",
      "status": "draft"
+    },
+    "fromCommit": {
+     "en": "From {site} at {commit}.",
+     "km": "ពី {site} នៅ {commit}។",
+     "status": "draft"
     }
-   }
+   },
+   "name_km": "ទំព័រពិនិត្យ · ការណែនាំ និងបាតទំព័រ"
   },
   {
    "name": "Home page · translate.333.eco",
@@ -285,7 +293,8 @@
      "km": "កន្លែងនេះរក្សាទុកភាសាខ្មែរដែលអ្នកអានជនជាតិខ្មែរបានអនុម័ត សម្រាប់គេហទំព័ររបស់យើង។",
      "status": "draft"
     }
-   }
+   },
+   "name_km": "ទំព័រដើម · translate.333.eco"
   }
  ]
 }

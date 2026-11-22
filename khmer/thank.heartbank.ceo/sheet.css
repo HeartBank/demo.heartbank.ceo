@@ -112,6 +112,13 @@ html[data-ui="en"] .bi .ui-en { font-size: 1em; color: inherit; }
 .langs button { min-height: 36px; padding: 4px 14px; border: 0; border-radius: 999px; background: transparent; font-size: 15px; }
 .langs button[aria-pressed="true"] { background: var(--ink); color: var(--paper); font-weight: 600; }
 
+/* the sub-card: the Khmer under review and what acts on it, set apart from the context above it */
+.review { margin-top: 10px; padding: 12px 12px 14px; border-radius: 12px; background: color-mix(in srgb, var(--accent) 8%, var(--paper));
+  border: 1px solid color-mix(in srgb, var(--accent) 28%, transparent); }
+.review .km { font-size: 21px; }
+.review .acts { margin-top: 12px; }
+.review button:not(.primary) { background: var(--paper); }
+
 /* the picture: a window of the screen with a red outline and arrow at the entry's words */
 .shot { margin: 8px 0 8px; }
 .shot .label { margin: 0 0 4px; font-size: 13px; color: var(--faint); }
@@ -139,6 +146,7 @@ footer { margin-top: 32px; color: var(--faint); font-size: 13px; }
 footer p { margin: 0 0 6px; }
 
 @media print {
+  .review { background: none; border: 1px solid #999; }
   .card { content-visibility: visible; }
   :root { --paper: #fff; --card: #fff; --ink: #000; --dim: #333; --faint: #555; --line: #999; --soft: #eee; }
   body { max-width: none; padding: 0; font-size: 12.5px; }

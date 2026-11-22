@@ -161,27 +161,31 @@ function card(e) {
     unsent.length ? el("span", { class: "unsent" }, bi("unsent")) : null,
     el("code", { class: "key", text: e.key })));
   art.append(el("div", { class: "en" }, e.en ? marked(e.en, "en") : bi("khmerOnly")));
-  if (e.note) art.append(el("p", { class: "appears" }, el("span", { class: "lbl" }, bi("appears")), el("span", { lang: "en", text: e.note })));
+  if (e.note) art.append(el("p", { class: "appears" }, el("span", { class: "lbl" }, bi("appears")),
+    e.note_km ? [el("span", { lang: "km", class: "ui-km", text: e.note_km }), el("span", { lang: "en", class: "ui-en", text: e.note })] : el("span", { lang: "en", text: e.note })));
   const fig = picture(e);
   if (fig) art.append(fig);
-  art.append(el("div", { class: "km" }, s.khmer ? marked(s.khmer, "km") : el("span", { class: "none" }, bi("noKhmer"))));
-  if (s.latest && e.km && s.khmer !== e.km) art.append(el("details", { class: "draft" }, el("summary", {}, bi("draft")), el("div", {}, marked(e.km, "km"))));
-  art.append(history(s) ?? "");
-  if (s.englishChanged) art.append(el("p", { class: "flag" }, bi("englishChanged")));
-  if (s.draftChanged) art.append(el("p", { class: "flag" }, bi("draftChanged")));
+  // ⭐ the sub-card (founder 2026-11-22: "make the Khmer string and the buttons stand out … a sub-card with a different background")
+  const box = el("div", { class: "review" });
+  art.append(box);
+  box.append(el("div", { class: "km" }, s.khmer ? marked(s.khmer, "km") : el("span", { class: "none" }, bi("noKhmer"))));
+  if (s.latest && e.km && s.khmer !== e.km) box.append(el("details", { class: "draft" }, el("summary", {}, bi("draft")), el("div", {}, marked(e.km, "km"))));
+  box.append(history(s) ?? "");
+  if (s.englishChanged) box.append(el("p", { class: "flag" }, bi("englishChanged")));
+  if (s.draftChanged) box.append(el("p", { class: "flag" }, bi("draftChanged")));
   if (s.notes.length) {
-    art.append(el("div", { class: "notes" }, el("p", { class: "label" }, bi("questions")),
+    box.append(el("div", { class: "notes" }, el("p", { class: "label" }, bi("questions")),
       el("ul", {}, s.notes.map((nt) => el("li", {}, el("span", { class: "when", text: day(nt.at) + (nt.reviewer ? ` · ${nt.reviewer}` : "") + " " }), el("span", { text: nt.note }))))));
   }
   if (role && online) {
-    if (open?.key === e.key) art.append(editor(e, s));
+    if (open?.key === e.key) box.append(editor(e, s));
     else {
       const acts = el("div", { class: "acts" });
       const current = s.status === "approved" && !s.draftChanged && !s.englishChanged;
       if (e.km && !current) acts.append(el("button", { type: "button", class: "primary", onclick: (ev) => save(e, { kind: "approve", km: e.km }, ev.currentTarget) }, bi("approve")));
       acts.append(el("button", { type: "button", onclick: () => { open = { key: e.key, kind: "text" }; redraw(e.key); } }, bi("correct")));
       acts.append(el("button", { type: "button", onclick: () => { open = { key: e.key, kind: "note" }; redraw(e.key); } }, bi("ask")));
-      art.append(acts);
+      box.append(acts);
     }
   }
   if (!s.latest) art.append(el("div", { class: "paper", "aria-hidden": "true" }));   // print only: room for a handwritten correction
@@ -263,7 +267,7 @@ function renderList(focusKey, note) {
     if (!matches(e, s, query) && e.key !== focusKey) continue;
     if (e.group !== group) {
       group = e.group;
-      section = el("section", {}, el("h2", { text: group }));
+      section = el("section", {}, el("h2", {}, e.groupKm ? [el("span", { lang: "km", class: "ui-km", text: e.groupKm }), el("span", { lang: "en", class: "ui-en", text: group })] : group));
       list.append(section);
     }
     section.append(card(e));

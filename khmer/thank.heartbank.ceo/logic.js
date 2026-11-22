@@ -37,7 +37,7 @@ export function stateOf(entry, rows) {
 /** Every entry of a sheet, numbered in order, with its group. */
 export function flatten(sheet) {
   const out = [];
-  for (const g of sheet.groups) for (const e of g.entries) out.push({ ...e, group: g.name, waiting: !!g.waiting, n: out.length + 1 });
+  for (const g of sheet.groups) for (const e of g.entries) out.push({ ...e, group: g.name, groupKm: g.name_km ?? null, waiting: !!g.waiting, n: out.length + 1 });
   return out;
 }
 
@@ -52,6 +52,7 @@ export function checkSheet(s) {
   const seen = new Set();
   for (const [gi, g] of (s.groups ?? []).entries()) {
     if (typeof g.name !== "string" || !g.name) p.push(`group ${gi + 1}: name required`);
+    if (g.name_km !== undefined && (typeof g.name_km !== "string" || !g.name_km)) p.push(`group ${gi + 1}: name_km must be a string`);
     for (const c of g.context ?? []) {
       // a drawing of where the words appear: a path on the page's own (demo) site, or an https address
       if (typeof c?.url !== "string" || !/^(\/[^\s"<>]*|https:\/\/[^\s"<>]+)$/.test(c.url) || !["km", "en"].includes(c.lang) || ![undefined, "drawing", "page"].includes(c.kind)) p.push(`group ${gi + 1}: context needs { url: "/S1.html" or https://…, lang: "km" | "en", kind?: "drawing" | "page" }`);
@@ -66,6 +67,7 @@ export function checkSheet(s) {
       if (!e.en && !e.km) p.push(`${e.key}: neither English nor Khmer`);
       if ((e.en?.length ?? 0) > 8000 || (e.km?.length ?? 0) > 8000) p.push(`${e.key}: longer than 8000 characters (the store's cap)`);
       if (e.note !== undefined && (typeof e.note !== "string" || e.note.length > 300)) p.push(`${e.key}: note must be a short string (where it appears, ≤300)`);
+      if (e.note_km !== undefined && (typeof e.note_km !== "string" || e.note_km.length > 300)) p.push(`${e.key}: note_km must be a short string (≤300)`);
     }
   }
   return p;
@@ -76,7 +78,7 @@ export function matches(entry, state, q) {
   q = String(q ?? "").trim().toLowerCase();
   if (!q) return true;
   if (/^#?\d+$/.test(q)) return String(entry.n) === q.replace("#", "");
-  const hay = [entry.key, entry.en, entry.km, entry.note, state?.khmer, ...(state?.earlier ?? []).map((r) => r.km), ...(state?.notes ?? []).map((r) => r.note)];
+  const hay = [entry.key, entry.en, entry.km, entry.note, entry.note_km, state?.khmer, ...(state?.earlier ?? []).map((r) => r.km), ...(state?.notes ?? []).map((r) => r.note)];
   return hay.some((h) => typeof h === "string" && h.toLowerCase().includes(q));
 }
 
