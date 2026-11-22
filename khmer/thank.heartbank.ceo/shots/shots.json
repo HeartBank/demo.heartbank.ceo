@@ -1,5 +1,5 @@
 {
- "made": "2026-11-22T07:51:00.880Z",
+ "made": "2026-11-22T08:06:04.204Z",
  "viewport": {
   "width": 390,
   "height": 844
@@ -105,6 +105,56 @@
    "found": 13,
    "images": 1
   },
+  "counter-scene-line": {
+   "url": "/?tag=homecoffee",
+   "found": 5,
+   "images": 3
+  },
+  "counter-scene-ahead": {
+   "url": "/?tag=homecoffee",
+   "found": 10,
+   "images": 3
+  },
+  "counter-scene-gifts": {
+   "url": "/?tag=homecoffee",
+   "found": 17,
+   "images": 1
+  },
+  "counter-scene-catering": {
+   "url": "/?tag=homecoffee",
+   "found": 13,
+   "images": 2
+  },
+  "counter-settle-pickup": {
+   "url": "/?tag=homecoffee",
+   "found": 16,
+   "images": 2
+  },
+  "counter-settle-delivery": {
+   "url": "/?tag=homecoffee",
+   "found": 4,
+   "images": 1
+  },
+  "counter-settle-first": {
+   "url": "/?tag=homecoffee",
+   "found": 1,
+   "images": 1
+  },
+  "counter-settle-catering": {
+   "url": "/?tag=homecoffee",
+   "found": 1,
+   "images": 1
+  },
+  "counter-settle-h3qr": {
+   "url": "/?tag=homecoffee",
+   "found": 5,
+   "images": 1
+  },
+  "counter-settle-shelf": {
+   "url": "/?tag=homecoffee",
+   "found": 0,
+   "images": 0
+  },
   "counter-work": {
    "url": "/?tag=homecoffee",
    "found": 12,
@@ -122,8 +172,8 @@
   },
   "counter-item": {
    "url": "/?tag=homecoffee",
-   "found": 44,
-   "images": 5
+   "found": 41,
+   "images": 4
   },
   "counter-shop": {
    "url": "/?tag=homecoffee",
@@ -137,12 +187,12 @@
   },
   "counter-set-payments": {
    "url": "/?tag=homecoffee",
-   "found": 35,
+   "found": 28,
    "images": 4
   },
   "counter-set-delivery": {
    "url": "/?tag=homecoffee",
-   "found": 18,
+   "found": 17,
    "images": 2
   },
   "counter-set-orders": {
@@ -192,13 +242,13 @@
   },
   "rider-offer": {
    "url": "/?surface=rider&tag=homecoffee",
-   "found": 16,
-   "images": 1
+   "found": 33,
+   "images": 4
   },
   "rider-out": {
    "url": "/?surface=rider&tag=homecoffee",
-   "found": 13,
-   "images": 1
+   "found": 0,
+   "images": 0
   },
   "find": {
    "url": "/find?surface=thank",
@@ -258,6 +308,36 @@
   "console-signed-out": {
    "url": "/?surface=admin",
    "found": 9,
+   "images": 1
+  },
+  "counter-closed-today": {
+   "url": "/?tag=homecoffee",
+   "found": 2,
+   "images": 1
+  },
+  "counter-no-hours": {
+   "url": "/?tag=homecoffee",
+   "found": 1,
+   "images": 1
+  },
+  "counter-empty": {
+   "url": "/?tag=homecoffee",
+   "found": 1,
+   "images": 1
+  },
+  "counter-empty-ahead": {
+   "url": "/?tag=homecoffee",
+   "found": 1,
+   "images": 1
+  },
+  "counter-empty-gifts": {
+   "url": "/?tag=homecoffee",
+   "found": 1,
+   "images": 1
+  },
+  "counter-empty-catering": {
+   "url": "/?tag=homecoffee",
+   "found": 1,
    "images": 1
   }
  },
@@ -2152,6 +2232,510 @@
    "w": 350,
    "h": 18
   },
+  "ct.option": {
+   "img": "counter-scene-line-0.webp",
+   "x": 316,
+   "y": 150,
+   "w": 67,
+   "h": 19
+  },
+  "ss.leadTitle": {
+   "img": "counter-scene-line-0.webp",
+   "x": 316,
+   "y": 150,
+   "w": 67,
+   "h": 19
+  },
+  "me.cater": {
+   "img": "counter-scene-line-0.webp",
+   "x": 316,
+   "y": 150,
+   "w": 67,
+   "h": 19
+  },
+  "cq.riderComing": {
+   "img": "counter-scene-line-1.webp",
+   "x": 243,
+   "y": 446,
+   "w": 110,
+   "h": 19
+  },
+  "cq.tabCatering": {
+   "img": "counter-scene-line-2.webp",
+   "x": 314,
+   "y": 135,
+   "w": 76,
+   "h": 50
+  },
+  "chrome.giftsN": {
+   "img": "counter-scene-ahead-0.webp",
+   "x": 248,
+   "y": 445,
+   "w": 105,
+   "h": 20
+  },
+  "cq.giftNothing": {
+   "img": "counter-scene-ahead-0.webp",
+   "x": 248,
+   "y": 445,
+   "w": 105,
+   "h": 20
+  },
+  "cq.shelfAside": {
+   "img": "counter-scene-ahead-0.webp",
+   "x": 37,
+   "y": 188,
+   "w": 316,
+   "h": 38
+  },
+  "cq.stagePay": {
+   "img": "counter-scene-ahead-1.webp",
+   "x": 20,
+   "y": 204,
+   "w": 85,
+   "h": 14
+  },
+  "cq.prepaidKhqr": {
+   "img": "counter-scene-ahead-1.webp",
+   "x": 37,
+   "y": 369,
+   "w": 106,
+   "h": 26
+  },
+  "cq.checkArrived": {
+   "img": "counter-scene-ahead-1.webp",
+   "x": 37,
+   "y": 409,
+   "w": 316,
+   "h": 50
+  },
+  "cq.payFirstAside": {
+   "img": "counter-scene-ahead-1.webp",
+   "x": 37,
+   "y": 469,
+   "w": 316,
+   "h": 19
+  },
+  "cq.waitingPayment": {
+   "img": "counter-scene-ahead-1.webp",
+   "x": 20,
+   "y": 204,
+   "w": 85,
+   "h": 14
+  },
+  "cq.theyreHere": {
+   "img": "counter-scene-ahead-2.webp",
+   "x": 37,
+   "y": 436,
+   "w": 177,
+   "h": 38
+  },
+  "cq.firstAside": {
+   "img": "counter-scene-ahead-2.webp",
+   "x": 37,
+   "y": 367,
+   "w": 316,
+   "h": 57
+  },
+  "co.cash": {
+   "img": "counter-scene-gifts-0.webp",
+   "x": 118,
+   "y": 568,
+   "w": 49,
+   "h": 18
+  },
+  "gb.rowFor": {
+   "img": "counter-scene-gifts-0.webp",
+   "x": 37,
+   "y": 181,
+   "w": 106,
+   "h": 29
+  },
+  "ct.payoutCash": {
+   "img": "counter-scene-gifts-0.webp",
+   "x": 118,
+   "y": 568,
+   "w": 49,
+   "h": 18
+  },
+  "cq.giftStage": {
+   "img": "counter-scene-gifts-0.webp",
+   "x": 20,
+   "y": 138,
+   "w": 350,
+   "h": 17
+  },
+  "cq.giftFor": {
+   "img": "counter-scene-gifts-0.webp",
+   "x": 37,
+   "y": 181,
+   "w": 106,
+   "h": 29
+  },
+  "cq.giftToPass": {
+   "img": "counter-scene-gifts-0.webp",
+   "x": 37,
+   "y": 261,
+   "w": 41,
+   "h": 18
+  },
+  "cq.giftCheckBank": {
+   "img": "counter-scene-gifts-0.webp",
+   "x": 37,
+   "y": 289,
+   "w": 316,
+   "h": 43
+  },
+  "cq.giftTakeCash": {
+   "img": "counter-scene-gifts-0.webp",
+   "x": 37,
+   "y": 597,
+   "w": 316,
+   "h": 22
+  },
+  "cq.giftRelease": {
+   "img": "counter-scene-gifts-0.webp",
+   "x": 37,
+   "y": 346,
+   "w": 316,
+   "h": 50
+  },
+  "ppl.paidCash": {
+   "img": "counter-scene-gifts-0.webp",
+   "x": 118,
+   "y": 568,
+   "w": 49,
+   "h": 18
+  },
+  "ask.for": {
+   "img": "counter-scene-gifts-0.webp",
+   "x": 37,
+   "y": 181,
+   "w": 106,
+   "h": 29
+  },
+  "open.cash": {
+   "img": "counter-scene-gifts-0.webp",
+   "x": 118,
+   "y": 568,
+   "w": 49,
+   "h": 18
+  },
+  "sp.cash": {
+   "img": "counter-scene-gifts-0.webp",
+   "x": 118,
+   "y": 568,
+   "w": 49,
+   "h": 18
+  },
+  "cg.rowFor": {
+   "img": "counter-scene-gifts-0.webp",
+   "x": 37,
+   "y": 181,
+   "w": 106,
+   "h": 29
+  },
+  "hs.giftFor": {
+   "img": "counter-scene-gifts-0.webp",
+   "x": 37,
+   "y": 185,
+   "w": 59,
+   "h": 19
+  },
+  "hs.cash": {
+   "img": "counter-scene-gifts-0.webp",
+   "x": 118,
+   "y": 568,
+   "w": 49,
+   "h": 18
+  },
+  "ad.cash": {
+   "img": "counter-scene-gifts-0.webp",
+   "x": 118,
+   "y": 568,
+   "w": 49,
+   "h": 18
+  },
+  "cq.cateringStage": {
+   "img": "counter-scene-catering-0.webp",
+   "x": 20,
+   "y": 203,
+   "w": 350,
+   "h": 17
+  },
+  "cq.cateringCharge": {
+   "img": "counter-scene-catering-0.webp",
+   "x": 37,
+   "y": 326,
+   "w": 74,
+   "h": 24
+  },
+  "cq.cateringWhere": {
+   "img": "counter-scene-catering-0.webp",
+   "x": 37,
+   "y": 401,
+   "w": 316,
+   "h": 23
+  },
+  "cq.cateringMap": {
+   "img": "counter-scene-catering-0.webp",
+   "x": 37,
+   "y": 462,
+   "w": 93,
+   "h": 38
+  },
+  "cq.cateringPayFirst": {
+   "img": "counter-scene-catering-0.webp",
+   "x": 37,
+   "y": 574,
+   "w": 316,
+   "h": 19
+  },
+  "cq.commissionStage": {
+   "img": "counter-scene-catering-0.webp",
+   "x": 20,
+   "y": 683,
+   "w": 350,
+   "h": 17
+  },
+  "cq.commissionFor": {
+   "img": "counter-scene-catering-0.webp",
+   "x": 37,
+   "y": 758,
+   "w": 316,
+   "h": 22
+  },
+  "me.askMin": {
+   "img": "counter-scene-catering-0.webp",
+   "x": 142,
+   "y": 403,
+   "w": 16,
+   "h": 18
+  },
+  "rd.dir.ne": {
+   "img": "counter-scene-catering-0.webp",
+   "x": 103,
+   "y": 403,
+   "w": 39,
+   "h": 18
+  },
+  "cq.cateringNote": {
+   "img": "counter-scene-catering-1.webp",
+   "x": 20,
+   "y": 653,
+   "w": 350,
+   "h": 94
+  },
+  "cq.commissionKhqr": {
+   "img": "counter-scene-catering-1.webp",
+   "x": 37,
+   "y": 466,
+   "w": 316,
+   "h": 43
+  },
+  "cq.commissionMark": {
+   "img": "counter-scene-catering-1.webp",
+   "x": 37,
+   "y": 523,
+   "w": 316,
+   "h": 50
+  },
+  "cq.commissionAside": {
+   "img": "counter-scene-catering-1.webp",
+   "x": 37,
+   "y": 583,
+   "w": 316,
+   "h": 38
+  },
+  "pl.payH3qr": {
+   "img": "counter-settle-pickup-0.webp",
+   "x": 41,
+   "y": 404,
+   "w": 308,
+   "h": 50
+  },
+  "cq.checkBank": {
+   "img": "counter-settle-pickup-0.webp",
+   "x": 41,
+   "y": 202,
+   "w": 308,
+   "h": 32
+  },
+  "cq.moneyStraight": {
+   "img": "counter-settle-pickup-0.webp",
+   "x": 41,
+   "y": 241,
+   "w": 244,
+   "h": 40
+  },
+  "cq.paidCash": {
+   "img": "counter-settle-pickup-0.webp",
+   "x": 41,
+   "y": 344,
+   "w": 308,
+   "h": 50
+  },
+  "cq.paidKhqr": {
+   "img": "counter-settle-pickup-0.webp",
+   "x": 41,
+   "y": 404,
+   "w": 308,
+   "h": 50
+  },
+  "cq.notYet": {
+   "img": "counter-settle-pickup-0.webp",
+   "x": 41,
+   "y": 524,
+   "w": 308,
+   "h": 50
+  },
+  "cq.cantConfirm": {
+   "img": "counter-settle-pickup-0.webp",
+   "x": 20,
+   "y": 617,
+   "w": 350,
+   "h": 115
+  },
+  "cq.moneyCatching": {
+   "img": "counter-settle-pickup-0.webp",
+   "x": 20,
+   "y": 776,
+   "w": 350,
+   "h": 40
+  },
+  "cq.paidH3qr": {
+   "img": "counter-settle-pickup-0.webp",
+   "x": 41,
+   "y": 464,
+   "w": 308,
+   "h": 50
+  },
+  "cq.commissionH3qr": {
+   "img": "counter-settle-pickup-0.webp",
+   "x": 41,
+   "y": 404,
+   "w": 308,
+   "h": 50
+  },
+  "cash.gives": {
+   "img": "counter-settle-pickup-0.webp",
+   "x": 37,
+   "y": 63,
+   "w": 56,
+   "h": 22
+  },
+  "cash.exact": {
+   "img": "counter-settle-pickup-0.webp",
+   "x": 323,
+   "y": 63,
+   "w": 30,
+   "h": 22
+  },
+  "cash.inUsd": {
+   "img": "counter-settle-pickup-0.webp",
+   "x": 37,
+   "y": 95,
+   "w": 154,
+   "h": 48
+  },
+  "cash.inKhr": {
+   "img": "counter-settle-pickup-0.webp",
+   "x": 199,
+   "y": 95,
+   "w": 154,
+   "h": 48
+  },
+  "cq.settleTitle": {
+   "img": "counter-settle-pickup-1.webp",
+   "x": 53,
+   "y": 16,
+   "w": 116,
+   "h": 29
+  },
+  "cq.owesForGoods": {
+   "img": "counter-settle-pickup-1.webp",
+   "x": 37,
+   "y": 96,
+   "w": 316,
+   "h": 22
+  },
+  "co.deliveryRow": {
+   "img": "counter-settle-delivery-0.webp",
+   "x": 37,
+   "y": 276,
+   "w": 159,
+   "h": 24
+  },
+  "cq.deliveryLine": {
+   "img": "counter-settle-delivery-0.webp",
+   "x": 37,
+   "y": 276,
+   "w": 159,
+   "h": 24
+  },
+  "cq.owesDelivery": {
+   "img": "counter-settle-delivery-0.webp",
+   "x": 37,
+   "y": 96,
+   "w": 316,
+   "h": 22
+  },
+  "me.caterUpTo": {
+   "img": "counter-settle-delivery-0.webp",
+   "x": 101,
+   "y": 278,
+   "w": 54,
+   "h": 19
+  },
+  "cq.owesFirst": {
+   "img": "counter-settle-first-0.webp",
+   "x": 37,
+   "y": 96,
+   "w": 316,
+   "h": 22
+  },
+  "cq.owesCatering": {
+   "img": "counter-settle-catering-0.webp",
+   "x": 37,
+   "y": 96,
+   "w": 316,
+   "h": 22
+  },
+  "cq.paidClose": {
+   "img": "counter-settle-h3qr-0.webp",
+   "x": 41,
+   "y": 413,
+   "w": 308,
+   "h": 50
+  },
+  "cq.cashSame": {
+   "img": "counter-settle-h3qr-0.webp",
+   "x": 20,
+   "y": 714,
+   "w": 350,
+   "h": 19
+  },
+  "cq.checkHeartBank": {
+   "img": "counter-settle-h3qr-0.webp",
+   "x": 41,
+   "y": 206,
+   "w": 308,
+   "h": 32
+  },
+  "cq.moneyStraightH3qr": {
+   "img": "counter-settle-h3qr-0.webp",
+   "x": 41,
+   "y": 245,
+   "w": 306,
+   "h": 62
+  },
+  "ppl.paidOfDue": {
+   "img": "counter-settle-h3qr-0.webp",
+   "x": 41,
+   "y": 310,
+   "w": 284,
+   "h": 40
+  },
   "common.nothingOut": {
    "img": "counter-work-0.webp",
    "x": 38,
@@ -2656,197 +3240,176 @@
    "w": 100,
    "h": 44
   },
-  "ct.option": {
-   "img": "counter-item-1.webp",
-   "x": 36,
-   "y": 444,
-   "w": 253,
-   "h": 23
-  },
   "ct.cancelKeep": {
    "img": "counter-item-1.webp",
    "x": 23,
-   "y": 695,
+   "y": 432,
    "w": 201,
    "h": 46
   },
   "or.cancelKeep": {
    "img": "counter-item-1.webp",
    "x": 23,
-   "y": 695,
+   "y": 432,
    "w": 201,
    "h": 46
   },
   "common.save": {
    "img": "counter-item-1.webp",
    "x": 23,
-   "y": 695,
+   "y": 432,
    "w": 201,
    "h": 46
   },
   "cq.abandonKeep": {
    "img": "counter-item-1.webp",
    "x": 23,
-   "y": 695,
+   "y": 432,
    "w": 201,
    "h": 46
   },
   "ppl.keep": {
    "img": "counter-item-1.webp",
    "x": 23,
-   "y": 695,
+   "y": 432,
    "w": 201,
    "h": 46
-  },
-  "ss.leadTitle": {
-   "img": "counter-item-1.webp",
-   "x": 36,
-   "y": 444,
-   "w": 253,
-   "h": 23
   },
   "ss.amSave": {
    "img": "counter-item-1.webp",
    "x": 23,
-   "y": 695,
+   "y": 432,
    "w": 201,
    "h": 46
   },
   "me.soldOutToday": {
    "img": "counter-item-1.webp",
    "x": 23,
-   "y": 755,
+   "y": 492,
    "w": 337,
    "h": 46
+  },
+  "me.justToday": {
+   "img": "counter-item-1.webp",
+   "x": 23,
+   "y": 552,
+   "w": 337,
+   "h": 20
   },
   "me.addSize": {
    "img": "counter-item-1.webp",
    "x": 23,
-   "y": 660,
+   "y": 397,
    "w": 61,
+   "h": 22
+  },
+  "me.moveUp": {
+   "img": "counter-item-1.webp",
+   "x": 23,
+   "y": 587,
+   "w": 164,
+   "h": 46
+  },
+  "me.moveDown": {
+   "img": "counter-item-1.webp",
+   "x": 197,
+   "y": 587,
+   "w": 164,
+   "h": 46
+  },
+  "me.takeOff": {
+   "img": "counter-item-1.webp",
+   "x": 151,
+   "y": 647,
+   "w": 80,
    "h": 22
   },
   "me.rewardPts": {
    "img": "counter-item-1.webp",
    "x": 23,
-   "y": 550,
+   "y": 287,
    "w": 337,
    "h": 21
   },
   "me.rewardHint": {
    "img": "counter-item-1.webp",
    "x": 23,
-   "y": 627,
+   "y": 364,
    "w": 337,
    "h": 19
-  },
-  "me.cater": {
-   "img": "counter-item-1.webp",
-   "x": 36,
-   "y": 444,
-   "w": 253,
-   "h": 23
   },
   "me.caterSub": {
    "img": "counter-item-1.webp",
    "x": 36,
-   "y": 467,
+   "y": 204,
    "w": 253,
    "h": 56
   },
   "ad.keep": {
    "img": "counter-item-1.webp",
    "x": 23,
-   "y": 695,
+   "y": 432,
    "w": 201,
    "h": 46
   },
-  "me.justToday": {
-   "img": "counter-item-2.webp",
-   "x": 23,
-   "y": 445,
-   "w": 337,
-   "h": 20
-  },
-  "me.moveUp": {
-   "img": "counter-item-2.webp",
-   "x": 23,
-   "y": 480,
-   "w": 164,
-   "h": 46
-  },
-  "me.moveDown": {
-   "img": "counter-item-2.webp",
-   "x": 197,
-   "y": 480,
-   "w": 164,
-   "h": 46
-  },
-  "me.takeOff": {
-   "img": "counter-item-2.webp",
-   "x": 151,
-   "y": 540,
-   "w": 80,
-   "h": 22
-  },
   "me.nameKm": {
-   "img": "counter-item-3.webp",
+   "img": "counter-item-2.webp",
    "x": 23,
    "y": 445,
    "w": 337,
    "h": 21
   },
   "me.type": {
-   "img": "counter-item-3.webp",
+   "img": "counter-item-2.webp",
    "x": 23,
    "y": 530,
    "w": 337,
    "h": 21
   },
   "me.typeHint": {
-   "img": "counter-item-3.webp",
+   "img": "counter-item-2.webp",
    "x": 23,
    "y": 603,
    "w": 337,
    "h": 37
   },
   "me.category": {
-   "img": "counter-item-3.webp",
+   "img": "counter-item-2.webp",
    "x": 23,
    "y": 655,
    "w": 337,
    "h": 21
   },
   "me.newCatKm": {
-   "img": "counter-item-3.webp",
+   "img": "counter-item-2.webp",
    "x": 23,
    "y": 732,
    "w": 337,
    "h": 20
   },
   "ph.itemHint": {
-   "img": "counter-item-3.webp",
+   "img": "counter-item-2.webp",
    "x": 125,
    "y": 324,
    "w": 235,
    "h": 77
   },
   "ph.change": {
-   "img": "counter-item-3.webp",
+   "img": "counter-item-2.webp",
    "x": 125,
    "y": 409,
    "w": 43,
    "h": 22
   },
   "ph.remove": {
-   "img": "counter-item-3.webp",
+   "img": "counter-item-2.webp",
    "x": 180,
    "y": 409,
    "w": 72,
    "h": 22
   },
   "me.catDelete": {
-   "img": "counter-item-4.webp",
+   "img": "counter-item-3.webp",
    "x": 23,
    "y": 444,
    "w": 60,
@@ -3664,236 +4227,187 @@
    "w": 350,
    "h": 32
   },
-  "co.cash": {
-   "img": "counter-set-payments-0.webp",
-   "x": 306,
-   "y": 242,
-   "w": 46,
-   "h": 27
-  },
-  "ct.payoutCash": {
-   "img": "counter-set-payments-0.webp",
-   "x": 306,
-   "y": 242,
-   "w": 46,
-   "h": 27
-  },
-  "ppl.paidCash": {
-   "img": "counter-set-payments-0.webp",
-   "x": 306,
-   "y": 242,
-   "w": 46,
-   "h": 27
-  },
-  "open.cash": {
-   "img": "counter-set-payments-0.webp",
-   "x": 306,
-   "y": 242,
-   "w": 46,
-   "h": 27
-  },
-  "sp.cash": {
-   "img": "counter-set-payments-0.webp",
-   "x": 306,
-   "y": 242,
-   "w": 46,
-   "h": 27
-  },
-  "sp.cashSub": {
-   "img": "counter-set-payments-0.webp",
-   "x": 84,
-   "y": 247,
-   "w": 198,
-   "h": 44
-  },
-  "sp.paste": {
-   "img": "counter-set-payments-0.webp",
-   "x": 38,
-   "y": 618,
-   "w": 314,
-   "h": 21
-  },
-  "sp.pastePh": {
-   "img": "counter-set-payments-0.webp",
-   "x": 38,
-   "y": 644,
-   "w": 314,
-   "h": 43
-  },
-  "sp.replace": {
-   "img": "counter-set-payments-0.webp",
-   "x": 38,
-   "y": 567,
-   "w": 42,
-   "h": 38
-  },
-  "sp.remove": {
-   "img": "counter-set-payments-0.webp",
-   "x": 92,
-   "y": 575,
-   "w": 46,
-   "h": 22
-  },
-  "sp.khqrWhy": {
-   "img": "counter-set-payments-0.webp",
-   "x": 38,
-   "y": 702,
-   "w": 314,
-   "h": 42
-  },
-  "sp.khqrOn": {
-   "img": "counter-set-payments-0.webp",
-   "x": 306,
-   "y": 333,
-   "w": 46,
-   "h": 27
-  },
-  "hs.cash": {
-   "img": "counter-set-payments-0.webp",
-   "x": 306,
-   "y": 242,
-   "w": 46,
-   "h": 27
-  },
-  "ad.cash": {
-   "img": "counter-set-payments-0.webp",
-   "x": 306,
-   "y": 242,
-   "w": 46,
-   "h": 27
-  },
   "gf.yes": {
-   "img": "counter-set-payments-1.webp",
+   "img": "counter-set-payments-0.webp",
    "x": 292,
    "y": 511,
    "w": 60,
    "h": 26
   },
   "gf.no": {
-   "img": "counter-set-payments-1.webp",
+   "img": "counter-set-payments-0.webp",
    "x": 340,
    "y": 551,
    "w": 12,
    "h": 22
   },
   "sp.whereCash": {
-   "img": "counter-set-payments-1.webp",
+   "img": "counter-set-payments-0.webp",
    "x": 20,
    "y": 446,
    "w": 350,
    "h": 32
   },
   "sp.cashPickup": {
-   "img": "counter-set-payments-1.webp",
+   "img": "counter-set-payments-0.webp",
    "x": 38,
    "y": 511,
    "w": 244,
    "h": 26
   },
   "sp.cashDelivery": {
-   "img": "counter-set-payments-1.webp",
+   "img": "counter-set-payments-0.webp",
    "x": 38,
    "y": 549,
    "w": 292,
    "h": 26
   },
   "sp.yes": {
-   "img": "counter-set-payments-1.webp",
+   "img": "counter-set-payments-0.webp",
    "x": 292,
    "y": 511,
    "w": 60,
    "h": 26
   },
   "sp.no": {
-   "img": "counter-set-payments-1.webp",
+   "img": "counter-set-payments-0.webp",
    "x": 340,
    "y": 551,
    "w": 12,
    "h": 22
   },
   "sp.cashWhy": {
-   "img": "counter-set-payments-1.webp",
+   "img": "counter-set-payments-0.webp",
    "x": 38,
    "y": 588,
    "w": 314,
    "h": 83
   },
   "sp.foot": {
-   "img": "counter-set-payments-1.webp",
+   "img": "counter-set-payments-0.webp",
    "x": 20,
    "y": 706,
    "w": 350,
    "h": 42
   },
   "sp.h3qrWhy": {
-   "img": "counter-set-payments-1.webp",
+   "img": "counter-set-payments-0.webp",
    "x": 38,
    "y": 136,
    "w": 314,
    "h": 83
   },
   "sp.rateTitle": {
-   "img": "counter-set-payments-1.webp",
+   "img": "counter-set-payments-0.webp",
    "x": 20,
    "y": 253,
    "w": 350,
    "h": 32
   },
   "sp.rateLabel": {
-   "img": "counter-set-payments-1.webp",
+   "img": "counter-set-payments-0.webp",
    "x": 38,
    "y": 326,
    "w": 189,
    "h": 24
   },
   "sp.rateHow": {
-   "img": "counter-set-payments-1.webp",
+   "img": "counter-set-payments-0.webp",
    "x": 38,
    "y": 371,
    "w": 314,
    "h": 42
   },
   "open.h3qr": {
-   "img": "counter-set-payments-2.webp",
+   "img": "counter-set-payments-1.webp",
    "x": 84,
    "y": 445,
    "w": 96,
    "h": 20
   },
+  "sp.paste": {
+   "img": "counter-set-payments-1.webp",
+   "x": 38,
+   "y": 267,
+   "w": 314,
+   "h": 21
+  },
+  "sp.pastePh": {
+   "img": "counter-set-payments-1.webp",
+   "x": 38,
+   "y": 293,
+   "w": 314,
+   "h": 43
+  },
+  "sp.replace": {
+   "img": "counter-set-payments-1.webp",
+   "x": 38,
+   "y": 216,
+   "w": 42,
+   "h": 38
+  },
+  "sp.remove": {
+   "img": "counter-set-payments-1.webp",
+   "x": 92,
+   "y": 224,
+   "w": 46,
+   "h": 22
+  },
+  "sp.khqrWhy": {
+   "img": "counter-set-payments-1.webp",
+   "x": 38,
+   "y": 351,
+   "w": 314,
+   "h": 42
+  },
   "sp.h3qr": {
-   "img": "counter-set-payments-2.webp",
+   "img": "counter-set-payments-1.webp",
    "x": 84,
    "y": 445,
    "w": 96,
    "h": 20
   },
   "sp.h3qrOn": {
-   "img": "counter-set-payments-2.webp",
+   "img": "counter-set-payments-1.webp",
    "x": 306,
    "y": 468,
    "w": 46,
    "h": 27
   },
   "hb.kampuchea": {
-   "img": "counter-set-payments-2.webp",
+   "img": "counter-set-payments-1.webp",
    "x": 96,
    "y": 537,
    "w": 256,
    "h": 47
   },
   "hb.own": {
-   "img": "counter-set-payments-2.webp",
+   "img": "counter-set-payments-1.webp",
    "x": 96,
    "y": 664,
    "w": 256,
    "h": 24
   },
   "hb.family": {
-   "img": "counter-set-payments-2.webp",
+   "img": "counter-set-payments-1.webp",
    "x": 38,
    "y": 703,
    "w": 314,
    "h": 50
+  },
+  "sp.cashSub": {
+   "img": "counter-set-payments-2.webp",
+   "x": 84,
+   "y": 247,
+   "w": 198,
+   "h": 44
+  },
+  "sp.khqrOn": {
+   "img": "counter-set-payments-2.webp",
+   "x": 306,
+   "y": 333,
+   "w": 46,
+   "h": 27
   },
   "hb.eachName": {
    "img": "counter-set-payments-3.webp",
@@ -4027,13 +4541,6 @@
    "y": 543,
    "w": 314,
    "h": 32
-  },
-  "me.caterUpTo": {
-   "img": "counter-set-delivery-1.webp",
-   "x": 38,
-   "y": 414,
-   "w": 53,
-   "h": 19
   },
   "no.first": {
    "img": "counter-set-orders-0.webp",
@@ -4507,7 +5014,7 @@
   "sl.whatSold": {
    "img": "counter-set-sales-1.webp",
    "x": 38,
-   "y": 255,
+   "y": 225,
    "w": 314,
    "h": 17
   },
@@ -4903,208 +5410,236 @@
    "w": 358,
    "h": 32
   },
-  "rd.band": {
+  "dl.leftConfirm": {
    "img": "rider-offer-0.webp",
+   "x": 275,
+   "y": 396,
+   "w": 76,
+   "h": 52
+  },
+  "rd.outside": {
+   "img": "rider-offer-0.webp",
+   "x": 39,
+   "y": 307,
+   "w": 99,
+   "h": 42
+  },
+  "rd.cantFind": {
+   "img": "rider-offer-0.webp",
+   "x": 147,
+   "y": 307,
+   "w": 92,
+   "h": 42
+  },
+  "rd.askCode": {
+   "img": "rider-offer-0.webp",
+   "x": 39,
+   "y": 360,
+   "w": 312,
+   "h": 21
+  },
+  "rd.codePh": {
+   "img": "rider-offer-0.webp",
+   "x": 39,
+   "y": 396,
+   "w": 227,
+   "h": 52
+  },
+  "rd.confirm": {
+   "img": "rider-offer-0.webp",
+   "x": 275,
+   "y": 396,
+   "w": 76,
+   "h": 52
+  },
+  "rd.noLeave": {
+   "img": "rider-offer-0.webp",
+   "x": 39,
+   "y": 459,
+   "w": 312,
+   "h": 64
+  },
+  "rd.positionEnds": {
+   "img": "rider-offer-0.webp",
+   "x": 39,
+   "y": 534,
+   "w": 312,
+   "h": 39
+  },
+  "rd.leftAtDoor": {
+   "img": "rider-offer-0.webp",
+   "x": 20,
+   "y": 611,
+   "w": 350,
+   "h": 17
+  },
+  "rd.leftConfirms": {
+   "img": "rider-offer-0.webp",
+   "x": 38,
+   "y": 724,
+   "w": 314,
+   "h": 64
+  },
+  "rd.mapLabel": {
+   "img": "rider-offer-0.webp",
+   "x": 39,
+   "y": 53,
+   "w": 312,
+   "h": 240
+  },
+  "rd.band": {
+   "img": "rider-offer-1.webp",
    "x": 246,
-   "y": 490,
+   "y": 621,
    "w": 105,
    "h": 20
   },
   "rd.offered": {
-   "img": "rider-offer-0.webp",
+   "img": "rider-offer-1.webp",
    "x": 20,
-   "y": 335,
+   "y": 467,
    "w": 350,
    "h": 17
   },
   "rd.accept": {
-   "img": "rider-offer-0.webp",
+   "img": "rider-offer-1.webp",
    "x": 39,
-   "y": 529,
+   "y": 661,
    "w": 226,
    "h": 52
   },
   "rd.passAside": {
-   "img": "rider-offer-0.webp",
+   "img": "rider-offer-1.webp",
    "x": 39,
-   "y": 647,
+   "y": 779,
    "w": 312,
    "h": 20
   },
   "rd.untilNext": {
-   "img": "rider-offer-0.webp",
+   "img": "rider-offer-1.webp",
    "x": 166,
-   "y": 609,
+   "y": 741,
    "w": 127,
    "h": 21
   },
+  "rd.pickedUp": {
+   "img": "rider-offer-1.webp",
+   "x": 39,
+   "y": 377,
+   "w": 226,
+   "h": 52
+  },
+  "rd.dir.s": {
+   "img": "rider-offer-1.webp",
+   "x": 106,
+   "y": 547,
+   "w": 45,
+   "h": 19
+  },
   "rd.offersNone": {
-   "img": "rider-offer-0.webp",
+   "img": "rider-offer-2.webp",
    "x": 209,
    "y": 260,
    "w": 143,
    "h": 21
   },
   "rd.offersOne": {
-   "img": "rider-offer-0.webp",
+   "img": "rider-offer-2.webp",
    "x": 227,
    "y": 160,
    "w": 125,
    "h": 21
   },
   "rd.offersOther": {
-   "img": "rider-offer-0.webp",
+   "img": "rider-offer-2.webp",
    "x": 227,
    "y": 160,
    "w": 125,
    "h": 21
   },
   "rd.waitingOne": {
-   "img": "rider-offer-0.webp",
+   "img": "rider-offer-2.webp",
    "x": 94,
    "y": 282,
    "w": 103,
    "h": 20
   },
   "rd.waitingOther": {
-   "img": "rider-offer-0.webp",
+   "img": "rider-offer-2.webp",
    "x": 94,
    "y": 282,
    "w": 103,
    "h": 20
   },
-  "rd.route": {
-   "img": "rider-offer-0.webp",
+  "rd.onTheWay": {
+   "img": "rider-offer-2.webp",
+   "x": 20,
+   "y": 335,
+   "w": 350,
+   "h": 17
+  },
+  "rd.alreadyPaid": {
+   "img": "rider-offer-2.webp",
    "x": 39,
-   "y": 413,
+   "y": 486,
+   "w": 174,
+   "h": 26
+  },
+  "rd.route": {
+   "img": "rider-offer-2.webp",
+   "x": 39,
+   "y": 524,
    "w": 312,
    "h": 23
   },
-  "rd.dir.s": {
-   "img": "rider-offer-0.webp",
-   "x": 106,
-   "y": 415,
-   "w": 45,
-   "h": 19
+  "rd.from": {
+   "img": "rider-offer-2.webp",
+   "x": 39,
+   "y": 380,
+   "w": 312,
+   "h": 20
   },
   "rd.availableSwitch": {
-   "img": "rider-offer-0.webp",
+   "img": "rider-offer-2.webp",
    "x": 324,
    "y": 26,
    "w": 46,
    "h": 27
   },
   "pr.open": {
-   "img": "rider-offer-0.webp",
+   "img": "rider-offer-2.webp",
    "x": 72,
    "y": 16,
    "w": 153,
    "h": 28
   },
   "pr.title": {
-   "img": "rider-offer-0.webp",
+   "img": "rider-offer-2.webp",
    "x": 72,
    "y": 16,
    "w": 153,
    "h": 28
   },
   "hs.ride": {
-   "img": "rider-offer-0.webp",
+   "img": "rider-offer-2.webp",
    "x": 94,
    "y": 185,
    "w": 34,
    "h": 16
   },
-  "dl.leftConfirm": {
-   "img": "rider-out-0.webp",
-   "x": 275,
-   "y": 621,
-   "w": 76,
-   "h": 52
-  },
-  "me.askMin": {
-   "img": "rider-out-0.webp",
-   "x": 39,
-   "y": 71,
-   "w": 12,
-   "h": 19
-  },
-  "rd.onTheWay": {
-   "img": "rider-out-0.webp",
+  "rd.collect": {
+   "img": "rider-offer-3.webp",
    "x": 20,
-   "y": 26,
+   "y": 413,
    "w": 350,
    "h": 17
   },
-  "rd.alreadyPaid": {
-   "img": "rider-out-0.webp",
-   "x": 39,
-   "y": 177,
-   "w": 174,
-   "h": 26
-  },
-  "rd.outside": {
-   "img": "rider-out-0.webp",
-   "x": 39,
-   "y": 532,
-   "w": 99,
-   "h": 42
-  },
-  "rd.cantFind": {
-   "img": "rider-out-0.webp",
-   "x": 147,
-   "y": 532,
-   "w": 92,
-   "h": 42
-  },
-  "rd.askCode": {
-   "img": "rider-out-0.webp",
-   "x": 39,
-   "y": 585,
-   "w": 312,
-   "h": 21
-  },
-  "rd.codePh": {
-   "img": "rider-out-0.webp",
-   "x": 39,
-   "y": 621,
-   "w": 227,
-   "h": 52
-  },
-  "rd.confirm": {
-   "img": "rider-out-0.webp",
-   "x": 275,
-   "y": 621,
-   "w": 76,
-   "h": 52
-  },
-  "rd.noLeave": {
-   "img": "rider-out-0.webp",
-   "x": 39,
-   "y": 684,
-   "w": 312,
-   "h": 64
-  },
-  "rd.positionEnds": {
-   "img": "rider-out-0.webp",
-   "x": 39,
-   "y": 759,
-   "w": 312,
-   "h": 39
-  },
-  "rd.mapLabel": {
-   "img": "rider-out-0.webp",
-   "x": 39,
-   "y": 278,
-   "w": 312,
-   "h": 240
-  },
-  "rd.from": {
-   "img": "rider-out-0.webp",
-   "x": 39,
-   "y": 71,
-   "w": 312,
-   "h": 20
+  "rd.photoTakeNow": {
+   "img": "rider-offer-3.webp",
+   "x": 38,
+   "y": 338,
+   "w": 59,
+   "h": 38
   },
   "type.coffee": {
    "img": "find-0.webp",
@@ -6869,10 +7404,58 @@
    "y": 24,
    "w": 350,
    "h": 73
+  },
+  "open.closedToday": {
+   "img": "counter-closed-today-0.webp",
+   "x": 36,
+   "y": 91,
+   "w": 51,
+   "h": 23
+  },
+  "cq.closedToday": {
+   "img": "counter-closed-today-0.webp",
+   "x": 36,
+   "y": 91,
+   "w": 51,
+   "h": 23
+  },
+  "cq.hoursNotSet": {
+   "img": "counter-no-hours-0.webp",
+   "x": 36,
+   "y": 91,
+   "w": 128,
+   "h": 23
+  },
+  "cq.emptyLine": {
+   "img": "counter-empty-0.webp",
+   "x": 20,
+   "y": 203,
+   "w": 350,
+   "h": 74
+  },
+  "cq.emptyAhead": {
+   "img": "counter-empty-ahead-0.webp",
+   "x": 20,
+   "y": 203,
+   "w": 350,
+   "h": 74
+  },
+  "cq.emptyGifts": {
+   "img": "counter-empty-gifts-0.webp",
+   "x": 20,
+   "y": 203,
+   "w": 350,
+   "h": 74
+  },
+  "cq.emptyCatering": {
+   "img": "counter-empty-catering-0.webp",
+   "x": 20,
+   "y": 203,
+   "w": 350,
+   "h": 74
   }
  },
  "missed": [
-  "open.closedToday",
   "open.closedNow",
   "open.wait",
   "open.aheadNone",
@@ -6893,7 +7476,6 @@
   "co.outOfRange",
   "co.codeLbl",
   "co.codeHow",
-  "co.deliveryRow",
   "co.nothingMore",
   "co.riderPaid",
   "co.sendDelivery",
@@ -6931,7 +7513,6 @@
   "pl.pickupKhqr",
   "pl.points",
   "pl.pickupH3qr",
-  "pl.payH3qr",
   "pl.h3qrWhichBank",
   "pl.h3qrOneBank",
   "pl.h3qrIsPayment",
@@ -7057,7 +7638,6 @@
   "gb.aGift",
   "gb.rowHeld",
   "gb.rowHandOver",
-  "gb.rowFor",
   "gb.rowTab",
   "gb.codeRowSub",
   "gb.codePh",
@@ -7155,7 +7735,6 @@
   "follow.on",
   "follow.stop",
   "follow.needHere",
-  "chrome.giftsN",
   "orders.on",
   "orders.thisOne",
   "you.number",
@@ -7560,19 +8139,13 @@
   "common.they",
   "common.them",
   "common.otherNumber",
-  "cq.giftNothing",
   "cq.nothingOwedThanked",
-  "cq.stagePay",
   "cq.checkedIn",
   "cq.ordered",
   "cq.prepaid",
-  "cq.theyreHere",
-  "cq.emptyLine",
-  "cq.emptyAhead",
   "cq.riderAssigned",
   "cq.noRider",
   "cq.aRider",
-  "cq.riderComing",
   "cq.riderOnWay",
   "cq.doorContested",
   "cq.doorPhotoSee",
@@ -7581,37 +8154,14 @@
   "cq.riderLeft",
   "cq.takeItOnRider",
   "cq.handed",
-  "cq.settleTitle",
-  "cq.owesForGoods",
-  "cq.checkBank",
-  "cq.moneyStraight",
   "cq.extraIsThank",
-  "cq.paidClose",
-  "cq.paidCash",
-  "cq.paidKhqr",
-  "cq.notYet",
-  "cq.cantConfirm",
-  "cq.moneyCatching",
-  "cq.closedToday",
   "cq.closedHours",
-  "cq.hoursNotSet",
   "cq.waiting",
   "cq.waitMin",
-  "cq.emptyGifts",
   "cq.loadError",
-  "cq.prepaidKhqr",
-  "cq.checkArrived",
-  "cq.payFirstAside",
-  "cq.firstAside",
-  "cq.shelfAside",
-  "cq.owesFirst",
   "cq.paidFirst",
-  "cq.waitingPayment",
   "cq.offerAgain",
-  "cq.deliveryLine",
-  "cq.owesDelivery",
   "cq.paidDelivery",
-  "cq.cashSame",
   "cq.noCashHere",
   "cq.closedByHB",
   "cq.fromPoints",
@@ -7624,43 +8174,19 @@
   "cq.codeMake",
   "cq.codeMade",
   "cq.codeUsed",
-  "cq.giftStage",
-  "cq.giftFor",
-  "cq.giftToPass",
-  "cq.giftCheckBank",
-  "cq.giftTakeCash",
-  "cq.giftRelease",
   "cq.giftReleaseErr",
   "cq.giftOwnerReleases",
   "cq.fromTab",
   "cq.nothingToPay",
-  "cq.paidH3qr",
-  "cq.checkHeartBank",
   "cq.h3qrLabelled",
   "cq.giftCheckH3qr",
-  "cq.moneyStraightH3qr",
   "cq.prepaidH3qr",
-  "cq.tabCatering",
   "cq.tabAsks",
-  "cq.emptyCatering",
-  "cq.cateringStage",
-  "cq.cateringCharge",
-  "cq.cateringWhere",
-  "cq.cateringMap",
-  "cq.cateringPayFirst",
   "cq.cateringDelivered",
   "cq.cateringDeliveredAside",
-  "cq.cateringNote",
-  "cq.owesCatering",
   "cq.paidCatering",
   "cq.commissionAhead",
-  "cq.commissionStage",
-  "cq.commissionFor",
-  "cq.commissionKhqr",
-  "cq.commissionH3qr",
   "cq.commissionNoWhere",
-  "cq.commissionMark",
-  "cq.commissionAside",
   "cq.abandonQ",
   "cq.abandonYes",
   "cq.abandonAside",
@@ -7805,7 +8331,6 @@
   "ppl.errMidRun",
   "ppl.paidHowMuch",
   "ppl.paidAmount",
-  "ppl.paidOfDue",
   "ppl.paidRange",
   "ppl.yourLabel",
   "ppl.message",
@@ -7842,7 +8367,6 @@
   "ask.how",
   "ask.someone",
   "ask.asked",
-  "ask.for",
   "ask.call",
   "ask.done",
   "dl.note1",
@@ -7927,8 +8451,6 @@
   "rd.moving",
   "rd.untilCounter",
   "rd.offHere",
-  "rd.collect",
-  "rd.pickedUp",
   "rd.sent",
   "rd.wrong",
   "rd.cantCheck",
@@ -7939,7 +8461,6 @@
   "rd.photoErr",
   "rd.photoSee",
   "rd.photoRetake",
-  "rd.photoTakeNow",
   "rd.photoMine",
   "rd.leaveNoPhoto",
   "rd.delivered",
@@ -7954,10 +8475,7 @@
   "rd.backRotation",
   "rd.loadErr",
   "rd.noRuns",
-  "rd.leftAtDoor",
-  "rd.leftConfirms",
   "rd.dir.n",
-  "rd.dir.ne",
   "rd.dir.e",
   "rd.dir.se",
   "rd.dir.sw",
@@ -8102,10 +8620,6 @@
   "wg.rowDone",
   "wg.rowOpen",
   "wg.check",
-  "cash.gives",
-  "cash.exact",
-  "cash.inUsd",
-  "cash.inKhr",
   "cash.change",
   "cash.noChange",
   "cash.short",
@@ -8188,7 +8702,6 @@
   "cg.waitRelease",
   "cg.onYou",
   "cg.youTitle",
-  "cg.rowFor",
   "cg.rowVia",
   "cg.rowWaiting",
   "cg.rowForget",
@@ -8220,7 +8733,6 @@
   "hs.commissionPaid",
   "hs.commissionOpen",
   "hs.gift",
-  "hs.giftFor",
   "hs.giftKeep",
   "hs.giftHave",
   "hs.giftPass",
