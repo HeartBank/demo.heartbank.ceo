@@ -1,5 +1,5 @@
 {
- "made": "2026-11-22T07:00:38.320Z",
+ "made": "2026-11-22T07:51:00.880Z",
  "viewport": {
   "width": 390,
   "height": 844
@@ -30,15 +30,25 @@
    "found": 32,
    "images": 3
   },
+  "store-ready": {
+   "url": "/?surface=storefront&tag=homecoffee",
+   "found": 4,
+   "images": 1
+  },
+  "store-thank": {
+   "url": "/?surface=storefront&tag=homecoffee",
+   "found": 9,
+   "images": 2
+  },
   "store-checkin": {
    "url": "/?surface=storefront&tag=homecoffee",
-   "found": 13,
-   "images": 1
+   "found": 0,
+   "images": 0
   },
   "store-gift": {
    "url": "/?surface=storefront&tag=homecoffee",
-   "found": 10,
-   "images": 1
+   "found": 0,
+   "images": 0
   },
   "store-gifts": {
    "url": "/?surface=storefront&tag=homecoffee",
@@ -52,7 +62,7 @@
   },
   "store-you": {
    "url": "/you?surface=storefront&tag=homecoffee",
-   "found": 8,
+   "found": 16,
    "images": 1
   },
   "store-sent": {
@@ -80,9 +90,19 @@
    "found": 2,
    "images": 1
   },
+  "counter-cashier-order": {
+   "url": "/?tag=homecoffee",
+   "found": 0,
+   "images": 0
+  },
   "counter-history": {
    "url": "/?tag=homecoffee",
-   "found": 12,
+   "found": 15,
+   "images": 1
+  },
+  "counter-history-sheet": {
+   "url": "/?tag=homecoffee",
+   "found": 13,
    "images": 1
   },
   "counter-work": {
@@ -107,7 +127,7 @@
   },
   "counter-shop": {
    "url": "/?tag=homecoffee",
-   "found": 34,
+   "found": 33,
    "images": 3
   },
   "counter-set-shop": {
@@ -117,7 +137,7 @@
   },
   "counter-set-payments": {
    "url": "/?tag=homecoffee",
-   "found": 28,
+   "found": 35,
    "images": 4
   },
   "counter-set-delivery": {
@@ -157,7 +177,7 @@
   },
   "counter-set-welcome": {
    "url": "/?tag=homecoffee",
-   "found": 28,
+   "found": 26,
    "images": 4
   },
   "counter-set-gifts": {
@@ -170,9 +190,14 @@
    "found": 8,
    "images": 2
   },
-  "rider": {
+  "rider-offer": {
    "url": "/?surface=rider&tag=homecoffee",
-   "found": 8,
+   "found": 16,
+   "images": 1
+  },
+  "rider-out": {
+   "url": "/?surface=rider&tag=homecoffee",
+   "found": 13,
    "images": 1
   },
   "find": {
@@ -196,39 +221,44 @@
    "images": 1
   },
   "console-platform": {
-   "url": "/?surface=admin",
+   "url": "/?surface=admin#platform",
    "found": 69,
    "images": 10
   },
   "console-shops": {
-   "url": "/?surface=admin",
-   "found": 1,
-   "images": 1
+   "url": "/?surface=admin#shops",
+   "found": 14,
+   "images": 2
   },
   "console-reports": {
-   "url": "/?surface=admin",
-   "found": 0,
-   "images": 0
+   "url": "/?surface=admin#reports",
+   "found": 15,
+   "images": 2
   },
   "console-themes": {
-   "url": "/?surface=admin",
-   "found": 0,
-   "images": 0
+   "url": "/?surface=admin#themes",
+   "found": 10,
+   "images": 3
   },
   "console-recommendation": {
-   "url": "/?surface=admin",
+   "url": "/?surface=admin#recommendation",
    "found": 32,
    "images": 4
   },
   "console-calling": {
-   "url": "/?surface=admin",
-   "found": 0,
-   "images": 0
+   "url": "/?surface=admin#calling",
+   "found": 22,
+   "images": 3
   },
   "console-clicks": {
+   "url": "/?surface=admin#clicks",
+   "found": 28,
+   "images": 4
+  },
+  "console-signed-out": {
    "url": "/?surface=admin",
-   "found": 0,
-   "images": 0
+   "found": 9,
+   "images": 1
   }
  },
  "entries": {
@@ -1282,166 +1312,96 @@
    "w": 310,
    "h": 54
   },
-  "ci.why": {
-   "img": "store-checkin-0.webp",
-   "x": 20,
-   "y": 552,
-   "w": 350,
-   "h": 43
+  "you.seeIt": {
+   "img": "store-ready-0.webp",
+   "x": 319,
+   "y": 399,
+   "w": 25,
+   "h": 18
   },
-  "ci.reach": {
-   "img": "store-checkin-0.webp",
-   "x": 42,
-   "y": 500,
-   "w": 328,
-   "h": 40
+  "or.rowPickup": {
+   "img": "store-ready-0.webp",
+   "x": 38,
+   "y": 436,
+   "w": 116,
+   "h": 18
   },
-  "ci.scan": {
-   "img": "store-checkin-0.webp",
-   "x": 20,
-   "y": 683,
-   "w": 350,
-   "h": 48
+  "or.readyCollect": {
+   "img": "store-ready-0.webp",
+   "x": 38,
+   "y": 462,
+   "w": 314,
+   "h": 21
   },
-  "ci.scanWhy": {
-   "img": "store-checkin-0.webp",
-   "x": 20,
-   "y": 743,
-   "w": 350,
-   "h": 22
+  "or.view": {
+   "img": "store-ready-0.webp",
+   "x": 319,
+   "y": 399,
+   "w": 25,
+   "h": 18
   },
-  "orders.off": {
-   "img": "store-checkin-0.webp",
-   "x": 20,
-   "y": 774,
-   "w": 350,
-   "h": 48
+  "ask.yourOrder": {
+   "img": "store-thank-0.webp",
+   "x": 93,
+   "y": 170,
+   "w": 204,
+   "h": 33
   },
-  "hr.closed": {
-   "img": "store-checkin-0.webp",
-   "x": 20,
-   "y": 774,
-   "w": 350,
-   "h": 48
+  "ask.eyebrow": {
+   "img": "store-thank-0.webp",
+   "x": 131,
+   "y": 287,
+   "w": 128,
+   "h": 17
   },
-  "common.close": {
-   "img": "store-checkin-0.webp",
-   "x": 20,
-   "y": 774,
-   "w": 350,
-   "h": 48
+  "ask.ma": {
+   "img": "store-thank-0.webp",
+   "x": 66,
+   "y": 332,
+   "w": 258,
+   "h": 111
   },
-  "ss.closed": {
-   "img": "store-checkin-0.webp",
-   "x": 20,
-   "y": 774,
-   "w": 350,
-   "h": 48
-  },
-  "me.askMin": {
-   "img": "store-checkin-0.webp",
-   "x": 214,
-   "y": 500,
-   "w": 16,
-   "h": 19
-  },
-  "rd.offAll": {
-   "img": "store-checkin-0.webp",
-   "x": 20,
-   "y": 774,
-   "w": 350,
-   "h": 48
-  },
-  "ad.closed": {
-   "img": "store-checkin-0.webp",
-   "x": 20,
-   "y": 774,
-   "w": 350,
-   "h": 48
-  },
-  "ad.closeReport": {
-   "img": "store-checkin-0.webp",
-   "x": 20,
-   "y": 774,
-   "w": 350,
-   "h": 48
-  },
-  "ad.pushOff": {
-   "img": "store-checkin-0.webp",
-   "x": 20,
-   "y": 774,
-   "w": 350,
-   "h": 48
-  },
-  "co.payHow": {
-   "img": "store-gift-0.webp",
-   "x": 20,
-   "y": 411,
-   "w": 350,
-   "h": 22
-  },
-  "co.cash": {
-   "img": "store-gift-0.webp",
-   "x": 84,
-   "y": 637,
-   "w": 63,
-   "h": 24
-  },
-  "co.cashSub": {
-   "img": "store-gift-0.webp",
-   "x": 84,
-   "y": 661,
-   "w": 63,
+  "ask.anything": {
+   "img": "store-thank-0.webp",
+   "x": 81,
+   "y": 412,
+   "w": 228,
    "h": 20
   },
-  "ct.payoutCash": {
-   "img": "store-gift-0.webp",
-   "x": 84,
-   "y": 637,
-   "w": 63,
-   "h": 24
+  "ask.note": {
+   "img": "store-thank-0.webp",
+   "x": 67,
+   "y": 537,
+   "w": 256,
+   "h": 44
   },
-  "pay.pickup": {
-   "img": "store-gift-0.webp",
+  "ask.why": {
+   "img": "store-thank-0.webp",
+   "x": 74,
+   "y": 601,
+   "w": 243,
+   "h": 61
+  },
+  "ask.thatsAll": {
+   "img": "store-thank-0.webp",
    "x": 20,
-   "y": 812,
+   "y": 702,
    "w": 350,
-   "h": 20
+   "h": 56
   },
-  "ppl.paidCash": {
-   "img": "store-gift-0.webp",
-   "x": 84,
-   "y": 637,
-   "w": 63,
-   "h": 24
+  "gf.thankTreasury": {
+   "img": "store-thank-0.webp",
+   "x": 20,
+   "y": 770,
+   "w": 350,
+   "h": 38
   },
-  "open.cash": {
-   "img": "store-gift-0.webp",
-   "x": 84,
-   "y": 637,
-   "w": 63,
-   "h": 24
-  },
-  "sp.cash": {
-   "img": "store-gift-0.webp",
-   "x": 84,
-   "y": 637,
-   "w": 63,
-   "h": 24
-  },
-  "hs.cash": {
-   "img": "store-gift-0.webp",
-   "x": 84,
-   "y": 637,
-   "w": 63,
-   "h": 24
-  },
-  "ad.cash": {
-   "img": "store-gift-0.webp",
-   "x": 84,
-   "y": 637,
-   "w": 63,
-   "h": 24
+  "ask.end": {
+   "img": "store-thank-1.webp",
+   "x": 20,
+   "y": 784,
+   "w": 350,
+   "h": 38
   },
   "gifts.title": {
    "img": "store-gifts-0.webp",
@@ -1484,6 +1444,13 @@
    "y": 85,
    "w": 350,
    "h": 22
+  },
+  "orders.off": {
+   "img": "store-you-0.webp",
+   "x": 20,
+   "y": 114,
+   "w": 18,
+   "h": 23
   },
   "orders.what": {
    "img": "store-you-0.webp",
@@ -1533,6 +1500,55 @@
    "y": 486,
    "w": 350,
    "h": 20
+  },
+  "hr.closed": {
+   "img": "store-you-0.webp",
+   "x": 20,
+   "y": 114,
+   "w": 18,
+   "h": 23
+  },
+  "common.close": {
+   "img": "store-you-0.webp",
+   "x": 20,
+   "y": 114,
+   "w": 18,
+   "h": 23
+  },
+  "ss.closed": {
+   "img": "store-you-0.webp",
+   "x": 20,
+   "y": 114,
+   "w": 18,
+   "h": 23
+  },
+  "rd.offAll": {
+   "img": "store-you-0.webp",
+   "x": 20,
+   "y": 114,
+   "w": 18,
+   "h": 23
+  },
+  "ad.closed": {
+   "img": "store-you-0.webp",
+   "x": 20,
+   "y": 114,
+   "w": 18,
+   "h": 23
+  },
+  "ad.closeReport": {
+   "img": "store-you-0.webp",
+   "x": 20,
+   "y": 114,
+   "w": 18,
+   "h": 23
+  },
+  "ad.pushOff": {
+   "img": "store-you-0.webp",
+   "x": 20,
+   "y": 114,
+   "w": 18,
+   "h": 23
   },
   "gb.rowSent": {
    "img": "store-sent-0.webp",
@@ -1961,38 +1977,52 @@
    "w": 82,
    "h": 43
   },
+  "hist.settled": {
+   "img": "counter-history-0.webp",
+   "x": 239,
+   "y": 351,
+   "w": 42,
+   "h": 14
+  },
+  "hist.by": {
+   "img": "counter-history-0.webp",
+   "x": 94,
+   "y": 349,
+   "w": 45,
+   "h": 18
+  },
   "hist.notSettled": {
    "img": "counter-history-0.webp",
    "x": 262,
-   "y": 324,
+   "y": 422,
    "w": 74,
    "h": 24
   },
   "hist.todayOne": {
    "img": "counter-history-0.webp",
    "x": 37,
-   "y": 225,
+   "y": 228,
    "w": 99,
    "h": 26
   },
   "hist.todayOther": {
    "img": "counter-history-0.webp",
    "x": 37,
-   "y": 225,
+   "y": 228,
    "w": 99,
    "h": 26
   },
   "hist.unsettledOne": {
    "img": "counter-history-0.webp",
    "x": 37,
-   "y": 395,
+   "y": 493,
    "w": 114,
    "h": 18
   },
   "hist.noChase": {
    "img": "counter-history-0.webp",
    "x": 37,
-   "y": 395,
+   "y": 493,
    "w": 299,
    "h": 40
   },
@@ -2008,7 +2038,14 @@
    "x": 20,
    "y": 209,
    "w": 350,
-   "h": 58
+   "h": 80
+  },
+  "hist.tookLabel": {
+   "img": "counter-history-0.webp",
+   "x": 243,
+   "y": 255,
+   "w": 93,
+   "h": 18
   },
   "ppl.today": {
    "img": "counter-history-0.webp",
@@ -2023,6 +2060,97 @@
    "y": 153,
    "w": 82,
    "h": 43
+  },
+  "cq.paidPill": {
+   "img": "counter-history-sheet-0.webp",
+   "x": 37,
+   "y": 522,
+   "w": 43,
+   "h": 19
+  },
+  "ppl.paidConfirm": {
+   "img": "counter-history-sheet-0.webp",
+   "x": 37,
+   "y": 522,
+   "w": 43,
+   "h": 19
+  },
+  "wg.drawItem": {
+   "img": "counter-history-sheet-0.webp",
+   "x": 37,
+   "y": 487,
+   "w": 31,
+   "h": 23
+  },
+  "hs.kindPickup": {
+   "img": "counter-history-sheet-0.webp",
+   "x": 20,
+   "y": 274,
+   "w": 39,
+   "h": 18
+  },
+  "hs.what": {
+   "img": "counter-history-sheet-0.webp",
+   "x": 37,
+   "y": 323,
+   "w": 316,
+   "h": 17
+  },
+  "hs.money": {
+   "img": "counter-history-sheet-0.webp",
+   "x": 37,
+   "y": 457,
+   "w": 316,
+   "h": 17
+  },
+  "hs.goods": {
+   "img": "counter-history-sheet-0.webp",
+   "x": 37,
+   "y": 487,
+   "w": 31,
+   "h": 23
+  },
+  "hs.paid": {
+   "img": "counter-history-sheet-0.webp",
+   "x": 37,
+   "y": 522,
+   "w": 43,
+   "h": 19
+  },
+  "hs.steps": {
+   "img": "counter-history-sheet-0.webp",
+   "x": 37,
+   "y": 590,
+   "w": 316,
+   "h": 17
+  },
+  "hs.placed": {
+   "img": "counter-history-sheet-0.webp",
+   "x": 37,
+   "y": 620,
+   "w": 50,
+   "h": 23
+  },
+  "hs.paidTo": {
+   "img": "counter-history-sheet-0.webp",
+   "x": 37,
+   "y": 653,
+   "w": 88,
+   "h": 23
+  },
+  "hs.handedBy": {
+   "img": "counter-history-sheet-0.webp",
+   "x": 37,
+   "y": 687,
+   "w": 67,
+   "h": 23
+  },
+  "hs.ref": {
+   "img": "counter-history-sheet-0.webp",
+   "x": 20,
+   "y": 744,
+   "w": 350,
+   "h": 18
   },
   "common.nothingOut": {
    "img": "counter-work-0.webp",
@@ -2822,13 +2950,6 @@
    "w": 24,
    "h": 20
   },
-  "hs.ref": {
-   "img": "counter-shop-0.webp",
-   "x": 216,
-   "y": 22,
-   "w": 154,
-   "h": 32
-  },
   "hub.shopSub": {
    "img": "counter-shop-1.webp",
    "x": 38,
@@ -3543,187 +3664,236 @@
    "w": 350,
    "h": 32
   },
-  "gf.yes": {
+  "co.cash": {
    "img": "counter-set-payments-0.webp",
+   "x": 306,
+   "y": 242,
+   "w": 46,
+   "h": 27
+  },
+  "ct.payoutCash": {
+   "img": "counter-set-payments-0.webp",
+   "x": 306,
+   "y": 242,
+   "w": 46,
+   "h": 27
+  },
+  "ppl.paidCash": {
+   "img": "counter-set-payments-0.webp",
+   "x": 306,
+   "y": 242,
+   "w": 46,
+   "h": 27
+  },
+  "open.cash": {
+   "img": "counter-set-payments-0.webp",
+   "x": 306,
+   "y": 242,
+   "w": 46,
+   "h": 27
+  },
+  "sp.cash": {
+   "img": "counter-set-payments-0.webp",
+   "x": 306,
+   "y": 242,
+   "w": 46,
+   "h": 27
+  },
+  "sp.cashSub": {
+   "img": "counter-set-payments-0.webp",
+   "x": 84,
+   "y": 247,
+   "w": 198,
+   "h": 44
+  },
+  "sp.paste": {
+   "img": "counter-set-payments-0.webp",
+   "x": 38,
+   "y": 618,
+   "w": 314,
+   "h": 21
+  },
+  "sp.pastePh": {
+   "img": "counter-set-payments-0.webp",
+   "x": 38,
+   "y": 644,
+   "w": 314,
+   "h": 43
+  },
+  "sp.replace": {
+   "img": "counter-set-payments-0.webp",
+   "x": 38,
+   "y": 567,
+   "w": 42,
+   "h": 38
+  },
+  "sp.remove": {
+   "img": "counter-set-payments-0.webp",
+   "x": 92,
+   "y": 575,
+   "w": 46,
+   "h": 22
+  },
+  "sp.khqrWhy": {
+   "img": "counter-set-payments-0.webp",
+   "x": 38,
+   "y": 702,
+   "w": 314,
+   "h": 42
+  },
+  "sp.khqrOn": {
+   "img": "counter-set-payments-0.webp",
+   "x": 306,
+   "y": 333,
+   "w": 46,
+   "h": 27
+  },
+  "hs.cash": {
+   "img": "counter-set-payments-0.webp",
+   "x": 306,
+   "y": 242,
+   "w": 46,
+   "h": 27
+  },
+  "ad.cash": {
+   "img": "counter-set-payments-0.webp",
+   "x": 306,
+   "y": 242,
+   "w": 46,
+   "h": 27
+  },
+  "gf.yes": {
+   "img": "counter-set-payments-1.webp",
    "x": 292,
    "y": 511,
    "w": 60,
    "h": 26
   },
   "gf.no": {
-   "img": "counter-set-payments-0.webp",
+   "img": "counter-set-payments-1.webp",
    "x": 340,
    "y": 551,
    "w": 12,
    "h": 22
   },
   "sp.whereCash": {
-   "img": "counter-set-payments-0.webp",
+   "img": "counter-set-payments-1.webp",
    "x": 20,
    "y": 446,
    "w": 350,
    "h": 32
   },
   "sp.cashPickup": {
-   "img": "counter-set-payments-0.webp",
+   "img": "counter-set-payments-1.webp",
    "x": 38,
    "y": 511,
    "w": 244,
    "h": 26
   },
   "sp.cashDelivery": {
-   "img": "counter-set-payments-0.webp",
+   "img": "counter-set-payments-1.webp",
    "x": 38,
    "y": 549,
    "w": 292,
    "h": 26
   },
   "sp.yes": {
-   "img": "counter-set-payments-0.webp",
+   "img": "counter-set-payments-1.webp",
    "x": 292,
    "y": 511,
    "w": 60,
    "h": 26
   },
   "sp.no": {
-   "img": "counter-set-payments-0.webp",
+   "img": "counter-set-payments-1.webp",
    "x": 340,
    "y": 551,
    "w": 12,
    "h": 22
   },
   "sp.cashWhy": {
-   "img": "counter-set-payments-0.webp",
+   "img": "counter-set-payments-1.webp",
    "x": 38,
    "y": 588,
    "w": 314,
    "h": 83
   },
   "sp.foot": {
-   "img": "counter-set-payments-0.webp",
+   "img": "counter-set-payments-1.webp",
    "x": 20,
    "y": 706,
    "w": 350,
    "h": 42
   },
   "sp.h3qrWhy": {
-   "img": "counter-set-payments-0.webp",
+   "img": "counter-set-payments-1.webp",
    "x": 38,
    "y": 136,
    "w": 314,
    "h": 83
   },
   "sp.rateTitle": {
-   "img": "counter-set-payments-0.webp",
+   "img": "counter-set-payments-1.webp",
    "x": 20,
    "y": 253,
    "w": 350,
    "h": 32
   },
   "sp.rateLabel": {
-   "img": "counter-set-payments-0.webp",
+   "img": "counter-set-payments-1.webp",
    "x": 38,
    "y": 326,
    "w": 189,
    "h": 24
   },
   "sp.rateHow": {
-   "img": "counter-set-payments-0.webp",
+   "img": "counter-set-payments-1.webp",
    "x": 38,
    "y": 371,
    "w": 314,
    "h": 42
   },
   "open.h3qr": {
-   "img": "counter-set-payments-1.webp",
+   "img": "counter-set-payments-2.webp",
    "x": 84,
    "y": 445,
    "w": 96,
    "h": 20
   },
-  "sp.paste": {
-   "img": "counter-set-payments-1.webp",
-   "x": 38,
-   "y": 267,
-   "w": 314,
-   "h": 21
-  },
-  "sp.pastePh": {
-   "img": "counter-set-payments-1.webp",
-   "x": 38,
-   "y": 293,
-   "w": 314,
-   "h": 43
-  },
-  "sp.replace": {
-   "img": "counter-set-payments-1.webp",
-   "x": 38,
-   "y": 216,
-   "w": 42,
-   "h": 38
-  },
-  "sp.remove": {
-   "img": "counter-set-payments-1.webp",
-   "x": 92,
-   "y": 224,
-   "w": 46,
-   "h": 22
-  },
-  "sp.khqrWhy": {
-   "img": "counter-set-payments-1.webp",
-   "x": 38,
-   "y": 351,
-   "w": 314,
-   "h": 42
-  },
   "sp.h3qr": {
-   "img": "counter-set-payments-1.webp",
+   "img": "counter-set-payments-2.webp",
    "x": 84,
    "y": 445,
    "w": 96,
    "h": 20
   },
   "sp.h3qrOn": {
-   "img": "counter-set-payments-1.webp",
+   "img": "counter-set-payments-2.webp",
    "x": 306,
    "y": 468,
    "w": 46,
    "h": 27
   },
   "hb.kampuchea": {
-   "img": "counter-set-payments-1.webp",
+   "img": "counter-set-payments-2.webp",
    "x": 96,
    "y": 537,
    "w": 256,
    "h": 47
   },
   "hb.own": {
-   "img": "counter-set-payments-1.webp",
+   "img": "counter-set-payments-2.webp",
    "x": 96,
    "y": 664,
    "w": 256,
    "h": 24
   },
   "hb.family": {
-   "img": "counter-set-payments-1.webp",
+   "img": "counter-set-payments-2.webp",
    "x": 38,
    "y": 703,
    "w": 314,
    "h": 50
-  },
-  "sp.cashSub": {
-   "img": "counter-set-payments-2.webp",
-   "x": 84,
-   "y": 247,
-   "w": 198,
-   "h": 44
-  },
-  "sp.khqrOn": {
-   "img": "counter-set-payments-2.webp",
-   "x": 306,
-   "y": 333,
-   "w": 46,
-   "h": 27
   },
   "hb.eachName": {
    "img": "counter-set-payments-3.webp",
@@ -4334,24 +4504,10 @@
    "w": 28,
    "h": 18
   },
-  "sl.left": {
-   "img": "counter-set-sales-1.webp",
-   "x": 38,
-   "y": 146,
-   "w": 222,
-   "h": 23
-  },
-  "sl.notProfit": {
-   "img": "counter-set-sales-1.webp",
-   "x": 38,
-   "y": 181,
-   "w": 314,
-   "h": 84
-  },
   "sl.whatSold": {
    "img": "counter-set-sales-1.webp",
    "x": 38,
-   "y": 315,
+   "y": 255,
    "w": 314,
    "h": 17
   },
@@ -4382,6 +4538,20 @@
    "y": 444,
    "w": 58,
    "h": 23
+  },
+  "sl.left": {
+   "img": "counter-set-sales-2.webp",
+   "x": 38,
+   "y": 519,
+   "w": 222,
+   "h": 23
+  },
+  "sl.notProfit": {
+   "img": "counter-set-sales-2.webp",
+   "x": 38,
+   "y": 554,
+   "w": 314,
+   "h": 84
   },
   "inv.body": {
    "img": "counter-set-invite-0.webp",
@@ -4551,13 +4721,6 @@
    "w": 322,
    "h": 102
   },
-  "wg.drawItem": {
-   "img": "counter-set-welcome-2.webp",
-   "x": 34,
-   "y": 375,
-   "w": 322,
-   "h": 21
-  },
   "wg.drawCount": {
    "img": "counter-set-welcome-2.webp",
    "x": 34,
@@ -4606,13 +4769,6 @@
    "y": 337,
    "w": 322,
    "h": 24
-  },
-  "hs.goods": {
-   "img": "counter-set-welcome-2.webp",
-   "x": 34,
-   "y": 375,
-   "w": 322,
-   "h": 21
   },
   "wg.reachHow": {
    "img": "counter-set-welcome-3.webp",
@@ -4747,61 +4903,208 @@
    "w": 358,
    "h": 32
   },
+  "rd.band": {
+   "img": "rider-offer-0.webp",
+   "x": 246,
+   "y": 490,
+   "w": 105,
+   "h": 20
+  },
+  "rd.offered": {
+   "img": "rider-offer-0.webp",
+   "x": 20,
+   "y": 335,
+   "w": 350,
+   "h": 17
+  },
+  "rd.accept": {
+   "img": "rider-offer-0.webp",
+   "x": 39,
+   "y": 529,
+   "w": 226,
+   "h": 52
+  },
+  "rd.passAside": {
+   "img": "rider-offer-0.webp",
+   "x": 39,
+   "y": 647,
+   "w": 312,
+   "h": 20
+  },
+  "rd.untilNext": {
+   "img": "rider-offer-0.webp",
+   "x": 166,
+   "y": 609,
+   "w": 127,
+   "h": 21
+  },
   "rd.offersNone": {
-   "img": "rider-0.webp",
+   "img": "rider-offer-0.webp",
    "x": 209,
-   "y": 160,
+   "y": 260,
    "w": 143,
    "h": 21
   },
+  "rd.offersOne": {
+   "img": "rider-offer-0.webp",
+   "x": 227,
+   "y": 160,
+   "w": 125,
+   "h": 21
+  },
+  "rd.offersOther": {
+   "img": "rider-offer-0.webp",
+   "x": 227,
+   "y": 160,
+   "w": 125,
+   "h": 21
+  },
   "rd.waitingOne": {
-   "img": "rider-0.webp",
+   "img": "rider-offer-0.webp",
    "x": 94,
    "y": 282,
    "w": 103,
    "h": 20
   },
   "rd.waitingOther": {
-   "img": "rider-0.webp",
+   "img": "rider-offer-0.webp",
    "x": 94,
-   "y": 184,
+   "y": 282,
    "w": 103,
    "h": 20
   },
-  "rd.noRuns": {
-   "img": "rider-0.webp",
-   "x": 20,
-   "y": 335,
-   "w": 350,
-   "h": 90
+  "rd.route": {
+   "img": "rider-offer-0.webp",
+   "x": 39,
+   "y": 413,
+   "w": 312,
+   "h": 23
+  },
+  "rd.dir.s": {
+   "img": "rider-offer-0.webp",
+   "x": 106,
+   "y": 415,
+   "w": 45,
+   "h": 19
   },
   "rd.availableSwitch": {
-   "img": "rider-0.webp",
+   "img": "rider-offer-0.webp",
    "x": 324,
    "y": 26,
    "w": 46,
    "h": 27
   },
   "pr.open": {
-   "img": "rider-0.webp",
+   "img": "rider-offer-0.webp",
    "x": 72,
    "y": 16,
    "w": 153,
    "h": 28
   },
   "pr.title": {
-   "img": "rider-0.webp",
+   "img": "rider-offer-0.webp",
    "x": 72,
    "y": 16,
    "w": 153,
    "h": 28
   },
   "hs.ride": {
-   "img": "rider-0.webp",
+   "img": "rider-offer-0.webp",
    "x": 94,
    "y": 185,
    "w": 34,
    "h": 16
+  },
+  "dl.leftConfirm": {
+   "img": "rider-out-0.webp",
+   "x": 275,
+   "y": 621,
+   "w": 76,
+   "h": 52
+  },
+  "me.askMin": {
+   "img": "rider-out-0.webp",
+   "x": 39,
+   "y": 71,
+   "w": 12,
+   "h": 19
+  },
+  "rd.onTheWay": {
+   "img": "rider-out-0.webp",
+   "x": 20,
+   "y": 26,
+   "w": 350,
+   "h": 17
+  },
+  "rd.alreadyPaid": {
+   "img": "rider-out-0.webp",
+   "x": 39,
+   "y": 177,
+   "w": 174,
+   "h": 26
+  },
+  "rd.outside": {
+   "img": "rider-out-0.webp",
+   "x": 39,
+   "y": 532,
+   "w": 99,
+   "h": 42
+  },
+  "rd.cantFind": {
+   "img": "rider-out-0.webp",
+   "x": 147,
+   "y": 532,
+   "w": 92,
+   "h": 42
+  },
+  "rd.askCode": {
+   "img": "rider-out-0.webp",
+   "x": 39,
+   "y": 585,
+   "w": 312,
+   "h": 21
+  },
+  "rd.codePh": {
+   "img": "rider-out-0.webp",
+   "x": 39,
+   "y": 621,
+   "w": 227,
+   "h": 52
+  },
+  "rd.confirm": {
+   "img": "rider-out-0.webp",
+   "x": 275,
+   "y": 621,
+   "w": 76,
+   "h": 52
+  },
+  "rd.noLeave": {
+   "img": "rider-out-0.webp",
+   "x": 39,
+   "y": 684,
+   "w": 312,
+   "h": 64
+  },
+  "rd.positionEnds": {
+   "img": "rider-out-0.webp",
+   "x": 39,
+   "y": 759,
+   "w": 312,
+   "h": 39
+  },
+  "rd.mapLabel": {
+   "img": "rider-out-0.webp",
+   "x": 39,
+   "y": 278,
+   "w": 312,
+   "h": 240
+  },
+  "rd.from": {
+   "img": "rider-out-0.webp",
+   "x": 39,
+   "y": 71,
+   "w": 312,
+   "h": 20
   },
   "type.coffee": {
    "img": "find-0.webp",
@@ -5657,12 +5960,278 @@
    "w": 79,
    "h": 44
   },
-  "common.loading": {
+  "ad.shopsSub": {
    "img": "console-shops-0.webp",
    "x": 20,
-   "y": 139,
+   "y": 215,
+   "w": 210,
+   "h": 24
+  },
+  "ad.findShop": {
+   "img": "console-shops-0.webp",
+   "x": 20,
+   "y": 259,
    "w": 350,
-   "h": 675
+   "h": 45
+  },
+  "ad.requestsTitle": {
+   "img": "console-shops-0.webp",
+   "x": 43,
+   "y": 347,
+   "w": 304,
+   "h": 17
+  },
+  "ad.approve": {
+   "img": "console-shops-0.webp",
+   "x": 43,
+   "y": 437,
+   "w": 70,
+   "h": 40
+  },
+  "ad.approveRandom": {
+   "img": "console-shops-0.webp",
+   "x": 123,
+   "y": 437,
+   "w": 185,
+   "h": 40
+  },
+  "ad.decline": {
+   "img": "console-shops-0.webp",
+   "x": 43,
+   "y": 487,
+   "w": 80,
+   "h": 40
+  },
+  "ad.requestsFoot": {
+   "img": "console-shops-0.webp",
+   "x": 43,
+   "y": 542,
+   "w": 304,
+   "h": 80
+  },
+  "ad.noColumns": {
+   "img": "console-shops-1.webp",
+   "x": 43,
+   "y": 591,
+   "w": 304,
+   "h": 17
+  },
+  "ad.colRevenue": {
+   "img": "console-shops-1.webp",
+   "x": 43,
+   "y": 619,
+   "w": 54,
+   "h": 26
+  },
+  "ad.colThanks": {
+   "img": "console-shops-1.webp",
+   "x": 171,
+   "y": 619,
+   "w": 132,
+   "h": 26
+  },
+  "ad.colRating": {
+   "img": "console-shops-1.webp",
+   "x": 43,
+   "y": 653,
+   "w": 72,
+   "h": 26
+  },
+  "ad.colImpressions": {
+   "img": "console-shops-1.webp",
+   "x": 123,
+   "y": 653,
+   "w": 65,
+   "h": 26
+  },
+  "ad.noColumnsWhy": {
+   "img": "console-shops-1.webp",
+   "x": 43,
+   "y": 706,
+   "w": 304,
+   "h": 87
+  },
+  "ad.movesAround": {
+   "img": "console-shops-1.webp",
+   "x": 97,
+   "y": 454,
+   "w": 71,
+   "h": 21
+  },
+  "ad.reportsSub": {
+   "img": "console-reports-0.webp",
+   "x": 20,
+   "y": 215,
+   "w": 350,
+   "h": 24
+  },
+  "ad.noReports": {
+   "img": "console-reports-0.webp",
+   "x": 20,
+   "y": 261,
+   "w": 350,
+   "h": 23
+  },
+  "ad.recordTitle": {
+   "img": "console-reports-0.webp",
+   "x": 43,
+   "y": 319,
+   "w": 304,
+   "h": 17
+  },
+  "ad.recordKind": {
+   "img": "console-reports-0.webp",
+   "x": 43,
+   "y": 348,
+   "w": 304,
+   "h": 43
+  },
+  "ad.recordShop": {
+   "img": "console-reports-0.webp",
+   "x": 43,
+   "y": 401,
+   "w": 304,
+   "h": 43
+  },
+  "ad.recordText": {
+   "img": "console-reports-0.webp",
+   "x": 43,
+   "y": 454,
+   "w": 304,
+   "h": 96
+  },
+  "ad.recordFoot": {
+   "img": "console-reports-0.webp",
+   "x": 43,
+   "y": 565,
+   "w": 304,
+   "h": 60
+  },
+  "ad.reachTitle": {
+   "img": "console-reports-0.webp",
+   "x": 43,
+   "y": 687,
+   "w": 304,
+   "h": 17
+  },
+  "ad.reach1": {
+   "img": "console-reports-0.webp",
+   "x": 62,
+   "y": 716,
+   "w": 112,
+   "h": 23
+  },
+  "ad.reach2": {
+   "img": "console-reports-0.webp",
+   "x": 62,
+   "y": 750,
+   "w": 202,
+   "h": 23
+  },
+  "ad.reachNot1": {
+   "img": "console-reports-0.webp",
+   "x": 62,
+   "y": 802,
+   "w": 203,
+   "h": 23
+  },
+  "ad.reachNot2": {
+   "img": "console-reports-1.webp",
+   "x": 62,
+   "y": 647,
+   "w": 162,
+   "h": 23
+  },
+  "ad.reachNot3": {
+   "img": "console-reports-1.webp",
+   "x": 62,
+   "y": 680,
+   "w": 208,
+   "h": 23
+  },
+  "ad.reachNot4": {
+   "img": "console-reports-1.webp",
+   "x": 62,
+   "y": 714,
+   "w": 159,
+   "h": 23
+  },
+  "ad.reachFoot": {
+   "img": "console-reports-1.webp",
+   "x": 43,
+   "y": 753,
+   "w": 304,
+   "h": 40
+  },
+  "ad.themesSub": {
+   "img": "console-themes-0.webp",
+   "x": 20,
+   "y": 215,
+   "w": 350,
+   "h": 48
+  },
+  "ad.themeDefault": {
+   "img": "console-themes-0.webp",
+   "x": 92,
+   "y": 327,
+   "w": 110,
+   "h": 20
+  },
+  "ad.themeOne": {
+   "img": "console-themes-1.webp",
+   "x": 91,
+   "y": 412,
+   "w": 60,
+   "h": 20
+  },
+  "ad.themeUnused": {
+   "img": "console-themes-1.webp",
+   "x": 91,
+   "y": 4,
+   "w": 50,
+   "h": 20
+  },
+  "ad.themeFill": {
+   "img": "console-themes-1.webp",
+   "x": 39,
+   "y": 120,
+   "w": 312,
+   "h": 38
+  },
+  "ad.noPicker": {
+   "img": "console-themes-1.webp",
+   "x": 43,
+   "y": 577,
+   "w": 304,
+   "h": 17
+  },
+  "ad.noPickerWhy": {
+   "img": "console-themes-1.webp",
+   "x": 43,
+   "y": 606,
+   "w": 304,
+   "h": 89
+  },
+  "ad.shape": {
+   "img": "console-themes-1.webp",
+   "x": 43,
+   "y": 721,
+   "w": 304,
+   "h": 17
+  },
+  "ad.shapeIs": {
+   "img": "console-themes-2.webp",
+   "x": 43,
+   "y": 597,
+   "w": 304,
+   "h": 111
+  },
+  "ad.themesMeasured": {
+   "img": "console-themes-2.webp",
+   "x": 20,
+   "y": 751,
+   "w": 350,
+   "h": 63
   },
   "ad.navRecommendation": {
    "img": "console-recommendation-0.webp",
@@ -5887,6 +6456,419 @@
    "y": 691,
    "w": 304,
    "h": 102
+  },
+  "cs.placedPaid": {
+   "img": "console-calling-0.webp",
+   "x": 59,
+   "y": 411,
+   "w": 113,
+   "h": 21
+  },
+  "ad.order": {
+   "img": "console-calling-0.webp",
+   "x": 43,
+   "y": 37,
+   "w": 304,
+   "h": 17
+  },
+  "ad.orderNone": {
+   "img": "console-calling-0.webp",
+   "x": 43,
+   "y": 66,
+   "w": 304,
+   "h": 122
+  },
+  "ad.orderWhy": {
+   "img": "console-calling-0.webp",
+   "x": 43,
+   "y": 199,
+   "w": 304,
+   "h": 59
+  },
+  "ad.shopSees": {
+   "img": "console-calling-0.webp",
+   "x": 43,
+   "y": 314,
+   "w": 304,
+   "h": 17
+  },
+  "ad.fromNeighbour": {
+   "img": "console-calling-0.webp",
+   "x": 59,
+   "y": 358,
+   "w": 113,
+   "h": 17
+  },
+  "ad.fromPool": {
+   "img": "console-calling-0.webp",
+   "x": 218,
+   "y": 358,
+   "w": 113,
+   "h": 17
+  },
+  "ad.paidFromSomeone": {
+   "img": "console-calling-0.webp",
+   "x": 59,
+   "y": 411,
+   "w": 113,
+   "h": 21
+  },
+  "ad.noDifference": {
+   "img": "console-calling-0.webp",
+   "x": 43,
+   "y": 461,
+   "w": 304,
+   "h": 46
+  },
+  "ad.shareTitle": {
+   "img": "console-calling-0.webp",
+   "x": 43,
+   "y": 569,
+   "w": 304,
+   "h": 17
+  },
+  "ad.share": {
+   "img": "console-calling-0.webp",
+   "x": 43,
+   "y": 598,
+   "w": 304,
+   "h": 94
+  },
+  "ad.callNotTitle": {
+   "img": "console-calling-0.webp",
+   "x": 43,
+   "y": 748,
+   "w": 304,
+   "h": 17
+  },
+  "ad.callSub": {
+   "img": "console-calling-1.webp",
+   "x": 20,
+   "y": 215,
+   "w": 350,
+   "h": 48
+  },
+  "ad.season": {
+   "img": "console-calling-1.webp",
+   "x": 43,
+   "y": 306,
+   "w": 304,
+   "h": 17
+  },
+  "ad.inRotation": {
+   "img": "console-calling-1.webp",
+   "x": 43,
+   "y": 373,
+   "w": 156,
+   "h": 22
+  },
+  "ad.noSeason": {
+   "img": "console-calling-1.webp",
+   "x": 43,
+   "y": 409,
+   "w": 304,
+   "h": 89
+  },
+  "ad.countsPublic": {
+   "img": "console-calling-1.webp",
+   "x": 43,
+   "y": 511,
+   "w": 304,
+   "h": 39
+  },
+  "ad.callNot": {
+   "img": "console-calling-2.webp",
+   "x": 43,
+   "y": 439,
+   "w": 304,
+   "h": 94
+  },
+  "ad.capTitle": {
+   "img": "console-calling-2.webp",
+   "x": 43,
+   "y": 589,
+   "w": 304,
+   "h": 17
+  },
+  "ad.cap": {
+   "img": "console-calling-2.webp",
+   "x": 43,
+   "y": 618,
+   "w": 304,
+   "h": 47
+  },
+  "ad.rule1": {
+   "img": "console-calling-2.webp",
+   "x": 20,
+   "y": 708,
+   "w": 350,
+   "h": 48
+  },
+  "ad.rule2": {
+   "img": "console-calling-2.webp",
+   "x": 20,
+   "y": 766,
+   "w": 350,
+   "h": 48
+  },
+  "ad.who.visitor": {
+   "img": "console-clicks-0.webp",
+   "x": 37,
+   "y": 412,
+   "w": 316,
+   "h": 19
+  },
+  "ad.evCounter": {
+   "img": "console-clicks-0.webp",
+   "x": 164,
+   "y": 184,
+   "w": 39,
+   "h": 36
+  },
+  "ad.evThank": {
+   "img": "console-clicks-0.webp",
+   "x": 282,
+   "y": 184,
+   "w": 68,
+   "h": 36
+  },
+  "ad.evViews": {
+   "img": "console-clicks-0.webp",
+   "x": 92,
+   "y": 227,
+   "w": 63,
+   "h": 36
+  },
+  "ad.evErrors": {
+   "img": "console-clicks-0.webp",
+   "x": 163,
+   "y": 227,
+   "w": 64,
+   "h": 36
+  },
+  "ad.evNoPerson": {
+   "img": "console-clicks-0.webp",
+   "x": 43,
+   "y": 101,
+   "w": 304,
+   "h": 40
+  },
+  "ad.evRefresh": {
+   "img": "console-clicks-0.webp",
+   "x": 178,
+   "y": 271,
+   "w": 70,
+   "h": 40
+  },
+  "ad.pushVisit": {
+   "img": "console-clicks-1.webp",
+   "x": 98,
+   "y": 335,
+   "w": 126,
+   "h": 36
+  },
+  "ad.pushEvery": {
+   "img": "console-clicks-1.webp",
+   "x": 232,
+   "y": 335,
+   "w": 84,
+   "h": 36
+  },
+  "ad.clicksSub": {
+   "img": "console-clicks-1.webp",
+   "x": 20,
+   "y": 215,
+   "w": 350,
+   "h": 48
+  },
+  "ad.pushTitle": {
+   "img": "console-clicks-1.webp",
+   "x": 43,
+   "y": 306,
+   "w": 304,
+   "h": 17
+  },
+  "ad.pushOffSub": {
+   "img": "console-clicks-1.webp",
+   "x": 43,
+   "y": 381,
+   "w": 304,
+   "h": 44
+  },
+  "ad.retSub": {
+   "img": "console-clicks-1.webp",
+   "x": 43,
+   "y": 724,
+   "w": 304,
+   "h": 44
+  },
+  "ad.retNever": {
+   "img": "console-clicks-1.webp",
+   "x": 243,
+   "y": 679,
+   "w": 68,
+   "h": 36
+  },
+  "ad.ret12m": {
+   "img": "console-clicks-1.webp",
+   "x": 171,
+   "y": 679,
+   "w": 64,
+   "h": 36
+  },
+  "ad.ret3m": {
+   "img": "console-clicks-1.webp",
+   "x": 43,
+   "y": 679,
+   "w": 57,
+   "h": 36
+  },
+  "ad.retTitle": {
+   "img": "console-clicks-1.webp",
+   "x": 43,
+   "y": 650,
+   "w": 304,
+   "h": 17
+  },
+  "ad.evShape": {
+   "img": "console-clicks-2.webp",
+   "x": 43,
+   "y": 413,
+   "w": 304,
+   "h": 17
+  },
+  "ad.evCounts": {
+   "img": "console-clicks-2.webp",
+   "x": 43,
+   "y": 442,
+   "w": 304,
+   "h": 24
+  },
+  "ad.evTopWords": {
+   "img": "console-clicks-2.webp",
+   "x": 43,
+   "y": 483,
+   "w": 304,
+   "h": 20
+  },
+  "ad.evTopScreens": {
+   "img": "console-clicks-2.webp",
+   "x": 43,
+   "y": 780,
+   "w": 304,
+   "h": 20
+  },
+  "ad.evNeverTitle": {
+   "img": "console-clicks-3.webp",
+   "x": 43,
+   "y": 414,
+   "w": 304,
+   "h": 17
+  },
+  "ad.evNever1": {
+   "img": "console-clicks-3.webp",
+   "x": 62,
+   "y": 443,
+   "w": 285,
+   "h": 68
+  },
+  "ad.evNever2": {
+   "img": "console-clicks-3.webp",
+   "x": 62,
+   "y": 520,
+   "w": 285,
+   "h": 46
+  },
+  "ad.evNever3": {
+   "img": "console-clicks-3.webp",
+   "x": 62,
+   "y": 574,
+   "w": 285,
+   "h": 91
+  },
+  "ad.evNever4": {
+   "img": "console-clicks-3.webp",
+   "x": 62,
+   "y": 674,
+   "w": 285,
+   "h": 46
+  },
+  "ad.evNever5": {
+   "img": "console-clicks-3.webp",
+   "x": 62,
+   "y": 729,
+   "w": 103,
+   "h": 23
+  },
+  "ad.evNeverFoot": {
+   "img": "console-clicks-3.webp",
+   "x": 43,
+   "y": 767,
+   "w": 304,
+   "h": 60
+  },
+  "ask.and": {
+   "img": "console-signed-out-0.webp",
+   "x": 90,
+   "y": 589,
+   "w": 18,
+   "h": 15
+  },
+  "dl.and": {
+   "img": "console-signed-out-0.webp",
+   "x": 90,
+   "y": 589,
+   "w": 18,
+   "h": 15
+  },
+  "si.send": {
+   "img": "console-signed-out-0.webp",
+   "x": 45,
+   "y": 473,
+   "w": 300,
+   "h": 52
+  },
+  "si.recaptcha": {
+   "img": "console-signed-out-0.webp",
+   "x": 20,
+   "y": 570,
+   "w": 350,
+   "h": 36
+  },
+  "si.privacy": {
+   "img": "console-signed-out-0.webp",
+   "x": 264,
+   "y": 571,
+   "w": 104,
+   "h": 15
+  },
+  "si.terms": {
+   "img": "console-signed-out-0.webp",
+   "x": 108,
+   "y": 589,
+   "w": 90,
+   "h": 15
+  },
+  "ad.signTitle": {
+   "img": "console-signed-out-0.webp",
+   "x": 45,
+   "y": 236,
+   "w": 300,
+   "h": 26
+  },
+  "ad.signIntro": {
+   "img": "console-signed-out-0.webp",
+   "x": 45,
+   "y": 278,
+   "w": 300,
+   "h": 70
+  },
+  "ad.notOperator": {
+   "img": "console-signed-out-0.webp",
+   "x": 20,
+   "y": 24,
+   "w": 350,
+   "h": 73
   }
  },
  "missed": [
@@ -5903,6 +6885,8 @@
   "co.shelfAhead",
   "co.waitingFull",
   "co.deliveryFree",
+  "co.payHow",
+  "co.cashSub",
   "co.locating",
   "co.locDenied",
   "co.inRange",
@@ -5955,28 +6939,19 @@
   "pl.aheadOther",
   "pl.next",
   "pl.payAfterH3qr",
-  "ask.yourOrder",
   "ask.yourItem",
   "ask.rode",
   "ask.eyebrowTag",
-  "ask.eyebrow",
-  "ask.ma",
   "ask.because",
-  "ask.and",
-  "ask.anything",
   "ask.noteTag",
-  "ask.note",
   "ask.whyTag",
-  "ask.why",
   "ask.goes",
   "ask.whose",
   "ask.noRailOwner",
   "ask.noRail",
   "ask.notThisTime",
-  "ask.thatsAll",
   "ask.video",
   "ask.videoShop",
-  "ask.end",
   "ask.whyReward",
   "ask.goesNow",
   "ask.sentNow",
@@ -6002,7 +6977,9 @@
   "ci.rowWelcomeShop",
   "ci.rowEach",
   "ci.rowHere",
+  "ci.why",
   "ci.mapLabel",
+  "ci.reach",
   "ci.mapShop",
   "ci.mapBands",
   "ci.working",
@@ -6024,9 +7001,11 @@
   "ci.whyDays",
   "ci.whyHours",
   "ci.whyEnded",
+  "ci.scan",
   "ci.scanTitle",
   "ci.scanOther",
   "ci.scanNot",
+  "ci.scanWhy",
   "rw.row",
   "rw.title",
   "rw.from",
@@ -6132,7 +7111,6 @@
   "gf.theirCode",
   "gf.showOrSendHint",
   "gf.thankDoor",
-  "gf.thankTreasury",
   "gf.thankTreasuryAnon",
   "gf.thankTreasuryWhere",
   "gf.thankTitle",
@@ -6200,7 +7178,6 @@
   "you.ordersOut",
   "you.historyMoved",
   "you.st.cancelled",
-  "you.seeIt",
   "cu.add",
   "cu.replace",
   "cu.name",
@@ -6367,7 +7344,6 @@
   "os.footPhone",
   "os.shortsHb",
   "os.shortsFamily",
-  "or.rowPickup",
   "or.rowDelivery",
   "or.rowGift",
   "or.stPacked",
@@ -6385,8 +7361,6 @@
   "or.stOnWay",
   "or.stBringing",
   "or.stPayFirst",
-  "or.readyCollect",
-  "or.view",
   "or.cameBack",
   "or.stLeft",
   "or.leftLine",
@@ -6455,7 +7429,6 @@
   "dl.leftHead",
   "dl.leftHow",
   "dl.leftHave",
-  "dl.leftConfirm",
   "dl.leftErr",
   "rc.replace",
   "rc.sent",
@@ -6504,8 +7477,10 @@
   "price.askAfter",
   "price.tagHead",
   "price.tagSub",
+  "common.loading",
   "common.saving",
   "powered",
+  "pay.pickup",
   "pay.delivery",
   "err.noShop",
   "err.load",
@@ -6631,7 +7606,6 @@
   "cq.shelfAside",
   "cq.owesFirst",
   "cq.paidFirst",
-  "cq.paidPill",
   "cq.waitingPayment",
   "cq.offerAgain",
   "cq.deliveryLine",
@@ -6726,8 +7700,6 @@
   "cq.codeFound",
   "cq.codeAllUsed",
   "hist.nothingOwed",
-  "hist.settled",
-  "hist.by",
   "hist.emptyToday",
   "hist.emptyWeek",
   "hist.weekOne",
@@ -6735,7 +7707,6 @@
   "hist.unsettledMany",
   "hist.monthOne",
   "hist.monthOther",
-  "hist.tookLabel",
   "hist.emptyMonth",
   "hist.emptyAll",
   "hist.closedN",
@@ -6836,7 +7807,6 @@
   "ppl.paidAmount",
   "ppl.paidOfDue",
   "ppl.paidRange",
-  "ppl.paidConfirm",
   "ppl.yourLabel",
   "ppl.message",
   "ppl.selfOff",
@@ -6881,7 +7851,6 @@
   "dl.needKhqr",
   "dl.needMap",
   "dl.needBands",
-  "dl.and",
   "dl.payNeeded",
   "sl.lastWeek",
   "sl.lastMonth",
@@ -6949,36 +7918,21 @@
   "me.caterCommissionHow",
   "me.caterCommissionBad",
   "rd.noBand",
-  "rd.band",
   "rd.addrLater",
-  "rd.offered",
-  "rd.accept",
-  "rd.passAside",
   "rd.passAsideLast",
   "rd.lastResort",
   "rd.restart",
   "rd.restartNobody",
   "rd.restartErr",
   "rd.moving",
-  "rd.untilNext",
   "rd.untilCounter",
-  "rd.offersOne",
-  "rd.offersOther",
   "rd.offHere",
   "rd.collect",
   "rd.pickedUp",
-  "rd.onTheWay",
-  "rd.alreadyPaid",
-  "rd.outside",
-  "rd.cantFind",
   "rd.sent",
-  "rd.askCode",
-  "rd.codePh",
-  "rd.confirm",
   "rd.wrong",
   "rd.cantCheck",
   "rd.notIn",
-  "rd.noLeave",
   "rd.photoAsked",
   "rd.photoTake",
   "rd.photoWhat",
@@ -6988,7 +7942,6 @@
   "rd.photoTakeNow",
   "rd.photoMine",
   "rd.leaveNoPhoto",
-  "rd.positionEnds",
   "rd.delivered",
   "rd.hasIt",
   "rd.theyHaveIt",
@@ -7000,22 +7953,19 @@
   "rd.backQueue",
   "rd.backRotation",
   "rd.loadErr",
+  "rd.noRuns",
   "rd.leftAtDoor",
   "rd.leftConfirms",
-  "rd.route",
   "rd.dir.n",
   "rd.dir.ne",
   "rd.dir.e",
   "rd.dir.se",
-  "rd.dir.s",
   "rd.dir.sw",
   "rd.dir.w",
   "rd.dir.nw",
-  "rd.mapLabel",
   "rd.notices",
   "rd.noticesSub",
   "rd.homeScreen",
-  "rd.from",
   "rd.offAllSays",
   "si.title",
   "si.intro",
@@ -7026,7 +7976,6 @@
   "si.hubWhere",
   "si.codeLabel",
   "si.signingIn",
-  "si.send",
   "si.sending",
   "si.errDomain",
   "si.errCode",
@@ -7034,9 +7983,6 @@
   "si.errMany",
   "si.errGeneric",
   "si.from",
-  "si.recaptcha",
-  "si.privacy",
-  "si.terms",
   "si.resend",
   "si.resent",
   "si.errExpired",
@@ -7185,7 +8131,6 @@
   "cs.send",
   "cs.placed",
   "cs.placedNamed",
-  "cs.placedPaid",
   "cs.placedLater",
   "cs.next",
   "cs.errSoldOut",
@@ -7253,31 +8198,23 @@
   "cg.owedNow",
   "cg.short",
   "cg.payEarnings",
-  "hs.kindPickup",
   "hs.kindDelivery",
   "hs.kindGift",
   "hs.kindCatering",
-  "hs.what",
   "hs.giftLine",
   "hs.after",
-  "hs.money",
   "hs.bringing",
   "hs.tab",
   "hs.points",
   "hs.thankedAfter",
-  "hs.paid",
   "hs.owed",
   "hs.ownerGift",
   "hs.bank",
-  "hs.steps",
-  "hs.placed",
   "hs.takenBy",
   "hs.arrived",
   "hs.bookedFor",
-  "hs.paidTo",
   "hs.byBank",
   "hs.delivered",
-  "hs.handedBy",
   "hs.closedBy",
   "hs.commission",
   "hs.commissionPaid",
@@ -7353,10 +8290,7 @@
   "push.runclosed.body",
   "push.click.title",
   "push.click.body",
-  "ad.signTitle",
-  "ad.signIntro",
   "ad.homeScreen",
-  "ad.notOperator",
   "ad.logged",
   "ad.perPhoneWhyKept",
   "ad.logApproved",
@@ -7370,8 +8304,6 @@
   "ad.logReportFiled",
   "ad.logReportClosed",
   "ad.logDiscovery",
-  "ad.shopsSub",
-  "ad.findShop",
   "ad.colTag",
   "ad.colTier",
   "ad.colJoined",
@@ -7379,23 +8311,11 @@
   "ad.colState",
   "ad.noMatch",
   "ad.noShops",
-  "ad.noColumns",
-  "ad.colRevenue",
-  "ad.colThanks",
-  "ad.colRating",
-  "ad.colImpressions",
-  "ad.noColumnsWhy",
-  "ad.requestsTitle",
   "ad.randomTag",
-  "ad.movesAround",
   "ad.approving",
-  "ad.approve",
   "ad.finishApproval",
-  "ad.approveRandom",
-  "ad.decline",
   "ad.declineYes",
   "ad.working",
-  "ad.requestsFoot",
   "ad.delivers",
   "ad.noMenu",
   "ad.tier",
@@ -7422,60 +8342,14 @@
   "ad.peopleFoot",
   "ad.shopNeverTitle",
   "ad.shopNever3",
-  "ad.reportsSub",
   "ad.kindRider",
   "ad.kindName",
   "ad.kindShop",
   "ad.kindOther",
   "ad.suspendApproval",
-  "ad.noReports",
-  "ad.recordTitle",
-  "ad.recordKind",
-  "ad.recordShop",
   "ad.recordNoShop",
   "ad.recordWho",
-  "ad.recordText",
   "ad.record",
-  "ad.recordFoot",
-  "ad.reachTitle",
-  "ad.reach1",
-  "ad.reach2",
-  "ad.reachNot1",
-  "ad.reachNot2",
-  "ad.reachNot3",
-  "ad.reachNot4",
-  "ad.reachFoot",
-  "ad.themesSub",
-  "ad.themeDefault",
-  "ad.themeOne",
-  "ad.themeUnused",
-  "ad.themeFill",
-  "ad.noPicker",
-  "ad.noPickerWhy",
-  "ad.shape",
-  "ad.shapeIs",
-  "ad.themesMeasured",
-  "ad.callSub",
-  "ad.season",
-  "ad.inRotation",
-  "ad.noSeason",
-  "ad.countsPublic",
-  "ad.order",
-  "ad.orderNone",
-  "ad.orderWhy",
-  "ad.shopSees",
-  "ad.fromNeighbour",
-  "ad.fromPool",
-  "ad.paidFromSomeone",
-  "ad.noDifference",
-  "ad.shareTitle",
-  "ad.share",
-  "ad.callNotTitle",
-  "ad.callNot",
-  "ad.capTitle",
-  "ad.cap",
-  "ad.rule1",
-  "ad.rule2",
   "ad.refuseUnfinished",
   "ad.refuseMidRun",
   "ad.refuseOwner",
@@ -7496,42 +8370,14 @@
   "ad.logAffiliateDeclined",
   "ad.who.owner",
   "ad.who.customer",
-  "ad.who.visitor",
-  "ad.evCounter",
-  "ad.evThank",
-  "ad.evViews",
-  "ad.evErrors",
-  "ad.pushVisit",
-  "ad.pushEvery",
-  "ad.clicksSub",
-  "ad.pushTitle",
-  "ad.pushOffSub",
   "ad.pushVisitSub",
   "ad.pushEverySub",
   "ad.pushNoPhone",
-  "ad.evShape",
-  "ad.evCounts",
-  "ad.evTopWords",
-  "ad.evTopScreens",
-  "ad.evNoPerson",
-  "ad.evRefresh",
   "ad.evNone",
   "ad.evOlder",
-  "ad.evNeverTitle",
-  "ad.evNever1",
-  "ad.evNever2",
-  "ad.evNever3",
-  "ad.evNever4",
-  "ad.evNever5",
   "ad.retFailed",
   "ad.retDone",
   "ad.retNeverSub",
-  "ad.retSub",
-  "ad.retNever",
-  "ad.ret12m",
-  "ad.ret3m",
-  "ad.retTitle",
-  "ad.evNeverFoot",
   "ad.seat",
   "ad.seatTake",
   "ad.seatedHere",
