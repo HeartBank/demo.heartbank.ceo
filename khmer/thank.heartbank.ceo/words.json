@@ -312,6 +312,16 @@
      "en": "This keeps the Khmer that native readers approve for our sites.",
      "km": "កន្លែងនេះរក្សាទុកភាសាខ្មែរដែលអ្នកអានជនជាតិខ្មែរបានអនុម័ត សម្រាប់គេហទំព័ររបស់យើង។",
      "status": "draft"
+    },
+    "homeYours": {
+     "en": "Your sites",
+     "km": "គេហទំព័ររបស់អ្នក",
+     "status": "draft"
+    },
+    "homeOthers": {
+     "en": "Other sites (you may review these too)",
+     "km": "គេហទំព័រផ្សេងទៀត (អ្នកក៏អាចពិនិត្យបានដែរ)",
+     "status": "draft"
     }
    },
    "name_km": "ទំព័រដើម · translate.333.eco"

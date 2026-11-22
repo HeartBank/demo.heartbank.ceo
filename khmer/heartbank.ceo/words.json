@@ -1,0 +1,496 @@
+{
+ "version": 1,
+ "note": "The review tool's OWN words (the page, its instructions, the home page at translate.333.eco). Our Khmer is a draft until a native reader approves it in the tool's own sheet (demo.333.eco/khmer/translate.333.eco/); `review.mjs self-apply` writes the approved Khmer here and marks it reviewed. ⛔ Never mark an entry reviewed by hand.",
+ "groups": [
+  {
+   "name": "Review page · buttons and labels",
+   "entries": {
+    "approve": {
+     "en": "Right as drafted",
+     "km": "ត្រឹមត្រូវហើយ",
+     "status": "draft"
+    },
+    "correct": {
+     "en": "Correct it",
+     "km": "កែតម្រូវ",
+     "status": "draft"
+    },
+    "ask": {
+     "en": "Ask a question",
+     "km": "សួរសំណួរ",
+     "status": "draft"
+    },
+    "save": {
+     "en": "Save",
+     "km": "រក្សាទុក",
+     "status": "draft"
+    },
+    "cancel": {
+     "en": "Cancel",
+     "km": "បោះបង់",
+     "status": "draft"
+    },
+    "todo": {
+     "en": "Not yet reviewed",
+     "km": "មិនទាន់បានពិនិត្យ",
+     "status": "draft"
+    },
+    "approved": {
+     "en": "Right as drafted",
+     "km": "ត្រឹមត្រូវហើយ",
+     "status": "draft"
+    },
+    "corrected": {
+     "en": "Corrected",
+     "km": "បានកែតម្រូវ",
+     "status": "draft"
+    },
+    "draft": {
+     "en": "Our draft",
+     "km": "សេចក្តីព្រាងរបស់យើង",
+     "status": "draft"
+    },
+    "noKhmer": {
+     "en": "No Khmer yet",
+     "km": "មិនទាន់មានភាសាខ្មែរ",
+     "status": "draft"
+    },
+    "khmerOnly": {
+     "en": "(shown in Khmer only)",
+     "km": "(បង្ហាញតែជាភាសាខ្មែរ)",
+     "status": "draft"
+    },
+    "appears": {
+     "en": "Where it appears",
+     "km": "កន្លែងដែលវាលេចឡើង",
+     "status": "draft"
+    },
+    "questions": {
+     "en": "Questions",
+     "km": "សំណួរ",
+     "status": "draft"
+    },
+    "earlier": {
+     "en": "Earlier entries",
+     "km": "ការបញ្ចូលមុនៗ",
+     "status": "draft"
+    },
+    "by": {
+     "en": "by {who}",
+     "km": "ដោយ {who}",
+     "status": "draft"
+    },
+    "yourKhmer": {
+     "en": "Your Khmer",
+     "km": "ភាសាខ្មែររបស់អ្នក",
+     "status": "draft"
+    },
+    "yourQuestion": {
+     "en": "Your question",
+     "km": "សំណួររបស់អ្នក",
+     "status": "draft"
+    },
+    "working": {
+     "en": "Saving",
+     "km": "កំពុងរក្សាទុក",
+     "status": "draft"
+    },
+    "show": {
+     "en": "Show",
+     "km": "បង្ហាញ",
+     "status": "draft"
+    },
+    "all": {
+     "en": "All",
+     "km": "ទាំងអស់",
+     "status": "draft"
+    },
+    "progress": {
+     "en": "{a} of {b} reviewed",
+     "km": "បានពិនិត្យ {a} ក្នុងចំណោម {b}",
+     "status": "draft"
+    },
+    "find": {
+     "en": "Find",
+     "km": "ស្វែងរក",
+     "status": "draft"
+    },
+    "findHint": {
+     "en": "A word, or a number",
+     "km": "ពាក្យ ឬលេខ",
+     "status": "draft"
+    },
+    "nothing": {
+     "en": "Nothing matches.",
+     "km": "គ្មានអ្វីត្រូវគ្នាទេ។",
+     "status": "draft"
+    },
+    "unsent": {
+     "en": "Unsent text, kept on this device",
+     "km": "អត្ថបទមិនទាន់រក្សាទុក ត្រូវបានទុកនៅលើឧបករណ៍នេះ",
+     "status": "draft"
+    },
+    "wholeScreen": {
+     "en": "The whole screen",
+     "km": "អេក្រង់ទាំងមូល",
+     "status": "draft"
+    },
+    "picture": {
+     "en": "Where it is on the screen",
+     "km": "ទីតាំងរបស់វានៅលើអេក្រង់",
+     "status": "draft"
+    },
+    "language": {
+     "en": "Language",
+     "km": "ភាសា",
+     "status": "draft"
+    },
+    "scheme": {
+     "en": "Light or dark",
+     "km": "ភ្លឺ ឬងងឹត",
+     "status": "draft"
+    },
+    "schemeAuto": {
+     "en": "Same as this device",
+     "km": "ដូចឧបករណ៍នេះ",
+     "status": "draft"
+    },
+    "schemeLight": {
+     "en": "Light",
+     "km": "ភ្លឺ",
+     "status": "draft"
+    },
+    "schemeDark": {
+     "en": "Dark",
+     "km": "ងងឹត",
+     "status": "draft"
+    }
+   },
+   "name_km": "ទំព័រពិនិត្យ · ប៊ូតុង និងស្លាក"
+  },
+  {
+   "name": "Review page · messages",
+   "entries": {
+    "writer": {
+     "en": "Your review link works. What you save is kept, and nothing is erased.",
+     "km": "តំណរបស់អ្នកដំណើរការ។ អ្វីដែលអ្នករក្សាទុកនឹងនៅជាប់ ហើយមិនត្រូវបានលុបទេ។",
+     "status": "draft"
+    },
+    "viewOnly": {
+     "en": "View only. Reviewers open this page from their own link.",
+     "km": "សម្រាប់មើលតែប៉ុណ្ណោះ។ អ្នកពិនិត្យបើកទំព័រនេះពីតំណផ្ទាល់ខ្លួនរបស់ពួកគេ។",
+     "status": "draft"
+    },
+    "badLink": {
+     "en": "This link does not work (canceled or mistyped). The page is view only.",
+     "km": "តំណនេះមិនដំណើរការទេ (ត្រូវបានបិទ ឬវាយខុស)។ ទំព័រនេះសម្រាប់មើលតែប៉ុណ្ណោះ។",
+     "status": "draft"
+    },
+    "offline": {
+     "en": "The store could not be reached. Showing our drafts only; nothing can be saved.",
+     "km": "មិនអាចភ្ជាប់ទៅកន្លែងរក្សាទុកបានទេ។ កំពុងបង្ហាញតែសេចក្តីព្រាងរបស់យើង ហើយមិនអាចរក្សាទុកបានទេ។",
+     "status": "draft"
+    },
+    "saved": {
+     "en": "Saved",
+     "km": "បានរក្សាទុក",
+     "status": "draft"
+    },
+    "notSaved": {
+     "en": "Not saved. Check the connection and press Save again.",
+     "km": "មិនទាន់បានរក្សាទុកទេ។ សូមពិនិត្យការតភ្ជាប់ ហើយចុច «រក្សាទុក» ម្តងទៀត។",
+     "status": "draft"
+    },
+    "linkGone": {
+     "en": "This link no longer works. Please ask for a new one.",
+     "km": "តំណនេះលែងដំណើរការហើយ។ សូមសុំតំណថ្មី។",
+     "status": "draft"
+    },
+    "tooMany": {
+     "en": "That is a full day's entries. Please continue tomorrow.",
+     "km": "ថ្ងៃនេះបានរក្សាទុកច្រើនហើយ។ សូមបន្តនៅថ្ងៃស្អែក។",
+     "status": "draft"
+    },
+    "englishChanged": {
+     "en": "The English changed after this review. Please look again.",
+     "km": "អត្ថបទអង់គ្លេសបានផ្លាស់ប្តូរ ក្រោយការពិនិត្យនេះ។ សូមមើលម្តងទៀត។",
+     "status": "draft"
+    },
+    "draftChanged": {
+     "en": "Our draft changed after it was approved. Please look again.",
+     "km": "សេចក្តីព្រាងរបស់យើងបានផ្លាស់ប្តូរ ក្រោយពេលអ្នកយល់ព្រម។ សូមមើលម្តងទៀត។",
+     "status": "draft"
+    },
+    "keep": {
+     "en": "Keep {x} as it is: the page fills it in.",
+     "km": "សូមរក្សា {x} ទុកដដែល។ ទំព័រនឹងបំពេញវាដោយខ្លួនឯង។",
+     "status": "draft"
+    },
+    "again": {
+     "en": "Press Save again to keep it as written.",
+     "km": "ចុច «រក្សាទុក» ម្តងទៀត ដើម្បីរក្សាទុកតាមដែលបានសរសេរ។",
+     "status": "draft"
+    }
+   },
+   "name_km": "ទំព័រពិនិត្យ · សារ"
+  },
+  {
+   "name": "Review page · instructions and footer",
+   "entries": {
+    "title": {
+     "en": "Khmer review",
+     "km": "ការពិនិត្យភាសាខ្មែរ",
+     "status": "draft"
+    },
+    "how": {
+     "en": "How to review",
+     "km": "របៀបពិនិត្យ",
+     "status": "draft"
+    },
+    "how1": {
+     "en": "These are all {count} pieces of text the site shows. The Khmer is our draft. Where it is right, press Right as drafted; where it is wrong, unclear or unnatural, press Correct it and write your Khmer. Words in braces, such as {n}, are filled in by the site: please keep them.",
+     "km": "នេះជាពាក្យទាំងអស់ដែលគេហទំព័រនេះបង្ហាញ ចំនួន {count} ។ ភាសាខ្មែរនេះជាសេចក្តីព្រាងរបស់យើង។ ប្រសិនបើត្រឹមត្រូវ សូមចុច «ត្រឹមត្រូវហើយ»។ ប្រសិនបើខុស មិនច្បាស់ ឬមិនធម្មជាតិ សូមចុច «កែតម្រូវ» ហើយសរសេរភាសាខ្មែររបស់អ្នក។ ពាក្យក្នុងវង់ក្រចក ដូចជា {n} ទំព័របំពេញដោយខ្លួនឯង សូមរក្សាវាទុកដដែល។",
+     "status": "draft"
+    },
+    "how2": {
+     "en": "Two native readers may review; the latest entry is the one used. Every entry is kept beside the earlier ones, and nothing is erased.",
+     "km": "អ្នកអានជនជាតិខ្មែរពីរនាក់អាចពិនិត្យបាន ហើយការបញ្ចូលចុងក្រោយគឺជាអ្វីដែលត្រូវប្រើ។ ការបញ្ចូលនីមួយៗត្រូវរក្សាទុកជាមួយការបញ្ចូលមុនៗ គ្មានអ្វីត្រូវលុបទេ។",
+     "status": "draft"
+    },
+    "how3": {
+     "en": "Each entry shows a picture of the screen it is on, with a red arrow at its words. The pictures show our draft Khmer, as the site was on {date}.",
+     "km": "ធាតុនីមួយៗបង្ហាញរូបភាពនៃអេក្រង់ដែលវានៅ ជាមួយព្រួញក្រហមចង្អុលទៅពាក្យរបស់វា។ រូបភាពទាំងនេះបង្ហាញសេចក្តីព្រាងខ្មែររបស់យើង ដូចគេហទំព័រនៅថ្ងៃទី {date}។",
+     "status": "draft"
+    },
+    "made": {
+     "en": "Sheet made {date}.",
+     "km": "សន្លឹកនេះបង្កើតនៅថ្ងៃ {date}។",
+     "status": "draft"
+    },
+    "kept": {
+     "en": "Entries are kept at translate.333.eco, without names on this page. A site changes only when its makers bring the approved Khmer in.",
+     "km": "ការបញ្ចូលត្រូវបានរក្សាទុកនៅ translate.333.eco ដោយគ្មានឈ្មោះនៅលើទំព័រនេះ។ គេហទំព័រផ្លាស់ប្តូរ លុះត្រាតែអ្នកបង្កើតវានាំយកភាសាខ្មែរដែលបានអនុម័តចូល។",
+     "status": "draft"
+    },
+    "ownDraft": {
+     "en": "The Khmer of this page's own words is our draft too.",
+     "km": "ភាសាខ្មែរនៃពាក្យរបស់ទំព័រនេះ ក៏ជាសេចក្តីព្រាងរបស់យើងដែរ។",
+     "status": "draft"
+    },
+    "noScript": {
+     "en": "This page needs JavaScript to save. It can still be printed for a review on paper.",
+     "km": "ទំព័រនេះត្រូវការ JavaScript ដើម្បីរក្សាទុក។ អ្នកនៅតែអាចបោះពុម្ពវា ដើម្បីពិនិត្យលើក្រដាសបាន។",
+     "status": "draft"
+    },
+    "fromCommit": {
+     "en": "From {site} at {commit}.",
+     "km": "ពី {site} នៅ {commit}។",
+     "status": "draft"
+    }
+   },
+   "name_km": "ទំព័រពិនិត្យ · ការណែនាំ និងបាតទំព័រ"
+  },
+  {
+   "name": "Home page · translate.333.eco",
+   "entries": {
+    "homeLede": {
+     "en": "The sites whose Khmer you can review. Each opens with your own link.",
+     "km": "គេហទំព័រដែលអ្នកអាចពិនិត្យភាសាខ្មែរបាន។ នីមួយៗបើកជាមួយតំណផ្ទាល់ខ្លួនរបស់អ្នក។",
+     "status": "draft"
+    },
+    "homeViewOnly": {
+     "en": "Open this page from your own link to review. Without it, the pages are view only.",
+     "km": "សូមបើកទំព័រនេះពីតំណផ្ទាល់ខ្លួនរបស់អ្នក ដើម្បីពិនិត្យ។ បើគ្មានតំណ ទំព័រទាំងនោះសម្រាប់មើលតែប៉ុណ្ណោះ។",
+     "status": "draft"
+    },
+    "homeNone": {
+     "en": "No site is under review yet.",
+     "km": "មិនទាន់មានគេហទំព័រណាមួយសម្រាប់ពិនិត្យនៅឡើយទេ។",
+     "status": "draft"
+    },
+    "homeAbout": {
+     "en": "This keeps the Khmer that native readers approve for our sites.",
+     "km": "កន្លែងនេះរក្សាទុកភាសាខ្មែរដែលអ្នកអានជនជាតិខ្មែរបានអនុម័ត សម្រាប់គេហទំព័ររបស់យើង។",
+     "status": "draft"
+    },
+    "homeYours": {
+     "en": "Your sites",
+     "km": "គេហទំព័ររបស់អ្នក",
+     "status": "draft"
+    },
+    "homeOthers": {
+     "en": "Other sites (you may review these too)",
+     "km": "គេហទំព័រផ្សេងទៀត (អ្នកក៏អាចពិនិត្យបានដែរ)",
+     "status": "draft"
+    }
+   },
+   "name_km": "ទំព័រដើម · translate.333.eco"
+  },
+  {
+   "name": "Task pages · typing and choosing (private tasks)",
+   "entries": {
+    "homeTasks": {
+     "en": "Your tasks",
+     "km": "កិច្ចការរបស់អ្នក",
+     "status": "draft"
+    },
+    "taskAll": {
+     "en": "All tasks",
+     "km": "កិច្ចការទាំងអស់",
+     "status": "draft"
+    },
+    "taskPrivate": {
+     "en": "Private: the pictures and what you enter here open only with your own link or the founder's.",
+     "km": "ឯកជន៖ រូបភាព និងអ្វីដែលអ្នកបញ្ចូលនៅទីនេះ បើកបានតែជាមួយតំណផ្ទាល់ខ្លួនរបស់អ្នក ឬតំណរបស់ស្ថាបនិកប៉ុណ្ណោះ។",
+     "status": "draft"
+    },
+    "taskNeedLink": {
+     "en": "Open this page from your own link.",
+     "km": "សូមបើកទំព័រនេះពីតំណផ្ទាល់ខ្លួនរបស់អ្នក។",
+     "status": "draft"
+    },
+    "taskNotYours": {
+     "en": "This link cannot open this task.",
+     "km": "តំណនេះមិនអាចបើកកិច្ចការនេះបានទេ។",
+     "status": "draft"
+    },
+    "typeLede": {
+     "en": "Type each page from its picture, exactly as printed: everything on the page, from top to bottom, keeping the line breaks.",
+     "km": "សូមវាយទំព័រនីមួយៗតាមរូបភាពរបស់វា ឲ្យដូចការបោះពុម្ពទាំងស្រុង៖ អ្វីៗទាំងអស់នៅលើទំព័រ ពីលើចុះក្រោម ដោយរក្សាការចុះបន្ទាត់ដដែល។",
+     "status": "draft"
+    },
+    "typeWhy": {
+     "en": "These pages test how well the reading tool reads other printings. Please type only what you see, and do not correct the print.",
+     "km": "ទំព័រទាំងនេះសម្រាប់សាកល្បងថា ឧបករណ៍អានអាចអានការបោះពុម្ពផ្សេងៗបានល្អប៉ុណ្ណា។ សូមវាយតែអ្វីដែលអ្នកឃើញ ហើយកុំកែការបោះពុម្ព។",
+     "status": "draft"
+    },
+    "typeAtthakatha": {
+     "en": "Pāli commentary (aṭṭhakathā)",
+     "km": "អដ្ឋកថា (បាលី)",
+     "status": "draft"
+    },
+    "typeTika": {
+     "en": "Pāli sub-commentary (ṭīkā)",
+     "km": "ដីកា (បាលី)",
+     "status": "draft"
+    },
+    "typeKhmer2009": {
+     "en": "The Tipiṭaka translated with its commentaries (2009 series)",
+     "km": "ព្រះត្រៃបិដក ប្រែរួមនឹងអដ្ឋកថា (ឆ្នាំ ២០០៩)",
+     "status": "draft"
+    },
+    "pageN": {
+     "en": "Page {n} of {of}",
+     "km": "ទំព័រទី {n} នៃ {of}",
+     "status": "draft"
+    },
+    "pdfPage": {
+     "en": "PDF page {page}",
+     "km": "ទំព័រ PDF ទី {page}",
+     "status": "draft"
+    },
+    "pagesDone": {
+     "en": "{a} of {b} pages done",
+     "km": "រួចរាល់ {a} ក្នុងចំណោម {b} ទំព័រ",
+     "status": "draft"
+    },
+    "pageDone": {
+     "en": "Done",
+     "km": "រួចរាល់",
+     "status": "draft"
+    },
+    "pageTodo": {
+     "en": "Not typed yet",
+     "km": "មិនទាន់វាយ",
+     "status": "draft"
+    },
+    "yourTyping": {
+     "en": "Your typing",
+     "km": "អត្ថបទដែលអ្នកវាយ",
+     "status": "draft"
+    },
+    "zoomIn": {
+     "en": "Bigger picture",
+     "km": "ពង្រីករូបភាព",
+     "status": "draft"
+    },
+    "zoomOut": {
+     "en": "Fit the picture",
+     "km": "បង្រួមរូបភាព",
+     "status": "draft"
+    },
+    "prev": {
+     "en": "Previous",
+     "km": "មុន",
+     "status": "draft"
+    },
+    "next": {
+     "en": "Next",
+     "km": "បន្ទាប់",
+     "status": "draft"
+    },
+    "chooseLede": {
+     "en": "Each of these pages was saved twice, and the versions differ. Look at the picture of the page and choose the version that matches it.",
+     "km": "ទំព័រនីមួយៗខាងក្រោមត្រូវបានរក្សាទុកពីរដង ហើយកំណែទាំងនោះខុសគ្នា។ សូមមើលរូបភាពទំព័រ ហើយជ្រើសរើសកំណែដែលត្រូវនឹងវា។",
+     "status": "draft"
+    },
+    "chooseDiff": {
+     "en": "Where the versions differ is highlighted.",
+     "km": "កន្លែងដែលកំណែខុសគ្នា ត្រូវបានគូសពណ៌។",
+     "status": "draft"
+    },
+    "volPage": {
+     "en": "Volume {volume} · PDF page {pdf} · {leaf}",
+     "km": "ភាគ {volume} · ទំព័រ PDF ទី {pdf} · {leaf}",
+     "status": "draft"
+    },
+    "leafPali": {
+     "en": "Pāli",
+     "km": "បាលី",
+     "status": "draft"
+    },
+    "leafKhmer": {
+     "en": "Khmer",
+     "km": "ខ្មែរ",
+     "status": "draft"
+    },
+    "savedOn": {
+     "en": "Saved {date}",
+     "km": "រក្សាទុកថ្ងៃ {date}",
+     "status": "draft"
+    },
+    "newest": {
+     "en": "newest",
+     "km": "ថ្មីបំផុត",
+     "status": "draft"
+    },
+    "thisOne": {
+     "en": "This one matches the page",
+     "km": "កំណែនេះត្រូវនឹងទំព័រ",
+     "status": "draft"
+    },
+    "neither": {
+     "en": "Neither matches",
+     "km": "គ្មានកំណែណាត្រូវទេ",
+     "status": "draft"
+    },
+    "chosen": {
+     "en": "Your choice",
+     "km": "ជម្រើសរបស់អ្នក",
+     "status": "draft"
+    },
+    "choicesDone": {
+     "en": "{a} of {b} pages chosen",
+     "km": "បានជ្រើសរើស {a} ក្នុងចំណោម {b} ទំព័រ",
+     "status": "draft"
+    },
+    "machineReading": {
+     "en": "a machine reading from an early experiment, not typed",
+     "km": "ការអានដោយម៉ាស៊ីន ពីការសាកល្បងដំបូង មិនមែនជាការវាយទេ",
+     "status": "draft"
+    }
+   },
+   "name_km": "ទំព័រកិច្ចការ · ការវាយ និងការជ្រើសរើស (កិច្ចការឯកជន)"
+  }
+ ]
+}

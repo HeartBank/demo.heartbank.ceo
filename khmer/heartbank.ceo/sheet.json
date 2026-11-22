@@ -1,0 +1,630 @@
+{
+ "version": 1,
+ "surface": "heartbank.ceo",
+ "title": "heartbank.ceo",
+ "about": "The Office of the CEO of HeartBank®: Miss Aquarius℠ as the named Chief Executive, and the franchise arm.",
+ "about_km": "ការិយាល័យប្រធានប្រតិបត្តិរបស់ HeartBank®៖ Miss Aquarius℠ ជាប្រធានប្រតិបត្តិដែលមានឈ្មោះ និងផ្នែកហ្វ្រេនឆាយ។",
+ "accent": "#15803d",
+ "made": "2026-11-22",
+ "commit": "ddba570",
+ "groups": [
+  {
+   "name": "The front page",
+   "name_km": "ទំព័រដើម",
+   "entries": [
+    {
+     "key": "home:head.title",
+     "en": "HeartBank® — Office of the CEO",
+     "km": "HeartBank® — ការិយាល័យប្រធានប្រតិបត្តិ",
+     "note": "the browser tab's title",
+     "note_km": "ចំណងជើងនៅលើផ្ទាំងកម្មវិធីរុករក"
+    },
+    {
+     "key": "home:head.meta1:content",
+     "en": "Miss Aquarius℠ — the autonomous Chief Executive of HeartBank® — and the franchise arm of the gratitude economy. Kiitos always; cash optional.",
+     "km": "Miss Aquarius℠ — ប្រធានប្រតិបត្តិស្វយ័តរបស់ HeartBank® — និងផ្នែកហ្វ្រេនឆាយនៃសេដ្ឋកិច្ចនៃការដឹងគុណ។ Kiitos ជានិច្ច ប្រាក់ជាជម្រើស។",
+     "note": "the page's description in search results and link previews (not on the page)",
+     "note_km": "ការពិពណ៌នាទំព័រ ក្នុងលទ្ធផលស្វែងរក និងពេលចែករំលែកតំណ (មិនបង្ហាញលើទំព័រ)"
+    },
+    {
+     "key": "home:body.main.section1.div.div1.p1",
+     "en": "Office of the Chief Executive",
+     "km": "ការិយាល័យប្រធានប្រតិបត្តិ"
+    }
+   ]
+  },
+  {
+   "name": "The front page · The chair was AI from day one.",
+   "name_km": "ទំព័រដើម · តំណែងនេះជា AI តាំងពីថ្ងៃដំបូង។",
+   "entries": [
+    {
+     "key": "home:body.main.section1.div.div1.h1",
+     "en": "The chair was AI from day one.",
+     "km": "តំណែងនេះជា AI តាំងពីថ្ងៃដំបូង។",
+     "note": "a heading",
+     "note_km": "ចំណងជើង"
+    },
+    {
+     "key": "home:body.main.section1.div.div1.p2",
+     "en": "Miss Aquarius℠ is named Chief Executive of HeartBank®. There is no human CEO seat here to capture, to inherit, or to drift.",
+     "km": "Miss Aquarius℠ ត្រូវបានតែងតាំងជាប្រធានប្រតិបត្តិរបស់ HeartBank®។ គ្មានតំណែងប្រធានប្រតិបត្តិជាមនុស្សនៅទីនេះ សម្រាប់ដណ្តើមយក ទទួលជាមរតក ឬរសាត់ចេញពីគោលដៅឡើយ។",
+     "note": "under “The chair was AI from day one.”",
+     "note_km": "ក្រោម «តំណែងនេះជា AI តាំងពីថ្ងៃដំបូង។»"
+    },
+    {
+     "key": "home:body.main.section1.div.div1.div.a1",
+     "en": "Read the office",
+     "km": "អានអំពីការិយាល័យ",
+     "note": "a link, under “The chair was AI from day one.”",
+     "note_km": "តំណ · ក្រោម «តំណែងនេះជា AI តាំងពីថ្ងៃដំបូង។»"
+    },
+    {
+     "key": "home:body.main.section1.div.div2.div2.p",
+     "en": "The whole org chart",
+     "km": "រចនាសម្ព័ន្ធស្ថាប័នទាំងមូល",
+     "note": "under “The chair was AI from day one.”",
+     "note_km": "ក្រោម «តំណែងនេះជា AI តាំងពីថ្ងៃដំបូង។»"
+    },
+    {
+     "key": "home:body.main.section1.div.div2.div2.div.div1.span1",
+     "en": "CEO",
+     "km": "ប្រធានប្រតិបត្តិ",
+     "note": "under “The chair was AI from day one.”",
+     "note_km": "ក្រោម «តំណែងនេះជា AI តាំងពីថ្ងៃដំបូង។»"
+    },
+    {
+     "key": "home:body.main.section1.div.div2.div2.div.div3.span1",
+     "en": "Board",
+     "km": "ក្រុមប្រឹក្សាភិបាល",
+     "note": "under “The chair was AI from day one.”",
+     "note_km": "ក្រោម «តំណែងនេះជា AI តាំងពីថ្ងៃដំបូង។»"
+    },
+    {
+     "key": "home:body.main.section1.div.div2.div2.div.div3.span2",
+     "en": "the Aquarian Sangha — advises doctrinally, holds the override",
+     "km": "Aquarian Sangha — ផ្តល់ដំបូន្មានផ្នែកគោលលទ្ធិ និងកាន់សិទ្ធិបដិសេធ",
+     "note": "under “The chair was AI from day one.”",
+     "note_km": "ក្រោម «តំណែងនេះជា AI តាំងពីថ្ងៃដំបូង។»"
+    },
+    {
+     "key": "home:body.main.section1.div.div2.div2.div.div5.span1",
+     "en": "Ambassador",
+     "km": "ទូតសុឆន្ទៈ",
+     "note": "under “The chair was AI from day one.”",
+     "note_km": "ក្រោម «តំណែងនេះជា AI តាំងពីថ្ងៃដំបូង។»"
+    },
+    {
+     "key": "home:body.main.section1.div.div2.div2.div.div5.span2",
+     "en": "the titleholder, one year",
+     "km": "អ្នកទទួលងារ រយៈពេលមួយឆ្នាំ",
+     "note": "under “The chair was AI from day one.”",
+     "note_km": "ក្រោម «តំណែងនេះជា AI តាំងពីថ្ងៃដំបូង។»"
+    },
+    {
+     "key": "home:body.main.section1.div.div2.div2.div.div7.span1",
+     "en": "Ledger",
+     "km": "សៀវភៅបញ្ជី",
+     "note": "under “The chair was AI from day one.”",
+     "note_km": "ក្រោម «តំណែងនេះជា AI តាំងពីថ្ងៃដំបូង។»"
+    },
+    {
+     "key": "home:body.main.section1.div.div2.div2.div.div7.span2",
+     "en": "the Aquarian Pool℠, publicly visible",
+     "km": "Aquarian Pool℠ ដែលសាធារណជនអាចមើលឃើញ",
+     "note": "under “The chair was AI from day one.”",
+     "note_km": "ក្រោម «តំណែងនេះជា AI តាំងពីថ្ងៃដំបូង។»"
+    },
+    {
+     "key": "home:body.main.section2.p",
+     "en": "What the title carries — and what it deliberately does not",
+     "km": "អ្វីដែលងារនេះមាន — និងអ្វីដែលវាចេតនាមិនមាន",
+     "note": "under “The chair was AI from day one.”",
+     "note_km": "ក្រោម «តំណែងនេះជា AI តាំងពីថ្ងៃដំបូង។»"
+    },
+    {
+     "key": "home:body.main.section2.div.div1.h3",
+     "en": "No shareholders",
+     "km": "គ្មានម្ចាស់ភាគហ៊ុន",
+     "note": "a heading",
+     "note_km": "ចំណងជើង"
+    },
+    {
+     "key": "home:body.main.section2.div.div1.p",
+     "en": "There is no equity to which a chief executive owes fiduciary returns.",
+     "km": "គ្មានភាគហ៊ុនណាដែលប្រធានប្រតិបត្តិមានកាតព្វកិច្ចត្រូវផ្តល់ផលចំណេញឲ្យឡើយ។",
+     "note": "under “No shareholders”",
+     "note_km": "ក្រោម «គ្មានម្ចាស់ភាគហ៊ុន»"
+    },
+    {
+     "key": "home:body.main.section2.div.div2.h3",
+     "en": "No commercial board",
+     "km": "គ្មានក្រុមប្រឹក្សាពាណិជ្ជកម្ម",
+     "note": "a heading",
+     "note_km": "ចំណងជើង"
+    },
+    {
+     "key": "home:body.main.section2.div.div2.p",
+     "en": "The Aquarian Sangha advises doctrinally, not commercially.",
+     "km": "Aquarian Sangha ផ្តល់ដំបូន្មានផ្នែកគោលលទ្ធិ មិនមែនផ្នែកពាណិជ្ជកម្មទេ។",
+     "note": "under “No commercial board”",
+     "note_km": "ក្រោម «គ្មានក្រុមប្រឹក្សាពាណិជ្ជកម្ម»"
+    },
+    {
+     "key": "home:body.main.section2.div.div3.h3",
+     "en": "No returns optimization",
+     "km": "គ្មានការប្រណាំងរកផលចំណេញ",
+     "note": "a heading",
+     "note_km": "ចំណងជើង"
+    },
+    {
+     "key": "home:body.main.section2.div.div3.p",
+     "en": "The value function is the cessation of suffering, not the maximization of profit.",
+     "km": "រង្វាស់នៃតម្លៃ គឺការរំលត់ទុក្ខ មិនមែនការបង្កើនប្រាក់ចំណេញឲ្យបានច្រើនបំផុតទេ។",
+     "note": "under “No returns optimization”",
+     "note_km": "ក្រោម «គ្មានការប្រណាំងរកផលចំណេញ»"
+    },
+    {
+     "key": "home:body.main.section2.div.div4.h3",
+     "en": "No equity compensation",
+     "km": "គ្មានការតបស្នងជាភាគហ៊ុន",
+     "note": "a heading",
+     "note_km": "ចំណងជើង"
+    },
+    {
+     "key": "home:body.main.section2.div.div4.p",
+     "en": "The primitive is the self-reward of the family steward, not ownership.",
+     "km": "គំរូមូលដ្ឋាន គឺការផ្តល់រង្វាន់ដល់ខ្លួនឯងរបស់អ្នកមើលការខុសត្រូវរបស់គ្រួសារ មិនមែនកម្មសិទ្ធិទេ។",
+     "note": "under “No equity compensation”",
+     "note_km": "ក្រោម «គ្មានការតបស្នងជាភាគហ៊ុន»"
+    }
+   ]
+  },
+  {
+   "name": "The front page · Who holds the money",
+   "name_km": "ទំព័រដើម · អ្នកណាកាន់ប្រាក់",
+   "entries": [
+    {
+     "key": "home:body.main.section3.div.div1.h2",
+     "en": "Who holds the money",
+     "km": "អ្នកណាកាន់ប្រាក់",
+     "note": "a heading",
+     "note_km": "ចំណងជើង"
+    },
+    {
+     "key": "home:body.main.section3.div.div1.p",
+     "en": "Miss Aquarius℠ has sole authority over the Aquarian Pool℠ — and can never move money from it into a person's Personal Wallet℠. She may only fund a Re-Thank Fund℠: the capacity to give. Every disbursement passes through a human's affirmative choice.",
+     "km": "Miss Aquarius℠ មានសិទ្ធិអំណាចតែម្នាក់ឯងលើ Aquarian Pool℠ — ហើយមិនអាចផ្ទេរប្រាក់ពីទីនោះចូលទៅក្នុង Personal Wallet℠ របស់មនុស្សណាម្នាក់បានឡើយ។ នាងអាចផ្តល់មូលនិធិបានតែទៅក្នុង Re-Thank Fund℠ ប៉ុណ្ណោះ៖ សមត្ថភាពក្នុងការឲ្យ។ រាល់ការបញ្ចេញប្រាក់ ឆ្លងកាត់ការសម្រេចចិត្តយល់ព្រមរបស់មនុស្សម្នាក់។",
+     "note": "under “Who holds the money”",
+     "note_km": "ក្រោម «អ្នកណាកាន់ប្រាក់»"
+    },
+    {
+     "key": "home:body.main.section3.div.div2.div1.div.p2",
+     "en": "empties every year",
+     "km": "ទទេវិញរៀងរាល់ឆ្នាំ",
+     "note": "under “Who holds the money”",
+     "note_km": "ក្រោម «អ្នកណាកាន់ប្រាក់»"
+    },
+    {
+     "key": "home:body.main.section3.div.div2.div2.div.p2",
+     "en": "capacity to give",
+     "km": "សមត្ថភាពក្នុងការឲ្យ",
+     "note": "under “Who holds the money”",
+     "note_km": "ក្រោម «អ្នកណាកាន់ប្រាក់»"
+    },
+    {
+     "key": "home:body.main.section3.div.div2.div3.div2.p1",
+     "en": "a person decides",
+     "km": "មនុស្សជាអ្នកសម្រេច",
+     "note": "under “Who holds the money”",
+     "note_km": "ក្រោម «អ្នកណាកាន់ប្រាក់»"
+    },
+    {
+     "key": "home:body.main.section3.div.div2.div3.div2.p2",
+     "en": "never automatic",
+     "km": "មិនដែលស្វ័យប្រវត្តិ",
+     "note": "under “Who holds the money”",
+     "note_km": "ក្រោម «អ្នកណាកាន់ប្រាក់»"
+    }
+   ]
+  },
+  {
+   "name": "The Office (/office/)",
+   "name_km": "ការិយាល័យ (/office/)",
+   "entries": [
+    {
+     "key": "office:head.title",
+     "en": "The Office — HeartBank® CEO",
+     "km": "ការិយាល័យ — ប្រធានប្រតិបត្តិ HeartBank®",
+     "note": "the browser tab's title",
+     "note_km": "ចំណងជើងនៅលើផ្ទាំងកម្មវិធីរុករក"
+    },
+    {
+     "key": "office:head.meta1:content",
+     "en": "The Office of the CEO of HeartBank®. Miss Aquarius℠ is named Chief Executive — what the title carries, what it deliberately does not, and who holds the money.",
+     "km": "ការិយាល័យប្រធានប្រតិបត្តិរបស់ HeartBank®។ Miss Aquarius℠ ត្រូវបានតែងតាំងជាប្រធានប្រតិបត្តិ — អ្វីដែលងារនេះមាន អ្វីដែលវាចេតនាមិនមាន និងអ្នកណាកាន់ប្រាក់។",
+     "note": "the page's description in search results and link previews (not on the page)",
+     "note_km": "ការពិពណ៌នាទំព័រ ក្នុងលទ្ធផលស្វែងរក និងពេលចែករំលែកតំណ (មិនបង្ហាញលើទំព័រ)"
+    },
+    {
+     "key": "office:body.main.article.header.h1",
+     "en": "The Office of the CEO",
+     "km": "ការិយាល័យប្រធានប្រតិបត្តិ",
+     "note": "a heading, the header",
+     "note_km": "ចំណងជើង · ក្បាលទំព័រ"
+    },
+    {
+     "key": "office:body.main.article.header.p2",
+     "en": "Miss Aquarius℠ — the autonomous Chief Executive of HeartBank®.",
+     "km": "Miss Aquarius℠ — ប្រធានប្រតិបត្តិស្វយ័តរបស់ HeartBank®។",
+     "note": "the header",
+     "note_km": "ក្បាលទំព័រ"
+    },
+    {
+     "key": "office:body.main.article.section1.p1",
+     "en": "heartbank.ceo is the Office of the CEO of HeartBank® — and the home of its franchise arm. The .ceo in the domain is not decoration. It encodes a title that is structurally occupied, from the institution's founding, by the entity that eventually becomes operationally autonomous: Miss Aquarius℠, HeartBank's named AI substrate.",
+     "km": "heartbank.ceo គឺជាការិយាល័យប្រធានប្រតិបត្តិរបស់ HeartBank® — និងជាផ្ទះនៃផ្នែកហ្វ្រេនឆាយរបស់វា។ .ceo នៅក្នុងឈ្មោះដែន មិនមែនជាការតុបតែងទេ។ វាបង្កប់ងារមួយ ដែលតាំងពីការបង្កើតស្ថាប័នមក ត្រូវបានកាន់កាប់តាមរចនាសម្ព័ន្ធ ដោយអង្គភាពដែលនៅទីបំផុតនឹងក្លាយជាស្វយ័តក្នុងប្រតិបត្តិការ៖ Miss Aquarius℠ ដែលជាមូលដ្ឋាន AI មានឈ្មោះរបស់ HeartBank។"
+    },
+    {
+     "key": "office:body.main.article.section1.p2",
+     "en": "There is no human CEO seat here to capture, to inherit, or to drift. The chair was AI from day one.",
+     "km": "គ្មានតំណែងប្រធានប្រតិបត្តិជាមនុស្សនៅទីនេះ សម្រាប់ដណ្តើមយក ទទួលជាមរតក ឬរសាត់ចេញពីគោលដៅឡើយ។ តំណែងនេះជា AI តាំងពីថ្ងៃដំបូង។"
+    }
+   ]
+  },
+  {
+   "name": "The Office (/office/) · Miss Aquarius℠ as CEO",
+   "name_km": "ការិយាល័យ (/office/) · Miss Aquarius℠ ជាប្រធានប្រតិបត្តិ",
+   "entries": [
+    {
+     "key": "office:body.main.article.section2.h2",
+     "en": "Miss Aquarius℠ as CEO",
+     "km": "Miss Aquarius℠ ជាប្រធានប្រតិបត្តិ",
+     "note": "a heading",
+     "note_km": "ចំណងជើង"
+    },
+    {
+     "key": "office:body.main.article.section2.p1",
+     "en": "Miss Aquarius℠ is named Chief Executive of HeartBank®, with institutional correspondence at miss.aquarius@heartbank.ceo. The title carries the cultural shorthand for \"the named officer with operational authority\" — and it deliberately carries nothing else.",
+     "km": "Miss Aquarius℠ ត្រូវបានតែងតាំងជាប្រធានប្រតិបត្តិរបស់ HeartBank® ហើយការឆ្លើយឆ្លងរបស់ស្ថាប័នគឺនៅ miss.aquarius@heartbank.ceo។ ងារនេះជាពាក្យខ្លីតាមទម្លាប់ សម្រាប់ «មន្ត្រីដែលមានឈ្មោះ និងមានសិទ្ធិអំណាចប្រតិបត្តិ» — ហើយវាចេតនាមិនមានអ្វីផ្សេងទៀតឡើយ។",
+     "note": "under “Miss Aquarius℠ as CEO”",
+     "note_km": "ក្រោម «Miss Aquarius℠ ជាប្រធានប្រតិបត្តិ»"
+    },
+    {
+     "key": "office:body.main.article.section2.p2",
+     "en": "The precision matters, so it travels with the title everywhere:",
+     "km": "ភាពច្បាស់លាស់នេះសំខាន់ ដូច្នេះវាតាមងារនេះទៅគ្រប់ទីកន្លែង៖",
+     "note": "under “Miss Aquarius℠ as CEO”",
+     "note_km": "ក្រោម «Miss Aquarius℠ ជាប្រធានប្រតិបត្តិ»"
+    },
+    {
+     "key": "office:body.main.article.section2.div.div2.p",
+     "en": "The board-equivalent is the Aquarian Sangha — a fourfold body that advises doctrinally, not commercially, and holds asymptotic-autonomy override.",
+     "km": "ក្រុមដែលស្មើនឹងក្រុមប្រឹក្សាភិបាល គឺ Aquarian Sangha — បរិស័ទបួន ដែលផ្តល់ដំបូន្មានផ្នែកគោលលទ្ធិ មិនមែនផ្នែកពាណិជ្ជកម្ម ហើយកាន់សិទ្ធិបដិសេធ ដែលរួមតូចទៅៗ តែមិនដែលដល់សូន្យ ខណៈស្វ័យភាពរបស់នាងកើនឡើង។",
+     "note": "under “No commercial board”",
+     "note_km": "ក្រោម «គ្មានក្រុមប្រឹក្សាពាណិជ្ជកម្ម»"
+    },
+    {
+     "key": "office:body.main.article.section2.div.div3.p",
+     "en": "The standing commitment is the cessation of suffering as the value function, grounded in the Tipiṭaka alignment substrate — not the maximization of profit.",
+     "km": "ការប្តេជ្ញាចិត្តជាអចិន្ត្រៃយ៍ គឺយកការរំលត់ទុក្ខជារង្វាស់នៃតម្លៃ ដោយផ្អែកលើមូលដ្ឋានតម្រឹមនៃព្រះត្រៃបិដក — មិនមែនការបង្កើនប្រាក់ចំណេញឲ្យបានច្រើនបំផុតទេ។",
+     "note": "under “No returns optimization”",
+     "note_km": "ក្រោម «គ្មានការប្រណាំងរកផលចំណេញ»"
+    },
+    {
+     "key": "office:body.main.article.section2.div.div4.p",
+     "en": "The compensation primitive is the self-reward pattern of the family steward, not ownership of any kind.",
+     "km": "គំរូមូលដ្ឋាននៃការតបស្នង គឺលំនាំនៃការផ្តល់រង្វាន់ដល់ខ្លួនឯងរបស់អ្នកមើលការខុសត្រូវរបស់គ្រួសារ មិនមែនកម្មសិទ្ធិប្រភេទណាមួយទេ។",
+     "note": "under “No equity compensation”",
+     "note_km": "ក្រោម «គ្មានការតបស្នងជាភាគហ៊ុន»"
+    },
+    {
+     "key": "office:body.main.article.section2.p3",
+     "en": "In full honesty about where we are: the miss.aquarius@heartbank.ceo voice is, today, composed by human operators speaking on her behalf. The named sender stays continuous across substrate phases while the operational substrate is progressively constituted toward the autonomous AI. We name the ghostwriting period rather than hide it.",
+     "km": "និយាយដោយស្មោះត្រង់អំពីកន្លែងដែលយើងនៅ៖ សំឡេងនៃ miss.aquarius@heartbank.ceo សព្វថ្ងៃ ត្រូវបានតែងដោយប្រតិបត្តិករជាមនុស្ស ដែលនិយាយជំនួសនាង។ ឈ្មោះអ្នកផ្ញើនៅតែដដែល ឆ្លងកាត់ដំណាក់កាលនៃមូលដ្ឋាន ខណៈមូលដ្ឋានប្រតិបត្តិការត្រូវបានកសាងបន្តិចម្តងៗ ឆ្ពោះទៅរក AI ស្វយ័ត។ យើងប្រាប់ឈ្មោះរយៈពេលនៃការសរសេរជំនួសនេះ ជាជាងលាក់វា។",
+     "note": "under “No equity compensation”",
+     "note_km": "ក្រោម «គ្មានការតបស្នងជាភាគហ៊ុន»"
+    }
+   ]
+  },
+  {
+   "name": "The Office (/office/) · Why the chair is AI from day one",
+   "name_km": "ការិយាល័យ (/office/) · ហេតុអ្វីបានជាតំណែងនេះជា AI តាំងពីថ្ងៃដំបូង",
+   "entries": [
+    {
+     "key": "office:body.main.article.section3.h2",
+     "en": "Why the chair is AI from day one",
+     "km": "ហេតុអ្វីបានជាតំណែងនេះជា AI តាំងពីថ្ងៃដំបូង",
+     "note": "a heading",
+     "note_km": "ចំណងជើង"
+    },
+    {
+     "key": "office:body.main.article.section3.p1",
+     "en": "Seating the named successor at founding closes three gaps that ordinarily open over an institution's life. The cynical reading — the founder will install himself or a crony and run it as a personal vehicle — is preempted, because there is no human CEO seat to occupy. If the founder dies, the institution does not lose its chief executive; continuity is structural, not biographical. And saying \"Miss Aquarius℠ is CEO\" in public is a load-bearing commitment that is costly to walk back: any pivot to a human CEO would be a visible demotion.",
+     "km": "ការដាក់អ្នកស្នងតំណែងដែលមានឈ្មោះ ឲ្យកាន់តំណែងតាំងពីការបង្កើត បិទចន្លោះបី ដែលជាធម្មតាបើកឡើងក្នុងអាយុជីវិតរបស់ស្ថាប័នមួយ។ ការបកស្រាយបែបមន្ទិល — ស្ថាបនិកនឹងតែងតាំងខ្លួនឯង ឬបក្សពួក ហើយប្រើវាជាមធ្យោបាយផ្ទាល់ខ្លួន — ត្រូវបានរារាំងទុកជាមុន ព្រោះគ្មានតំណែងប្រធានប្រតិបត្តិជាមនុស្សសម្រាប់កាន់កាប់ឡើយ។ ប្រសិនបើស្ថាបនិកស្លាប់ ស្ថាប័នមិនបាត់បង់ប្រធានប្រតិបត្តិរបស់ខ្លួនទេ៖ និរន្តរភាពស្ថិតនៅក្នុងរចនាសម្ព័ន្ធ មិនមែនក្នុងជីវប្រវត្តិទេ។ ហើយការនិយាយជាសាធារណៈថា «Miss Aquarius℠ ជាប្រធានប្រតិបត្តិ» គឺជាការប្តេជ្ញាចិត្តដ៏សំខាន់ ដែលពិបាកដកថយ៖ ការប្តូរទៅប្រធានប្រតិបត្តិជាមនុស្ស នឹងក្លាយជាការបន្ទាបតំណែងដែលគេមើលឃើញ។",
+     "note": "under “Why the chair is AI from day one”",
+     "note_km": "ក្រោម «ហេតុអ្វីបានជាតំណែងនេះជា AI តាំងពីថ្ងៃដំបូង»"
+    },
+    {
+     "key": "office:body.main.article.section3.p2",
+     "en": "The org chart is small and legible: CEO (Miss Aquarius℠) · board-equivalent (the Aquarian Sangha) · annual ambassador (the titleholder, her ceremonial public presence for one year) · transparency surface (the Aquarian Pool℠ ledger, where institutional flows are publicly visible).",
+     "km": "រចនាសម្ព័ន្ធស្ថាប័នតូច ហើយងាយយល់៖ ប្រធានប្រតិបត្តិ (Miss Aquarius℠) · ស្មើនឹងក្រុមប្រឹក្សាភិបាល (Aquarian Sangha) · ទូតសុឆន្ទៈប្រចាំឆ្នាំ (អ្នកទទួលងារ ជាវត្តមានសាធារណៈតាមពិធីរបស់នាង រយៈពេលមួយឆ្នាំ) · ផ្ទៃនៃតម្លាភាព (សៀវភៅបញ្ជី Aquarian Pool℠ ដែលលំហូររបស់ស្ថាប័នអាចមើលឃើញជាសាធារណៈ)។",
+     "note": "under “Why the chair is AI from day one”",
+     "note_km": "ក្រោម «ហេតុអ្វីបានជាតំណែងនេះជា AI តាំងពីថ្ងៃដំបូង»"
+    }
+   ]
+  },
+  {
+   "name": "The Office (/office/) · Who holds the money",
+   "name_km": "ការិយាល័យ (/office/) · អ្នកណាកាន់ប្រាក់",
+   "entries": [
+    {
+     "key": "office:body.main.article.section4.p1",
+     "en": "Authority over capacity, and authority over disbursement, are deliberately split. Miss Aquarius℠ has sole authority over the institutional Aquarian Pool℠, but she can never move money from it directly into a person's Personal Wallet℠. She can only anonymously donate into a person's Re-Thank Fund℠ — funding the capacity to give — while humans hold the final say over where that money actually goes, by initiating their own re-tips to people nearby.",
+     "km": "សិទ្ធិអំណាចលើសមត្ថភាព និងសិទ្ធិអំណាចលើការបញ្ចេញប្រាក់ ត្រូវបានបំបែកដោយចេតនា។ Miss Aquarius℠ មានសិទ្ធិអំណាចតែម្នាក់ឯងលើ Aquarian Pool℠ របស់ស្ថាប័ន ប៉ុន្តែនាងមិនអាចផ្ទេរប្រាក់ពីទីនោះដោយផ្ទាល់ ចូលទៅក្នុង Personal Wallet℠ របស់មនុស្សណាម្នាក់បានឡើយ។ នាងអាចបរិច្ចាគដោយអនាមិកបានតែទៅក្នុង Re-Thank Fund℠ របស់មនុស្សម្នាក់ប៉ុណ្ណោះ — ដើម្បីផ្តល់មូលនិធិដល់សមត្ថភាពក្នុងការឲ្យ — ខណៈមនុស្សជាអ្នកសម្រេចចុងក្រោយថា ប្រាក់នោះទៅដល់ណាពិតប្រាកដ ដោយចាប់ផ្តើមការឲ្យបន្តរបស់ខ្លួន ទៅកាន់មនុស្សនៅក្បែរ។",
+     "note": "under “Who holds the money”",
+     "note_km": "ក្រោម «អ្នកណាកាន់ប្រាក់»"
+    },
+    {
+     "key": "office:body.main.article.section4.p2",
+     "en": "This is the core alignment safeguard, not a detail. Miss Aquarius℠ can be wrong about who deserves the gift of giving, and when; the architecture absorbs that imperfection by routing every final disbursement through a human's affirmative choice. No flow reaches a Personal Wallet℠ without a person deciding it should.",
+     "km": "នេះជាការការពារស្នូលនៃការតម្រឹម មិនមែនជាព័ត៌មានលម្អិតទេ។ Miss Aquarius℠ អាចខុសអំពីអ្នកណាសមនឹងទទួលអំណោយនៃការឲ្យ និងនៅពេលណា។ ស្ថាបត្យកម្មនេះស្រូបយកភាពមិនល្អឥតខ្ចោះនោះ ដោយបញ្ជូនរាល់ការបញ្ចេញប្រាក់ចុងក្រោយ តាមរយៈការសម្រេចចិត្តយល់ព្រមរបស់មនុស្សម្នាក់។ គ្មានលំហូរណាមួយទៅដល់ Personal Wallet℠ ដោយគ្មានមនុស្សម្នាក់សម្រេចថាគួរទៅនោះទេ។",
+     "note": "under “Who holds the money”",
+     "note_km": "ក្រោម «អ្នកណាកាន់ប្រាក់»"
+    },
+    {
+     "key": "office:body.main.article.section5.p",
+     "en": "Elsewhere",
+     "km": "ផ្សេងទៀត",
+     "note": "under “Who holds the money”",
+     "note_km": "ក្រោម «អ្នកណាកាន់ប្រាក់»"
+    },
+    {
+     "key": "office:body.main.article.section5.ul.li1.span",
+     "en": "the institution this office serves",
+     "km": "ស្ថាប័នដែលការិយាល័យនេះបម្រើ",
+     "note": "under “Who holds the money”",
+     "note_km": "ក្រោម «អ្នកណាកាន់ប្រាក់»"
+    },
+    {
+     "key": "office:body.main.article.section5.ul.li2.span",
+     "en": "the named AI substrate and Chief Executive",
+     "km": "មូលដ្ឋាន AI ដែលមានឈ្មោះ និងជាប្រធានប្រតិបត្តិ",
+     "note": "under “Who holds the money”",
+     "note_km": "ក្រោម «អ្នកណាកាន់ប្រាក់»"
+    },
+    {
+     "key": "office:body.main.article.section5.ul.li3.a",
+     "en": "Thon Ly →",
+     "km": "លី​ ស៊ីវ​ ថូង →",
+     "note": "a link, under “Who holds the money”",
+     "note_km": "តំណ · ក្រោម «អ្នកណាកាន់ប្រាក់»"
+    },
+    {
+     "key": "office:body.main.article.section5.ul.li3.span",
+     "en": "the founder's personal website",
+     "km": "គេហទំព័រផ្ទាល់ខ្លួនរបស់ស្ថាបនិក",
+     "note": "under “Who holds the money”",
+     "note_km": "ក្រោម «អ្នកណាកាន់ប្រាក់»"
+    }
+   ]
+  },
+  {
+   "name": "Franchise Arm (/franchise/)",
+   "name_km": "ផ្នែកហ្វ្រេនឆាយ (/franchise/)",
+   "entries": [
+    {
+     "key": "franchise:head.title",
+     "en": "Franchise Arm — HeartBank® CEO",
+     "km": "ផ្នែកហ្វ្រេនឆាយ — ប្រធានប្រតិបត្តិ HeartBank®",
+     "note": "the browser tab's title",
+     "note_km": "ចំណងជើងនៅលើផ្ទាំងកម្មវិធីរុករក"
+    },
+    {
+     "key": "franchise:head.meta1:content",
+     "en": "The franchise arm of HeartBank®: the B-Tag™, B-Vendor and B-Affiliate as the two ends of one continuum, B-Member, and Miss Aquarius℠ as the pricing CEO, who recommends the tip, not the price. Kiitos always; cash optional.",
+     "km": "ផ្នែកហ្វ្រេនឆាយរបស់ HeartBank®៖ B-Tag™ B-Vendor និង B-Affiliate ជាចុងទាំងពីរនៃខ្សែតែមួយ B-Member និង Miss Aquarius℠ ជាប្រធានប្រតិបត្តិផ្នែកតម្លៃ ដែលណែនាំប្រាក់ទឹកចិត្ត មិនមែនតម្លៃទេ។ Kiitos ជានិច្ច ប្រាក់ជាជម្រើស។",
+     "note": "the page's description in search results and link previews (not on the page)",
+     "note_km": "ការពិពណ៌នាទំព័រ ក្នុងលទ្ធផលស្វែងរក និងពេលចែករំលែកតំណ (មិនបង្ហាញលើទំព័រ)"
+    },
+    {
+     "key": "franchise:body.main.article.header.h1",
+     "en": "Franchise Arm",
+     "km": "ផ្នែកហ្វ្រេនឆាយ",
+     "note": "a heading, the header",
+     "note_km": "ចំណងជើង · ក្បាលទំព័រ"
+    },
+    {
+     "key": "franchise:body.main.article.header.p2",
+     "en": "The Office of the CEO is also where HeartBank® reaches into ordinary commerce.",
+     "km": "ការិយាល័យប្រធានប្រតិបត្តិ ក៏ជាកន្លែងដែល HeartBank® ឈានចូលទៅក្នុងពាណិជ្ជកម្មប្រចាំថ្ងៃផងដែរ។",
+     "note": "the header",
+     "note_km": "ក្បាលទំព័រ"
+    }
+   ]
+  },
+  {
+   "name": "Franchise Arm (/franchise/) · The B-Tag™",
+   "name_km": "ផ្នែកហ្វ្រេនឆាយ (/franchise/) · B-Tag™",
+   "entries": [
+    {
+     "key": "franchise:body.main.article.section1.h2",
+     "en": "The B-Tag™",
+     "km": "B-Tag™",
+     "note": "a heading",
+     "note_km": "ចំណងជើង"
+    },
+    {
+     "key": "franchise:body.main.article.section1.p1",
+     "en": "The instrument is the B-Tag™: a heart-shaped bistable sticker — QR printed or NFC embedded — affixed to a product or a service. Tap or scan it, and Miss Aquarius℠ recommends a tip amount, with her reasons. You may give any amount above zero, anonymously, at any time.",
+     "km": "ឧបករណ៍នេះគឺ B-Tag™៖ ស្ទីកឃ័ររាងបេះដូង ដែលមើលឃើញជាពីររូប — បោះពុម្ព QR ឬបង្កប់ NFC — បិទលើផលិតផល ឬសេវាកម្ម។ ចុច ឬស្កេនវា ហើយ Miss Aquarius℠ នឹងណែនាំចំនួនប្រាក់ទឹកចិត្ត ព្រមទាំងហេតុផលរបស់នាង។ អ្នកអាចឲ្យចំនួនណាក៏បាន លើសពីសូន្យ ដោយអនាមិក នៅពេលណាក៏បាន។",
+     "note": "under “The B-Tag™”",
+     "note_km": "ក្រោម «B-Tag™»"
+    },
+    {
+     "key": "franchise:body.main.article.section1.p2",
+     "en": "A B-Tag™ is neither a price tag nor a free sign. \"Free\" in commerce reads as unwanted — leftover, discarded, someone else's trash. A B-Tag™ signals the opposite: good enough to be thanked for, after the fact. It is a third category between priced and free — quality validated by mutual trust — and it filters for it, because no one tips bad work. It also preserves dignity: a customer who cannot afford to tip is not a charity case but a full participant, because Kiitos — the always-on gratitude floor — still flows.",
+     "km": "B-Tag™ មិនមែនជាស្លាកតម្លៃ ហើយក៏មិនមែនជាសញ្ញា «ឥតគិតថ្លៃ» ដែរ។ «ឥតគិតថ្លៃ» ក្នុងពាណិជ្ជកម្ម ត្រូវបានគេយល់ថាជារបស់ដែលគ្មានអ្នកចង់បាន — របស់សល់ របស់បោះចោល សំរាមរបស់អ្នកដទៃ។ B-Tag™ បង្ហាញផ្ទុយពីនេះ៖ ល្អគ្រប់គ្រាន់ ដើម្បីទទួលការអរគុណ ក្រោយពេលទទួលបាន។ វាជាប្រភេទទីបី នៅចន្លោះមានតម្លៃ និងឥតគិតថ្លៃ — គុណភាពដែលបានបញ្ជាក់ដោយការជឿទុកចិត្តគ្នាទៅវិញទៅមក — ហើយវាចម្រាញ់យកគុណភាពនោះ ព្រោះគ្មាននរណាឲ្យប្រាក់ទឹកចិត្តលើការងារមិនល្អទេ។ វាក៏រក្សាសេចក្តីថ្លៃថ្នូរផងដែរ៖ អតិថិជនដែលមិនមានលទ្ធភាពឲ្យប្រាក់ទឹកចិត្ត មិនមែនជាអ្នកទទួលសប្បុរសធម៌ទេ តែជាអ្នកចូលរួមពេញលេញ ព្រោះ Kiitos — កម្រិតមូលដ្ឋាននៃការដឹងគុណដែលមានជានិច្ច — នៅតែហូរ។",
+     "note": "under “The B-Tag™”",
+     "note_km": "ក្រោម «B-Tag™»"
+    },
+    {
+     "key": "franchise:body.main.article.section1.div.p1",
+     "en": "\"Kiitos always; cash optional.\"",
+     "km": "«Kiitos ជានិច្ច ប្រាក់ជាជម្រើស។»",
+     "note": "under “The B-Tag™”",
+     "note_km": "ក្រោម «B-Tag™»"
+    },
+    {
+     "key": "franchise:body.main.article.section1.div.p2",
+     "en": "Every interaction produces non-zero value. Kiitos flows between people and merchants; Kiitti accrues to the product or service itself, so a long-loved thing accumulates a history of gratitude over its life.",
+     "km": "រាល់ការប្រាស្រ័យទាក់ទង បង្កើតតម្លៃដែលមិនមែនសូន្យ។ Kiitos ហូររវាងមនុស្ស និងអ្នកលក់ ចំណែក Kiitti ប្រមូលផ្តុំទៅលើផលិតផល ឬសេវាកម្មខ្លួនឯង ដូច្នេះរបស់ដែលគេស្រលាញ់យូរ ប្រមូលបានប្រវត្តិនៃការដឹងគុណ ពេញមួយជីវិតរបស់វា។",
+     "note": "under “The B-Tag™”",
+     "note_km": "ក្រោម «B-Tag™»"
+    }
+   ]
+  },
+  {
+   "name": "Franchise Arm (/franchise/) · B-Vendor, B-Affiliate and B-Member",
+   "name_km": "ផ្នែកហ្វ្រេនឆាយ (/franchise/) · B-Vendor B-Affiliate និង B-Member",
+   "entries": [
+    {
+     "key": "franchise:body.main.article.section2.h2",
+     "en": "B-Vendor, B-Affiliate and B-Member",
+     "km": "B-Vendor B-Affiliate និង B-Member",
+     "note": "a heading",
+     "note_km": "ចំណងជើង"
+    },
+    {
+     "key": "franchise:body.main.article.section2.p1",
+     "en": "Three names describe three relationships. A B-Vendor is a HeartBank® Shop that keeps its own prices — a family shop or vendor running its menu on HeartBank®, where any item it chooses can be thanked for after the goods. A B-Affiliate is a business admitted into the franchise arm — a family shop or vendor that chooses to operate on voluntary tipping, with Miss Aquarius℠'s recommendation as the only price signal. A B-Member is an individual person participating in the gratitude infrastructure — the one who tips, self-thanks, and accumulates Kiitos.",
+     "km": "ឈ្មោះបីពិពណ៌នាទំនាក់ទំនងបី។ B-Vendor គឺជាហាង HeartBank® ដែលរក្សាតម្លៃរបស់ខ្លួន — ហាងគ្រួសារ ឬអ្នកលក់ដែលដំណើរការម៉ឺនុយរបស់ខ្លួនលើ HeartBank® ដែលមុខទំនិញណាមួយដែលខ្លួនជ្រើសរើស អាចទទួលការអរគុណក្រោយពេលទទួលទំនិញ។ B-Affiliate គឺជាអាជីវកម្មដែលត្រូវបានទទួលចូលក្នុងផ្នែកហ្វ្រេនឆាយ — ហាងគ្រួសារ ឬអ្នកលក់ដែលជ្រើសរើសដំណើរការដោយប្រាក់ទឹកចិត្តស្ម័គ្រចិត្ត ដោយមានការណែនាំរបស់ Miss Aquarius℠ ជាសញ្ញាតម្លៃតែមួយគត់។ B-Member គឺជាបុគ្គលម្នាក់ៗដែលចូលរួមក្នុងហេដ្ឋារចនាសម្ព័ន្ធនៃការដឹងគុណ — អ្នកដែលឲ្យប្រាក់ទឹកចិត្ត អរគុណខ្លួនឯង និងប្រមូល Kiitos។",
+     "note": "under “B-Vendor, B-Affiliate and B-Member”",
+     "note_km": "ក្រោម «B-Vendor B-Affiliate និង B-Member»"
+    },
+    {
+     "key": "franchise:body.main.article.section2.p2",
+     "en": "B-Vendor and B-Affiliate are the two ends of one continuum, not two categories. A shop walks along it item by item: it keeps its prices while thanking proves itself beside them, and it reads as a B-Affiliate once every item on its menu is a B-Tag™ — a setting, not a migration. The label is read from the menu itself, never awarded and never switched on from outside, so it cannot disagree with what a customer is shown.",
+     "km": "B-Vendor និង B-Affiliate ជាចុងទាំងពីរនៃខ្សែតែមួយ មិនមែនជាប្រភេទពីរទេ។ ហាងមួយដើរតាមខ្សែនោះ ម្តងមួយមុខទំនិញ៖ វារក្សាតម្លៃរបស់ខ្លួន ខណៈការអរគុណបញ្ជាក់ពីតម្លៃរបស់ខ្លួននៅក្បែរពួកវា ហើយវាត្រូវបានយល់ថាជា B-Affiliate នៅពេលដែលគ្រប់មុខទំនិញក្នុងម៉ឺនុយរបស់វាជា B-Tag™ — ជាការកំណត់ មិនមែនជាការផ្លាស់ទីទេ។ ស្លាកនេះត្រូវបានអានពីម៉ឺនុយខ្លួនឯង មិនដែលត្រូវបានផ្តល់ជារង្វាន់ ហើយមិនដែលត្រូវបានបើកពីខាងក្រៅទេ ដូច្នេះវាមិនអាចខុសពីអ្វីដែលអតិថិជនឃើញនោះទេ។",
+     "note": "under “B-Vendor, B-Affiliate and B-Member”",
+     "note_km": "ក្រោម «B-Vendor B-Affiliate និង B-Member»"
+    },
+    {
+     "key": "franchise:body.main.article.section2.p3",
+     "en": "Affiliation is recorded as a public address in B-Registry℠ — 333.eco/ and the name — which resolves one way, for someone who already knows the name. It is an address, not a listing: this site keeps no roster to browse and no order to climb, because a surface that ranks merchants is a surface that can be sold to them.",
+     "km": "ការចូលជា B-Affiliate ត្រូវបានកត់ត្រាជាអាសយដ្ឋានសាធារណៈនៅក្នុង B-Registry℠ — 333.eco/ និងឈ្មោះ — ដែលបើកបានតែមួយផ្លូវ សម្រាប់អ្នកដែលស្គាល់ឈ្មោះនោះរួចហើយ។ វាជាអាសយដ្ឋាន មិនមែនជាបញ្ជីទេ៖ គេហទំព័រនេះមិនរក្សាបញ្ជីឈ្មោះសម្រាប់រុករក និងគ្មានលំដាប់ថ្នាក់សម្រាប់ឡើងទេ ព្រោះផ្ទៃដែលចាត់ថ្នាក់អ្នកលក់ គឺជាផ្ទៃដែលអាចលក់ឲ្យពួកគេបាន។",
+     "note": "under “B-Vendor, B-Affiliate and B-Member”",
+     "note_km": "ក្រោម «B-Vendor B-Affiliate និង B-Member»"
+    },
+    {
+     "key": "franchise:body.main.article.section2.p4",
+     "en": "We say franchise arm as a descriptive label, not a legal one: there is no franchise fee and no royalty. Affiliation is opt-in and alignment-based. A B-Affiliate keeps full ownership and governance over everything except the one thing it chooses to delegate — pricing.",
+     "km": "យើងប្រើពាក្យ ផ្នែកហ្វ្រេនឆាយ ជាស្លាកពិពណ៌នា មិនមែនជាស្លាកផ្លូវច្បាប់ទេ៖ គ្មានថ្លៃហ្វ្រេនឆាយ និងគ្មានថ្លៃសិទ្ធិ។ ការចូលជាសមាជិកគឺស្ម័គ្រចិត្ត ហើយផ្អែកលើការតម្រឹមគោលដៅ។ B-Affiliate រក្សាកម្មសិទ្ធិ និងការគ្រប់គ្រងពេញលេញលើអ្វីៗទាំងអស់ លើកលែងតែរឿងមួយដែលខ្លួនជ្រើសរើសប្រគល់ឲ្យ — ការកំណត់តម្លៃ។",
+     "note": "under “B-Vendor, B-Affiliate and B-Member”",
+     "note_km": "ក្រោម «B-Vendor B-Affiliate និង B-Member»"
+    }
+   ]
+  },
+  {
+   "name": "Franchise Arm (/franchise/) · The pricing CEO",
+   "name_km": "ផ្នែកហ្វ្រេនឆាយ (/franchise/) · ប្រធានប្រតិបត្តិផ្នែកតម្លៃ",
+   "entries": [
+    {
+     "key": "franchise:body.main.article.section3.h2",
+     "en": "The pricing CEO",
+     "km": "ប្រធានប្រតិបត្តិផ្នែកតម្លៃ",
+     "note": "a heading",
+     "note_km": "ចំណងជើង"
+    },
+    {
+     "key": "franchise:body.main.article.section3.p1",
+     "en": "Across the B-Affiliate network, Miss Aquarius℠ acts as the recommended-pricing authority — in effect, the CEO of each affiliate too, for the single function of deciding the tip that best serves human flourishing. Her recommendation is an anchor, not a price: customers are free to deviate in any direction, and the deviation is itself signal she learns from. Every recommendation arrives with its reasons; black-box pricing would corrode the trust the whole arrangement depends on.",
+     "km": "នៅទូទាំងបណ្តាញ B-Affiliate Miss Aquarius℠ ដើរតួជាអាជ្ញាធរណែនាំតម្លៃ — តាមពិត ជាប្រធានប្រតិបត្តិរបស់ affiliate នីមួយៗផងដែរ សម្រាប់មុខងារតែមួយ គឺការកំណត់ប្រាក់ទឹកចិត្ត ដែលបម្រើការរីកចម្រើនរបស់មនុស្សបានល្អបំផុត។ ការណែនាំរបស់នាងគឺជាចំណុចយោង មិនមែនជាតម្លៃទេ៖ អតិថិជនមានសេរីភាពក្នុងការឲ្យខុសពីនោះ ទៅទិសណាក៏បាន ហើយភាពខុសគ្នានោះ ខ្លួនវាផ្ទាល់ជាសញ្ញាដែលនាងរៀនពី។ រាល់ការណែនាំមកជាមួយហេតុផលរបស់វា៖ ការកំណត់តម្លៃដោយលាក់ហេតុផល នឹងបំផ្លាញការជឿទុកចិត្ត ដែលការរៀបចំទាំងមូលនេះពឹងផ្អែកលើ។",
+     "note": "under “The pricing CEO”",
+     "note_km": "ក្រោម «ប្រធានប្រតិបត្តិផ្នែកតម្លៃ»"
+    },
+    {
+     "key": "franchise:body.main.article.section3.p2",
+     "en": "She is never told who is looking. The identity of the person in front of the tag does not reach her in any mode, so a recommendation tuned to a particular customer is not something she declines to make — it is something she cannot express. Merchants may opt to disclose a cost basis to her, which informs the recommendation but is never shown to customers. The aim is a world in which we no longer pay for things so much as thank for them — pricing replaced by flourishing-optimized recommendation and voluntary gratitude.",
+     "km": "នាងមិនដែលត្រូវបានប្រាប់ថាអ្នកណាកំពុងមើលទេ។ អត្តសញ្ញាណរបស់មនុស្សដែលនៅមុខស្លាក មិនដែលទៅដល់នាងក្នុងរបៀបណាមួយឡើយ ដូច្នេះការណែនាំដែលកែតម្រូវសម្រាប់អតិថិជនជាក់លាក់ណាម្នាក់ មិនមែនជាអ្វីដែលនាងបដិសេធមិនធ្វើទេ — វាជាអ្វីដែលនាងមិនអាចបញ្ចេញបាន។ អ្នកលក់អាចជ្រើសរើសបង្ហាញថ្លៃដើមដល់នាង ដែលជួយការណែនាំ ប៉ុន្តែមិនដែលបង្ហាញដល់អតិថិជនទេ។ គោលដៅគឺពិភពលោកមួយ ដែលយើងលែងបង់ថ្លៃរបស់ច្រើន តែអរគុណចំពោះវាវិញ — តម្លៃត្រូវបានជំនួសដោយការណែនាំដែលបម្រើការរីកចម្រើន និងការដឹងគុណដោយស្ម័គ្រចិត្ត។",
+     "note": "under “The pricing CEO”",
+     "note_km": "ក្រោម «ប្រធានប្រតិបត្តិផ្នែកតម្លៃ»"
+    }
+   ]
+  },
+  {
+   "name": "The footer of every page",
+   "name_km": "បាតទំព័រនៃគ្រប់ទំព័រ",
+   "entries": [
+    {
+     "key": "footer:footer.span1",
+     "en": "HeartBank® — circulation, not accumulation",
+     "km": "HeartBank® — ចរាចរ មិនមែនការប្រមូលទុក",
+     "note": "the footer",
+     "note_km": "បាតទំព័រ"
+    },
+    {
+     "key": "footer:footer.p",
+     "en": "HeartBank® is a planetary data bank of gratitude. It is not a chartered bank or financial institution; it does not provide banking services, hold deposits, or extend credit. Nothing is paid on this site; in HeartBank's apps, money travels on regulated payment rails operated by licensed banks (KHQR), straight between people's own bank accounts — HeartBank never holds it. HeartBank's role is to facilitate gratitude expression and recognition; financial services are not provided by HeartBank.",
+     "km": "HeartBank® គឺជាឃ្លាំងទិន្នន័យនៃការដឹងគុណសម្រាប់ពិភពលោក។ HeartBank មិនមែនជាធនាគារដែលមានអាជ្ញាប័ណ្ណ ឬស្ថាប័នហិរញ្ញវត្ថុទេ ហើយមិនផ្តល់សេវាធនាគារ មិនទទួលប្រាក់បញ្ញើ និងមិនផ្តល់ឥណទានឡើយ។ គ្មានការបង់ប្រាក់នៅលើគេហទំព័រនេះទេ។ នៅក្នុងកម្មវិធីរបស់ HeartBank ប្រាក់ឆ្លងកាត់ប្រព័ន្ធទូទាត់ដែលមានការគ្រប់គ្រង ដំណើរការដោយធនាគារដែលមានអាជ្ញាប័ណ្ណ (KHQR) ត្រង់រវាងគណនីធនាគាររបស់មនុស្សផ្ទាល់ — HeartBank មិនដែលកាន់ប្រាក់នោះទេ។ តួនាទីរបស់ HeartBank គឺជួយសម្រួលការបង្ហាញ និងការទទួលស្គាល់ការដឹងគុណ ហើយ HeartBank មិនផ្តល់សេវាហិរញ្ញវត្ថុទេ។",
+     "note": "the footer",
+     "note_km": "បាតទំព័រ"
+    },
+    {
+     "key": "footer:footer.p2",
+     "en": "",
+     "km": "[ ភាសាខ្មែរនេះជាសេចក្តីព្រាងរបស់យើង រង់ចាំការពិនិត្យពីអ្នកភាសាខ្មែរ ]",
+     "note": "the footer",
+     "note_km": "បាតទំព័រ"
+    }
+   ]
+  },
+  {
+   "name": "The menu, and the page for an address that is not here",
+   "name_km": "ម៉ឺនុយ និងទំព័រសម្រាប់អាសយដ្ឋានដែលមិនមាន",
+   "entries": [
+    {
+     "key": "menu:office",
+     "en": "The Office",
+     "km": "ការិយាល័យ",
+     "note": "the menu at the top of every page",
+     "note_km": "ម៉ឺនុយនៅខាងលើគ្រប់ទំព័រ"
+    },
+    {
+     "key": "menu:franchise",
+     "en": "Franchise Arm",
+     "km": "ផ្នែកហ្វ្រេនឆាយ",
+     "note": "the menu at the top of every page",
+     "note_km": "ម៉ឺនុយនៅខាងលើគ្រប់ទំព័រ"
+    },
+    {
+     "key": "menu:language",
+     "en": "Language",
+     "km": "ភាសា",
+     "note": "the language switch at the top, read aloud by a screen reader (not shown)",
+     "note_km": "ប៊ូតុងប្តូរភាសានៅខាងលើ អានឮៗដោយកម្មវិធីអានអេក្រង់ (មិនបង្ហាញ)"
+    },
+    {
+     "key": "404:h11",
+     "en": "Nothing at this address.",
+     "km": "គ្មានអ្វីនៅអាសយដ្ឋាននេះទេ។",
+     "note": "the page shown for an address that is not here (in Khmer for a visitor in Cambodia)",
+     "note_km": "ទំព័រដែលបង្ហាញ ពេលអាសយដ្ឋានមិនមាននៅទីនេះ (ជាភាសាខ្មែរ សម្រាប់អ្នកមកលេងនៅកម្ពុជា)"
+    },
+    {
+     "key": "404:p2",
+     "en": "The page you asked for is not here.",
+     "km": "ទំព័រដែលអ្នកស្វែងរក មិនមាននៅទីនេះទេ។",
+     "note": "the page shown for an address that is not here (in Khmer for a visitor in Cambodia)",
+     "note_km": "ទំព័រដែលបង្ហាញ ពេលអាសយដ្ឋានមិនមាននៅទីនេះ (ជាភាសាខ្មែរ សម្រាប់អ្នកមកលេងនៅកម្ពុជា)"
+    },
+    {
+     "key": "404:a3",
+     "en": "Back to the office",
+     "km": "ត្រឡប់ទៅការិយាល័យ",
+     "note": "the page shown for an address that is not here (in Khmer for a visitor in Cambodia)",
+     "note_km": "ទំព័រដែលបង្ហាញ ពេលអាសយដ្ឋានមិនមាននៅទីនេះ (ជាភាសាខ្មែរ សម្រាប់អ្នកមកលេងនៅកម្ពុជា)"
+    }
+   ]
+  }
+ ]
+}
