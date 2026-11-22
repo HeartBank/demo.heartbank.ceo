@@ -16,6 +16,20 @@ const store = {
   del: (k) => { try { localStorage.removeItem(k); } catch {} },
 };
 
+// ⭐ THE UI LANGUAGE (founder 2026-11-22: "Add English/khmer language toggle"): the tool's OWN words show in one language;
+//   the entries under review always show both. Order (/build Default 3): the stored choice → a phone set to Khmer → Cambodia's
+//   time zone (the last tiebreak) → English. Kept on this device only.
+const UI_KEY = "khmer-review:ui";
+let ui = (() => {
+  const s = store.get(UI_KEY);
+  if (s === "km" || s === "en") return s;
+  if ((navigator.languages ?? [navigator.language]).some((l) => /^km\b/i.test(l ?? ""))) return "km";
+  try { if (Intl.DateTimeFormat().resolvedOptions().timeZone === "Asia/Phnom_Penh") return "km"; } catch {}
+  return "en";
+})();
+const applyUi = () => { document.documentElement.dataset.ui = ui; document.documentElement.lang = ui; };
+applyUi();
+
 let T = {};
 const el = (tag, attrs = {}, ...kids) => {
   const e = document.createElement(tag);
@@ -30,7 +44,7 @@ const el = (tag, attrs = {}, ...kids) => {
 const bi = (key, vars = {}) => {
   const [km, en] = Array.isArray(key) ? key : (T[key] ?? [key, key]);
   const fill = (s) => s.replace(/\{(\w+)\}/g, (m, k) => vars[k] ?? m);
-  return el("span", { class: "bi" }, el("span", { lang: "km", text: fill(km) }), el("span", { class: "en", lang: "en", text: fill(en) }));
+  return el("span", { class: "bi" }, el("span", { lang: "km", class: "ui-km", text: fill(km) }), el("span", { class: "en ui-en", lang: "en", text: fill(en) }));
 };
 /** a text with its {placeholders} marked, as text nodes only */
 const marked = (s, lang) => {
@@ -55,14 +69,24 @@ async function loadRows() {
 function reindex() { byKey = new Map(); for (const r of rows) { const a = byKey.get(r.key); if (a) a.push(r); else byKey.set(r.key, [r]); } }
 const st = (e) => stateOf(e, byKey.get(e.key) ?? []);
 
+function langs() {
+  const box = document.getElementById("langs");
+  if (!box) return;
+  const pick = (l) => { ui = l; store.set(UI_KEY, l); applyUi(); render(); };
+  box.replaceChildren(el("div", { class: "langs", role: "group", "aria-label": ui === "km" ? T.language[0] : T.language[1] },
+    el("button", { type: "button", lang: "km", "aria-pressed": String(ui === "km"), onclick: () => pick("km") }, "ខ្មែរ"),
+    el("button", { type: "button", lang: "en", "aria-pressed": String(ui === "en"), onclick: () => pick("en") }, "English")));
+}
+
 function header() {
+  langs();
   const bar = document.getElementById("status");
   bar.replaceChildren();
   const msg = !online ? "offline" : role ? "writer" : TOKEN ? "badLink" : "viewOnly";
   bar.append(el("p", { class: `banner ${!online || (TOKEN && !role) ? "warn" : role ? "ok" : ""}` }, bi(msg)));
   const done = entries.filter((e) => st(e).status !== "todo").length;
   const all = entries.length, todo = all - done;
-  const find = el("input", { type: "search", id: "find", placeholder: `${T.findHint[0]} · ${T.findHint[1]}`, autocomplete: "off" });
+  const find = el("input", { type: "search", id: "find", placeholder: ui === "km" ? T.findHint[0] : T.findHint[1], lang: ui, autocomplete: "off" });
   find.value = query;
   let timer;
   find.addEventListener("input", () => { clearTimeout(timer); timer = setTimeout(() => { query = find.value; renderList(); }, 150); });

@@ -139,6 +139,11 @@
      "en": "Where it is on the screen",
      "km": "ទីតាំងរបស់វានៅលើអេក្រង់",
      "status": "draft"
+    },
+    "language": {
+     "en": "Language",
+     "km": "ភាសា",
+     "status": "draft"
     }
    }
   },

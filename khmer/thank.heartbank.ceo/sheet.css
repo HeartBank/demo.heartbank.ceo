@@ -104,6 +104,14 @@ textarea.kmbox { font-size: 19px; line-height: 1.9; }
 .history li div { font-size: 17px; overflow-wrap: anywhere; }
 #list > p.none { color: var(--faint); }
 
+/* the UI language: the tool's own words in one language (the entries under review keep both); no script = both */
+html[data-ui="km"] .ui-en, html[data-ui="en"] .ui-km { display: none !important; }
+html[data-ui="en"] .bi .ui-en { font-size: 1em; color: inherit; }
+.top { display: flex; justify-content: flex-end; margin: 0 0 6px; }
+.langs { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; padding: 3px; gap: 2px; background: var(--paper); }
+.langs button { min-height: 36px; padding: 4px 14px; border: 0; border-radius: 999px; background: transparent; font-size: 15px; }
+.langs button[aria-pressed="true"] { background: var(--ink); color: var(--paper); font-weight: 600; }
+
 /* the picture: a window of the screen with a red outline and arrow at the entry's words */
 .shot { margin: 8px 0 8px; }
 .shot .label { margin: 0 0 4px; font-size: 13px; color: var(--faint); }
