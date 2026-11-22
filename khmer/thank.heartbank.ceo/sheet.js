@@ -40,7 +40,7 @@ const marked = (s, lang) => {
 };
 const day = (ms) => { const d = new Date(ms); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`; };
 
-let sheet, entries, rows = [], byKey = new Map(), role = null, online = true, filter = "all", query = "", open = null, lastLoad = 0;
+let shots = null, sheet, entries, rows = [], byKey = new Map(), role = null, online = true, filter = "all", query = "", open = null, lastLoad = 0;
 
 async function loadRows() {
   // the admin's link reads the export, which names each reviewer; everyone else reads the public rows, which name no one
@@ -83,6 +83,48 @@ function history(s) {
       el("div", {}, marked(r.km, "km"))))));
 }
 
+// ⭐ The picture (founder 2026-11-21: "no drawings, just screenshots: one screenshot per item … a prominent arrow pointing at the text
+//   in question"): a window of the phone screenshot the entry was found on (shots/shots.json, /khmer-review capture), with a red
+//   outline around its words and a thick arrow at them, drawn in the screenshot's own coordinates. One picture serves every entry on
+//   that screen; the window and the arrow are each entry's own.
+const NS = "http://www.w3.org/2000/svg";
+const svgEl = (tag, attrs) => { const x = document.createElementNS(NS, tag); for (const [k, v] of Object.entries(attrs)) x.setAttribute(k, String(v)); return x; };
+function picture(e) {
+  const p = shots?.entries?.[e.key];
+  if (!p) return null;
+  const VW = shots.viewport.width, VH = shots.viewport.height, WIN = Math.min(320, VH);
+  const top = Math.max(0, Math.min(VH - WIN, p.y + p.h / 2 - WIN / 2));
+  const frame = el("div", { class: "frame" });
+  frame.style.aspectRatio = `${VW} / ${WIN}`;
+  const img = el("img", { src: "shots/" + p.img, alt: "", loading: "lazy", decoding: "async" });
+  img.style.transform = `translateY(-${(top / VH) * 100}%)`;
+  const svg = svgEl("svg", { class: "mark", viewBox: `0 ${top} ${VW} ${WIN}`, preserveAspectRatio: "none", "aria-hidden": "true" });
+  const pad = 4, bx = p.x - pad, by = p.y - pad, bw = p.w + 2 * pad, bh = p.h + 2 * pad;
+  svg.append(svgEl("rect", { class: "box", x: bx, y: by, width: bw, height: bh, rx: 8 }));
+  // the arrow: from the side with room, at the words' middle; a box as wide as the screen gets it from below (or above)
+  const cy = p.y + p.h / 2, roomL = bx, roomR = VW - (bx + bw);
+  let tail, tip;
+  if (Math.max(roomL, roomR) >= 48) {
+    const fromRight = roomR >= roomL;
+    tip = [fromRight ? bx + bw + 3 : bx - 3, cy];
+    const len = Math.min(96, Math.max(roomL, roomR) - 8);
+    tail = [fromRight ? tip[0] + len : tip[0] - len, cy - len * 0.45];
+  } else {
+    const below = by + bh + 80 <= top + WIN;
+    tip = [Math.min(VW - 20, Math.max(20, p.x + Math.min(p.w, 120) / 2)), below ? by + bh + 3 : by - 3];
+    tail = [tip[0] + 40, below ? tip[1] + 70 : tip[1] - 70];
+  }
+  const ang = Math.atan2(tip[1] - tail[1], tip[0] - tail[0]);
+  const base = [tip[0] - 15 * Math.cos(ang), tip[1] - 15 * Math.sin(ang)];
+  const side = (s1) => [base[0] + s1 * 9 * Math.sin(ang), base[1] - s1 * 9 * Math.cos(ang)];
+  const shaft = `M${tail[0]},${tail[1]} L${base[0]},${base[1]}`;
+  svg.append(svgEl("path", { class: "halo", d: shaft }), svgEl("path", { class: "arrow", d: shaft }),
+    svgEl("polygon", { class: "head", points: [tip, side(1), side(-1)].map((q) => q.join(",")).join(" ") }));
+  frame.append(img, svg);
+  return el("figure", { class: "shot" }, el("p", { class: "label" }, bi("picture")), frame,
+    el("figcaption", {}, el("a", { href: "shots/" + p.img, target: "_blank", rel: "noopener noreferrer" }, bi("wholeScreen"))));
+}
+
 function card(e) {
   const s = st(e);
   const unsent = ["text", "note"].filter((k) => store.get(DRAFT_KEY(e.key, k)));
@@ -96,6 +138,8 @@ function card(e) {
     el("code", { class: "key", text: e.key })));
   art.append(el("div", { class: "en" }, e.en ? marked(e.en, "en") : bi("khmerOnly")));
   if (e.note) art.append(el("p", { class: "appears" }, el("span", { class: "lbl" }, bi("appears")), el("span", { lang: "en", text: e.note })));
+  const fig = picture(e);
+  if (fig) art.append(fig);
   art.append(el("div", { class: "km" }, s.khmer ? marked(s.khmer, "km") : el("span", { class: "none" }, bi("noKhmer"))));
   if (s.latest && e.km && s.khmer !== e.km) art.append(el("details", { class: "draft" }, el("summary", {}, bi("draft")), el("div", {}, marked(e.km, "km"))));
   art.append(history(s) ?? "");
@@ -184,13 +228,6 @@ async function save(e, row, btn, msg, dk) {
   }
 }
 
-function contextLinks(g) {
-  if (!g?.context?.length) return null;
-  return el("p", { class: "where" }, bi("where"),
-    el("span", { class: "links" }, g.context.map((c) => el("a", { href: c.url, target: "_blank", rel: "noopener noreferrer" }, bi(c.kind === "page" ? "livePage" : c.lang === "km" ? "drawingKm" : "drawingEn")))),
-    g.context.some((c) => c.kind !== "page") ? el("span", { class: "note" }, bi("drawingNote")) : null);
-}
-
 function renderList(focusKey, note) {
   const list = document.getElementById("list");
   const keepY = focusKey ? document.getElementById("e-" + focusKey)?.getBoundingClientRect().top : null;
@@ -202,7 +239,7 @@ function renderList(focusKey, note) {
     if (!matches(e, s, query) && e.key !== focusKey) continue;
     if (e.group !== group) {
       group = e.group;
-      section = el("section", {}, el("h2", { text: group }), contextLinks(sheet.groups.find((g) => g.name === group)) ?? "");
+      section = el("section", {}, el("h2", { text: group }));
       list.append(section);
     }
     section.append(card(e));
@@ -246,6 +283,7 @@ async function main() {
   let words;
   try {
     [sheet, words] = await Promise.all(["sheet.json", "words.json"].map((f) => fetch(f, { cache: "no-cache" }).then((r) => r.json())));
+    shots = await fetch("shots/shots.json", { cache: "no-cache" }).then((r) => (r.ok ? r.json() : null)).catch(() => null);
   } catch {
     document.getElementById("list").textContent = "sheet.json could not be read.";
     return;

@@ -125,34 +125,19 @@
      "km": "គ្មានអ្វីត្រូវគ្នាទេ។",
      "status": "draft"
     },
-    "where": {
-     "en": "Where these appear",
-     "km": "កន្លែងដែលពាក្យទាំងនេះលេចឡើង",
-     "status": "draft"
-    },
-    "drawingKm": {
-     "en": "Drawing, Khmer",
-     "km": "គំនូរ ភាសាខ្មែរ",
-     "status": "draft"
-    },
-    "drawingEn": {
-     "en": "Drawing, English",
-     "km": "គំនូរ ភាសាអង់គ្លេស",
-     "status": "draft"
-    },
-    "livePage": {
-     "en": "The page itself",
-     "km": "ទំព័រផ្ទាល់",
-     "status": "draft"
-    },
-    "drawingNote": {
-     "en": "A drawing may differ from the live site.",
-     "km": "គំនូរអាចខុសពីគេហទំព័រពិត។",
-     "status": "draft"
-    },
     "unsent": {
      "en": "Unsent text, kept on this device",
      "km": "អត្ថបទមិនទាន់រក្សាទុក ត្រូវបានទុកនៅលើឧបករណ៍នេះ",
+     "status": "draft"
+    },
+    "wholeScreen": {
+     "en": "The whole screen",
+     "km": "អេក្រង់ទាំងមូល",
+     "status": "draft"
+    },
+    "picture": {
+     "en": "Where it is on the screen",
+     "km": "ទីតាំងរបស់វានៅលើអេក្រង់",
      "status": "draft"
     }
    }
@@ -246,8 +231,8 @@
      "status": "draft"
     },
     "how3": {
-     "en": "Each group links to a drawing of the screen where its words appear.",
-     "km": "ក្រុមនីមួយៗមានតំណទៅកាន់គំនូរនៃអេក្រង់ ដែលពាក្យរបស់វាលេចឡើង។",
+     "en": "Each entry shows a picture of the screen it is on, with a red arrow at its words. The pictures show our draft Khmer, as the site was on {date}.",
+     "km": "ធាតុនីមួយៗបង្ហាញរូបភាពនៃអេក្រង់ដែលវានៅ ជាមួយព្រួញក្រហមចង្អុលទៅពាក្យរបស់វា។ រូបភាពទាំងនេះបង្ហាញសេចក្តីព្រាងខ្មែររបស់យើង ដូចគេហទំព័រនៅថ្ងៃទី {date}។",
      "status": "draft"
     },
     "made": {

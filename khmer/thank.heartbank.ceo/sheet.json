@@ -5,7 +5,7 @@
  "about": "The shops app: the storefront customers order from, the shop's own counter and rider app, gifts, notifications and the team's console.",
  "accent": "#14532d",
  "made": "2026-11-21",
- "commit": "e3d21ca",
+ "commit": "49eac6b",
  "groups": [
   {
    "name": "The storefront (customers) · menu, under the shop name (open)",
@@ -51,18 +51,6 @@
      "en": "{n} ahead",
      "km": "{n} នៅមុន",
      "note": "menu, right of 'Open now'"
-    }
-   ],
-   "context": [
-    {
-     "url": "/Storefront.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    },
-    {
-     "url": "/Checkout.dc.html",
-     "lang": "en",
-     "kind": "drawing"
     }
    ]
   },
@@ -519,18 +507,6 @@
      "km": "{shop} បានបិទហើយ ដូច្នេះការកុម្ម៉ង់នេះមិនត្រូវបានផ្ញើទេ។ មិនមានអ្វីត្រូវបានគិតប្រាក់ទេ ហើយអ្វីដែលអ្នកបានជ្រើសរើសនៅតែនៅទីនេះ សម្រាប់ពេលហាងបើក។",
      "note": "checkout, when the server refuses an order because the shop closed while it was being sent"
     }
-   ],
-   "context": [
-    {
-     "url": "/Storefront.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    },
-    {
-     "url": "/Checkout.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    }
    ]
   },
   {
@@ -740,18 +716,6 @@
      "km": "**ក្រៅពីនោះ មិនជំពាក់អ្វីទៀតទេ។** អ្នកនឹងមានឱកាសអរគុណ ពេលវានៅក្នុងដៃរបស់អ្នក — មិនមែនមុននោះទេ ដូច្នេះវាមិនអាចជាផ្នែកនៃតម្លៃបានទេ។",
      "note": "a pickup's order page, right under 'To pay after you have it'"
     }
-   ],
-   "context": [
-    {
-     "url": "/Storefront.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    },
-    {
-     "url": "/Checkout.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    }
    ]
   },
   {
@@ -931,18 +895,6 @@
      "km": "វាមិនបានដំណើរការទេ — គ្មានអ្វីត្រូវបានផ្ញើទេ។ អ្នកអាចផ្ញើវានៅក្នុង HeartBank® ជំនួសវិញ៖",
      "note": "the ask"
     }
-   ],
-   "context": [
-    {
-     "url": "/Storefront.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    },
-    {
-     "url": "/Checkout.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    }
    ]
   },
   {
@@ -989,18 +941,6 @@
      "en": "it covers what it cost to make",
      "km": "វាគ្រប់ថ្លៃដើមដែលចំណាយដើម្បីធ្វើវា",
      "note": "a reason in the suggestion"
-    }
-   ],
-   "context": [
-    {
-     "url": "/Storefront.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    },
-    {
-     "url": "/Checkout.dc.html",
-     "lang": "en",
-     "kind": "drawing"
     }
    ]
   },
@@ -1114,18 +1054,6 @@
      "en": "Snacks",
      "km": "អាហារសម្រន់",
      "note": "the fixed item-type list"
-    }
-   ],
-   "context": [
-    {
-     "url": "/Storefront.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    },
-    {
-     "url": "/Checkout.dc.html",
-     "lang": "en",
-     "kind": "drawing"
     }
    ]
   },
@@ -1354,18 +1282,6 @@
      "km": "ការចុះឈ្មោះមកដល់ដោយកូដនៅកុងទ័រ មិនប្រើទីតាំងទេ។",
      "note": "the check-in sheet, under its camera button"
     }
-   ],
-   "context": [
-    {
-     "url": "/Storefront.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    },
-    {
-     "url": "/Checkout.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    }
    ]
   },
   {
@@ -1533,18 +1449,6 @@
      "km": "{shop} បិទនៅពេលនេះ — អ្នកអាចយករង្វាន់បាន ពេលហាងបើក។",
      "note": "rewards screen, above the rewards the person can claim, while the shop is closed"
     }
-   ],
-   "context": [
-    {
-     "url": "/Storefront.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    },
-    {
-     "url": "/Checkout.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    }
    ]
   },
   {
@@ -1627,18 +1531,6 @@
      "en": "Back to the menu",
      "km": "ត្រឡប់ទៅម៉ឺនុយ",
      "note": "the draw's own page"
-    }
-   ],
-   "context": [
-    {
-     "url": "/Storefront.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    },
-    {
-     "url": "/Checkout.dc.html",
-     "lang": "en",
-     "kind": "drawing"
     }
    ]
   },
@@ -1908,18 +1800,6 @@
      "en": "Everything on that gift has been had.",
      "km": "អ្វីៗទាំងអស់នៅលើកាដូនោះ ត្រូវបានទទួលអស់ហើយ។",
      "note": "menu, after a used-up code is entered"
-    }
-   ],
-   "context": [
-    {
-     "url": "/Storefront.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    },
-    {
-     "url": "/Checkout.dc.html",
-     "lang": "en",
-     "kind": "drawing"
     }
    ]
   },
@@ -2286,18 +2166,6 @@
      "km": "កាដូនេះសម្រាប់ {name} ផ្តល់បន្ត។ ពេលពួកគេមានលេខកូដហើយ វាជារបស់ពួកគេសម្រាប់ផ្តល់ឲ្យគេ។",
      "note": "gift page, a relay this phone bought for someone to pass on"
     }
-   ],
-   "context": [
-    {
-     "url": "/Storefront.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    },
-    {
-     "url": "/Checkout.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    }
    ]
   },
   {
@@ -2368,18 +2236,6 @@
      "en": "Nothing new about the gifts you sent.",
      "km": "គ្មានអ្វីថ្មីអំពីកាដូដែលអ្នកបានផ្ញើទេ។",
      "note": "the sender's screen, nothing to say"
-    }
-   ],
-   "context": [
-    {
-     "url": "/Storefront.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    },
-    {
-     "url": "/Checkout.dc.html",
-     "lang": "en",
-     "kind": "drawing"
     }
    ]
   },
@@ -2494,18 +2350,6 @@
      "km": "កាដូសម្រាប់ផ្តល់បន្ត តាមរយៈ",
      "note": "gift order page, above the re-giver's name"
     }
-   ],
-   "context": [
-    {
-     "url": "/Storefront.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    },
-    {
-     "url": "/Checkout.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    }
    ]
   },
   {
@@ -2546,18 +2390,6 @@
      "en": "It stays until you use it.",
      "km": "វានៅដដែល រហូតដល់អ្នកប្រើវា។",
      "note": "tab screen"
-    }
-   ],
-   "context": [
-    {
-     "url": "/Storefront.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    },
-    {
-     "url": "/Checkout.dc.html",
-     "lang": "en",
-     "kind": "drawing"
     }
    ]
   },
@@ -2600,18 +2432,6 @@
      "km": "ដើម្បីដឹងអ្វីដែលនៅជិតអ្នក ត្រូវការទីតាំងរបស់អ្នកម្តង។ គ្មានអ្វីត្រូវបានរក្សាទុកទេ។",
      "note": "storefront, a MOVING shop"
     }
-   ],
-   "context": [
-    {
-     "url": "/Storefront.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    },
-    {
-     "url": "/Checkout.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    }
    ]
   },
   {
@@ -2646,18 +2466,6 @@
      "en": "{n} gifts",
      "km": "កាដូ {n}",
      "note": "the count beside Gifts on her photo"
-    }
-   ],
-   "context": [
-    {
-     "url": "/Storefront.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    },
-    {
-     "url": "/Checkout.dc.html",
-     "lang": "en",
-     "kind": "drawing"
     }
    ]
   },
@@ -2711,18 +2519,6 @@
      "en": "Turn on order updates",
      "km": "បើកព័ត៌មានការកុម្ម៉ង់",
      "note": "storefront"
-    }
-   ],
-   "context": [
-    {
-     "url": "/Storefront.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    },
-    {
-     "url": "/Checkout.dc.html",
-     "lang": "en",
-     "kind": "drawing"
     }
    ]
   },
@@ -2885,18 +2681,6 @@
      "km": "មើល",
      "note": "Rewards → the one history, a delivered catering booking that earned a commission"
     }
-   ],
-   "context": [
-    {
-     "url": "/Storefront.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    },
-    {
-     "url": "/Checkout.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    }
    ]
   },
   {
@@ -2955,18 +2739,6 @@
      "en": "Both are optional. If you're under 18, ask a parent before you add a photo.",
      "km": "ទាំងពីរមិនបង្ខំទេ។ ប្រសិនបើអ្នកអាយុក្រោម ១៨ឆ្នាំ សូមសួរឪពុកម្ដាយ មុននឹងបន្ថែមរូបថត។",
      "note": "You, signed in"
-    }
-   ],
-   "context": [
-    {
-     "url": "/Storefront.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    },
-    {
-     "url": "/Checkout.dc.html",
-     "lang": "en",
-     "kind": "drawing"
     }
    ]
   },
@@ -3027,18 +2799,6 @@
      "km": "កុំអានវាឲ្យនរណាម្នាក់ ឬវាយវានៅកន្លែងផ្សេង — គ្មាននរណាម្នាក់ពីហាង ឬ HeartBank® នឹងសុំវាទេ។",
      "note": "the verify hop, ?app=1, the last line"
     }
-   ],
-   "context": [
-    {
-     "url": "/Storefront.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    },
-    {
-     "url": "/Checkout.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    }
    ]
   },
   {
@@ -3085,18 +2845,6 @@
      "en": "That could not be checked — try again.",
      "km": "មិនអាចពិនិត្យបានទេ — សូមសាកម្ដងទៀត។",
      "note": "an installed storefront, the sign-in sheet"
-    }
-   ],
-   "context": [
-    {
-     "url": "/Storefront.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    },
-    {
-     "url": "/Checkout.dc.html",
-     "lang": "en",
-     "kind": "drawing"
     }
    ]
   },
@@ -3180,18 +2928,6 @@
      "en": "You bought that gift for someone, so it's theirs to use. Send it to them from Gifts.",
      "km": "អ្នកបានទិញកាដូនោះសម្រាប់នរណាម្នាក់ ដូច្នេះវាជារបស់គេសម្រាប់ប្រើ។ ផ្ញើវាទៅគេពីទំព័រកាដូ។",
      "note": "checkout, the buyer tried to use a gift they bought"
-    }
-   ],
-   "context": [
-    {
-     "url": "/Storefront.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    },
-    {
-     "url": "/Checkout.dc.html",
-     "lang": "en",
-     "kind": "drawing"
     }
    ]
   },
@@ -3630,18 +3366,6 @@
      "km": "បញ្ចូល {item} ក្នុងការកុម្ម៉ង់ម្ហូបច្រើននេះ",
      "note": "the catering menu, the switch on each item"
     }
-   ],
-   "context": [
-    {
-     "url": "/Storefront.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    },
-    {
-     "url": "/Checkout.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    }
    ]
   },
   {
@@ -3773,18 +3497,6 @@
      "km": "គ្មាននរណាម្នាក់ឃើញថា មានប៉ុន្មាននាក់បានប្រើលេខកូដណាមួយទេ — រួមទាំងអ្នកផង។",
      "note": "storefront rewards"
     }
-   ],
-   "context": [
-    {
-     "url": "/Storefront.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    },
-    {
-     "url": "/Checkout.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    }
    ]
   },
   {
@@ -3897,18 +3609,6 @@
      "en": "There is no number on this account to show.",
      "km": "គណនីនេះគ្មានលេខសម្រាប់បង្ហាញទេ។",
      "note": "the ask sheet"
-    }
-   ],
-   "context": [
-    {
-     "url": "/Storefront.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    },
-    {
-     "url": "/Checkout.dc.html",
-     "lang": "en",
-     "kind": "drawing"
     }
    ]
   },
@@ -4023,18 +3723,6 @@
      "km": "ស្កេនវាដើម្បីបើកម៉ឺនុយនេះនៅលើទូរសព្ទផ្សេង ឬចែករំលែកតំណ។ វាមិនដែលប្ដូរទេ។",
      "note": "the tier sheet, its last card"
     }
-   ],
-   "context": [
-    {
-     "url": "/Storefront.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    },
-    {
-     "url": "/Checkout.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    }
    ]
   },
   {
@@ -4099,18 +3787,6 @@
      "en": "Family B-Shorts",
      "km": "Family B-Shorts",
      "note": "the owner's sheet: her Shorts in her own family's bank"
-    }
-   ],
-   "context": [
-    {
-     "url": "/Storefront.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    },
-    {
-     "url": "/Checkout.dc.html",
-     "lang": "en",
-     "kind": "drawing"
     }
    ]
   },
@@ -4284,18 +3960,6 @@
      "en": "Enter your code when you have it",
      "km": "សូមបញ្ចូលលេខកូដរបស់អ្នក ពេលអ្នកបានទទួលវា",
      "note": "A348"
-    }
-   ],
-   "context": [
-    {
-     "url": "/Storefront.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    },
-    {
-     "url": "/Checkout.dc.html",
-     "lang": "en",
-     "kind": "drawing"
     }
    ]
   },
@@ -4566,18 +4230,6 @@
      "km": "មិនអាចបើកវាបានទេឥឡូវនេះ។ សូមព្យាយាមម្ដងទៀត។",
      "note": "You › B-Treasury"
     }
-   ],
-   "context": [
-    {
-     "url": "/Storefront.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    },
-    {
-     "url": "/Checkout.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    }
    ]
   },
   {
@@ -4636,18 +4288,6 @@
      "en": "Open in Google Maps",
      "km": "បើកក្នុង Google Maps",
      "note": "the shop's place sheet, above Close"
-    }
-   ],
-   "context": [
-    {
-     "url": "/Storefront.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    },
-    {
-     "url": "/Checkout.dc.html",
-     "lang": "en",
-     "kind": "drawing"
     }
    ]
   },
@@ -4714,18 +4354,6 @@
      "km": "កាមេរ៉ាមិនអាចចាប់ផ្តើមបានទេ — សូមជ្រើសរើសរូបថតជំនួសវិញ។",
      "note": "<qr-scan>"
     }
-   ],
-   "context": [
-    {
-     "url": "/Storefront.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    },
-    {
-     "url": "/Checkout.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    }
    ]
   },
   {
@@ -4791,18 +4419,6 @@
      "km": "មិនអាចផ្ញើបានទេ — សូមសាកម្តងទៀត។",
      "note": "A348"
     }
-   ],
-   "context": [
-    {
-     "url": "/Storefront.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    },
-    {
-     "url": "/Checkout.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    }
    ]
   },
   {
@@ -4861,18 +4477,6 @@
      "en": "Not sent. Try again.",
      "km": "មិនទាន់ផ្ញើទេ។ សូមព្យាយាមម្តងទៀត។",
      "note": "order page, the receipt block, any other failure"
-    }
-   ],
-   "context": [
-    {
-     "url": "/Storefront.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    },
-    {
-     "url": "/Checkout.dc.html",
-     "lang": "en",
-     "kind": "drawing"
     }
    ]
   },
@@ -4975,18 +4579,6 @@
      "km": "Wi-Fi មិនបានផ្ទុកទេ។ សូមព្យាយាមម្ដងទៀត។",
      "note": "storefront"
     }
-   ],
-   "context": [
-    {
-     "url": "/Storefront.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    },
-    {
-     "url": "/Checkout.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    }
    ]
   },
   {
@@ -5021,18 +4613,6 @@
      "en": "Times are {city} time ({utc}).",
      "km": "ម៉ោងទាំងនេះ គិតតាមម៉ោង {city} ({utc})។",
      "note": "storefront"
-    }
-   ],
-   "context": [
-    {
-     "url": "/Storefront.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    },
-    {
-     "url": "/Checkout.dc.html",
-     "lang": "en",
-     "kind": "drawing"
     }
    ]
   },
@@ -5104,18 +4684,6 @@
      "en": "ready in {band}",
      "km": "រួចក្នុង {band}",
      "note": "storefront"
-    }
-   ],
-   "context": [
-    {
-     "url": "/Storefront.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    },
-    {
-     "url": "/Checkout.dc.html",
-     "lang": "en",
-     "kind": "drawing"
     }
    ]
   },
@@ -5223,18 +4791,6 @@
      "en": "This treat can’t be opened here now.",
      "km": "អំណោយនេះមិនអាចបើកនៅទីនេះឥឡូវនេះទេ។",
      "note": "storefront, B-Treat"
-    }
-   ],
-   "context": [
-    {
-     "url": "/Storefront.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    },
-    {
-     "url": "/Checkout.dc.html",
-     "lang": "en",
-     "kind": "drawing"
     }
    ]
   },
@@ -5685,18 +5241,6 @@
      "km": "វីដេអូគំនូរជីវចល ដែលមានសំឡេង AI។",
      "note": "the watch sheet"
     }
-   ],
-   "context": [
-    {
-     "url": "/Storefront.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    },
-    {
-     "url": "/Checkout.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    }
    ]
   },
   {
@@ -5804,18 +5348,6 @@
      "km": "អ្នកដែលបានផ្ញើវា",
      "note": "the one statement, anonymous"
     }
-   ],
-   "context": [
-    {
-     "url": "/Gift.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    },
-    {
-     "url": "/GiftClaim.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    }
    ]
   },
   {
@@ -5833,18 +5365,6 @@
      "km": "មួយទៀត",
      "note": "menu, the + button"
     }
-   ],
-   "context": [
-    {
-     "url": "/Gift.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    },
-    {
-     "url": "/GiftClaim.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    }
    ]
   },
   {
@@ -5856,18 +5376,6 @@
      "km": "បន្ថែម",
      "note": "the + button, read aloud by a screen reader"
     }
-   ],
-   "context": [
-    {
-     "url": "/Gift.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    },
-    {
-     "url": "/GiftClaim.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    }
    ]
   },
   {
@@ -5878,18 +5386,6 @@
      "en": "That one lapsed. Here is a new one in its memory.",
      "km": "មួយនោះបានផុតហើយ។ នេះជាមួយថ្មី ក្នុងការចងចាំវា។",
      "note": "the payer's"
-    }
-   ],
-   "context": [
-    {
-     "url": "/Gift.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    },
-    {
-     "url": "/GiftClaim.dc.html",
-     "lang": "en",
-     "kind": "drawing"
     }
    ]
   },
@@ -6076,13 +5572,6 @@
      "km": "ចេញលក់ឥឡូវនេះ · {place}",
      "note": "the /find page, on a moving shop's card, with her own words for where"
     }
-   ],
-   "context": [
-    {
-     "url": "/Find.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    }
    ]
   },
   {
@@ -6099,13 +5588,6 @@
      "en": "Continue",
      "km": "បន្ត",
      "note": "thank.heartbank.ceo/open"
-    }
-   ],
-   "context": [
-    {
-     "url": "/OpenShop.dc.html",
-     "lang": "en",
-     "kind": "drawing"
     }
    ]
   },
@@ -6159,13 +5641,6 @@
      "en": "co-owner",
      "km": "សហម្ចាស់",
      "note": "People, beside a name"
-    }
-   ],
-   "context": [
-    {
-     "url": "/SettingsPeople.dc.html",
-     "lang": "en",
-     "kind": "drawing"
     }
    ]
   },
@@ -7251,13 +6726,6 @@
      "km": "អ្វីៗទាំងអស់នៅលើកាដូនេះត្រូវបានប្រើរួចហើយ។",
      "note": "Cashier, a looked-up code with nothing open"
     }
-   ],
-   "context": [
-    {
-     "url": "/Counter.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    }
    ]
   },
   {
@@ -7407,13 +6875,6 @@
      "km": "«កុម្ម៉ង់នៅទីនេះ» — តំណរបស់អ្នក លេខកូដ QR និងកាតសម្រាប់បោះពុម្ព",
      "note": "counter Shop hub"
     }
-   ],
-   "context": [
-    {
-     "url": "/Settings.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    }
    ]
   },
   {
@@ -7454,13 +6915,6 @@
      "en": "Work",
      "km": "ការងារ",
      "note": "the bottom tabs"
-    }
-   ],
-   "context": [
-    {
-     "url": "/Counter.dc.html",
-     "lang": "en",
-     "kind": "drawing"
     }
    ]
   },
@@ -7640,13 +7094,6 @@
      "en": "Older",
      "km": "ចាស់ជាងនេះ",
      "note": "the counter's History"
-    }
-   ],
-   "context": [
-    {
-     "url": "/CounterHistory.dc.html",
-     "lang": "en",
-     "kind": "drawing"
     }
    ]
   },
@@ -8012,13 +7459,6 @@
      "en": "That didn't save — try again.",
      "km": "មិនបានរក្សាទុកទេ — សូមព្យាយាមម្តងទៀត។",
      "note": "counter You, the switch or the save failed"
-    }
-   ],
-   "context": [
-    {
-     "url": "/CounterYou.dc.html",
-     "lang": "en",
-     "kind": "drawing"
     }
    ]
   },
@@ -8715,13 +8155,6 @@
      "km": "HeartBank® អាចធ្វើការក្នុងហាងរបស់អ្នកដូចអ្នកដែរ — ម៉ឺនុយ តម្លៃ និងមនុស្ស — ដើម្បីជួយអ្នក។ ដកវាចេញបានគ្រប់ពេល។",
      "note": "People, under HeartBank®'s seat"
     }
-   ],
-   "context": [
-    {
-     "url": "/SettingsPeople.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    }
    ]
   },
   {
@@ -9279,13 +8712,6 @@
      "km": "ជ្រើសរូបថតកូដ",
      "note": "shop settings"
     }
-   ],
-   "context": [
-    {
-     "url": "/SettingsShop.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    }
    ]
   },
   {
@@ -9505,13 +8931,6 @@
      "km": "គ្រប់កម្រិតត្រូវការអ្វីដែលអ្នកដឹកទទួលបាន — ការដឹកដែលមិនបានប្រាក់ មិនមែនជាអ្វីដែលនរណាម្នាក់បានយល់ព្រមទេ។",
      "note": "Delivery settings, an error"
     }
-   ],
-   "context": [
-    {
-     "url": "/SettingsDelivery.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    }
    ]
   },
   {
@@ -9666,13 +9085,6 @@
      "en": "Your shop's numbers, and nobody else's. You are not compared to anyone.",
      "km": "លេខរបស់ហាងអ្នក មិនមែនរបស់អ្នកដទៃទេ។ អ្នកមិនត្រូវបានប្រៀបធៀបជាមួយនរណាម្នាក់ទេ។",
      "note": "How it's going, the last line"
-    }
-   ],
-   "context": [
-    {
-     "url": "/SettingsSales.dc.html",
-     "lang": "en",
-     "kind": "drawing"
     }
    ]
   },
@@ -10321,13 +9733,6 @@
      "km": "កម្រៃជើងសារ៖ លេខគត់ពី 0 ដល់ 50។",
      "note": "the menu editor, a commission refused"
     }
-   ],
-   "context": [
-    {
-     "url": "/CounterYou.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    }
    ]
   },
   {
@@ -10806,13 +10211,6 @@
      "en": "You're off runs at every shop — no new offers come to you until you switch Available back on. A run you already have stays yours.",
      "km": "អ្នកបានបិទការដឹកជញ្ជូននៅគ្រប់ហាង — គ្មានការផ្ដល់ថ្មីមកអ្នកទេ រហូតដល់អ្នកបើក «ទំនេរ» វិញ។ ការដឹកដែលអ្នកមានរួចហើយ នៅតែជារបស់អ្នក។",
      "note": "rider, the top of the queue while off"
-    }
-   ],
-   "context": [
-    {
-     "url": "/Rider.dc.html",
-     "lang": "en",
-     "kind": "drawing"
     }
    ]
   },
@@ -11459,13 +10857,6 @@
      "km": "គ្រប់មុខទំនិញត្រូវបានអរគុណបន្ទាប់ ដោយគ្មានតម្លៃថេរ។ HeartBank® អនុម័តសំណើនេះ; រហូតដល់ពេលនោះ ហាងរបស់អ្នកបើកជាមួយតម្លៃរបស់វាដូចធម្មតា។",
      "note": "thank.heartbank.ceo/open, under the B-Affiliate checkbox"
     }
-   ],
-   "context": [
-    {
-     "url": "/OpenShop.dc.html",
-     "lang": "en",
-     "kind": "drawing"
-    }
    ]
   },
   {
@@ -12042,13 +11433,6 @@
      "en": "Your prices stay in riel. Anyone reading in English sees them in dollars at this rate, so {riel} reads as {usd}.",
      "km": "តម្លៃរបស់អ្នកនៅតែជារៀល។ អ្នកអានជាភាសាអង់គ្លេសនឹងឃើញវាជាដុល្លារតាមអត្រានេះ ដូច្នេះ {riel} អានថា {usd}។",
      "note": "Settings · How you take money"
-    }
-   ],
-   "context": [
-    {
-     "url": "/SettingsPayments.dc.html",
-     "lang": "en",
-     "kind": "drawing"
     }
    ]
   },
@@ -12639,13 +12023,6 @@
      "en": "Part of that gift was just used. Look the code up again.",
      "km": "ផ្នែកមួយនៃកាដូនោះទើបតែត្រូវបានប្រើ។ សូមរកមើលលេខកូដម្តងទៀត។",
      "note": "Cashier review, a gift line refused"
-    }
-   ],
-   "context": [
-    {
-     "url": "/CounterPayment.dc.html",
-     "lang": "en",
-     "kind": "drawing"
     }
    ]
   },
@@ -15868,13 +15245,6 @@
      "en": "made a one-hour log-in link",
      "km": "បានបង្កើតតំណចូលគណនីមួយម៉ោង",
      "note": "the log, an action"
-    }
-   ],
-   "context": [
-    {
-     "url": "/Admin.dc.html",
-     "lang": "en",
-     "kind": "drawing"
     }
    ]
   }

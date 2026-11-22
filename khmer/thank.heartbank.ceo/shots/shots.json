@@ -1,0 +1,7557 @@
+{
+ "made": "2026-11-22T07:00:38.320Z",
+ "viewport": {
+  "width": 390,
+  "height": 844
+ },
+ "states": {
+  "store-menu": {
+   "url": "/?surface=storefront&tag=homecoffee",
+   "found": 47,
+   "images": 4
+  },
+  "store-checkout": {
+   "url": "/?surface=storefront&tag=homecoffee",
+   "found": 31,
+   "images": 2
+  },
+  "store-delivery": {
+   "url": "/?surface=storefront&tag=homecoffee",
+   "found": 22,
+   "images": 2
+  },
+  "store-giftcode": {
+   "url": "/?surface=storefront&tag=homecoffee",
+   "found": 18,
+   "images": 3
+  },
+  "store-placed": {
+   "url": "/?surface=storefront&tag=homecoffee",
+   "found": 32,
+   "images": 3
+  },
+  "store-checkin": {
+   "url": "/?surface=storefront&tag=homecoffee",
+   "found": 13,
+   "images": 1
+  },
+  "store-gift": {
+   "url": "/?surface=storefront&tag=homecoffee",
+   "found": 10,
+   "images": 1
+  },
+  "store-gifts": {
+   "url": "/?surface=storefront&tag=homecoffee",
+   "found": 2,
+   "images": 1
+  },
+  "store-tab": {
+   "url": "/?surface=storefront&tag=homecoffee",
+   "found": 3,
+   "images": 1
+  },
+  "store-you": {
+   "url": "/you?surface=storefront&tag=homecoffee",
+   "found": 8,
+   "images": 1
+  },
+  "store-sent": {
+   "url": "/?surface=storefront&tag=homecoffee",
+   "found": 4,
+   "images": 1
+  },
+  "store-done": {
+   "url": "/?surface=storefront&tag=homecoffee",
+   "found": 0,
+   "images": 0
+  },
+  "store-regift": {
+   "url": "/?surface=storefront&tag=homecoffee",
+   "found": 0,
+   "images": 0
+  },
+  "counter-orders": {
+   "url": "/?tag=homecoffee",
+   "found": 52,
+   "images": 3
+  },
+  "counter-cashier": {
+   "url": "/?tag=homecoffee",
+   "found": 2,
+   "images": 1
+  },
+  "counter-history": {
+   "url": "/?tag=homecoffee",
+   "found": 12,
+   "images": 1
+  },
+  "counter-work": {
+   "url": "/?tag=homecoffee",
+   "found": 12,
+   "images": 1
+  },
+  "counter-you": {
+   "url": "/?tag=homecoffee",
+   "found": 35,
+   "images": 4
+  },
+  "counter-menu": {
+   "url": "/?tag=homecoffee",
+   "found": 9,
+   "images": 2
+  },
+  "counter-item": {
+   "url": "/?tag=homecoffee",
+   "found": 44,
+   "images": 5
+  },
+  "counter-shop": {
+   "url": "/?tag=homecoffee",
+   "found": 34,
+   "images": 3
+  },
+  "counter-set-shop": {
+   "url": "/?tag=homecoffee",
+   "found": 83,
+   "images": 11
+  },
+  "counter-set-payments": {
+   "url": "/?tag=homecoffee",
+   "found": 28,
+   "images": 4
+  },
+  "counter-set-delivery": {
+   "url": "/?tag=homecoffee",
+   "found": 18,
+   "images": 2
+  },
+  "counter-set-orders": {
+   "url": "/?tag=homecoffee",
+   "found": 7,
+   "images": 1
+  },
+  "counter-set-people": {
+   "url": "/?tag=homecoffee",
+   "found": 47,
+   "images": 6
+  },
+  "counter-person": {
+   "url": "/?tag=homecoffee",
+   "found": 0,
+   "images": 0
+  },
+  "counter-set-sales": {
+   "url": "/?tag=homecoffee",
+   "found": 20,
+   "images": 3
+  },
+  "counter-set-invite": {
+   "url": "/?tag=homecoffee",
+   "found": 4,
+   "images": 1
+  },
+  "counter-set-log": {
+   "url": "/?tag=homecoffee",
+   "found": 2,
+   "images": 1
+  },
+  "counter-set-welcome": {
+   "url": "/?tag=homecoffee",
+   "found": 28,
+   "images": 4
+  },
+  "counter-set-gifts": {
+   "url": "/?tag=homecoffee",
+   "found": 10,
+   "images": 1
+  },
+  "counter-set-qr": {
+   "url": "/?tag=homecoffee",
+   "found": 8,
+   "images": 2
+  },
+  "rider": {
+   "url": "/?surface=rider&tag=homecoffee",
+   "found": 8,
+   "images": 1
+  },
+  "find": {
+   "url": "/find?surface=thank",
+   "found": 20,
+   "images": 10
+  },
+  "open": {
+   "url": "/open?surface=thank",
+   "found": 31,
+   "images": 3
+  },
+  "verify": {
+   "url": "/verify?surface=thank",
+   "found": 1,
+   "images": 1
+  },
+  "counter-signed-out": {
+   "url": "/?tag=homecoffee",
+   "found": 1,
+   "images": 1
+  },
+  "console-platform": {
+   "url": "/?surface=admin",
+   "found": 69,
+   "images": 10
+  },
+  "console-shops": {
+   "url": "/?surface=admin",
+   "found": 1,
+   "images": 1
+  },
+  "console-reports": {
+   "url": "/?surface=admin",
+   "found": 0,
+   "images": 0
+  },
+  "console-themes": {
+   "url": "/?surface=admin",
+   "found": 0,
+   "images": 0
+  },
+  "console-recommendation": {
+   "url": "/?surface=admin",
+   "found": 32,
+   "images": 4
+  },
+  "console-calling": {
+   "url": "/?surface=admin",
+   "found": 0,
+   "images": 0
+  },
+  "console-clicks": {
+   "url": "/?surface=admin",
+   "found": 0,
+   "images": 0
+  }
+ },
+ "entries": {
+  "open.now": {
+   "img": "store-menu-0.webp",
+   "x": 20,
+   "y": 322,
+   "w": 88,
+   "h": 42
+  },
+  "open.aheadOther": {
+   "img": "store-menu-0.webp",
+   "x": 149,
+   "y": 322,
+   "w": 73,
+   "h": 42
+  },
+  "ci.title": {
+   "img": "store-menu-0.webp",
+   "x": 14,
+   "y": 128,
+   "w": 291,
+   "h": 32
+  },
+  "ci.go": {
+   "img": "store-menu-0.webp",
+   "x": 14,
+   "y": 128,
+   "w": 122,
+   "h": 32
+  },
+  "ci.pill": {
+   "img": "store-menu-0.webp",
+   "x": 14,
+   "y": 128,
+   "w": 122,
+   "h": 32
+  },
+  "rw.pill": {
+   "img": "store-menu-0.webp",
+   "x": 142,
+   "y": 128,
+   "w": 69,
+   "h": 32
+  },
+  "gb.codeRow": {
+   "img": "store-menu-0.webp",
+   "x": 20,
+   "y": 811,
+   "w": 104,
+   "h": 22
+  },
+  "chrome.signIn": {
+   "img": "store-menu-0.webp",
+   "x": 311,
+   "y": 128,
+   "w": 65,
+   "h": 32
+  },
+  "ho.go": {
+   "img": "store-menu-0.webp",
+   "x": 311,
+   "y": 128,
+   "w": 65,
+   "h": 32
+  },
+  "ct.request": {
+   "img": "store-menu-0.webp",
+   "x": 302,
+   "y": 811,
+   "w": 68,
+   "h": 22
+  },
+  "am.restroom": {
+   "img": "store-menu-0.webp",
+   "x": 8,
+   "y": 12,
+   "w": 112,
+   "h": 32
+  },
+  "am.wifi": {
+   "img": "store-menu-0.webp",
+   "x": 135,
+   "y": 12,
+   "w": 106,
+   "h": 32
+  },
+  "am.workspace": {
+   "img": "store-menu-0.webp",
+   "x": 255,
+   "y": 12,
+   "w": 127,
+   "h": 32
+  },
+  "ql.ready": {
+   "img": "store-menu-0.webp",
+   "x": 258,
+   "y": 744,
+   "w": 92,
+   "h": 15
+  },
+  "tr.checkIn": {
+   "img": "store-menu-0.webp",
+   "x": 14,
+   "y": 128,
+   "w": 122,
+   "h": 32
+  },
+  "cat.all": {
+   "img": "store-menu-0.webp",
+   "x": 20,
+   "y": 382,
+   "w": 78,
+   "h": 38
+  },
+  "start.one": {
+   "img": "store-menu-0.webp",
+   "x": 40,
+   "y": 730,
+   "w": 132,
+   "h": 24
+  },
+  "start.other": {
+   "img": "store-menu-0.webp",
+   "x": 40,
+   "y": 730,
+   "w": 132,
+   "h": 24
+  },
+  "start.over": {
+   "img": "store-menu-0.webp",
+   "x": 20,
+   "y": 782,
+   "w": 79,
+   "h": 20
+  },
+  "start.time": {
+   "img": "store-menu-0.webp",
+   "x": 258,
+   "y": 744,
+   "w": 92,
+   "h": 15
+  },
+  "noAccount": {
+   "img": "store-menu-0.webp",
+   "x": 273,
+   "y": 782,
+   "w": 97,
+   "h": 20
+  },
+  "wait.band": {
+   "img": "store-menu-0.webp",
+   "x": 111,
+   "y": 502,
+   "w": 62,
+   "h": 17
+  },
+  "item.prepRange": {
+   "img": "store-menu-0.webp",
+   "x": 111,
+   "y": 502,
+   "w": 62,
+   "h": 17
+  },
+  "gf.box": {
+   "img": "store-menu-0.webp",
+   "x": 40,
+   "y": 730,
+   "w": 132,
+   "h": 24
+  },
+  "qty.less": {
+   "img": "store-menu-0.webp",
+   "x": 257,
+   "y": 591,
+   "w": 34,
+   "h": 34
+  },
+  "qty.more": {
+   "img": "store-menu-0.webp",
+   "x": 323,
+   "y": 591,
+   "w": 34,
+   "h": 34
+  },
+  "fd.titleAll": {
+   "img": "store-menu-0.webp",
+   "x": 20,
+   "y": 322,
+   "w": 88,
+   "h": 42
+  },
+  "fd.everything": {
+   "img": "store-menu-0.webp",
+   "x": 20,
+   "y": 382,
+   "w": 78,
+   "h": 38
+  },
+  "hub.welcome": {
+   "img": "store-menu-0.webp",
+   "x": 142,
+   "y": 128,
+   "w": 69,
+   "h": 32
+  },
+  "hist.all": {
+   "img": "store-menu-0.webp",
+   "x": 20,
+   "y": 382,
+   "w": 78,
+   "h": 38
+  },
+  "me.itemsOne": {
+   "img": "store-menu-0.webp",
+   "x": 40,
+   "y": 730,
+   "w": 132,
+   "h": 24
+  },
+  "me.itemsOther": {
+   "img": "store-menu-0.webp",
+   "x": 40,
+   "y": 730,
+   "w": 132,
+   "h": 24
+  },
+  "si.signIn": {
+   "img": "store-menu-0.webp",
+   "x": 311,
+   "y": 128,
+   "w": 65,
+   "h": 32
+  },
+  "no.capLess": {
+   "img": "store-menu-0.webp",
+   "x": 257,
+   "y": 591,
+   "w": 34,
+   "h": 34
+  },
+  "wg.title": {
+   "img": "store-menu-0.webp",
+   "x": 142,
+   "y": 128,
+   "w": 69,
+   "h": 32
+  },
+  "ad.unitMin": {
+   "img": "store-menu-0.webp",
+   "x": 150,
+   "y": 503,
+   "w": 23,
+   "h": 14
+  },
+  "ad.evAll": {
+   "img": "store-menu-0.webp",
+   "x": 20,
+   "y": 382,
+   "w": 78,
+   "h": 38
+  },
+  "create": {
+   "img": "store-menu-1.webp",
+   "x": 20,
+   "y": 667,
+   "w": 350,
+   "h": 19
+  },
+  "nobank": {
+   "img": "store-menu-1.webp",
+   "x": 20,
+   "y": 698,
+   "w": 350,
+   "h": 118
+  },
+  "scheme.light": {
+   "img": "store-menu-1.webp",
+   "x": 308,
+   "y": 596,
+   "w": 8,
+   "h": 15
+  },
+  "scheme.dark": {
+   "img": "store-menu-1.webp",
+   "x": 336,
+   "y": 596,
+   "w": 22,
+   "h": 15
+  },
+  "scheme.toggle": {
+   "img": "store-menu-1.webp",
+   "x": 296,
+   "y": 588,
+   "w": 74,
+   "h": 32
+  },
+  "inv.made": {
+   "img": "store-menu-1.webp",
+   "x": 20,
+   "y": 667,
+   "w": 350,
+   "h": 19
+  },
+  "mi.offShelf": {
+   "img": "store-menu-2.webp",
+   "x": 111,
+   "y": 411,
+   "w": 55,
+   "h": 22
+  },
+  "item.prep": {
+   "img": "store-menu-3.webp",
+   "x": 111,
+   "y": 414,
+   "w": 36,
+   "h": 17
+  },
+  "add": {
+   "img": "store-menu-3.webp",
+   "x": 313,
+   "y": 508,
+   "w": 44,
+   "h": 44
+  },
+  "ss.waitMin": {
+   "img": "store-menu-3.webp",
+   "x": 111,
+   "y": 414,
+   "w": 36,
+   "h": 17
+  },
+  "co.title": {
+   "img": "store-checkout-0.webp",
+   "x": 54,
+   "y": 18,
+   "w": 121,
+   "h": 29
+  },
+  "co.how": {
+   "img": "store-checkout-0.webp",
+   "x": 20,
+   "y": 374,
+   "w": 350,
+   "h": 22
+  },
+  "co.pickup": {
+   "img": "store-checkout-0.webp",
+   "x": 33,
+   "y": 415,
+   "w": 86,
+   "h": 23
+  },
+  "co.delivery": {
+   "img": "store-checkout-0.webp",
+   "x": 153,
+   "y": 415,
+   "w": 86,
+   "h": 23
+  },
+  "co.label": {
+   "img": "store-checkout-0.webp",
+   "x": 20,
+   "y": 489,
+   "w": 350,
+   "h": 22
+  },
+  "co.labelPh": {
+   "img": "store-checkout-0.webp",
+   "x": 20,
+   "y": 516,
+   "w": 350,
+   "h": 50
+  },
+  "co.labelHint": {
+   "img": "store-checkout-0.webp",
+   "x": 20,
+   "y": 571,
+   "w": 350,
+   "h": 20
+  },
+  "co.back": {
+   "img": "store-checkout-0.webp",
+   "x": 20,
+   "y": 22,
+   "w": 20,
+   "h": 22
+  },
+  "co.place": {
+   "img": "store-checkout-0.webp",
+   "x": 40,
+   "y": 745,
+   "w": 32,
+   "h": 24
+  },
+  "co.total": {
+   "img": "store-checkout-0.webp",
+   "x": 20,
+   "y": 193,
+   "w": 31,
+   "h": 26
+  },
+  "co.whole": {
+   "img": "store-checkout-0.webp",
+   "x": 20,
+   "y": 266,
+   "w": 350,
+   "h": 93
+  },
+  "co.firstPayNext": {
+   "img": "store-checkout-0.webp",
+   "x": 20,
+   "y": 792,
+   "w": 350,
+   "h": 40
+  },
+  "co.deliveryFrom": {
+   "img": "store-checkout-0.webp",
+   "x": 153,
+   "y": 440,
+   "w": 86,
+   "h": 20
+  },
+  "co.payHowAhead": {
+   "img": "store-checkout-0.webp",
+   "x": 20,
+   "y": 606,
+   "w": 350,
+   "h": 22
+  },
+  "co.h3qrSub": {
+   "img": "store-checkout-0.webp",
+   "x": 84,
+   "y": 671,
+   "w": 270,
+   "h": 40
+  },
+  "gb.door": {
+   "img": "store-checkout-0.webp",
+   "x": 272,
+   "y": 415,
+   "w": 86,
+   "h": 23
+  },
+  "gb.doorSub": {
+   "img": "store-checkout-0.webp",
+   "x": 272,
+   "y": 440,
+   "w": 86,
+   "h": 20
+  },
+  "ct.minOnly": {
+   "img": "store-checkout-0.webp",
+   "x": 153,
+   "y": 440,
+   "w": 86,
+   "h": 20
+  },
+  "ql.mine": {
+   "img": "store-checkout-0.webp",
+   "x": 54,
+   "y": 18,
+   "w": 121,
+   "h": 29
+  },
+  "common.back": {
+   "img": "store-checkout-0.webp",
+   "x": 20,
+   "y": 22,
+   "w": 20,
+   "h": 22
+  },
+  "cq.delivery": {
+   "img": "store-checkout-0.webp",
+   "x": 153,
+   "y": 415,
+   "w": 86,
+   "h": 23
+  },
+  "cq.codeTitle": {
+   "img": "store-checkout-0.webp",
+   "x": 272,
+   "y": 415,
+   "w": 86,
+   "h": 23
+  },
+  "hub.delivery": {
+   "img": "store-checkout-0.webp",
+   "x": 153,
+   "y": 415,
+   "w": 86,
+   "h": 23
+  },
+  "ppl.paidGift": {
+   "img": "store-checkout-0.webp",
+   "x": 272,
+   "y": 415,
+   "w": 86,
+   "h": 23
+  },
+  "dl.title": {
+   "img": "store-checkout-0.webp",
+   "x": 153,
+   "y": 415,
+   "w": 86,
+   "h": 23
+  },
+  "me.caterFrom": {
+   "img": "store-checkout-0.webp",
+   "x": 153,
+   "y": 441,
+   "w": 30,
+   "h": 16
+  },
+  "co.firstAhead": {
+   "img": "store-checkout-1.webp",
+   "x": 20,
+   "y": 618,
+   "w": 350,
+   "h": 20
+  },
+  "co.khqr": {
+   "img": "store-checkout-1.webp",
+   "x": 85,
+   "y": 553,
+   "w": 241,
+   "h": 24
+  },
+  "co.khqrSub": {
+   "img": "store-checkout-1.webp",
+   "x": 85,
+   "y": 577,
+   "w": 241,
+   "h": 20
+  },
+  "co.historyNote": {
+   "img": "store-checkout-1.webp",
+   "x": 20,
+   "y": 644,
+   "w": 350,
+   "h": 41
+  },
+  "sp.khqr": {
+   "img": "store-checkout-1.webp",
+   "x": 85,
+   "y": 553,
+   "w": 241,
+   "h": 24
+  },
+  "co.pinLabel": {
+   "img": "store-delivery-0.webp",
+   "x": 20,
+   "y": 411,
+   "w": 350,
+   "h": 22
+  },
+  "co.pinHint": {
+   "img": "store-delivery-0.webp",
+   "x": 20,
+   "y": 731,
+   "w": 350,
+   "h": 20
+  },
+  "co.pinWho": {
+   "img": "store-delivery-0.webp",
+   "x": 20,
+   "y": 758,
+   "w": 350,
+   "h": 41
+  },
+  "co.useMine": {
+   "img": "store-delivery-0.webp",
+   "x": 20,
+   "y": 688,
+   "w": 149,
+   "h": 38
+  },
+  "co.note": {
+   "img": "store-delivery-0.webp",
+   "x": 20,
+   "y": 813,
+   "w": 350,
+   "h": 22
+  },
+  "co.typeAddr": {
+   "img": "store-delivery-0.webp",
+   "x": 179,
+   "y": 688,
+   "w": 110,
+   "h": 38
+  },
+  "gf.you": {
+   "img": "store-delivery-0.webp",
+   "x": 118,
+   "y": 759,
+   "w": 17,
+   "h": 17
+  },
+  "chrome.you": {
+   "img": "store-delivery-0.webp",
+   "x": 118,
+   "y": 759,
+   "w": 17,
+   "h": 17
+  },
+  "ms.you": {
+   "img": "store-delivery-0.webp",
+   "x": 118,
+   "y": 759,
+   "w": 17,
+   "h": 17
+  },
+  "cq.you": {
+   "img": "store-delivery-0.webp",
+   "x": 118,
+   "y": 759,
+   "w": 17,
+   "h": 17
+  },
+  "nav.you": {
+   "img": "store-delivery-0.webp",
+   "x": 118,
+   "y": 759,
+   "w": 17,
+   "h": 17
+  },
+  "hist.byYou": {
+   "img": "store-delivery-0.webp",
+   "x": 118,
+   "y": 759,
+   "w": 17,
+   "h": 17
+  },
+  "you.you": {
+   "img": "store-delivery-0.webp",
+   "x": 118,
+   "y": 759,
+   "w": 17,
+   "h": 17
+  },
+  "ppl.you": {
+   "img": "store-delivery-0.webp",
+   "x": 118,
+   "y": 759,
+   "w": 17,
+   "h": 17
+  },
+  "ppl.byYou": {
+   "img": "store-delivery-0.webp",
+   "x": 118,
+   "y": 759,
+   "w": 17,
+   "h": 17
+  },
+  "ss.mapUse": {
+   "img": "store-delivery-0.webp",
+   "x": 20,
+   "y": 688,
+   "w": 149,
+   "h": 38
+  },
+  "co.notePh": {
+   "img": "store-delivery-1.webp",
+   "x": 20,
+   "y": 398,
+   "w": 350,
+   "h": 48
+  },
+  "co.noteHint": {
+   "img": "store-delivery-1.webp",
+   "x": 20,
+   "y": 452,
+   "w": 350,
+   "h": 20
+  },
+  "co.whoSees": {
+   "img": "store-delivery-1.webp",
+   "x": 20,
+   "y": 599,
+   "w": 350,
+   "h": 93
+  },
+  "co.payAheadHow": {
+   "img": "store-delivery-1.webp",
+   "x": 20,
+   "y": 706,
+   "w": 350,
+   "h": 22
+  },
+  "co.leave": {
+   "img": "store-delivery-1.webp",
+   "x": 20,
+   "y": 488,
+   "w": 292,
+   "h": 24
+  },
+  "co.leaveSub": {
+   "img": "store-delivery-1.webp",
+   "x": 20,
+   "y": 519,
+   "w": 350,
+   "h": 58
+  },
+  "gb.whatTheyGet": {
+   "img": "store-giftcode-0.webp",
+   "x": 40,
+   "y": 373,
+   "w": 310,
+   "h": 22
+  },
+  "gb.notAnAmount": {
+   "img": "store-giftcode-0.webp",
+   "x": 40,
+   "y": 435,
+   "w": 310,
+   "h": 41
+  },
+  "gb.keepQ": {
+   "img": "store-giftcode-0.webp",
+   "x": 20,
+   "y": 509,
+   "w": 350,
+   "h": 22
+  },
+  "gb.keepHave": {
+   "img": "store-giftcode-0.webp",
+   "x": 20,
+   "y": 536,
+   "w": 171,
+   "h": 50
+  },
+  "gb.keepPass": {
+   "img": "store-giftcode-0.webp",
+   "x": 199,
+   "y": 536,
+   "w": 171,
+   "h": 50
+  },
+  "gb.forQ": {
+   "img": "store-giftcode-0.webp",
+   "x": 20,
+   "y": 600,
+   "w": 350,
+   "h": 22
+  },
+  "gb.forHint": {
+   "img": "store-giftcode-0.webp",
+   "x": 20,
+   "y": 681,
+   "w": 350,
+   "h": 20
+  },
+  "gb.fromYou": {
+   "img": "store-giftcode-0.webp",
+   "x": 20,
+   "y": 743,
+   "w": 171,
+   "h": 50
+  },
+  "gb.fromSomeone": {
+   "img": "store-giftcode-0.webp",
+   "x": 199,
+   "y": 743,
+   "w": 171,
+   "h": 50
+  },
+  "gb.fromYouHint": {
+   "img": "store-giftcode-0.webp",
+   "x": 20,
+   "y": 798,
+   "w": 350,
+   "h": 20
+  },
+  "gb.knowQThey": {
+   "img": "store-giftcode-0.webp",
+   "x": 20,
+   "y": 716,
+   "w": 350,
+   "h": 22
+  },
+  "cq.giftToHave": {
+   "img": "store-giftcode-0.webp",
+   "x": 20,
+   "y": 536,
+   "w": 171,
+   "h": 50
+  },
+  "gb.yourName": {
+   "img": "store-giftcode-1.webp",
+   "x": 20,
+   "y": 411,
+   "w": 350,
+   "h": 22
+  },
+  "gb.say": {
+   "img": "store-giftcode-1.webp",
+   "x": 20,
+   "y": 501,
+   "w": 350,
+   "h": 22
+  },
+  "gb.payNow": {
+   "img": "store-giftcode-1.webp",
+   "x": 20,
+   "y": 590,
+   "w": 350,
+   "h": 22
+  },
+  "gb.cash": {
+   "img": "store-giftcode-1.webp",
+   "x": 84,
+   "y": 816,
+   "w": 226,
+   "h": 24
+  },
+  "gb.cashSub": {
+   "img": "store-giftcode-2.webp",
+   "x": 84,
+   "y": 705,
+   "w": 226,
+   "h": 20
+  },
+  "gb.total": {
+   "img": "store-giftcode-2.webp",
+   "x": 20,
+   "y": 745,
+   "w": 350,
+   "h": 20
+  },
+  "pl.has": {
+   "img": "store-placed-0.webp",
+   "x": 20,
+   "y": 20,
+   "w": 350,
+   "h": 69
+  },
+  "pl.callout": {
+   "img": "store-placed-0.webp",
+   "x": 20,
+   "y": 140,
+   "w": 350,
+   "h": 22
+  },
+  "pl.firstTitle": {
+   "img": "store-placed-0.webp",
+   "x": 40,
+   "y": 370,
+   "w": 310,
+   "h": 25
+  },
+  "pl.payAmount": {
+   "img": "store-placed-0.webp",
+   "x": 40,
+   "y": 688,
+   "w": 310,
+   "h": 21
+  },
+  "pl.payCheck": {
+   "img": "store-placed-0.webp",
+   "x": 40,
+   "y": 717,
+   "w": 310,
+   "h": 64
+  },
+  "you.st.preparing": {
+   "img": "store-placed-0.webp",
+   "x": 137,
+   "y": 187,
+   "w": 117,
+   "h": 40
+  },
+  "you.st.ready": {
+   "img": "store-placed-0.webp",
+   "x": 253,
+   "y": 187,
+   "w": 117,
+   "h": 40
+  },
+  "or.stReceived": {
+   "img": "store-placed-0.webp",
+   "x": 20,
+   "y": 187,
+   "w": 117,
+   "h": 40
+  },
+  "or.stMaking": {
+   "img": "store-placed-0.webp",
+   "x": 137,
+   "y": 187,
+   "w": 117,
+   "h": 40
+  },
+  "or.stReady": {
+   "img": "store-placed-0.webp",
+   "x": 253,
+   "y": 187,
+   "w": 117,
+   "h": 40
+  },
+  "or.cancel": {
+   "img": "store-placed-0.webp",
+   "x": 139,
+   "y": 247,
+   "w": 112,
+   "h": 22
+  },
+  "ql.making": {
+   "img": "store-placed-0.webp",
+   "x": 137,
+   "y": 187,
+   "w": 117,
+   "h": 40
+  },
+  "chain.received": {
+   "img": "store-placed-0.webp",
+   "x": 20,
+   "y": 187,
+   "w": 117,
+   "h": 40
+  },
+  "chain.making": {
+   "img": "store-placed-0.webp",
+   "x": 137,
+   "y": 187,
+   "w": 117,
+   "h": 40
+  },
+  "chain.ready": {
+   "img": "store-placed-0.webp",
+   "x": 253,
+   "y": 187,
+   "w": 117,
+   "h": 40
+  },
+  "cq.codeDone": {
+   "img": "store-placed-0.webp",
+   "x": 253,
+   "y": 187,
+   "w": 117,
+   "h": 40
+  },
+  "hs.done": {
+   "img": "store-placed-0.webp",
+   "x": 253,
+   "y": 187,
+   "w": 117,
+   "h": 40
+  },
+  "ad.who.guest": {
+   "img": "store-placed-0.webp",
+   "x": 20,
+   "y": 95,
+   "w": 350,
+   "h": 44
+  },
+  "ad.linkDone": {
+   "img": "store-placed-0.webp",
+   "x": 253,
+   "y": 187,
+   "w": 117,
+   "h": 40
+  },
+  "pl.again": {
+   "img": "store-placed-1.webp",
+   "x": 20,
+   "y": 770,
+   "w": 350,
+   "h": 54
+  },
+  "pl.firstThen": {
+   "img": "store-placed-1.webp",
+   "x": 40,
+   "y": 52,
+   "w": 310,
+   "h": 43
+  },
+  "pl.paySaveHint": {
+   "img": "store-placed-1.webp",
+   "x": 40,
+   "y": 20,
+   "w": 310,
+   "h": 20
+  },
+  "pl.payAfter": {
+   "img": "store-placed-1.webp",
+   "x": 37,
+   "y": 554,
+   "w": 231,
+   "h": 24
+  },
+  "pl.payAfterKhqr": {
+   "img": "store-placed-1.webp",
+   "x": 37,
+   "y": 579,
+   "w": 231,
+   "h": 37
+  },
+  "pl.afterOwed": {
+   "img": "store-placed-1.webp",
+   "x": 20,
+   "y": 654,
+   "w": 350,
+   "h": 93
+  },
+  "orders.recTitle": {
+   "img": "store-placed-1.webp",
+   "x": 39,
+   "y": 346,
+   "w": 312,
+   "h": 26
+  },
+  "orders.recBody": {
+   "img": "store-placed-1.webp",
+   "x": 39,
+   "y": 378,
+   "w": 312,
+   "h": 64
+  },
+  "orders.turnOn": {
+   "img": "store-placed-1.webp",
+   "x": 39,
+   "y": 454,
+   "w": 312,
+   "h": 48
+  },
+  "rc.title": {
+   "img": "store-placed-1.webp",
+   "x": 40,
+   "y": 132,
+   "w": 310,
+   "h": 24
+  },
+  "rc.how": {
+   "img": "store-placed-1.webp",
+   "x": 40,
+   "y": 160,
+   "w": 310,
+   "h": 59
+  },
+  "rc.add": {
+   "img": "store-placed-1.webp",
+   "x": 40,
+   "y": 231,
+   "w": 310,
+   "h": 56
+  },
+  "pl.paySave": {
+   "img": "store-placed-2.webp",
+   "x": 40,
+   "y": 395,
+   "w": 310,
+   "h": 54
+  },
+  "ci.why": {
+   "img": "store-checkin-0.webp",
+   "x": 20,
+   "y": 552,
+   "w": 350,
+   "h": 43
+  },
+  "ci.reach": {
+   "img": "store-checkin-0.webp",
+   "x": 42,
+   "y": 500,
+   "w": 328,
+   "h": 40
+  },
+  "ci.scan": {
+   "img": "store-checkin-0.webp",
+   "x": 20,
+   "y": 683,
+   "w": 350,
+   "h": 48
+  },
+  "ci.scanWhy": {
+   "img": "store-checkin-0.webp",
+   "x": 20,
+   "y": 743,
+   "w": 350,
+   "h": 22
+  },
+  "orders.off": {
+   "img": "store-checkin-0.webp",
+   "x": 20,
+   "y": 774,
+   "w": 350,
+   "h": 48
+  },
+  "hr.closed": {
+   "img": "store-checkin-0.webp",
+   "x": 20,
+   "y": 774,
+   "w": 350,
+   "h": 48
+  },
+  "common.close": {
+   "img": "store-checkin-0.webp",
+   "x": 20,
+   "y": 774,
+   "w": 350,
+   "h": 48
+  },
+  "ss.closed": {
+   "img": "store-checkin-0.webp",
+   "x": 20,
+   "y": 774,
+   "w": 350,
+   "h": 48
+  },
+  "me.askMin": {
+   "img": "store-checkin-0.webp",
+   "x": 214,
+   "y": 500,
+   "w": 16,
+   "h": 19
+  },
+  "rd.offAll": {
+   "img": "store-checkin-0.webp",
+   "x": 20,
+   "y": 774,
+   "w": 350,
+   "h": 48
+  },
+  "ad.closed": {
+   "img": "store-checkin-0.webp",
+   "x": 20,
+   "y": 774,
+   "w": 350,
+   "h": 48
+  },
+  "ad.closeReport": {
+   "img": "store-checkin-0.webp",
+   "x": 20,
+   "y": 774,
+   "w": 350,
+   "h": 48
+  },
+  "ad.pushOff": {
+   "img": "store-checkin-0.webp",
+   "x": 20,
+   "y": 774,
+   "w": 350,
+   "h": 48
+  },
+  "co.payHow": {
+   "img": "store-gift-0.webp",
+   "x": 20,
+   "y": 411,
+   "w": 350,
+   "h": 22
+  },
+  "co.cash": {
+   "img": "store-gift-0.webp",
+   "x": 84,
+   "y": 637,
+   "w": 63,
+   "h": 24
+  },
+  "co.cashSub": {
+   "img": "store-gift-0.webp",
+   "x": 84,
+   "y": 661,
+   "w": 63,
+   "h": 20
+  },
+  "ct.payoutCash": {
+   "img": "store-gift-0.webp",
+   "x": 84,
+   "y": 637,
+   "w": 63,
+   "h": 24
+  },
+  "pay.pickup": {
+   "img": "store-gift-0.webp",
+   "x": 20,
+   "y": 812,
+   "w": 350,
+   "h": 20
+  },
+  "ppl.paidCash": {
+   "img": "store-gift-0.webp",
+   "x": 84,
+   "y": 637,
+   "w": 63,
+   "h": 24
+  },
+  "open.cash": {
+   "img": "store-gift-0.webp",
+   "x": 84,
+   "y": 637,
+   "w": 63,
+   "h": 24
+  },
+  "sp.cash": {
+   "img": "store-gift-0.webp",
+   "x": 84,
+   "y": 637,
+   "w": 63,
+   "h": 24
+  },
+  "hs.cash": {
+   "img": "store-gift-0.webp",
+   "x": 84,
+   "y": 637,
+   "w": 63,
+   "h": 24
+  },
+  "ad.cash": {
+   "img": "store-gift-0.webp",
+   "x": 84,
+   "y": 637,
+   "w": 63,
+   "h": 24
+  },
+  "gifts.title": {
+   "img": "store-gifts-0.webp",
+   "x": 50,
+   "y": 16,
+   "w": 185,
+   "h": 33
+  },
+  "gifts.none": {
+   "img": "store-gifts-0.webp",
+   "x": 20,
+   "y": 77,
+   "w": 350,
+   "h": 71
+  },
+  "gf.tabTitle": {
+   "img": "store-tab-0.webp",
+   "x": 54,
+   "y": 18,
+   "w": 113,
+   "h": 29
+  },
+  "tab.used": {
+   "img": "store-tab-0.webp",
+   "x": 20,
+   "y": 90,
+   "w": 350,
+   "h": 24
+  },
+  "tab.stays": {
+   "img": "store-tab-0.webp",
+   "x": 20,
+   "y": 168,
+   "w": 350,
+   "h": 20
+  },
+  "orders.title": {
+   "img": "store-you-0.webp",
+   "x": 20,
+   "y": 85,
+   "w": 350,
+   "h": 22
+  },
+  "orders.what": {
+   "img": "store-you-0.webp",
+   "x": 20,
+   "y": 145,
+   "w": 350,
+   "h": 41
+  },
+  "you.title": {
+   "img": "store-you-0.webp",
+   "x": 50,
+   "y": 16,
+   "w": 180,
+   "h": 33
+  },
+  "you.outHead": {
+   "img": "store-you-0.webp",
+   "x": 20,
+   "y": 531,
+   "w": 350,
+   "h": 47
+  },
+  "cn.connect": {
+   "img": "store-you-0.webp",
+   "x": 299,
+   "y": 344,
+   "w": 54,
+   "h": 40
+  },
+  "cn.youWhat": {
+   "img": "store-you-0.webp",
+   "x": 20,
+   "y": 237,
+   "w": 350,
+   "h": 82
+  },
+  "cn.youOff": {
+   "img": "store-you-0.webp",
+   "x": 37,
+   "y": 447,
+   "w": 82,
+   "h": 20
+  },
+  "cn.youStopThere": {
+   "img": "store-you-0.webp",
+   "x": 20,
+   "y": 486,
+   "w": 350,
+   "h": 20
+  },
+  "gb.rowSent": {
+   "img": "store-sent-0.webp",
+   "x": 54,
+   "y": 18,
+   "w": 137,
+   "h": 29
+  },
+  "gs.title": {
+   "img": "store-sent-0.webp",
+   "x": 54,
+   "y": 18,
+   "w": 137,
+   "h": 29
+  },
+  "gs.nothing": {
+   "img": "store-sent-0.webp",
+   "x": 20,
+   "y": 90,
+   "w": 350,
+   "h": 22
+  },
+  "you.giftsSent": {
+   "img": "store-sent-0.webp",
+   "x": 54,
+   "y": 18,
+   "w": 137,
+   "h": 29
+  },
+  "co.theOrder": {
+   "img": "counter-orders-0.webp",
+   "x": 130,
+   "y": 812,
+   "w": 36,
+   "h": 18
+  },
+  "gb.open": {
+   "img": "counter-orders-0.webp",
+   "x": 36,
+   "y": 94,
+   "w": 23,
+   "h": 23
+  },
+  "ql.waiting": {
+   "img": "counter-orders-0.webp",
+   "x": 83,
+   "y": 95,
+   "w": 54,
+   "h": 18
+  },
+  "role.owner": {
+   "img": "counter-orders-0.webp",
+   "x": 309,
+   "y": 24,
+   "w": 61,
+   "h": 27
+  },
+  "role.lower.owner": {
+   "img": "counter-orders-0.webp",
+   "x": 309,
+   "y": 24,
+   "w": 61,
+   "h": 27
+  },
+  "common.theShop": {
+   "img": "counter-orders-0.webp",
+   "x": 266,
+   "y": 28,
+   "w": 24,
+   "h": 20
+  },
+  "cq.stageNext": {
+   "img": "counter-orders-0.webp",
+   "x": 20,
+   "y": 150,
+   "w": 23,
+   "h": 14
+  },
+  "cq.stageWaiting": {
+   "img": "counter-orders-0.webp",
+   "x": 83,
+   "y": 95,
+   "w": 54,
+   "h": 18
+  },
+  "cq.startMaking": {
+   "img": "counter-orders-0.webp",
+   "x": 38,
+   "y": 321,
+   "w": 227,
+   "h": 50
+  },
+  "cq.skip": {
+   "img": "counter-orders-0.webp",
+   "x": 274,
+   "y": 321,
+   "w": 78,
+   "h": 50
+  },
+  "cq.skipAside": {
+   "img": "counter-orders-0.webp",
+   "x": 38,
+   "y": 381,
+   "w": 314,
+   "h": 38
+  },
+  "cq.waitingRider": {
+   "img": "counter-orders-0.webp",
+   "x": 20,
+   "y": 508,
+   "w": 350,
+   "h": 17
+  },
+  "cq.riderOffered": {
+   "img": "counter-orders-0.webp",
+   "x": 278,
+   "y": 722,
+   "w": 75,
+   "h": 19
+  },
+  "cq.open": {
+   "img": "counter-orders-0.webp",
+   "x": 36,
+   "y": 94,
+   "w": 23,
+   "h": 23
+  },
+  "cq.takingOrders": {
+   "img": "counter-orders-0.webp",
+   "x": 243,
+   "y": 91,
+   "w": 72,
+   "h": 29
+  },
+  "cq.switchShop": {
+   "img": "counter-orders-0.webp",
+   "x": 67,
+   "y": 40,
+   "w": 91,
+   "h": 19
+  },
+  "hub.shop": {
+   "img": "counter-orders-0.webp",
+   "x": 266,
+   "y": 28,
+   "w": 24,
+   "h": 20
+  },
+  "nav.orders": {
+   "img": "counter-orders-0.webp",
+   "x": 130,
+   "y": 812,
+   "w": 36,
+   "h": 18
+  },
+  "nav.cashier": {
+   "img": "counter-orders-0.webp",
+   "x": 30,
+   "y": 812,
+   "w": 50,
+   "h": 18
+  },
+  "nav.history": {
+   "img": "counter-orders-0.webp",
+   "x": 231,
+   "y": 812,
+   "w": 21,
+   "h": 18
+  },
+  "nav.shop": {
+   "img": "counter-orders-0.webp",
+   "x": 266,
+   "y": 28,
+   "w": 24,
+   "h": 20
+  },
+  "nav.work": {
+   "img": "counter-orders-0.webp",
+   "x": 322,
+   "y": 812,
+   "w": 27,
+   "h": 18
+  },
+  "hist.allOne": {
+   "img": "counter-orders-0.webp",
+   "x": 116,
+   "y": 788,
+   "w": 64,
+   "h": 42
+  },
+  "hist.allOther": {
+   "img": "counter-orders-0.webp",
+   "x": 116,
+   "y": 788,
+   "w": 64,
+   "h": 42
+  },
+  "rd.pass": {
+   "img": "counter-orders-0.webp",
+   "x": 274,
+   "y": 321,
+   "w": 78,
+   "h": 50
+  },
+  "open.go": {
+   "img": "counter-orders-0.webp",
+   "x": 20,
+   "y": 94,
+   "w": 197,
+   "h": 23
+  },
+  "inv.waiting": {
+   "img": "counter-orders-0.webp",
+   "x": 83,
+   "y": 95,
+   "w": 54,
+   "h": 18
+  },
+  "cs.reviewTitle": {
+   "img": "counter-orders-0.webp",
+   "x": 130,
+   "y": 812,
+   "w": 36,
+   "h": 18
+  },
+  "ad.navShops": {
+   "img": "counter-orders-0.webp",
+   "x": 266,
+   "y": 28,
+   "w": 24,
+   "h": 20
+  },
+  "ad.shopsTitle": {
+   "img": "counter-orders-0.webp",
+   "x": 266,
+   "y": 28,
+   "w": 24,
+   "h": 20
+  },
+  "ad.colShop": {
+   "img": "counter-orders-0.webp",
+   "x": 266,
+   "y": 28,
+   "w": 24,
+   "h": 20
+  },
+  "ad.colOrders": {
+   "img": "counter-orders-0.webp",
+   "x": 130,
+   "y": 812,
+   "w": 36,
+   "h": 18
+  },
+  "ad.open": {
+   "img": "counter-orders-0.webp",
+   "x": 36,
+   "y": 94,
+   "w": 23,
+   "h": 23
+  },
+  "ad.evStorefront": {
+   "img": "counter-orders-0.webp",
+   "x": 266,
+   "y": 28,
+   "w": 24,
+   "h": 20
+  },
+  "ad.evShop": {
+   "img": "counter-orders-0.webp",
+   "x": 266,
+   "y": 28,
+   "w": 24,
+   "h": 20
+  },
+  "pl.making": {
+   "img": "counter-orders-1.webp",
+   "x": 20,
+   "y": 204,
+   "w": 63,
+   "h": 14
+  },
+  "common.cancel": {
+   "img": "counter-orders-1.webp",
+   "x": 38,
+   "y": 438,
+   "w": 69,
+   "h": 38
+  },
+  "cq.stageMaking": {
+   "img": "counter-orders-1.webp",
+   "x": 20,
+   "y": 204,
+   "w": 63,
+   "h": 14
+  },
+  "cq.here": {
+   "img": "counter-orders-1.webp",
+   "x": 315,
+   "y": 254,
+   "w": 37,
+   "h": 19
+  },
+  "cq.sentAhead": {
+   "img": "counter-orders-1.webp",
+   "x": 97,
+   "y": 150,
+   "w": 77,
+   "h": 19
+  },
+  "cq.payAtCounter": {
+   "img": "counter-orders-1.webp",
+   "x": 38,
+   "y": 335,
+   "w": 100,
+   "h": 26
+  },
+  "cq.itsReady": {
+   "img": "counter-orders-1.webp",
+   "x": 38,
+   "y": 376,
+   "w": 314,
+   "h": 50
+  },
+  "cq.tabLine": {
+   "img": "counter-orders-1.webp",
+   "x": 20,
+   "y": 135,
+   "w": 55,
+   "h": 50
+  },
+  "cq.tabAhead": {
+   "img": "counter-orders-1.webp",
+   "x": 97,
+   "y": 135,
+   "w": 86,
+   "h": 50
+  },
+  "cq.tabGifts": {
+   "img": "counter-orders-1.webp",
+   "x": 205,
+   "y": 135,
+   "w": 90,
+   "h": 50
+  },
+  "cq.abandon": {
+   "img": "counter-orders-1.webp",
+   "x": 38,
+   "y": 438,
+   "w": 69,
+   "h": 38
+  },
+  "me.cancel": {
+   "img": "counter-orders-1.webp",
+   "x": 38,
+   "y": 438,
+   "w": 69,
+   "h": 38
+  },
+  "ph.cropCancel": {
+   "img": "counter-orders-1.webp",
+   "x": 38,
+   "y": 438,
+   "w": 69,
+   "h": 38
+  },
+  "ad.linkCancel": {
+   "img": "counter-orders-1.webp",
+   "x": 38,
+   "y": 438,
+   "w": 69,
+   "h": 38
+  },
+  "cq.thankedAfter": {
+   "img": "counter-orders-2.webp",
+   "x": 225,
+   "y": 552,
+   "w": 128,
+   "h": 17
+  },
+  "cq.readyStage": {
+   "img": "counter-orders-2.webp",
+   "x": 20,
+   "y": 503,
+   "w": 350,
+   "h": 17
+  },
+  "cq.handedSettle": {
+   "img": "counter-orders-2.webp",
+   "x": 37,
+   "y": 632,
+   "w": 316,
+   "h": 50
+  },
+  "cq.codeOpen": {
+   "img": "counter-cashier-0.webp",
+   "x": 20,
+   "y": 153,
+   "w": 181,
+   "h": 38
+  },
+  "cg.toggle": {
+   "img": "counter-cashier-0.webp",
+   "x": 213,
+   "y": 155,
+   "w": 101,
+   "h": 34
+  },
+  "hr.today": {
+   "img": "counter-history-0.webp",
+   "x": 20,
+   "y": 153,
+   "w": 82,
+   "h": 43
+  },
+  "hist.today": {
+   "img": "counter-history-0.webp",
+   "x": 20,
+   "y": 153,
+   "w": 82,
+   "h": 43
+  },
+  "hist.week": {
+   "img": "counter-history-0.webp",
+   "x": 110,
+   "y": 153,
+   "w": 82,
+   "h": 43
+  },
+  "hist.notSettled": {
+   "img": "counter-history-0.webp",
+   "x": 262,
+   "y": 324,
+   "w": 74,
+   "h": 24
+  },
+  "hist.todayOne": {
+   "img": "counter-history-0.webp",
+   "x": 37,
+   "y": 225,
+   "w": 99,
+   "h": 26
+  },
+  "hist.todayOther": {
+   "img": "counter-history-0.webp",
+   "x": 37,
+   "y": 225,
+   "w": 99,
+   "h": 26
+  },
+  "hist.unsettledOne": {
+   "img": "counter-history-0.webp",
+   "x": 37,
+   "y": 395,
+   "w": 114,
+   "h": 18
+  },
+  "hist.noChase": {
+   "img": "counter-history-0.webp",
+   "x": 37,
+   "y": 395,
+   "w": 299,
+   "h": 40
+  },
+  "hist.month": {
+   "img": "counter-history-0.webp",
+   "x": 199,
+   "y": 153,
+   "w": 82,
+   "h": 43
+  },
+  "hist.toSales": {
+   "img": "counter-history-0.webp",
+   "x": 20,
+   "y": 209,
+   "w": 350,
+   "h": 58
+  },
+  "ppl.today": {
+   "img": "counter-history-0.webp",
+   "x": 20,
+   "y": 153,
+   "w": 82,
+   "h": 43
+  },
+  "sl.month": {
+   "img": "counter-history-0.webp",
+   "x": 199,
+   "y": 153,
+   "w": 82,
+   "h": 43
+  },
+  "common.nothingOut": {
+   "img": "counter-work-0.webp",
+   "x": 38,
+   "y": 445,
+   "w": 314,
+   "h": 22
+  },
+  "you.canDrive": {
+   "img": "counter-work-0.webp",
+   "x": 133,
+   "y": 141,
+   "w": 68,
+   "h": 27
+  },
+  "you.canDo": {
+   "img": "counter-work-0.webp",
+   "x": 38,
+   "y": 204,
+   "w": 314,
+   "h": 17
+  },
+  "you.canOrders": {
+   "img": "counter-work-0.webp",
+   "x": 61,
+   "y": 237,
+   "w": 163,
+   "h": 24
+  },
+  "you.canMoney": {
+   "img": "counter-work-0.webp",
+   "x": 61,
+   "y": 271,
+   "w": 134,
+   "h": 24
+  },
+  "you.canDeliver": {
+   "img": "counter-work-0.webp",
+   "x": 61,
+   "y": 305,
+   "w": 70,
+   "h": 24
+  },
+  "you.canChange": {
+   "img": "counter-work-0.webp",
+   "x": 61,
+   "y": 338,
+   "w": 178,
+   "h": 24
+  },
+  "you.week": {
+   "img": "counter-work-0.webp",
+   "x": 38,
+   "y": 417,
+   "w": 314,
+   "h": 17
+  },
+  "you.sameTally": {
+   "img": "counter-work-0.webp",
+   "x": 20,
+   "y": 500,
+   "w": 350,
+   "h": 95
+  },
+  "you.till": {
+   "img": "counter-work-0.webp",
+   "x": 38,
+   "y": 628,
+   "w": 314,
+   "h": 17
+  },
+  "you.tillNone": {
+   "img": "counter-work-0.webp",
+   "x": 38,
+   "y": 656,
+   "w": 314,
+   "h": 22
+  },
+  "you.drawer": {
+   "img": "counter-work-0.webp",
+   "x": 20,
+   "y": 710,
+   "w": 350,
+   "h": 95
+  },
+  "chrome.signOut": {
+   "img": "counter-you-0.webp",
+   "x": 20,
+   "y": 700,
+   "w": 350,
+   "h": 48
+  },
+  "you.language": {
+   "img": "counter-you-0.webp",
+   "x": 38,
+   "y": 542,
+   "w": 32,
+   "h": 24
+  },
+  "you.signOut": {
+   "img": "counter-you-0.webp",
+   "x": 20,
+   "y": 700,
+   "w": 350,
+   "h": 48
+  },
+  "you.notices": {
+   "img": "counter-you-0.webp",
+   "x": 38,
+   "y": 429,
+   "w": 130,
+   "h": 24
+  },
+  "you.noticesSub": {
+   "img": "counter-you-0.webp",
+   "x": 38,
+   "y": 461,
+   "w": 314,
+   "h": 22
+  },
+  "you.phone": {
+   "img": "counter-you-0.webp",
+   "x": 38,
+   "y": 196,
+   "w": 314,
+   "h": 17
+  },
+  "you.phoneShown": {
+   "img": "counter-you-0.webp",
+   "x": 96,
+   "y": 225,
+   "w": 256,
+   "h": 24
+  },
+  "you.phoneShownWhat": {
+   "img": "counter-you-0.webp",
+   "x": 38,
+   "y": 259,
+   "w": 314,
+   "h": 62
+  },
+  "rd.signOut": {
+   "img": "counter-you-0.webp",
+   "x": 20,
+   "y": 700,
+   "w": 350,
+   "h": 48
+  },
+  "si.phoneLabel": {
+   "img": "counter-you-0.webp",
+   "x": 38,
+   "y": 196,
+   "w": 314,
+   "h": 17
+  },
+  "si.country": {
+   "img": "counter-you-0.webp",
+   "x": 38,
+   "y": 333,
+   "w": 74,
+   "h": 45
+  },
+  "ad.seatLeave": {
+   "img": "counter-you-0.webp",
+   "x": 20,
+   "y": 700,
+   "w": 350,
+   "h": 48
+  },
+  "cu.remove": {
+   "img": "counter-you-1.webp",
+   "x": 210,
+   "y": 445,
+   "w": 42,
+   "h": 22
+  },
+  "you.wagesClear": {
+   "img": "counter-you-1.webp",
+   "x": 210,
+   "y": 445,
+   "w": 42,
+   "h": 22
+  },
+  "you.namePh": {
+   "img": "counter-you-1.webp",
+   "x": 38,
+   "y": 148,
+   "w": 314,
+   "h": 44
+  },
+  "you.nameWho": {
+   "img": "counter-you-1.webp",
+   "x": 38,
+   "y": 200,
+   "w": 314,
+   "h": 62
+  },
+  "you.messenger": {
+   "img": "counter-you-1.webp",
+   "x": 38,
+   "y": 734,
+   "w": 314,
+   "h": 17
+  },
+  "you.messengerPh": {
+   "img": "counter-you-1.webp",
+   "x": 87,
+   "y": 761,
+   "w": 265,
+   "h": 45
+  },
+  "ppl.removeShiftShort": {
+   "img": "counter-you-1.webp",
+   "x": 210,
+   "y": 445,
+   "w": 42,
+   "h": 22
+  },
+  "ppl.remove": {
+   "img": "counter-you-1.webp",
+   "x": 210,
+   "y": 445,
+   "w": 42,
+   "h": 22
+  },
+  "me.takeOffYes": {
+   "img": "counter-you-1.webp",
+   "x": 210,
+   "y": 445,
+   "w": 42,
+   "h": 22
+  },
+  "me.caterRemove": {
+   "img": "counter-you-1.webp",
+   "x": 210,
+   "y": 445,
+   "w": 42,
+   "h": 22
+  },
+  "ph.shop": {
+   "img": "counter-you-1.webp",
+   "x": 38,
+   "y": 313,
+   "w": 314,
+   "h": 17
+  },
+  "pf.title": {
+   "img": "counter-you-1.webp",
+   "x": 38,
+   "y": 313,
+   "w": 314,
+   "h": 17
+  },
+  "pf.who": {
+   "img": "counter-you-1.webp",
+   "x": 38,
+   "y": 487,
+   "w": 314,
+   "h": 42
+  },
+  "pf.replace": {
+   "img": "counter-you-1.webp",
+   "x": 138,
+   "y": 437,
+   "w": 60,
+   "h": 38
+  },
+  "pf.remove": {
+   "img": "counter-you-1.webp",
+   "x": 210,
+   "y": 445,
+   "w": 42,
+   "h": 22
+  },
+  "pf.shown": {
+   "img": "counter-you-1.webp",
+   "x": 96,
+   "y": 542,
+   "w": 256,
+   "h": 24
+  },
+  "pf.shownWhere": {
+   "img": "counter-you-1.webp",
+   "x": 38,
+   "y": 575,
+   "w": 314,
+   "h": 62
+  },
+  "pf.adults": {
+   "img": "counter-you-1.webp",
+   "x": 38,
+   "y": 642,
+   "w": 314,
+   "h": 42
+  },
+  "pr.namePh": {
+   "img": "counter-you-1.webp",
+   "x": 38,
+   "y": 148,
+   "w": 314,
+   "h": 44
+  },
+  "you.wagesNamePh": {
+   "img": "counter-you-2.webp",
+   "x": 38,
+   "y": 170,
+   "w": 314,
+   "h": 17
+  },
+  "you.nameTitle": {
+   "img": "counter-you-2.webp",
+   "x": 38,
+   "y": 170,
+   "w": 314,
+   "h": 17
+  },
+  "pr.name": {
+   "img": "counter-you-2.webp",
+   "x": 38,
+   "y": 170,
+   "w": 314,
+   "h": 17
+  },
+  "you.messengerOwner": {
+   "img": "counter-you-3.webp",
+   "x": 38,
+   "y": 424,
+   "w": 314,
+   "h": 62
+  },
+  "rw.rowPts": {
+   "img": "counter-menu-0.webp",
+   "x": 119,
+   "y": 398,
+   "w": 114,
+   "h": 20
+  },
+  "me.fixedTitle": {
+   "img": "counter-menu-0.webp",
+   "x": 34,
+   "y": 166,
+   "w": 262,
+   "h": 25
+  },
+  "me.fixedSub": {
+   "img": "counter-menu-0.webp",
+   "x": 34,
+   "y": 192,
+   "w": 262,
+   "h": 40
+  },
+  "me.youAre": {
+   "img": "counter-menu-0.webp",
+   "x": 34,
+   "y": 262,
+   "w": 30,
+   "h": 22
+  },
+  "me.sizesN": {
+   "img": "counter-menu-0.webp",
+   "x": 160,
+   "y": 379,
+   "w": 37,
+   "h": 17
+  },
+  "me.reachCant": {
+   "img": "counter-menu-1.webp",
+   "x": 16,
+   "y": 728,
+   "w": 358,
+   "h": 20
+  },
+  "me.add": {
+   "img": "counter-menu-1.webp",
+   "x": 16,
+   "y": 460,
+   "w": 358,
+   "h": 56
+  },
+  "me.offMenu": {
+   "img": "counter-menu-1.webp",
+   "x": 16,
+   "y": 542,
+   "w": 358,
+   "h": 17
+  },
+  "me.putBack": {
+   "img": "counter-menu-1.webp",
+   "x": 291,
+   "y": 592,
+   "w": 70,
+   "h": 22
+  },
+  "gb.giveOneLine": {
+   "img": "counter-item-0.webp",
+   "x": 36,
+   "y": 444,
+   "w": 176,
+   "h": 22
+  },
+  "me.price": {
+   "img": "counter-item-0.webp",
+   "x": 36,
+   "y": 243,
+   "w": 100,
+   "h": 44
+  },
+  "me.oneNumber": {
+   "img": "counter-item-0.webp",
+   "x": 190,
+   "y": 310,
+   "w": 106,
+   "h": 20
+  },
+  "me.mode": {
+   "img": "counter-item-0.webp",
+   "x": 36,
+   "y": 215,
+   "w": 311,
+   "h": 17
+  },
+  "me.modeFixed": {
+   "img": "counter-item-0.webp",
+   "x": 36,
+   "y": 243,
+   "w": 100,
+   "h": 44
+  },
+  "me.modeBPrice": {
+   "img": "counter-item-0.webp",
+   "x": 142,
+   "y": 243,
+   "w": 100,
+   "h": 44
+  },
+  "me.modeBTag": {
+   "img": "counter-item-0.webp",
+   "x": 247,
+   "y": 243,
+   "w": 100,
+   "h": 44
+  },
+  "me.sentFixed": {
+   "img": "counter-item-0.webp",
+   "x": 36,
+   "y": 392,
+   "w": 311,
+   "h": 38
+  },
+  "me.prep": {
+   "img": "counter-item-0.webp",
+   "x": 36,
+   "y": 531,
+   "w": 57,
+   "h": 21
+  },
+  "me.sizeKm": {
+   "img": "counter-item-0.webp",
+   "x": 36,
+   "y": 160,
+   "w": 311,
+   "h": 45
+  },
+  "me.removeSize": {
+   "img": "counter-item-0.webp",
+   "x": 36,
+   "y": 575,
+   "w": 80,
+   "h": 22
+  },
+  "me.width": {
+   "img": "counter-item-0.webp",
+   "x": 36,
+   "y": 357,
+   "w": 224,
+   "h": 22
+  },
+  "me.offShelf": {
+   "img": "counter-item-0.webp",
+   "x": 36,
+   "y": 483,
+   "w": 173,
+   "h": 22
+  },
+  "me.giveOne": {
+   "img": "counter-item-0.webp",
+   "x": 36,
+   "y": 444,
+   "w": 176,
+   "h": 22
+  },
+  "gs2.giveone": {
+   "img": "counter-item-0.webp",
+   "x": 36,
+   "y": 444,
+   "w": 176,
+   "h": 22
+  },
+  "ad.pricing": {
+   "img": "counter-item-0.webp",
+   "x": 36,
+   "y": 243,
+   "w": 100,
+   "h": 44
+  },
+  "ct.option": {
+   "img": "counter-item-1.webp",
+   "x": 36,
+   "y": 444,
+   "w": 253,
+   "h": 23
+  },
+  "ct.cancelKeep": {
+   "img": "counter-item-1.webp",
+   "x": 23,
+   "y": 695,
+   "w": 201,
+   "h": 46
+  },
+  "or.cancelKeep": {
+   "img": "counter-item-1.webp",
+   "x": 23,
+   "y": 695,
+   "w": 201,
+   "h": 46
+  },
+  "common.save": {
+   "img": "counter-item-1.webp",
+   "x": 23,
+   "y": 695,
+   "w": 201,
+   "h": 46
+  },
+  "cq.abandonKeep": {
+   "img": "counter-item-1.webp",
+   "x": 23,
+   "y": 695,
+   "w": 201,
+   "h": 46
+  },
+  "ppl.keep": {
+   "img": "counter-item-1.webp",
+   "x": 23,
+   "y": 695,
+   "w": 201,
+   "h": 46
+  },
+  "ss.leadTitle": {
+   "img": "counter-item-1.webp",
+   "x": 36,
+   "y": 444,
+   "w": 253,
+   "h": 23
+  },
+  "ss.amSave": {
+   "img": "counter-item-1.webp",
+   "x": 23,
+   "y": 695,
+   "w": 201,
+   "h": 46
+  },
+  "me.soldOutToday": {
+   "img": "counter-item-1.webp",
+   "x": 23,
+   "y": 755,
+   "w": 337,
+   "h": 46
+  },
+  "me.addSize": {
+   "img": "counter-item-1.webp",
+   "x": 23,
+   "y": 660,
+   "w": 61,
+   "h": 22
+  },
+  "me.rewardPts": {
+   "img": "counter-item-1.webp",
+   "x": 23,
+   "y": 550,
+   "w": 337,
+   "h": 21
+  },
+  "me.rewardHint": {
+   "img": "counter-item-1.webp",
+   "x": 23,
+   "y": 627,
+   "w": 337,
+   "h": 19
+  },
+  "me.cater": {
+   "img": "counter-item-1.webp",
+   "x": 36,
+   "y": 444,
+   "w": 253,
+   "h": 23
+  },
+  "me.caterSub": {
+   "img": "counter-item-1.webp",
+   "x": 36,
+   "y": 467,
+   "w": 253,
+   "h": 56
+  },
+  "ad.keep": {
+   "img": "counter-item-1.webp",
+   "x": 23,
+   "y": 695,
+   "w": 201,
+   "h": 46
+  },
+  "me.justToday": {
+   "img": "counter-item-2.webp",
+   "x": 23,
+   "y": 445,
+   "w": 337,
+   "h": 20
+  },
+  "me.moveUp": {
+   "img": "counter-item-2.webp",
+   "x": 23,
+   "y": 480,
+   "w": 164,
+   "h": 46
+  },
+  "me.moveDown": {
+   "img": "counter-item-2.webp",
+   "x": 197,
+   "y": 480,
+   "w": 164,
+   "h": 46
+  },
+  "me.takeOff": {
+   "img": "counter-item-2.webp",
+   "x": 151,
+   "y": 540,
+   "w": 80,
+   "h": 22
+  },
+  "me.nameKm": {
+   "img": "counter-item-3.webp",
+   "x": 23,
+   "y": 445,
+   "w": 337,
+   "h": 21
+  },
+  "me.type": {
+   "img": "counter-item-3.webp",
+   "x": 23,
+   "y": 530,
+   "w": 337,
+   "h": 21
+  },
+  "me.typeHint": {
+   "img": "counter-item-3.webp",
+   "x": 23,
+   "y": 603,
+   "w": 337,
+   "h": 37
+  },
+  "me.category": {
+   "img": "counter-item-3.webp",
+   "x": 23,
+   "y": 655,
+   "w": 337,
+   "h": 21
+  },
+  "me.newCatKm": {
+   "img": "counter-item-3.webp",
+   "x": 23,
+   "y": 732,
+   "w": 337,
+   "h": 20
+  },
+  "ph.itemHint": {
+   "img": "counter-item-3.webp",
+   "x": 125,
+   "y": 324,
+   "w": 235,
+   "h": 77
+  },
+  "ph.change": {
+   "img": "counter-item-3.webp",
+   "x": 125,
+   "y": 409,
+   "w": 43,
+   "h": 22
+  },
+  "ph.remove": {
+   "img": "counter-item-3.webp",
+   "x": 180,
+   "y": 409,
+   "w": 72,
+   "h": 22
+  },
+  "me.catDelete": {
+   "img": "counter-item-4.webp",
+   "x": 23,
+   "y": 444,
+   "w": 60,
+   "h": 22
+  },
+  "chrome.gifts": {
+   "img": "counter-shop-0.webp",
+   "x": 38,
+   "y": 456,
+   "w": 24,
+   "h": 20
+  },
+  "cq.giftPill": {
+   "img": "counter-shop-0.webp",
+   "x": 38,
+   "y": 456,
+   "w": 24,
+   "h": 20
+  },
+  "hub.peopleSub": {
+   "img": "counter-shop-0.webp",
+   "x": 38,
+   "y": 149,
+   "w": 250,
+   "h": 21
+  },
+  "hub.sales": {
+   "img": "counter-shop-0.webp",
+   "x": 38,
+   "y": 228,
+   "w": 129,
+   "h": 20
+  },
+  "hub.salesSub": {
+   "img": "counter-shop-0.webp",
+   "x": 38,
+   "y": 253,
+   "w": 274,
+   "h": 21
+  },
+  "hub.invite": {
+   "img": "counter-shop-0.webp",
+   "x": 38,
+   "y": 560,
+   "w": 97,
+   "h": 20
+  },
+  "hub.inviteSub": {
+   "img": "counter-shop-0.webp",
+   "x": 38,
+   "y": 585,
+   "w": 215,
+   "h": 21
+  },
+  "hub.log": {
+   "img": "counter-shop-0.webp",
+   "x": 38,
+   "y": 664,
+   "w": 215,
+   "h": 20
+  },
+  "hub.logSub": {
+   "img": "counter-shop-0.webp",
+   "x": 38,
+   "y": 689,
+   "w": 297,
+   "h": 42
+  },
+  "hub.welcomeSub": {
+   "img": "counter-shop-0.webp",
+   "x": 38,
+   "y": 356,
+   "w": 297,
+   "h": 42
+  },
+  "hub.gifts": {
+   "img": "counter-shop-0.webp",
+   "x": 38,
+   "y": 456,
+   "w": 24,
+   "h": 20
+  },
+  "hub.giftsSub": {
+   "img": "counter-shop-0.webp",
+   "x": 38,
+   "y": 481,
+   "w": 272,
+   "h": 21
+  },
+  "inv.title": {
+   "img": "counter-shop-0.webp",
+   "x": 38,
+   "y": 560,
+   "w": 97,
+   "h": 20
+  },
+  "cs.giftAnon": {
+   "img": "counter-shop-0.webp",
+   "x": 38,
+   "y": 456,
+   "w": 24,
+   "h": 20
+  },
+  "hs.ref": {
+   "img": "counter-shop-0.webp",
+   "x": 216,
+   "y": 22,
+   "w": 154,
+   "h": 32
+  },
+  "hub.shopSub": {
+   "img": "counter-shop-1.webp",
+   "x": 38,
+   "y": 369,
+   "w": 258,
+   "h": 21
+  },
+  "hub.menu": {
+   "img": "counter-shop-1.webp",
+   "x": 38,
+   "y": 573,
+   "w": 35,
+   "h": 20
+  },
+  "hub.menuSub": {
+   "img": "counter-shop-1.webp",
+   "x": 38,
+   "y": 598,
+   "w": 212,
+   "h": 21
+  },
+  "hub.payments": {
+   "img": "counter-shop-1.webp",
+   "x": 38,
+   "y": 677,
+   "w": 144,
+   "h": 20
+  },
+  "hub.paymentsSub": {
+   "img": "counter-shop-1.webp",
+   "x": 38,
+   "y": 701,
+   "w": 282,
+   "h": 21
+  },
+  "hub.qr": {
+   "img": "counter-shop-1.webp",
+   "x": 38,
+   "y": 448,
+   "w": 70,
+   "h": 20
+  },
+  "hub.qrSub": {
+   "img": "counter-shop-1.webp",
+   "x": 38,
+   "y": 473,
+   "w": 297,
+   "h": 42
+  },
+  "pair.title": {
+   "img": "counter-shop-1.webp",
+   "x": 37,
+   "y": 168,
+   "w": 316,
+   "h": 24
+  },
+  "pair.sub": {
+   "img": "counter-shop-1.webp",
+   "x": 37,
+   "y": 193,
+   "w": 316,
+   "h": 39
+  },
+  "pair.km": {
+   "img": "counter-shop-1.webp",
+   "x": 37,
+   "y": 244,
+   "w": 100,
+   "h": 44
+  },
+  "pair.en": {
+   "img": "counter-shop-1.webp",
+   "x": 145,
+   "y": 244,
+   "w": 100,
+   "h": 44
+  },
+  "pair.both": {
+   "img": "counter-shop-1.webp",
+   "x": 253,
+   "y": 244,
+   "w": 100,
+   "h": 44
+  },
+  "sp.title": {
+   "img": "counter-shop-1.webp",
+   "x": 38,
+   "y": 677,
+   "w": 144,
+   "h": 20
+  },
+  "sq.title": {
+   "img": "counter-shop-1.webp",
+   "x": 38,
+   "y": 448,
+   "w": 70,
+   "h": 20
+  },
+  "hub.deliverySub": {
+   "img": "counter-shop-2.webp",
+   "x": 38,
+   "y": 445,
+   "w": 211,
+   "h": 21
+  },
+  "hub.people": {
+   "img": "counter-shop-2.webp",
+   "x": 38,
+   "y": 524,
+   "w": 39,
+   "h": 20
+  },
+  "hub.orders": {
+   "img": "counter-shop-2.webp",
+   "x": 38,
+   "y": 316,
+   "w": 88,
+   "h": 20
+  },
+  "hub.ordersSub": {
+   "img": "counter-shop-2.webp",
+   "x": 38,
+   "y": 341,
+   "w": 196,
+   "h": 21
+  },
+  "no.title": {
+   "img": "counter-shop-2.webp",
+   "x": 38,
+   "y": 316,
+   "w": 88,
+   "h": 20
+  },
+  "co.typeAddrFind": {
+   "img": "counter-set-shop-0.webp",
+   "x": 279,
+   "y": 432,
+   "w": 73,
+   "h": 47
+  },
+  "ss.map": {
+   "img": "counter-set-shop-0.webp",
+   "x": 20,
+   "y": 276,
+   "w": 350,
+   "h": 32
+  },
+  "ss.mapHint": {
+   "img": "counter-set-shop-0.webp",
+   "x": 38,
+   "y": 341,
+   "w": 314,
+   "h": 43
+  },
+  "ss.mapFind": {
+   "img": "counter-set-shop-0.webp",
+   "x": 38,
+   "y": 397,
+   "w": 314,
+   "h": 22
+  },
+  "ss.mapFindPh": {
+   "img": "counter-set-shop-0.webp",
+   "x": 38,
+   "y": 432,
+   "w": 233,
+   "h": 47
+  },
+  "ss.mapFindBtn": {
+   "img": "counter-set-shop-0.webp",
+   "x": 279,
+   "y": 432,
+   "w": 73,
+   "h": 47
+  },
+  "ss.themeSub": {
+   "img": "counter-set-shop-0.webp",
+   "x": 38,
+   "y": 201,
+   "w": 314,
+   "h": 42
+  },
+  "ad.linkFind": {
+   "img": "counter-set-shop-0.webp",
+   "x": 279,
+   "y": 432,
+   "w": 73,
+   "h": 47
+  },
+  "cn.khqrNone": {
+   "img": "counter-set-shop-1.webp",
+   "x": 286,
+   "y": 470,
+   "w": 66,
+   "h": 25
+  },
+  "ss.wantsTitle": {
+   "img": "counter-set-shop-1.webp",
+   "x": 20,
+   "y": 318,
+   "w": 350,
+   "h": 32
+  },
+  "ss.wantsHow": {
+   "img": "counter-set-shop-1.webp",
+   "x": 38,
+   "y": 383,
+   "w": 314,
+   "h": 64
+  },
+  "ss.wantApp": {
+   "img": "counter-set-shop-1.webp",
+   "x": 86,
+   "y": 460,
+   "w": 180,
+   "h": 24
+  },
+  "ss.wantPlay": {
+   "img": "counter-set-shop-1.webp",
+   "x": 86,
+   "y": 532,
+   "w": 182,
+   "h": 24
+  },
+  "ss.wantAppSub": {
+   "img": "counter-set-shop-1.webp",
+   "x": 86,
+   "y": 484,
+   "w": 180,
+   "h": 21
+  },
+  "ss.wantDomain": {
+   "img": "counter-set-shop-1.webp",
+   "x": 86,
+   "y": 603,
+   "w": 188,
+   "h": 48
+  },
+  "ss.wantDomainSub": {
+   "img": "counter-set-shop-1.webp",
+   "x": 86,
+   "y": 651,
+   "w": 188,
+   "h": 41
+  },
+  "ss.notYet": {
+   "img": "counter-set-shop-1.webp",
+   "x": 286,
+   "y": 470,
+   "w": 66,
+   "h": 25
+  },
+  "ss.foot": {
+   "img": "counter-set-shop-1.webp",
+   "x": 20,
+   "y": 728,
+   "w": 350,
+   "h": 21
+  },
+  "am.wifiPassword": {
+   "img": "counter-set-shop-2.webp",
+   "x": 38,
+   "y": 444,
+   "w": 314,
+   "h": 21
+  },
+  "ss.amWifiCustomers": {
+   "img": "counter-set-shop-2.webp",
+   "x": 47,
+   "y": 155,
+   "w": 135,
+   "h": 15
+  },
+  "ss.amWifiAnyone": {
+   "img": "counter-set-shop-2.webp",
+   "x": 208,
+   "y": 155,
+   "w": 135,
+   "h": 15
+  },
+  "ss.wifiRead": {
+   "img": "counter-set-shop-2.webp",
+   "x": 38,
+   "y": 194,
+   "w": 314,
+   "h": 24
+  },
+  "ss.wifiReadHint": {
+   "img": "counter-set-shop-2.webp",
+   "x": 38,
+   "y": 220,
+   "w": 314,
+   "h": 42
+  },
+  "ss.wifiName": {
+   "img": "counter-set-shop-2.webp",
+   "x": 38,
+   "y": 321,
+   "w": 314,
+   "h": 21
+  },
+  "ss.wifiPassword": {
+   "img": "counter-set-shop-2.webp",
+   "x": 38,
+   "y": 444,
+   "w": 314,
+   "h": 21
+  },
+  "ss.wifiOpen": {
+   "img": "counter-set-shop-2.webp",
+   "x": 38,
+   "y": 408,
+   "w": 314,
+   "h": 23
+  },
+  "ss.wifiHidden": {
+   "img": "counter-set-shop-2.webp",
+   "x": 38,
+   "y": 532,
+   "w": 314,
+   "h": 23
+  },
+  "ss.wifiPhoto": {
+   "img": "counter-set-shop-2.webp",
+   "x": 38,
+   "y": 270,
+   "w": 105,
+   "h": 38
+  },
+  "hr.title": {
+   "img": "counter-set-shop-3.webp",
+   "x": 20,
+   "y": 439,
+   "w": 350,
+   "h": 32
+  },
+  "ss.whatYouDo": {
+   "img": "counter-set-shop-3.webp",
+   "x": 20,
+   "y": 171,
+   "w": 350,
+   "h": 32
+  },
+  "ss.storyLabel": {
+   "img": "counter-set-shop-3.webp",
+   "x": 38,
+   "y": 236,
+   "w": 314,
+   "h": 21
+  },
+  "ss.storyPh": {
+   "img": "counter-set-shop-3.webp",
+   "x": 38,
+   "y": 263,
+   "w": 314,
+   "h": 47
+  },
+  "ss.storyFoot": {
+   "img": "counter-set-shop-3.webp",
+   "x": 38,
+   "y": 385,
+   "w": 314,
+   "h": 21
+  },
+  "ss.open": {
+   "img": "counter-set-shop-3.webp",
+   "x": 20,
+   "y": 439,
+   "w": 350,
+   "h": 32
+  },
+  "day.mon": {
+   "img": "counter-set-shop-3.webp",
+   "x": 38,
+   "y": 515,
+   "w": 49,
+   "h": 26
+  },
+  "day.tue": {
+   "img": "counter-set-shop-3.webp",
+   "x": 38,
+   "y": 575,
+   "w": 49,
+   "h": 26
+  },
+  "day.wed": {
+   "img": "counter-set-shop-3.webp",
+   "x": 38,
+   "y": 635,
+   "w": 49,
+   "h": 26
+  },
+  "day.thu": {
+   "img": "counter-set-shop-3.webp",
+   "x": 38,
+   "y": 684,
+   "w": 49,
+   "h": 51
+  },
+  "day.fri": {
+   "img": "counter-set-shop-3.webp",
+   "x": 38,
+   "y": 759,
+   "w": 49,
+   "h": 26
+  },
+  "wait.under": {
+   "img": "counter-set-shop-4.webp",
+   "x": 166,
+   "y": 446,
+   "w": 75,
+   "h": 18
+  },
+  "ss.zoneFoot": {
+   "img": "counter-set-shop-4.webp",
+   "x": 38,
+   "y": 145,
+   "w": 314,
+   "h": 42
+  },
+  "ss.waitTitle": {
+   "img": "counter-set-shop-4.webp",
+   "x": 20,
+   "y": 220,
+   "w": 350,
+   "h": 32
+  },
+  "ss.waitLabel": {
+   "img": "counter-set-shop-4.webp",
+   "x": 38,
+   "y": 285,
+   "w": 314,
+   "h": 24
+  },
+  "ss.waitHow": {
+   "img": "counter-set-shop-4.webp",
+   "x": 38,
+   "y": 425,
+   "w": 314,
+   "h": 62
+  },
+  "ss.atOnceTitle": {
+   "img": "counter-set-shop-4.webp",
+   "x": 20,
+   "y": 520,
+   "w": 350,
+   "h": 32
+  },
+  "ss.atOnceLabel": {
+   "img": "counter-set-shop-4.webp",
+   "x": 38,
+   "y": 585,
+   "w": 314,
+   "h": 48
+  },
+  "ss.atOnceAuto": {
+   "img": "counter-set-shop-4.webp",
+   "x": 38,
+   "y": 646,
+   "w": 153,
+   "h": 45
+  },
+  "ss.atOnceCustom": {
+   "img": "counter-set-shop-4.webp",
+   "x": 199,
+   "y": 646,
+   "w": 153,
+   "h": 45
+  },
+  "ss.atOnceNumber": {
+   "img": "counter-set-shop-4.webp",
+   "x": 38,
+   "y": 712,
+   "w": 205,
+   "h": 24
+  },
+  "ss.atOnceHowCustom": {
+   "img": "counter-set-shop-4.webp",
+   "x": 38,
+   "y": 757,
+   "w": 314,
+   "h": 42
+  },
+  "ss.yourShop": {
+   "img": "counter-set-shop-5.webp",
+   "x": 20,
+   "y": 153,
+   "w": 350,
+   "h": 32
+  },
+  "ss.name": {
+   "img": "counter-set-shop-5.webp",
+   "x": 38,
+   "y": 218,
+   "w": 314,
+   "h": 21
+  },
+  "ss.where": {
+   "img": "counter-set-shop-5.webp",
+   "x": 38,
+   "y": 304,
+   "w": 314,
+   "h": 21
+  },
+  "rd.shops": {
+   "img": "counter-set-shop-5.webp",
+   "x": 20,
+   "y": 153,
+   "w": 350,
+   "h": 32
+  },
+  "open.yourShop": {
+   "img": "counter-set-shop-5.webp",
+   "x": 20,
+   "y": 153,
+   "w": 350,
+   "h": 32
+  },
+  "ph.icon": {
+   "img": "counter-set-shop-5.webp",
+   "x": 38,
+   "y": 605,
+   "w": 250,
+   "h": 24
+  },
+  "ph.iconHint": {
+   "img": "counter-set-shop-5.webp",
+   "x": 38,
+   "y": 633,
+   "w": 250,
+   "h": 56
+  },
+  "ph.shopSub": {
+   "img": "counter-set-shop-5.webp",
+   "x": 38,
+   "y": 488,
+   "w": 224,
+   "h": 21
+  },
+  "ph.isDrawing": {
+   "img": "counter-set-shop-5.webp",
+   "x": 38,
+   "y": 513,
+   "w": 224,
+   "h": 37
+  },
+  "ss.inKhmer": {
+   "img": "counter-set-shop-6.webp",
+   "x": 38,
+   "y": 432,
+   "w": 314,
+   "h": 47
+  },
+  "ss.amenities": {
+   "img": "counter-set-shop-6.webp",
+   "x": 20,
+   "y": 191,
+   "w": 350,
+   "h": 32
+  },
+  "ss.amenitiesHint": {
+   "img": "counter-set-shop-6.webp",
+   "x": 20,
+   "y": 231,
+   "w": 350,
+   "h": 43
+  },
+  "ss.amCustomers": {
+   "img": "counter-set-shop-6.webp",
+   "x": 47,
+   "y": 357,
+   "w": 135,
+   "h": 18
+  },
+  "ss.amAnyone": {
+   "img": "counter-set-shop-6.webp",
+   "x": 208,
+   "y": 357,
+   "w": 135,
+   "h": 18
+  },
+  "ss.amNote": {
+   "img": "counter-set-shop-6.webp",
+   "x": 38,
+   "y": 400,
+   "w": 314,
+   "h": 21
+  },
+  "ss.saveHours": {
+   "img": "counter-set-shop-7.webp",
+   "x": 38,
+   "y": 432,
+   "w": 314,
+   "h": 48
+  },
+  "ss.hoursFoot": {
+   "img": "counter-set-shop-7.webp",
+   "x": 38,
+   "y": 495,
+   "w": 314,
+   "h": 42
+  },
+  "ss.zoneTitle": {
+   "img": "counter-set-shop-7.webp",
+   "x": 20,
+   "y": 570,
+   "w": 350,
+   "h": 32
+  },
+  "ss.zoneLabel": {
+   "img": "counter-set-shop-7.webp",
+   "x": 38,
+   "y": 635,
+   "w": 314,
+   "h": 43
+  },
+  "ss.zoneNow": {
+   "img": "counter-set-shop-7.webp",
+   "x": 38,
+   "y": 740,
+   "w": 314,
+   "h": 22
+  },
+  "day.sat": {
+   "img": "counter-set-shop-7.webp",
+   "x": 38,
+   "y": 318,
+   "w": 49,
+   "h": 26
+  },
+  "day.sun": {
+   "img": "counter-set-shop-7.webp",
+   "x": 38,
+   "y": 368,
+   "w": 49,
+   "h": 51
+  },
+  "wg.hours": {
+   "img": "counter-set-shop-7.webp",
+   "x": 38,
+   "y": 432,
+   "w": 314,
+   "h": 48
+  },
+  "ss.zoneUsePhone": {
+   "img": "counter-set-shop-8.webp",
+   "x": 38,
+   "y": 434,
+   "w": 314,
+   "h": 44
+  },
+  "ss.searchPlace": {
+   "img": "counter-set-shop-9.webp",
+   "x": 38,
+   "y": 443,
+   "w": 256,
+   "h": 24
+  },
+  "ss.searchPlaceSub": {
+   "img": "counter-set-shop-9.webp",
+   "x": 38,
+   "y": 467,
+   "w": 256,
+   "h": 62
+  },
+  "ss.theme": {
+   "img": "counter-set-shop-10.webp",
+   "x": 20,
+   "y": 440,
+   "w": 350,
+   "h": 32
+  },
+  "ss.owner": {
+   "img": "counter-set-shop-10.webp",
+   "x": 38,
+   "y": 130,
+   "w": 314,
+   "h": 21
+  },
+  "ss.madeBy": {
+   "img": "counter-set-shop-10.webp",
+   "x": 38,
+   "y": 216,
+   "w": 314,
+   "h": 21
+  },
+  "ss.madeByPh": {
+   "img": "counter-set-shop-10.webp",
+   "x": 38,
+   "y": 242,
+   "w": 314,
+   "h": 47
+  },
+  "ss.ownerFoot": {
+   "img": "counter-set-shop-10.webp",
+   "x": 38,
+   "y": 365,
+   "w": 314,
+   "h": 42
+  },
+  "ad.navThemes": {
+   "img": "counter-set-shop-10.webp",
+   "x": 20,
+   "y": 440,
+   "w": 350,
+   "h": 32
+  },
+  "ad.themesTitle": {
+   "img": "counter-set-shop-10.webp",
+   "x": 20,
+   "y": 440,
+   "w": 350,
+   "h": 32
+  },
+  "gf.yes": {
+   "img": "counter-set-payments-0.webp",
+   "x": 292,
+   "y": 511,
+   "w": 60,
+   "h": 26
+  },
+  "gf.no": {
+   "img": "counter-set-payments-0.webp",
+   "x": 340,
+   "y": 551,
+   "w": 12,
+   "h": 22
+  },
+  "sp.whereCash": {
+   "img": "counter-set-payments-0.webp",
+   "x": 20,
+   "y": 446,
+   "w": 350,
+   "h": 32
+  },
+  "sp.cashPickup": {
+   "img": "counter-set-payments-0.webp",
+   "x": 38,
+   "y": 511,
+   "w": 244,
+   "h": 26
+  },
+  "sp.cashDelivery": {
+   "img": "counter-set-payments-0.webp",
+   "x": 38,
+   "y": 549,
+   "w": 292,
+   "h": 26
+  },
+  "sp.yes": {
+   "img": "counter-set-payments-0.webp",
+   "x": 292,
+   "y": 511,
+   "w": 60,
+   "h": 26
+  },
+  "sp.no": {
+   "img": "counter-set-payments-0.webp",
+   "x": 340,
+   "y": 551,
+   "w": 12,
+   "h": 22
+  },
+  "sp.cashWhy": {
+   "img": "counter-set-payments-0.webp",
+   "x": 38,
+   "y": 588,
+   "w": 314,
+   "h": 83
+  },
+  "sp.foot": {
+   "img": "counter-set-payments-0.webp",
+   "x": 20,
+   "y": 706,
+   "w": 350,
+   "h": 42
+  },
+  "sp.h3qrWhy": {
+   "img": "counter-set-payments-0.webp",
+   "x": 38,
+   "y": 136,
+   "w": 314,
+   "h": 83
+  },
+  "sp.rateTitle": {
+   "img": "counter-set-payments-0.webp",
+   "x": 20,
+   "y": 253,
+   "w": 350,
+   "h": 32
+  },
+  "sp.rateLabel": {
+   "img": "counter-set-payments-0.webp",
+   "x": 38,
+   "y": 326,
+   "w": 189,
+   "h": 24
+  },
+  "sp.rateHow": {
+   "img": "counter-set-payments-0.webp",
+   "x": 38,
+   "y": 371,
+   "w": 314,
+   "h": 42
+  },
+  "open.h3qr": {
+   "img": "counter-set-payments-1.webp",
+   "x": 84,
+   "y": 445,
+   "w": 96,
+   "h": 20
+  },
+  "sp.paste": {
+   "img": "counter-set-payments-1.webp",
+   "x": 38,
+   "y": 267,
+   "w": 314,
+   "h": 21
+  },
+  "sp.pastePh": {
+   "img": "counter-set-payments-1.webp",
+   "x": 38,
+   "y": 293,
+   "w": 314,
+   "h": 43
+  },
+  "sp.replace": {
+   "img": "counter-set-payments-1.webp",
+   "x": 38,
+   "y": 216,
+   "w": 42,
+   "h": 38
+  },
+  "sp.remove": {
+   "img": "counter-set-payments-1.webp",
+   "x": 92,
+   "y": 224,
+   "w": 46,
+   "h": 22
+  },
+  "sp.khqrWhy": {
+   "img": "counter-set-payments-1.webp",
+   "x": 38,
+   "y": 351,
+   "w": 314,
+   "h": 42
+  },
+  "sp.h3qr": {
+   "img": "counter-set-payments-1.webp",
+   "x": 84,
+   "y": 445,
+   "w": 96,
+   "h": 20
+  },
+  "sp.h3qrOn": {
+   "img": "counter-set-payments-1.webp",
+   "x": 306,
+   "y": 468,
+   "w": 46,
+   "h": 27
+  },
+  "hb.kampuchea": {
+   "img": "counter-set-payments-1.webp",
+   "x": 96,
+   "y": 537,
+   "w": 256,
+   "h": 47
+  },
+  "hb.own": {
+   "img": "counter-set-payments-1.webp",
+   "x": 96,
+   "y": 664,
+   "w": 256,
+   "h": 24
+  },
+  "hb.family": {
+   "img": "counter-set-payments-1.webp",
+   "x": 38,
+   "y": 703,
+   "w": 314,
+   "h": 50
+  },
+  "sp.cashSub": {
+   "img": "counter-set-payments-2.webp",
+   "x": 84,
+   "y": 247,
+   "w": 198,
+   "h": 44
+  },
+  "sp.khqrOn": {
+   "img": "counter-set-payments-2.webp",
+   "x": 306,
+   "y": 333,
+   "w": 46,
+   "h": 27
+  },
+  "hb.eachName": {
+   "img": "counter-set-payments-3.webp",
+   "x": 38,
+   "y": 427,
+   "w": 314,
+   "h": 58
+  },
+  "hb.customersSee": {
+   "img": "counter-set-payments-3.webp",
+   "x": 54,
+   "y": 506,
+   "w": 282,
+   "h": 19
+  },
+  "dur.week": {
+   "img": "counter-set-delivery-0.webp",
+   "x": 199,
+   "y": 636,
+   "w": 73,
+   "h": 41
+  },
+  "dur.days": {
+   "img": "counter-set-delivery-0.webp",
+   "x": 38,
+   "y": 636,
+   "w": 73,
+   "h": 41
+  },
+  "dur.day": {
+   "img": "counter-set-delivery-0.webp",
+   "x": 183,
+   "y": 690,
+   "w": 35,
+   "h": 18
+  },
+  "dur.hours": {
+   "img": "counter-set-delivery-0.webp",
+   "x": 38,
+   "y": 587,
+   "w": 73,
+   "h": 41
+  },
+  "ss.leadLabel": {
+   "img": "counter-set-delivery-0.webp",
+   "x": 38,
+   "y": 550,
+   "w": 314,
+   "h": 24
+  },
+  "ss.leadHow": {
+   "img": "counter-set-delivery-0.webp",
+   "x": 38,
+   "y": 689,
+   "w": 314,
+   "h": 42
+  },
+  "dl.saveBands": {
+   "img": "counter-set-delivery-0.webp",
+   "x": 38,
+   "y": 167,
+   "w": 314,
+   "h": 48
+  },
+  "dl.foot": {
+   "img": "counter-set-delivery-0.webp",
+   "x": 20,
+   "y": 448,
+   "w": 350,
+   "h": 21
+  },
+  "dl.offer": {
+   "img": "counter-set-delivery-1.webp",
+   "x": 306,
+   "y": 230,
+   "w": 46,
+   "h": 27
+  },
+  "dl.paidBefore": {
+   "img": "counter-set-delivery-1.webp",
+   "x": 38,
+   "y": 247,
+   "w": 155,
+   "h": 18
+  },
+  "dl.offFoot": {
+   "img": "counter-set-delivery-1.webp",
+   "x": 38,
+   "y": 284,
+   "w": 314,
+   "h": 42
+  },
+  "dl.howFar": {
+   "img": "counter-set-delivery-1.webp",
+   "x": 38,
+   "y": 376,
+   "w": 96,
+   "h": 24
+  },
+  "dl.youCharge": {
+   "img": "counter-set-delivery-1.webp",
+   "x": 134,
+   "y": 376,
+   "w": 109,
+   "h": 24
+  },
+  "dl.riderGets": {
+   "img": "counter-set-delivery-1.webp",
+   "x": 243,
+   "y": 376,
+   "w": 109,
+   "h": 24
+  },
+  "dl.upTo": {
+   "img": "counter-set-delivery-1.webp",
+   "x": 38,
+   "y": 400,
+   "w": 96,
+   "h": 48
+  },
+  "dl.range": {
+   "img": "counter-set-delivery-1.webp",
+   "x": 38,
+   "y": 447,
+   "w": 96,
+   "h": 48
+  },
+  "dl.past": {
+   "img": "counter-set-delivery-1.webp",
+   "x": 38,
+   "y": 543,
+   "w": 314,
+   "h": 32
+  },
+  "me.caterUpTo": {
+   "img": "counter-set-delivery-1.webp",
+   "x": 38,
+   "y": 414,
+   "w": 53,
+   "h": 19
+  },
+  "no.first": {
+   "img": "counter-set-orders-0.webp",
+   "x": 38,
+   "y": 218,
+   "w": 256,
+   "h": 24
+  },
+  "no.firstSub": {
+   "img": "counter-set-orders-0.webp",
+   "x": 38,
+   "y": 241,
+   "w": 256,
+   "h": 41
+  },
+  "no.cap": {
+   "img": "counter-set-orders-0.webp",
+   "x": 38,
+   "y": 310,
+   "w": 249,
+   "h": 24
+  },
+  "no.capSub": {
+   "img": "counter-set-orders-0.webp",
+   "x": 38,
+   "y": 334,
+   "w": 249,
+   "h": 21
+  },
+  "no.capMore": {
+   "img": "counter-set-orders-0.webp",
+   "x": 316,
+   "y": 367,
+   "w": 36,
+   "h": 36
+  },
+  "no.note1": {
+   "img": "counter-set-orders-0.webp",
+   "x": 37,
+   "y": 452,
+   "w": 305,
+   "h": 83
+  },
+  "no.foot": {
+   "img": "counter-set-orders-0.webp",
+   "x": 20,
+   "y": 680,
+   "w": 350,
+   "h": 21
+  },
+  "role.staff": {
+   "img": "counter-set-people-0.webp",
+   "x": 302,
+   "y": 443,
+   "w": 50,
+   "h": 25
+  },
+  "role.rider": {
+   "img": "counter-set-people-0.webp",
+   "x": 305,
+   "y": 219,
+   "w": 47,
+   "h": 25
+  },
+  "role.lower.staff": {
+   "img": "counter-set-people-0.webp",
+   "x": 302,
+   "y": 443,
+   "w": 50,
+   "h": 25
+  },
+  "role.lower.rider": {
+   "img": "counter-set-people-0.webp",
+   "x": 305,
+   "y": 219,
+   "w": 47,
+   "h": 25
+  },
+  "ppl.available": {
+   "img": "counter-set-people-0.webp",
+   "x": 38,
+   "y": 263,
+   "w": 105,
+   "h": 23
+  },
+  "ppl.availableOn": {
+   "img": "counter-set-people-0.webp",
+   "x": 38,
+   "y": 286,
+   "w": 105,
+   "h": 19
+  },
+  "ppl.ridesHow": {
+   "img": "counter-set-people-0.webp",
+   "x": 38,
+   "y": 564,
+   "w": 256,
+   "h": 37
+  },
+  "ppl.shiftsTitle": {
+   "img": "counter-set-people-0.webp",
+   "x": 38,
+   "y": 660,
+   "w": 314,
+   "h": 16
+  },
+  "ppl.cash": {
+   "img": "counter-set-people-0.webp",
+   "x": 38,
+   "y": 488,
+   "w": 209,
+   "h": 23
+  },
+  "ppl.cashOn": {
+   "img": "counter-set-people-0.webp",
+   "x": 38,
+   "y": 511,
+   "w": 209,
+   "h": 19
+  },
+  "ppl.staffGiftPct": {
+   "img": "counter-set-people-0.webp",
+   "x": 38,
+   "y": 127,
+   "w": 68,
+   "h": 23
+  },
+  "sl.riders": {
+   "img": "counter-set-people-0.webp",
+   "x": 305,
+   "y": 219,
+   "w": 47,
+   "h": 25
+  },
+  "rd.available": {
+   "img": "counter-set-people-0.webp",
+   "x": 38,
+   "y": 263,
+   "w": 105,
+   "h": 23
+  },
+  "hs.rider": {
+   "img": "counter-set-people-0.webp",
+   "x": 305,
+   "y": 219,
+   "w": 47,
+   "h": 25
+  },
+  "ad.who.staff": {
+   "img": "counter-set-people-0.webp",
+   "x": 302,
+   "y": 443,
+   "w": 50,
+   "h": 25
+  },
+  "ad.who.rider": {
+   "img": "counter-set-people-0.webp",
+   "x": 305,
+   "y": 219,
+   "w": 47,
+   "h": 25
+  },
+  "ad.evRider": {
+   "img": "counter-set-people-0.webp",
+   "x": 305,
+   "y": 219,
+   "w": 47,
+   "h": 25
+  },
+  "you.shifts": {
+   "img": "counter-set-people-1.webp",
+   "x": 47,
+   "y": 446,
+   "w": 21,
+   "h": 19
+  },
+  "you.alreadySettled": {
+   "img": "counter-set-people-1.webp",
+   "x": 38,
+   "y": 473,
+   "w": 66,
+   "h": 23
+  },
+  "ppl.shiftOne": {
+   "img": "counter-set-people-1.webp",
+   "x": 38,
+   "y": 445,
+   "w": 30,
+   "h": 23
+  },
+  "ppl.shiftOther": {
+   "img": "counter-set-people-1.webp",
+   "x": 38,
+   "y": 445,
+   "w": 30,
+   "h": 23
+  },
+  "ppl.alreadySettled": {
+   "img": "counter-set-people-1.webp",
+   "x": 38,
+   "y": 473,
+   "w": 66,
+   "h": 23
+  },
+  "ppl.youOwe": {
+   "img": "counter-set-people-1.webp",
+   "x": 38,
+   "y": 528,
+   "w": 95,
+   "h": 26
+  },
+  "ppl.marks": {
+   "img": "counter-set-people-1.webp",
+   "x": 38,
+   "y": 676,
+   "w": 314,
+   "h": 22
+  },
+  "ppl.rateFirst": {
+   "img": "counter-set-people-1.webp",
+   "x": 38,
+   "y": 390,
+   "w": 314,
+   "h": 41
+  },
+  "ppl.markPaid": {
+   "img": "counter-set-people-1.webp",
+   "x": 38,
+   "y": 566,
+   "w": 314,
+   "h": 44
+  },
+  "ppl.paidRows": {
+   "img": "counter-set-people-1.webp",
+   "x": 38,
+   "y": 622,
+   "w": 314,
+   "h": 16
+  },
+  "ppl.title": {
+   "img": "counter-set-people-2.webp",
+   "x": 20,
+   "y": 153,
+   "w": 350,
+   "h": 32
+  },
+  "ppl.rides": {
+   "img": "counter-set-people-2.webp",
+   "x": 38,
+   "y": 270,
+   "w": 256,
+   "h": 23
+  },
+  "ppl.ownerRidesOff": {
+   "img": "counter-set-people-2.webp",
+   "x": 38,
+   "y": 293,
+   "w": 256,
+   "h": 37
+  },
+  "ppl.staffGiftTitle": {
+   "img": "counter-set-people-2.webp",
+   "x": 38,
+   "y": 380,
+   "w": 314,
+   "h": 24
+  },
+  "ppl.staffGiftHow": {
+   "img": "counter-set-people-2.webp",
+   "x": 38,
+   "y": 407,
+   "w": 314,
+   "h": 39
+  },
+  "ppl.tripOne": {
+   "img": "counter-set-people-3.webp",
+   "x": 38,
+   "y": 444,
+   "w": 134,
+   "h": 23
+  },
+  "ppl.tripOther": {
+   "img": "counter-set-people-3.webp",
+   "x": 38,
+   "y": 444,
+   "w": 134,
+   "h": 23
+  },
+  "ppl.payTitle": {
+   "img": "counter-set-people-3.webp",
+   "x": 38,
+   "y": 729,
+   "w": 314,
+   "h": 17
+  },
+  "ppl.perShift": {
+   "img": "counter-set-people-3.webp",
+   "x": 38,
+   "y": 759,
+   "w": 169,
+   "h": 24
+  },
+  "ppl.addStaff": {
+   "img": "counter-set-people-3.webp",
+   "x": 20,
+   "y": 648,
+   "w": 111,
+   "h": 48
+  },
+  "ppl.addRider": {
+   "img": "counter-set-people-3.webp",
+   "x": 140,
+   "y": 648,
+   "w": 111,
+   "h": 48
+  },
+  "ppl.addOwner": {
+   "img": "counter-set-people-3.webp",
+   "x": 259,
+   "y": 648,
+   "w": 111,
+   "h": 48
+  },
+  "ppl.perShiftSub": {
+   "img": "counter-set-people-4.webp",
+   "x": 38,
+   "y": 446,
+   "w": 169,
+   "h": 19
+  },
+  "ppl.whoRecords": {
+   "img": "counter-set-people-4.webp",
+   "x": 38,
+   "y": 478,
+   "w": 314,
+   "h": 24
+  },
+  "ppl.byThem": {
+   "img": "counter-set-people-4.webp",
+   "x": 199,
+   "y": 510,
+   "w": 153,
+   "h": 64
+  },
+  "ppl.byYouHow": {
+   "img": "counter-set-people-4.webp",
+   "x": 38,
+   "y": 581,
+   "w": 314,
+   "h": 38
+  },
+  "ppl.perTrip": {
+   "img": "counter-set-people-4.webp",
+   "x": 38,
+   "y": 645,
+   "w": 144,
+   "h": 24
+  },
+  "ppl.perTripSub": {
+   "img": "counter-set-people-4.webp",
+   "x": 38,
+   "y": 669,
+   "w": 144,
+   "h": 37
+  },
+  "ppl.perTripWhere": {
+   "img": "counter-set-people-4.webp",
+   "x": 194,
+   "y": 665,
+   "w": 158,
+   "h": 22
+  },
+  "ppl.foot": {
+   "img": "counter-set-people-5.webp",
+   "x": 20,
+   "y": 727,
+   "w": 350,
+   "h": 21
+  },
+  "sl.sales": {
+   "img": "counter-set-sales-0.webp",
+   "x": 38,
+   "y": 228,
+   "w": 314,
+   "h": 17
+  },
+  "sl.fromOne": {
+   "img": "counter-set-sales-0.webp",
+   "x": 38,
+   "y": 306,
+   "w": 314,
+   "h": 22
+  },
+  "sl.fromOther": {
+   "img": "counter-set-sales-0.webp",
+   "x": 38,
+   "y": 306,
+   "w": 314,
+   "h": 22
+  },
+  "sl.paidOrNot": {
+   "img": "counter-set-sales-0.webp",
+   "x": 38,
+   "y": 330,
+   "w": 314,
+   "h": 20
+  },
+  "sl.mon": {
+   "img": "counter-set-sales-0.webp",
+   "x": 38,
+   "y": 435,
+   "w": 14,
+   "h": 18
+  },
+  "sl.sun": {
+   "img": "counter-set-sales-0.webp",
+   "x": 324,
+   "y": 435,
+   "w": 28,
+   "h": 18
+  },
+  "sl.thanked": {
+   "img": "counter-set-sales-0.webp",
+   "x": 38,
+   "y": 503,
+   "w": 314,
+   "h": 17
+  },
+  "sl.thankedNote": {
+   "img": "counter-set-sales-0.webp",
+   "x": 38,
+   "y": 527,
+   "w": 314,
+   "h": 109
+  },
+  "sl.paidOut": {
+   "img": "counter-set-sales-0.webp",
+   "x": 38,
+   "y": 686,
+   "w": 314,
+   "h": 17
+  },
+  "sl.costToMake": {
+   "img": "counter-set-sales-0.webp",
+   "x": 38,
+   "y": 715,
+   "w": 89,
+   "h": 23
+  },
+  "sl.paidPeople": {
+   "img": "counter-set-sales-0.webp",
+   "x": 38,
+   "y": 745,
+   "w": 143,
+   "h": 23
+  },
+  "sl.am6": {
+   "img": "counter-set-sales-1.webp",
+   "x": 38,
+   "y": 519,
+   "w": 25,
+   "h": 18
+  },
+  "sl.pm6": {
+   "img": "counter-set-sales-1.webp",
+   "x": 324,
+   "y": 519,
+   "w": 28,
+   "h": 18
+  },
+  "sl.left": {
+   "img": "counter-set-sales-1.webp",
+   "x": 38,
+   "y": 146,
+   "w": 222,
+   "h": 23
+  },
+  "sl.notProfit": {
+   "img": "counter-set-sales-1.webp",
+   "x": 38,
+   "y": 181,
+   "w": 314,
+   "h": 84
+  },
+  "sl.whatSold": {
+   "img": "counter-set-sales-1.webp",
+   "x": 38,
+   "y": 315,
+   "w": 314,
+   "h": 17
+  },
+  "sl.busy": {
+   "img": "counter-set-sales-1.webp",
+   "x": 38,
+   "y": 417,
+   "w": 314,
+   "h": 17
+  },
+  "sl.twoFigures": {
+   "img": "counter-set-sales-1.webp",
+   "x": 20,
+   "y": 571,
+   "w": 350,
+   "h": 117
+  },
+  "sl.foot": {
+   "img": "counter-set-sales-1.webp",
+   "x": 20,
+   "y": 706,
+   "w": 350,
+   "h": 42
+  },
+  "sl.wages": {
+   "img": "counter-set-sales-2.webp",
+   "x": 50,
+   "y": 444,
+   "w": 58,
+   "h": 23
+  },
+  "inv.body": {
+   "img": "counter-set-invite-0.webp",
+   "x": 38,
+   "y": 218,
+   "w": 314,
+   "h": 47
+  },
+  "inv.door": {
+   "img": "counter-set-invite-0.webp",
+   "x": 20,
+   "y": 411,
+   "w": 350,
+   "h": 95
+  },
+  "inv.make": {
+   "img": "counter-set-invite-0.webp",
+   "x": 38,
+   "y": 278,
+   "w": 314,
+   "h": 48
+  },
+  "inv.once": {
+   "img": "counter-set-invite-0.webp",
+   "x": 38,
+   "y": 339,
+   "w": 314,
+   "h": 39
+  },
+  "log.intro": {
+   "img": "counter-set-log-0.webp",
+   "x": 20,
+   "y": 201,
+   "w": 350,
+   "h": 64
+  },
+  "log.empty": {
+   "img": "counter-set-log-0.webp",
+   "x": 20,
+   "y": 279,
+   "w": 350,
+   "h": 23
+  },
+  "bq.pick": {
+   "img": "counter-set-welcome-0.webp",
+   "x": 34,
+   "y": 422,
+   "w": 322,
+   "h": 66
+  },
+  "bq.pixels": {
+   "img": "counter-set-welcome-0.webp",
+   "x": 103,
+   "y": 446,
+   "w": 64,
+   "h": 18
+  },
+  "bq.outline": {
+   "img": "counter-set-welcome-0.webp",
+   "x": 268,
+   "y": 446,
+   "w": 58,
+   "h": 18
+  },
+  "wg.codeNew": {
+   "img": "counter-set-welcome-0.webp",
+   "x": 199,
+   "y": 537,
+   "w": 157,
+   "h": 48
+  },
+  "wg.codeDownload": {
+   "img": "counter-set-welcome-0.webp",
+   "x": 34,
+   "y": 537,
+   "w": 155,
+   "h": 48
+  },
+  "wg.codeDownloadHow": {
+   "img": "counter-set-welcome-0.webp",
+   "x": 34,
+   "y": 593,
+   "w": 322,
+   "h": 41
+  },
+  "wg.reachTitle": {
+   "img": "counter-set-welcome-0.webp",
+   "x": 34,
+   "y": 686,
+   "w": 322,
+   "h": 17
+  },
+  "wg.toggle": {
+   "img": "counter-set-welcome-1.webp",
+   "x": 34,
+   "y": 248,
+   "w": 159,
+   "h": 24
+  },
+  "wg.toggleSub": {
+   "img": "counter-set-welcome-1.webp",
+   "x": 34,
+   "y": 273,
+   "w": 159,
+   "h": 21
+  },
+  "wg.codeTitle": {
+   "img": "counter-set-welcome-1.webp",
+   "x": 34,
+   "y": 662,
+   "w": 322,
+   "h": 17
+  },
+  "wg.codeHow": {
+   "img": "counter-set-welcome-1.webp",
+   "x": 34,
+   "y": 690,
+   "w": 322,
+   "h": 41
+  },
+  "rf.title": {
+   "img": "counter-set-welcome-1.webp",
+   "x": 34,
+   "y": 415,
+   "w": 322,
+   "h": 17
+  },
+  "rf.toggle": {
+   "img": "counter-set-welcome-1.webp",
+   "x": 34,
+   "y": 415,
+   "w": 322,
+   "h": 17
+  },
+  "rf.toggleSub": {
+   "img": "counter-set-welcome-1.webp",
+   "x": 34,
+   "y": 469,
+   "w": 262,
+   "h": 58
+  },
+  "rf.noCount": {
+   "img": "counter-set-welcome-1.webp",
+   "x": 34,
+   "y": 549,
+   "w": 322,
+   "h": 61
+  },
+  "wg.foot": {
+   "img": "counter-set-welcome-2.webp",
+   "x": 16,
+   "y": 728,
+   "w": 358,
+   "h": 20
+  },
+  "wg.drawTitle": {
+   "img": "counter-set-welcome-2.webp",
+   "x": 34,
+   "y": 199,
+   "w": 322,
+   "h": 17
+  },
+  "wg.drawHow": {
+   "img": "counter-set-welcome-2.webp",
+   "x": 34,
+   "y": 227,
+   "w": 322,
+   "h": 102
+  },
+  "wg.drawItem": {
+   "img": "counter-set-welcome-2.webp",
+   "x": 34,
+   "y": 375,
+   "w": 322,
+   "h": 21
+  },
+  "wg.drawCount": {
+   "img": "counter-set-welcome-2.webp",
+   "x": 34,
+   "y": 462,
+   "w": 84,
+   "h": 24
+  },
+  "wg.drawDaily": {
+   "img": "counter-set-welcome-2.webp",
+   "x": 34,
+   "y": 502,
+   "w": 157,
+   "h": 47
+  },
+  "wg.drawOnce": {
+   "img": "counter-set-welcome-2.webp",
+   "x": 199,
+   "y": 502,
+   "w": 157,
+   "h": 47
+  },
+  "wg.drawSave": {
+   "img": "counter-set-welcome-2.webp",
+   "x": 34,
+   "y": 561,
+   "w": 322,
+   "h": 48
+  },
+  "wg.drawOff": {
+   "img": "counter-set-welcome-2.webp",
+   "x": 34,
+   "y": 621,
+   "w": 322,
+   "h": 44
+  },
+  "wg.drawOffHow": {
+   "img": "counter-set-welcome-2.webp",
+   "x": 34,
+   "y": 673,
+   "w": 322,
+   "h": 20
+  },
+  "wg.drawDailyNow": {
+   "img": "counter-set-welcome-2.webp",
+   "x": 34,
+   "y": 337,
+   "w": 322,
+   "h": 24
+  },
+  "hs.goods": {
+   "img": "counter-set-welcome-2.webp",
+   "x": 34,
+   "y": 375,
+   "w": 322,
+   "h": 21
+  },
+  "wg.reachHow": {
+   "img": "counter-set-welcome-3.webp",
+   "x": 34,
+   "y": 414,
+   "w": 322,
+   "h": 81
+  },
+  "cs.giftFrom": {
+   "img": "counter-set-gifts-0.webp",
+   "x": 34,
+   "y": 397,
+   "w": 322,
+   "h": 17
+  },
+  "gs2.title": {
+   "img": "counter-set-gifts-0.webp",
+   "x": 16,
+   "y": 153,
+   "w": 358,
+   "h": 32
+  },
+  "gs2.whenBought": {
+   "img": "counter-set-gifts-0.webp",
+   "x": 34,
+   "y": 220,
+   "w": 322,
+   "h": 17
+  },
+  "gs2.lands": {
+   "img": "counter-set-gifts-0.webp",
+   "x": 34,
+   "y": 248,
+   "w": 322,
+   "h": 69
+  },
+  "gs2.noHold": {
+   "img": "counter-set-gifts-0.webp",
+   "x": 34,
+   "y": 325,
+   "w": 322,
+   "h": 20
+  },
+  "gs2.poolLbl": {
+   "img": "counter-set-gifts-0.webp",
+   "x": 34,
+   "y": 397,
+   "w": 322,
+   "h": 17
+  },
+  "gs2.poolToggle": {
+   "img": "counter-set-gifts-0.webp",
+   "x": 34,
+   "y": 426,
+   "w": 262,
+   "h": 48
+  },
+  "gs2.poolSub": {
+   "img": "counter-set-gifts-0.webp",
+   "x": 34,
+   "y": 474,
+   "w": 262,
+   "h": 41
+  },
+  "gs2.poolFacts": {
+   "img": "counter-set-gifts-0.webp",
+   "x": 34,
+   "y": 528,
+   "w": 322,
+   "h": 61
+  },
+  "gs2.neverSee": {
+   "img": "counter-set-gifts-0.webp",
+   "x": 34,
+   "y": 597,
+   "w": 322,
+   "h": 41
+  },
+  "rf.download": {
+   "img": "counter-set-qr-0.webp",
+   "x": 34,
+   "y": 575,
+   "w": 155,
+   "h": 48
+  },
+  "rf.share": {
+   "img": "counter-set-qr-0.webp",
+   "x": 199,
+   "y": 575,
+   "w": 157,
+   "h": 48
+  },
+  "sq.download": {
+   "img": "counter-set-qr-0.webp",
+   "x": 34,
+   "y": 575,
+   "w": 155,
+   "h": 48
+  },
+  "sq.share": {
+   "img": "counter-set-qr-0.webp",
+   "x": 199,
+   "y": 575,
+   "w": 157,
+   "h": 48
+  },
+  "sq.notCheckin": {
+   "img": "counter-set-qr-0.webp",
+   "x": 16,
+   "y": 658,
+   "w": 358,
+   "h": 91
+  },
+  "sq.orderHere": {
+   "img": "counter-set-qr-1.webp",
+   "x": 34,
+   "y": 220,
+   "w": 322,
+   "h": 17
+  },
+  "sq.how": {
+   "img": "counter-set-qr-1.webp",
+   "x": 34,
+   "y": 248,
+   "w": 322,
+   "h": 42
+  },
+  "ad.themeMany": {
+   "img": "counter-set-qr-1.webp",
+   "x": 16,
+   "y": 153,
+   "w": 358,
+   "h": 32
+  },
+  "rd.offersNone": {
+   "img": "rider-0.webp",
+   "x": 209,
+   "y": 160,
+   "w": 143,
+   "h": 21
+  },
+  "rd.waitingOne": {
+   "img": "rider-0.webp",
+   "x": 94,
+   "y": 282,
+   "w": 103,
+   "h": 20
+  },
+  "rd.waitingOther": {
+   "img": "rider-0.webp",
+   "x": 94,
+   "y": 184,
+   "w": 103,
+   "h": 20
+  },
+  "rd.noRuns": {
+   "img": "rider-0.webp",
+   "x": 20,
+   "y": 335,
+   "w": 350,
+   "h": 90
+  },
+  "rd.availableSwitch": {
+   "img": "rider-0.webp",
+   "x": 324,
+   "y": 26,
+   "w": 46,
+   "h": 27
+  },
+  "pr.open": {
+   "img": "rider-0.webp",
+   "x": 72,
+   "y": 16,
+   "w": 153,
+   "h": 28
+  },
+  "pr.title": {
+   "img": "rider-0.webp",
+   "x": 72,
+   "y": 16,
+   "w": 153,
+   "h": 28
+  },
+  "hs.ride": {
+   "img": "rider-0.webp",
+   "x": 94,
+   "y": 185,
+   "w": 34,
+   "h": 16
+  },
+  "type.coffee": {
+   "img": "find-0.webp",
+   "x": 103,
+   "y": 162,
+   "w": 61,
+   "h": 38
+  },
+  "type.tea": {
+   "img": "find-0.webp",
+   "x": 172,
+   "y": 162,
+   "w": 45,
+   "h": 38
+  },
+  "type.milktea": {
+   "img": "find-0.webp",
+   "x": 225,
+   "y": 162,
+   "w": 100,
+   "h": 38
+  },
+  "fd.subAll": {
+   "img": "find-0.webp",
+   "x": 20,
+   "y": 57,
+   "w": 193,
+   "h": 23
+  },
+  "fd.searchLabel": {
+   "img": "find-0.webp",
+   "x": 20,
+   "y": 96,
+   "w": 350,
+   "h": 50
+  },
+  "fd.searchHint": {
+   "img": "find-0.webp",
+   "x": 20,
+   "y": 96,
+   "w": 350,
+   "h": 50
+  },
+  "fd.useHere": {
+   "img": "find-0.webp",
+   "x": 20,
+   "y": 218,
+   "w": 134,
+   "h": 23
+  },
+  "fd.hereNote": {
+   "img": "find-0.webp",
+   "x": 20,
+   "y": 249,
+   "w": 350,
+   "h": 38
+  },
+  "fd.endAll": {
+   "img": "find-0.webp",
+   "x": 0,
+   "y": 658,
+   "w": 390,
+   "h": 47
+  },
+  "fd.howAll": {
+   "img": "find-0.webp",
+   "x": 20,
+   "y": 760,
+   "w": 350,
+   "h": 59
+  },
+  "type.shake": {
+   "img": "find-1.webp",
+   "x": 288,
+   "y": 162,
+   "w": 82,
+   "h": 38
+  },
+  "type.juice": {
+   "img": "find-2.webp",
+   "x": 288,
+   "y": 162,
+   "w": 82,
+   "h": 38
+  },
+  "type.soda": {
+   "img": "find-3.webp",
+   "x": 313,
+   "y": 162,
+   "w": 57,
+   "h": 38
+  },
+  "type.dessert": {
+   "img": "find-4.webp",
+   "x": 308,
+   "y": 162,
+   "w": 62,
+   "h": 38
+  },
+  "type.bakery": {
+   "img": "find-5.webp",
+   "x": 283,
+   "y": 162,
+   "w": 87,
+   "h": 38
+  },
+  "type.pizza": {
+   "img": "find-6.webp",
+   "x": 309,
+   "y": 162,
+   "w": 61,
+   "h": 38
+  },
+  "type.noodles": {
+   "img": "find-7.webp",
+   "x": 270,
+   "y": 162,
+   "w": 100,
+   "h": 38
+  },
+  "type.snack": {
+   "img": "find-8.webp",
+   "x": 271,
+   "y": 162,
+   "w": 99,
+   "h": 38
+  },
+  "fd.round": {
+   "img": "find-9.webp",
+   "x": 20,
+   "y": 617,
+   "w": 350,
+   "h": 39
+  },
+  "fd.noCart": {
+   "img": "find-9.webp",
+   "x": 20,
+   "y": 664,
+   "w": 350,
+   "h": 20
+  },
+  "ask.send": {
+   "img": "open-0.webp",
+   "x": 20,
+   "y": 768,
+   "w": 350,
+   "h": 56
+  },
+  "gf.thankSend": {
+   "img": "open-0.webp",
+   "x": 145,
+   "y": 786,
+   "w": 19,
+   "h": 20
+  },
+  "open.step1": {
+   "img": "open-0.webp",
+   "x": 20,
+   "y": 88,
+   "w": 350,
+   "h": 17
+  },
+  "open.nameKm": {
+   "img": "open-0.webp",
+   "x": 20,
+   "y": 116,
+   "w": 350,
+   "h": 56
+  },
+  "open.step2": {
+   "img": "open-0.webp",
+   "x": 20,
+   "y": 196,
+   "w": 350,
+   "h": 17
+  },
+  "open.where": {
+   "img": "open-0.webp",
+   "x": 20,
+   "y": 223,
+   "w": 350,
+   "h": 56
+  },
+  "open.mobile": {
+   "img": "open-0.webp",
+   "x": 65,
+   "y": 290,
+   "w": 126,
+   "h": 23
+  },
+  "open.step3": {
+   "img": "open-0.webp",
+   "x": 20,
+   "y": 440,
+   "w": 350,
+   "h": 17
+  },
+  "open.cashSub": {
+   "img": "open-0.webp",
+   "x": 87,
+   "y": 507,
+   "w": 230,
+   "h": 20
+  },
+  "open.h3qrSub": {
+   "img": "open-0.webp",
+   "x": 86,
+   "y": 675,
+   "w": 232,
+   "h": 61
+  },
+  "open.ask": {
+   "img": "open-0.webp",
+   "x": 20,
+   "y": 768,
+   "w": 350,
+   "h": 56
+  },
+  "open.khqr": {
+   "img": "open-0.webp",
+   "x": 86,
+   "y": 567,
+   "w": 232,
+   "h": 24
+  },
+  "open.khqrSub": {
+   "img": "open-0.webp",
+   "x": 86,
+   "y": 591,
+   "w": 232,
+   "h": 20
+  },
+  "open.here": {
+   "img": "open-0.webp",
+   "x": 20,
+   "y": 325,
+   "w": 281,
+   "h": 42
+  },
+  "open.hereWhy": {
+   "img": "open-0.webp",
+   "x": 20,
+   "y": 377,
+   "w": 350,
+   "h": 39
+  },
+  "rw.back": {
+   "img": "open-1.webp",
+   "x": 20,
+   "y": 22,
+   "w": 20,
+   "h": 22
+  },
+  "wt.watch": {
+   "img": "open-1.webp",
+   "x": 36,
+   "y": 165,
+   "w": 245,
+   "h": 19
+  },
+  "open.title": {
+   "img": "open-1.webp",
+   "x": 54,
+   "y": 18,
+   "w": 136,
+   "h": 29
+  },
+  "open.back": {
+   "img": "open-1.webp",
+   "x": 20,
+   "y": 22,
+   "w": 20,
+   "h": 22
+  },
+  "open.head": {
+   "img": "open-1.webp",
+   "x": 20,
+   "y": 90,
+   "w": 350,
+   "h": 32
+  },
+  "open.free": {
+   "img": "open-1.webp",
+   "x": 20,
+   "y": 131,
+   "w": 350,
+   "h": 24
+  },
+  "open.byInvite": {
+   "img": "open-1.webp",
+   "x": 39,
+   "y": 226,
+   "w": 312,
+   "h": 46
+  },
+  "open.noInvite": {
+   "img": "open-1.webp",
+   "x": 39,
+   "y": 277,
+   "w": 312,
+   "h": 44
+  },
+  "open.inviteLabel": {
+   "img": "open-1.webp",
+   "x": 39,
+   "y": 335,
+   "w": 312,
+   "h": 17
+  },
+  "gift.useIt": {
+   "img": "open-2.webp",
+   "x": 291,
+   "y": 479,
+   "w": 60,
+   "h": 42
+  },
+  "open.enough": {
+   "img": "open-2.webp",
+   "x": 20,
+   "y": 230,
+   "w": 350,
+   "h": 58
+  },
+  "open.addrLbl": {
+   "img": "open-2.webp",
+   "x": 39,
+   "y": 331,
+   "w": 312,
+   "h": 17
+  },
+  "open.addrFree": {
+   "img": "open-2.webp",
+   "x": 39,
+   "y": 394,
+   "w": 312,
+   "h": 42
+  },
+  "open.wantAny": {
+   "img": "open-2.webp",
+   "x": 39,
+   "y": 467,
+   "w": 238,
+   "h": 23
+  },
+  "open.wantSub": {
+   "img": "open-2.webp",
+   "x": 39,
+   "y": 491,
+   "w": 238,
+   "h": 42
+  },
+  "open.useIt": {
+   "img": "open-2.webp",
+   "x": 291,
+   "y": 479,
+   "w": 60,
+   "h": 42
+  },
+  "hop.noShop": {
+   "img": "verify-0.webp",
+   "x": 45,
+   "y": 135,
+   "w": 300,
+   "h": 23
+  },
+  "main.notCounter": {
+   "img": "counter-signed-out-0.webp",
+   "x": 0,
+   "y": 0,
+   "w": 390,
+   "h": 44
+  },
+  "cq.cateringFree": {
+   "img": "console-platform-0.webp",
+   "x": 271,
+   "y": 404,
+   "w": 76,
+   "h": 37
+  },
+  "rf.daysN": {
+   "img": "console-platform-0.webp",
+   "x": 335,
+   "y": 805,
+   "w": 12,
+   "h": 20
+  },
+  "ad.thankedWhy": {
+   "img": "console-platform-0.webp",
+   "x": 43,
+   "y": 13,
+   "w": 304,
+   "h": 61
+  },
+  "ad.noBreakdownTitle": {
+   "img": "console-platform-0.webp",
+   "x": 43,
+   "y": 138,
+   "w": 304,
+   "h": 17
+  },
+  "ad.noBreakdown": {
+   "img": "console-platform-0.webp",
+   "x": 43,
+   "y": 166,
+   "w": 304,
+   "h": 134
+  },
+  "ad.vanity": {
+   "img": "console-platform-0.webp",
+   "x": 43,
+   "y": 411,
+   "w": 143,
+   "h": 24
+  },
+  "ad.vanityVal": {
+   "img": "console-platform-0.webp",
+   "x": 271,
+   "y": 404,
+   "w": 76,
+   "h": 37
+  },
+  "ad.storage": {
+   "img": "console-platform-0.webp",
+   "x": 43,
+   "y": 467,
+   "w": 106,
+   "h": 19
+  },
+  "ad.storageSub": {
+   "img": "console-platform-0.webp",
+   "x": 43,
+   "y": 491,
+   "w": 132,
+   "h": 21
+  },
+  "ad.storageVal": {
+   "img": "console-platform-0.webp",
+   "x": 235,
+   "y": 469,
+   "w": 112,
+   "h": 37
+  },
+  "ad.media": {
+   "img": "console-platform-0.webp",
+   "x": 43,
+   "y": 541,
+   "w": 119,
+   "h": 24
+  },
+  "ad.mediaVal": {
+   "img": "console-platform-0.webp",
+   "x": 258,
+   "y": 534,
+   "w": 89,
+   "h": 37
+  },
+  "ad.pricingFoot": {
+   "img": "console-platform-0.webp",
+   "x": 43,
+   "y": 596,
+   "w": 304,
+   "h": 98
+  },
+  "ad.discovery": {
+   "img": "console-platform-0.webp",
+   "x": 43,
+   "y": 757,
+   "w": 304,
+   "h": 17
+  },
+  "ad.liveness": {
+   "img": "console-platform-0.webp",
+   "x": 43,
+   "y": 805,
+   "w": 86,
+   "h": 19
+  },
+  "ad.unitDays": {
+   "img": "console-platform-0.webp",
+   "x": 335,
+   "y": 805,
+   "w": 12,
+   "h": 20
+  },
+  "ad.notices": {
+   "img": "console-platform-1.webp",
+   "x": 43,
+   "y": 373,
+   "w": 170,
+   "h": 24
+  },
+  "ad.noticesSub": {
+   "img": "console-platform-1.webp",
+   "x": 43,
+   "y": 405,
+   "w": 304,
+   "h": 72
+  },
+  "ad.navPlatform": {
+   "img": "console-platform-1.webp",
+   "x": 0,
+   "y": 90,
+   "w": 76,
+   "h": 44
+  },
+  "ad.navReports": {
+   "img": "console-platform-1.webp",
+   "x": 146,
+   "y": 90,
+   "w": 110,
+   "h": 44
+  },
+  "ad.platformTitle": {
+   "img": "console-platform-1.webp",
+   "x": 20,
+   "y": 165,
+   "w": 350,
+   "h": 47
+  },
+  "ad.platformSub": {
+   "img": "console-platform-1.webp",
+   "x": 20,
+   "y": 215,
+   "w": 350,
+   "h": 24
+  },
+  "ad.requestsWaiting": {
+   "img": "console-platform-1.webp",
+   "x": 20,
+   "y": 261,
+   "w": 350,
+   "h": 68
+  },
+  "ad.shopsOpen": {
+   "img": "console-platform-1.webp",
+   "x": 43,
+   "y": 541,
+   "w": 121,
+   "h": 17
+  },
+  "ad.ordersWeek": {
+   "img": "console-platform-1.webp",
+   "x": 226,
+   "y": 541,
+   "w": 121,
+   "h": 17
+  },
+  "ad.deliveries": {
+   "img": "console-platform-1.webp",
+   "x": 43,
+   "y": 671,
+   "w": 121,
+   "h": 17
+  },
+  "ad.reportsOpen": {
+   "img": "console-platform-1.webp",
+   "x": 226,
+   "y": 671,
+   "w": 121,
+   "h": 17
+  },
+  "ad.circulated": {
+   "img": "console-platform-1.webp",
+   "x": 43,
+   "y": 808,
+   "w": 304,
+   "h": 17
+  },
+  "ad.reportsTitle": {
+   "img": "console-platform-1.webp",
+   "x": 146,
+   "y": 90,
+   "w": 110,
+   "h": 44
+  },
+  "ad.navCalling": {
+   "img": "console-platform-2.webp",
+   "x": 306,
+   "y": 90,
+   "w": 83,
+   "h": 44
+  },
+  "ad.recTitle": {
+   "img": "console-platform-2.webp",
+   "x": 210,
+   "y": 90,
+   "w": 97,
+   "h": 44
+  },
+  "ad.callTitle": {
+   "img": "console-platform-2.webp",
+   "x": 306,
+   "y": 90,
+   "w": 83,
+   "h": 44
+  },
+  "ad.circulatedSub": {
+   "img": "console-platform-3.webp",
+   "x": 43,
+   "y": 411,
+   "w": 304,
+   "h": 21
+  },
+  "ad.thanked": {
+   "img": "console-platform-3.webp",
+   "x": 43,
+   "y": 490,
+   "w": 304,
+   "h": 17
+  },
+  "ad.thankedNone": {
+   "img": "console-platform-3.webp",
+   "x": 43,
+   "y": 519,
+   "w": 304,
+   "h": 24
+  },
+  "ad.walk": {
+   "img": "console-platform-4.webp",
+   "x": 43,
+   "y": 412,
+   "w": 106,
+   "h": 19
+  },
+  "ad.floor": {
+   "img": "console-platform-4.webp",
+   "x": 43,
+   "y": 467,
+   "w": 124,
+   "h": 19
+  },
+  "ad.floorSub": {
+   "img": "console-platform-4.webp",
+   "x": 43,
+   "y": 490,
+   "w": 184,
+   "h": 41
+  },
+  "ad.quiet": {
+   "img": "console-platform-4.webp",
+   "x": 43,
+   "y": 558,
+   "w": 157,
+   "h": 19
+  },
+  "ad.quietSub": {
+   "img": "console-platform-4.webp",
+   "x": 43,
+   "y": 581,
+   "w": 173,
+   "h": 41
+  },
+  "ad.unitM": {
+   "img": "console-platform-4.webp",
+   "x": 339,
+   "y": 488,
+   "w": 8,
+   "h": 20
+  },
+  "ad.discoveryGlobal": {
+   "img": "console-platform-4.webp",
+   "x": 58,
+   "y": 662,
+   "w": 274,
+   "h": 82
+  },
+  "ad.discoveryIs": {
+   "img": "console-platform-4.webp",
+   "x": 58,
+   "y": 752,
+   "w": 274,
+   "h": 62
+  },
+  "ad.discoveryNotYet": {
+   "img": "console-platform-5.webp",
+   "x": 58,
+   "y": 402,
+   "w": 274,
+   "h": 41
+  },
+  "ad.ceilings": {
+   "img": "console-platform-5.webp",
+   "x": 43,
+   "y": 518,
+   "w": 304,
+   "h": 17
+  },
+  "ad.perPhone": {
+   "img": "console-platform-5.webp",
+   "x": 43,
+   "y": 561,
+   "w": 207,
+   "h": 19
+  },
+  "ad.perPhoneSub": {
+   "img": "console-platform-5.webp",
+   "x": 43,
+   "y": 584,
+   "w": 251,
+   "h": 41
+  },
+  "ad.absent": {
+   "img": "console-platform-5.webp",
+   "x": 310,
+   "y": 570,
+   "w": 37,
+   "h": 44
+  },
+  "ad.shopCap": {
+   "img": "console-platform-5.webp",
+   "x": 43,
+   "y": 652,
+   "w": 176,
+   "h": 19
+  },
+  "ad.shopCapSub": {
+   "img": "console-platform-5.webp",
+   "x": 43,
+   "y": 676,
+   "w": 200,
+   "h": 21
+  },
+  "ad.hers": {
+   "img": "console-platform-5.webp",
+   "x": 298,
+   "y": 661,
+   "w": 49,
+   "h": 23
+  },
+  "ad.perPhoneWhy": {
+   "img": "console-platform-6.webp",
+   "x": 43,
+   "y": 326,
+   "w": 304,
+   "h": 191
+  },
+  "ad.neverTitle": {
+   "img": "console-platform-6.webp",
+   "x": 43,
+   "y": 579,
+   "w": 304,
+   "h": 17
+  },
+  "ad.never1": {
+   "img": "console-platform-6.webp",
+   "x": 62,
+   "y": 608,
+   "w": 223,
+   "h": 23
+  },
+  "ad.never2": {
+   "img": "console-platform-6.webp",
+   "x": 62,
+   "y": 640,
+   "w": 105,
+   "h": 23
+  },
+  "ad.never3": {
+   "img": "console-platform-6.webp",
+   "x": 62,
+   "y": 671,
+   "w": 285,
+   "h": 68
+  },
+  "ad.never4": {
+   "img": "console-platform-6.webp",
+   "x": 62,
+   "y": 749,
+   "w": 285,
+   "h": 46
+  },
+  "ad.never5": {
+   "img": "console-platform-6.webp",
+   "x": 62,
+   "y": 803,
+   "w": 154,
+   "h": 23
+  },
+  "ad.ret6m": {
+   "img": "console-platform-6.webp",
+   "x": 182,
+   "y": 443,
+   "w": 24,
+   "h": 18
+  },
+  "ad.neverFoot": {
+   "img": "console-platform-7.webp",
+   "x": 43,
+   "y": 402,
+   "w": 304,
+   "h": 40
+  },
+  "ad.link": {
+   "img": "console-platform-7.webp",
+   "x": 43,
+   "y": 506,
+   "w": 304,
+   "h": 17
+  },
+  "ad.linkSub": {
+   "img": "console-platform-7.webp",
+   "x": 43,
+   "y": 535,
+   "w": 304,
+   "h": 65
+  },
+  "ad.linkFoot": {
+   "img": "console-platform-7.webp",
+   "x": 43,
+   "y": 777,
+   "w": 304,
+   "h": 60
+  },
+  "ad.logTitle": {
+   "img": "console-platform-8.webp",
+   "x": 43,
+   "y": 667,
+   "w": 304,
+   "h": 17
+  },
+  "ad.logEmpty": {
+   "img": "console-platform-8.webp",
+   "x": 43,
+   "y": 696,
+   "w": 304,
+   "h": 22
+  },
+  "ad.logFoot": {
+   "img": "console-platform-8.webp",
+   "x": 43,
+   "y": 733,
+   "w": 304,
+   "h": 60
+  },
+  "ad.navClicks": {
+   "img": "console-platform-9.webp",
+   "x": 311,
+   "y": 90,
+   "w": 79,
+   "h": 44
+  },
+  "ad.evClicks": {
+   "img": "console-platform-9.webp",
+   "x": 311,
+   "y": 90,
+   "w": 79,
+   "h": 44
+  },
+  "ad.clicksTitle": {
+   "img": "console-platform-9.webp",
+   "x": 311,
+   "y": 90,
+   "w": 79,
+   "h": 44
+  },
+  "common.loading": {
+   "img": "console-shops-0.webp",
+   "x": 20,
+   "y": 139,
+   "w": 350,
+   "h": 675
+  },
+  "ad.navRecommendation": {
+   "img": "console-recommendation-0.webp",
+   "x": 292,
+   "y": 90,
+   "w": 98,
+   "h": 44
+  },
+  "ad.recSub": {
+   "img": "console-recommendation-0.webp",
+   "x": 20,
+   "y": 215,
+   "w": 350,
+   "h": 48
+  },
+  "ad.reads": {
+   "img": "console-recommendation-0.webp",
+   "x": 43,
+   "y": 306,
+   "w": 304,
+   "h": 17
+  },
+  "ad.readItem": {
+   "img": "console-recommendation-0.webp",
+   "x": 43,
+   "y": 346,
+   "w": 224,
+   "h": 24
+  },
+  "ad.readItemSub": {
+   "img": "console-recommendation-0.webp",
+   "x": 43,
+   "y": 371,
+   "w": 224,
+   "h": 21
+  },
+  "ad.readTime": {
+   "img": "console-recommendation-0.webp",
+   "x": 43,
+   "y": 415,
+   "w": 206,
+   "h": 24
+  },
+  "ad.readTimeSub": {
+   "img": "console-recommendation-0.webp",
+   "x": 43,
+   "y": 440,
+   "w": 206,
+   "h": 21
+  },
+  "ad.readCost": {
+   "img": "console-recommendation-0.webp",
+   "x": 43,
+   "y": 483,
+   "w": 235,
+   "h": 24
+  },
+  "ad.readCostSub": {
+   "img": "console-recommendation-0.webp",
+   "x": 43,
+   "y": 508,
+   "w": 235,
+   "h": 41
+  },
+  "ad.readRegion": {
+   "img": "console-recommendation-0.webp",
+   "x": 43,
+   "y": 573,
+   "w": 206,
+   "h": 24
+  },
+  "ad.readRegionSub": {
+   "img": "console-recommendation-0.webp",
+   "x": 43,
+   "y": 597,
+   "w": 206,
+   "h": 21
+  },
+  "ad.readStock": {
+   "img": "console-recommendation-0.webp",
+   "x": 43,
+   "y": 641,
+   "w": 188,
+   "h": 24
+  },
+  "ad.readStockSub": {
+   "img": "console-recommendation-0.webp",
+   "x": 43,
+   "y": 666,
+   "w": 188,
+   "h": 21
+  },
+  "ad.readDeviation": {
+   "img": "console-recommendation-0.webp",
+   "x": 43,
+   "y": 710,
+   "w": 235,
+   "h": 24
+  },
+  "ad.readDeviationSub": {
+   "img": "console-recommendation-0.webp",
+   "x": 43,
+   "y": 734,
+   "w": 235,
+   "h": 62
+  },
+  "ad.passed": {
+   "img": "console-recommendation-0.webp",
+   "x": 296,
+   "y": 356,
+   "w": 51,
+   "h": 26
+  },
+  "ad.readsFoot": {
+   "img": "console-recommendation-1.webp",
+   "x": 43,
+   "y": 402,
+   "w": 304,
+   "h": 40
+  },
+  "ad.shapeTitle": {
+   "img": "console-recommendation-1.webp",
+   "x": 43,
+   "y": 504,
+   "w": 304,
+   "h": 17
+  },
+  "ad.fn": {
+   "img": "console-recommendation-1.webp",
+   "x": 43,
+   "y": 544,
+   "w": 127,
+   "h": 48
+  },
+  "ad.example": {
+   "img": "console-recommendation-1.webp",
+   "x": 43,
+   "y": 621,
+   "w": 148,
+   "h": 24
+  },
+  "ad.quick": {
+   "img": "console-recommendation-1.webp",
+   "x": 43,
+   "y": 674,
+   "w": 83,
+   "h": 48
+  },
+  "ad.skip": {
+   "img": "console-recommendation-1.webp",
+   "x": 43,
+   "y": 751,
+   "w": 83,
+   "h": 24
+  },
+  "ad.notSetting": {
+   "img": "console-recommendation-1.webp",
+   "x": 144,
+   "y": 745,
+   "w": 203,
+   "h": 37
+  },
+  "ad.reasons": {
+   "img": "console-recommendation-2.webp",
+   "x": 43,
+   "y": 375,
+   "w": 85,
+   "h": 95
+  },
+  "ad.anchor": {
+   "img": "console-recommendation-2.webp",
+   "x": 58,
+   "y": 509,
+   "w": 274,
+   "h": 103
+  },
+  "ad.width62": {
+   "img": "console-recommendation-2.webp",
+   "x": 58,
+   "y": 620,
+   "w": 274,
+   "h": 82
+  },
+  "ad.neverSee": {
+   "img": "console-recommendation-2.webp",
+   "x": 43,
+   "y": 779,
+   "w": 304,
+   "h": 17
+  },
+  "ad.see1": {
+   "img": "console-recommendation-3.webp",
+   "x": 62,
+   "y": 480,
+   "w": 285,
+   "h": 46
+  },
+  "ad.see2": {
+   "img": "console-recommendation-3.webp",
+   "x": 62,
+   "y": 538,
+   "w": 280,
+   "h": 23
+  },
+  "ad.see3": {
+   "img": "console-recommendation-3.webp",
+   "x": 62,
+   "y": 572,
+   "w": 285,
+   "h": 46
+  },
+  "ad.see4": {
+   "img": "console-recommendation-3.webp",
+   "x": 62,
+   "y": 630,
+   "w": 285,
+   "h": 46
+  },
+  "ad.seeFoot": {
+   "img": "console-recommendation-3.webp",
+   "x": 43,
+   "y": 691,
+   "w": 304,
+   "h": 102
+  }
+ },
+ "missed": [
+  "open.closedToday",
+  "open.closedNow",
+  "open.wait",
+  "open.aheadNone",
+  "open.aheadOne",
+  "co.where",
+  "co.wherePh",
+  "co.whereHint",
+  "co.askedOne",
+  "co.askedOther",
+  "co.shelfAhead",
+  "co.waitingFull",
+  "co.deliveryFree",
+  "co.locating",
+  "co.locDenied",
+  "co.inRange",
+  "co.outOfRange",
+  "co.codeLbl",
+  "co.codeHow",
+  "co.deliveryRow",
+  "co.nothingMore",
+  "co.riderPaid",
+  "co.sendDelivery",
+  "co.payNext",
+  "co.sending",
+  "co.errBand",
+  "co.errItem",
+  "co.errOffline",
+  "co.errGeneric",
+  "co.historyKept",
+  "co.payNextH3qr",
+  "co.tabUse",
+  "co.tabCovers",
+  "co.tabPart",
+  "co.tabRow",
+  "co.sendDeliveryShort",
+  "co.typeAddrPh",
+  "co.typeAddrErr",
+  "co.typeAddrNone",
+  "co.typeAddrPick",
+  "co.zoneNote",
+  "co.leavePhoto",
+  "co.leavePhotoSub",
+  "co.errShut",
+  "pl.saved",
+  "pl.offline",
+  "pl.after",
+  "pl.firstPaid",
+  "pl.shelfThenOnly",
+  "pl.shelfThenMixed",
+  "pl.shelfPaid",
+  "pl.payTitle",
+  "pl.payThen",
+  "pl.paid",
+  "pl.pickupKhqr",
+  "pl.points",
+  "pl.pickupH3qr",
+  "pl.payH3qr",
+  "pl.h3qrWhichBank",
+  "pl.h3qrOneBank",
+  "pl.h3qrIsPayment",
+  "pl.aheadOne",
+  "pl.aheadOther",
+  "pl.next",
+  "pl.payAfterH3qr",
+  "ask.yourOrder",
+  "ask.yourItem",
+  "ask.rode",
+  "ask.eyebrowTag",
+  "ask.eyebrow",
+  "ask.ma",
+  "ask.because",
+  "ask.and",
+  "ask.anything",
+  "ask.noteTag",
+  "ask.note",
+  "ask.whyTag",
+  "ask.why",
+  "ask.goes",
+  "ask.whose",
+  "ask.noRailOwner",
+  "ask.noRail",
+  "ask.notThisTime",
+  "ask.thatsAll",
+  "ask.video",
+  "ask.videoShop",
+  "ask.end",
+  "ask.whyReward",
+  "ask.goesNow",
+  "ask.sentNow",
+  "ask.oneTapShort",
+  "ask.oneTapLimit",
+  "ask.oneTapFail",
+  "reason.takes-time",
+  "reason.made-to-order",
+  "reason.end-of-day",
+  "reason.nearly-gone",
+  "reason.regional-norm",
+  "reason.share-of-price",
+  "reason.covers-cost",
+  "type.water",
+  "type.icecream",
+  "type.sandwich",
+  "type.rice",
+  "type.soup",
+  "type.grill",
+  "type.fruit",
+  "ci.row",
+  "ci.rowWelcome",
+  "ci.rowWelcomeShop",
+  "ci.rowEach",
+  "ci.rowHere",
+  "ci.mapLabel",
+  "ci.mapShop",
+  "ci.mapBands",
+  "ci.working",
+  "ci.done",
+  "ci.inLine",
+  "ci.points",
+  "ci.drawOne",
+  "ci.drawOther",
+  "ci.lucky",
+  "ci.howChecked",
+  "ci.counter",
+  "ci.menu",
+  "ci.pillHere",
+  "ci.pointsBig",
+  "ci.pointsFrom",
+  "ci.whyCapOne",
+  "ci.whyCapOther",
+  "ci.whyDay",
+  "ci.whyDays",
+  "ci.whyHours",
+  "ci.whyEnded",
+  "ci.scanTitle",
+  "ci.scanOther",
+  "ci.scanNot",
+  "rw.row",
+  "rw.title",
+  "rw.from",
+  "rw.yours",
+  "rw.all",
+  "rw.claim",
+  "rw.how",
+  "rw.history",
+  "rw.logCheckin",
+  "rw.logOrder",
+  "rw.logReward",
+  "rw.logAReward",
+  "rw.howSpend",
+  "rw.howScan",
+  "rw.howSet",
+  "rw.own",
+  "rw.phone",
+  "rw.claimTitle",
+  "rw.claimGo",
+  "rw.err",
+  "rw.pillPts",
+  "rw.logFriendCheckin",
+  "rw.logFriendOrder",
+  "rw.shut",
+  "dr.title",
+  "dr.promised",
+  "dr.open",
+  "dr.sealed",
+  "dr.drawn",
+  "dr.nobody",
+  "dr.how",
+  "dr.ok",
+  "dr.bad",
+  "dr.beacon",
+  "dr.beaconStored",
+  "dr.mine",
+  "dr.back",
+  "gb.giveOneAtCheckout",
+  "gb.viaQ",
+  "gb.viaHint",
+  "gb.knowQ",
+  "gb.fromSomeoneHint",
+  "gb.needFrom",
+  "gb.monthStatement",
+  "gb.pay",
+  "gb.paidAhead",
+  "gb.notGiftable",
+  "gb.them",
+  "gb.aGift",
+  "gb.rowHeld",
+  "gb.rowHandOver",
+  "gb.rowFor",
+  "gb.rowTab",
+  "gb.codeRowSub",
+  "gb.codePh",
+  "gb.rowToGive",
+  "gb.codeAdded",
+  "gb.codeAllUsed",
+  "gf.title",
+  "gf.yours",
+  "gf.toGive",
+  "gf.given",
+  "gf.noMatch",
+  "gf.tooMany",
+  "gf.error",
+  "gf.backToShop",
+  "gf.showOrSend",
+  "gf.sendLink",
+  "gf.linkCopied",
+  "gf.shareText",
+  "gf.handOverHint",
+  "gf.them",
+  "gf.allUsed",
+  "gf.orHandBack",
+  "gf.handBackLink",
+  "gf.handBackTitle",
+  "gf.handBackWhat",
+  "gf.worthToday",
+  "gf.needsAccount",
+  "gf.getAccount",
+  "gf.accountMinor",
+  "gf.handBackGo",
+  "gf.keepIt",
+  "gf.backedHint",
+  "gf.notToDrink",
+  "gf.anyone",
+  "gf.anonAsked",
+  "gf.anonNoName",
+  "gf.giveIt",
+  "gf.thePersonWhoGave",
+  "gf.yourName",
+  "gf.yourNameHint",
+  "gf.whereGoing",
+  "gf.goingBack",
+  "gf.goingOn",
+  "gf.under18",
+  "gf.under18Why",
+  "gf.oneQuestion",
+  "gf.thoughtKnew",
+  "gf.guessPrivate",
+  "gf.passIt",
+  "gf.theirsNow",
+  "gf.theirCode",
+  "gf.showOrSendHint",
+  "gf.thankDoor",
+  "gf.thankTreasury",
+  "gf.thankTreasuryAnon",
+  "gf.thankTreasuryWhere",
+  "gf.thankTitle",
+  "gf.thankWhat",
+  "gf.thankSent",
+  "gf.thankEnough",
+  "gf.relayHandOverHint",
+  "gs.had",
+  "gs.lapsedBody",
+  "gs.sentOn",
+  "gs.sendNew",
+  "gs.notNow",
+  "gs.notRevived",
+  "gs.newOne",
+  "gs.newCode",
+  "gs.monthAgain",
+  "gp.waiting",
+  "gp.released",
+  "gp.payTitle",
+  "gp.payThen",
+  "gp.cash",
+  "gp.theirCode",
+  "gp.goodFor",
+  "gp.toPass",
+  "gp.keptHere",
+  "gp.collectedEarlier",
+  "gp.useTab",
+  "gp.tabUsed",
+  "gp.heroFor",
+  "gp.step1",
+  "gp.step2",
+  "gp.step3",
+  "gp.amountLbl",
+  "gp.heroPass",
+  "tab.owes",
+  "tab.use",
+  "tab.in",
+  "tab.out",
+  "follow.btn",
+  "follow.note",
+  "follow.how",
+  "follow.on",
+  "follow.stop",
+  "follow.needHere",
+  "chrome.giftsN",
+  "orders.on",
+  "orders.thisOne",
+  "you.number",
+  "you.onlyHere",
+  "you.orders",
+  "you.ordersNone",
+  "you.st.new",
+  "you.st.done",
+  "you.gift",
+  "you.follow",
+  "you.tabLink",
+  "you.giftsHand",
+  "you.giftsGive",
+  "you.notes",
+  "you.noteAbout",
+  "you.route",
+  "you.routeOn",
+  "you.routeStop",
+  "you.sentNews",
+  "you.ordersOut",
+  "you.historyMoved",
+  "you.st.cancelled",
+  "you.seeIt",
+  "cu.add",
+  "cu.replace",
+  "cu.name",
+  "cu.saved",
+  "cu.err",
+  "cu.photoErr",
+  "cu.who",
+  "cu.minors",
+  "hop.title",
+  "hop.intro",
+  "hop.leaving",
+  "hop.retry",
+  "hop.codeTitle",
+  "hop.codeHow",
+  "hop.codeOnce",
+  "hop.codeNever",
+  "ho.title",
+  "ho.how",
+  "ho.codeLbl",
+  "ho.again",
+  "ho.wrong",
+  "ho.err",
+  "gift.from",
+  "gift.fromSomeone",
+  "gift.used",
+  "gift.onOrder",
+  "gift.line",
+  "gift.deliveryToo",
+  "gift.see",
+  "gift.nothingToPay",
+  "gift.atCounter",
+  "gift.errUsed",
+  "gift.errSoldOut",
+  "gift.errOwn",
+  "ct.each",
+  "ct.from",
+  "ct.qty",
+  "ct.how",
+  "ct.optionSub",
+  "ct.only",
+  "ct.giftsStay",
+  "ct.when",
+  "ct.time",
+  "ct.whenHint",
+  "ct.errWhen",
+  "ct.where",
+  "ct.pinHint",
+  "ct.pinWho",
+  "ct.notePh",
+  "ct.errMin",
+  "ct.errRange",
+  "ct.errChanged",
+  "ct.bringing",
+  "ct.paidFirst",
+  "ct.book",
+  "ct.chainBringing",
+  "ct.placedWhen",
+  "ct.paid",
+  "ct.payTitle",
+  "ct.payThen",
+  "ct.noteLbl",
+  "ct.labelLbl",
+  "ct.payNext",
+  "ct.payNextH3qr",
+  "ct.cancelMode",
+  "ct.signInFirst",
+  "ct.start",
+  "ct.payoutQ",
+  "ct.payoutKhqrAdd",
+  "ct.payoutKhqrChange",
+  "ct.payoutKhqrHint",
+  "ct.payoutNotKhqr",
+  "ct.payoutNoQr",
+  "ct.payoutH3qrHint",
+  "ct.commissionRow",
+  "ct.commissionWhen",
+  "ct.commissionYours",
+  "ct.commissionOwed",
+  "ct.commissionPaid",
+  "ct.errSignIn",
+  "ct.errPayout",
+  "ct.message",
+  "ct.move",
+  "ct.moveQ",
+  "ct.moveTells",
+  "ct.moveSave",
+  "ct.moved",
+  "ct.cancel",
+  "ct.cancelQ",
+  "ct.cancelQPaid",
+  "ct.cancelYes",
+  "ct.errNotNew",
+  "ct.cancelledHead",
+  "ct.cancelledWhen",
+  "ct.cancelledPaid",
+  "ct.rowTitle",
+  "ct.broughtHead",
+  "ct.broughtWhen",
+  "ct.payoutCashHint",
+  "ct.payoutKhqrKept",
+  "ct.pick",
+  "rf.arrivedTitle",
+  "rf.termsDays",
+  "rf.termsFirst",
+  "rf.youLoseNothing",
+  "rf.useIt",
+  "rf.notNow",
+  "rf.linked",
+  "rf.errNotNew",
+  "rf.errOwn",
+  "rf.errAlready",
+  "rf.errNoMatch",
+  "rf.errOff",
+  "rf.errGeneric",
+  "rf.yourCode",
+  "rf.getCode",
+  "rf.shareText",
+  "rf.printCaption",
+  "rf.friendCode",
+  "rf.noCountCustomer",
+  "ca.title",
+  "ca.lead",
+  "ca.qty",
+  "ca.when",
+  "ca.name",
+  "ca.phone",
+  "ca.send",
+  "ca.choose",
+  "ca.replace",
+  "ca.sent",
+  "ca.sentHow",
+  "ca.messenger",
+  "ca.err",
+  "ca.errSignIn",
+  "ca.errItem",
+  "ca.errClosed",
+  "ca.errOn",
+  "ca.errPhone",
+  "tier.affiliateWhat",
+  "tier.vendorWhat",
+  "tier.vendorLead",
+  "tier.affLead",
+  "tier.vendorPricesHead",
+  "tier.vendorPrices",
+  "tier.vendorAfterHead",
+  "tier.vendorAfter",
+  "tier.affAfterHead",
+  "tier.affAfter",
+  "tier.affSuggestHead",
+  "tier.affSuggest",
+  "tier.straightHead",
+  "tier.straight",
+  "tier.read",
+  "tier.more",
+  "tier.qrHead",
+  "tier.qrHow",
+  "os.title",
+  "os.messenger",
+  "os.call",
+  "os.foot",
+  "os.footOne",
+  "os.footShorts",
+  "os.footMessenger",
+  "os.footPhone",
+  "os.shortsHb",
+  "os.shortsFamily",
+  "or.rowPickup",
+  "or.rowDelivery",
+  "or.rowGift",
+  "or.stPacked",
+  "or.stGift",
+  "or.cancelQ",
+  "or.cancelQPaid",
+  "or.cancelQReward",
+  "or.cancelYes",
+  "or.errNotNew",
+  "or.errNotYours",
+  "or.cancelledHead",
+  "or.cancelledPaid",
+  "or.closedHead",
+  "or.stGiftShort",
+  "or.stOnWay",
+  "or.stBringing",
+  "or.stPayFirst",
+  "or.readyCollect",
+  "or.view",
+  "or.cameBack",
+  "or.stLeft",
+  "or.leftLine",
+  "cn.connectedShort",
+  "cn.asHandle",
+  "cn.why",
+  "cn.whyPayout",
+  "cn.payFrom",
+  "cn.pickupWhen",
+  "cn.chargedNow",
+  "cn.pickupCharged",
+  "cn.firstCharged",
+  "cn.shelfCharged",
+  "cn.firstChargedShort",
+  "cn.deliveryCharged",
+  "cn.giftCharged",
+  "cn.bookCharged",
+  "cn.needBank",
+  "cn.connected",
+  "cn.errSession",
+  "cn.errNotMember",
+  "cn.errSelf",
+  "cn.errGeneric",
+  "cn.errNoHandle",
+  "cn.errInsufficient",
+  "cn.errRevoked",
+  "cn.errUnreachable",
+  "cn.errCharge",
+  "cn.payAfterBank",
+  "cn.paidFrom",
+  "cn.giftPaid",
+  "cn.youOn",
+  "cn.reconnect",
+  "cn.stop",
+  "cn.khqrTitle",
+  "cn.khqrReplace",
+  "cn.khqrWhat",
+  "cn.oneTapLabel",
+  "cn.oneTapOnHint",
+  "cn.oneTapOffHint",
+  "cn.oneTapNeedsHop",
+  "cn.oneTapFailed",
+  "ms.outNow",
+  "ms.away",
+  "ms.awayNow",
+  "ms.denied",
+  "ms.failed",
+  "ms.retry",
+  "ms.kept",
+  "ms.maps",
+  "qs.title",
+  "qs.hint",
+  "qs.photo",
+  "qs.stays",
+  "qs.noQr",
+  "qs.decodeFailed",
+  "qs.errPermission",
+  "qs.errNotFound",
+  "qs.errBusy",
+  "qs.errGeneric",
+  "dl.photoSee",
+  "dl.photoAlt",
+  "dl.photoGone",
+  "dl.notHere",
+  "dl.contested",
+  "dl.leftHead",
+  "dl.leftHow",
+  "dl.leftHave",
+  "dl.leftConfirm",
+  "dl.leftErr",
+  "rc.replace",
+  "rc.sent",
+  "rc.errPhoto",
+  "rc.errState",
+  "rc.errOffline",
+  "rc.err",
+  "am.forCustomers",
+  "am.forAnyone",
+  "am.wifiName",
+  "am.wifiNoPassword",
+  "am.wifiHidden",
+  "am.wifiScan",
+  "am.copy",
+  "am.copied",
+  "am.needCheckin",
+  "am.needOrder",
+  "am.off",
+  "am.err",
+  "hr.closedToday",
+  "hr.zone",
+  "ql.title",
+  "ql.countOne",
+  "ql.countOther",
+  "ql.more",
+  "ql.empty",
+  "ql.join",
+  "ql.private",
+  "tr.from",
+  "tr.with",
+  "tr.whenHere",
+  "tr.whenHereGiver",
+  "tr.chooseOne",
+  "tr.choose",
+  "tr.chosenNote",
+  "tr.change",
+  "tr.choosing",
+  "tr.appears",
+  "tr.forName",
+  "tr.line",
+  "tr.nothingToPay",
+  "tr.ordered",
+  "tr.none",
+  "tr.gone",
+  "note.soldOut",
+  "price.askAfter",
+  "price.tagHead",
+  "price.tagSub",
+  "common.saving",
+  "powered",
+  "pay.delivery",
+  "err.noShop",
+  "err.load",
+  "closed.shop",
+  "pz.title",
+  "pz.code",
+  "pz.keep",
+  "live.out",
+  "live.far",
+  "live.howFar",
+  "live.nearWhere",
+  "push.denied",
+  "push.failed",
+  "push.homeScreen",
+  "ready.ask",
+  "ready.on",
+  "onway.ask",
+  "onway.on",
+  "giftready.ask",
+  "giftready.on",
+  "dev.on",
+  "dev.moving",
+  "dev.off",
+  "dev.offDone",
+  "gifts.forYou",
+  "gifts.forYouHow",
+  "carry.done",
+  "rr.coming",
+  "rr.onWay",
+  "rr.yourRider",
+  "sq.copied",
+  "up.ready",
+  "up.update",
+  "shut.now",
+  "shut.today",
+  "wt.howto",
+  "wt.made",
+  "gf.showAtCounter",
+  "gf.copy",
+  "gf.copied",
+  "gf.whileOpen",
+  "gf.theseThings",
+  "gf.noDate",
+  "gf.used",
+  "gf.fromBought",
+  "gf.fromSomeone",
+  "gf.fromVia",
+  "gf.fromSomeoneVia",
+  "gf.passedBy",
+  "gf.someone",
+  "gf.month",
+  "gf.monthBack",
+  "gf.whoeverSent",
+  "gs.lapsedHead",
+  "fd.titleNear",
+  "fd.subNear",
+  "fd.typesOnly",
+  "fd.hereDenied",
+  "fd.hereFailed",
+  "fd.bandFirst",
+  "fd.band",
+  "fd.thankAfter",
+  "fd.endNear",
+  "fd.noneNear",
+  "fd.noneAll",
+  "fd.nobodyNear",
+  "fd.nobodyAll",
+  "fd.address",
+  "fd.how",
+  "fd.noBeacon",
+  "fd.loadErr",
+  "fd.out",
+  "fd.outAt",
+  "wt.continue",
+  "role.coowner",
+  "role.lower.coowner",
+  "common.they",
+  "common.them",
+  "common.otherNumber",
+  "cq.giftNothing",
+  "cq.nothingOwedThanked",
+  "cq.stagePay",
+  "cq.checkedIn",
+  "cq.ordered",
+  "cq.prepaid",
+  "cq.theyreHere",
+  "cq.emptyLine",
+  "cq.emptyAhead",
+  "cq.riderAssigned",
+  "cq.noRider",
+  "cq.aRider",
+  "cq.riderComing",
+  "cq.riderOnWay",
+  "cq.doorContested",
+  "cq.doorPhotoSee",
+  "cq.doorPhotoAlt",
+  "cq.doorPhotoGone",
+  "cq.riderLeft",
+  "cq.takeItOnRider",
+  "cq.handed",
+  "cq.settleTitle",
+  "cq.owesForGoods",
+  "cq.checkBank",
+  "cq.moneyStraight",
+  "cq.extraIsThank",
+  "cq.paidClose",
+  "cq.paidCash",
+  "cq.paidKhqr",
+  "cq.notYet",
+  "cq.cantConfirm",
+  "cq.moneyCatching",
+  "cq.closedToday",
+  "cq.closedHours",
+  "cq.hoursNotSet",
+  "cq.waiting",
+  "cq.waitMin",
+  "cq.emptyGifts",
+  "cq.loadError",
+  "cq.prepaidKhqr",
+  "cq.checkArrived",
+  "cq.payFirstAside",
+  "cq.firstAside",
+  "cq.shelfAside",
+  "cq.owesFirst",
+  "cq.paidFirst",
+  "cq.paidPill",
+  "cq.waitingPayment",
+  "cq.offerAgain",
+  "cq.deliveryLine",
+  "cq.owesDelivery",
+  "cq.paidDelivery",
+  "cq.cashSame",
+  "cq.noCashHere",
+  "cq.closedByHB",
+  "cq.fromPoints",
+  "cq.codeLook",
+  "cq.codeNoMatch",
+  "cq.codeTooMany",
+  "cq.codeError",
+  "cq.codeToGive",
+  "cq.codeName",
+  "cq.codeMake",
+  "cq.codeMade",
+  "cq.codeUsed",
+  "cq.giftStage",
+  "cq.giftFor",
+  "cq.giftToPass",
+  "cq.giftCheckBank",
+  "cq.giftTakeCash",
+  "cq.giftRelease",
+  "cq.giftReleaseErr",
+  "cq.giftOwnerReleases",
+  "cq.fromTab",
+  "cq.nothingToPay",
+  "cq.paidH3qr",
+  "cq.checkHeartBank",
+  "cq.h3qrLabelled",
+  "cq.giftCheckH3qr",
+  "cq.moneyStraightH3qr",
+  "cq.prepaidH3qr",
+  "cq.tabCatering",
+  "cq.tabAsks",
+  "cq.emptyCatering",
+  "cq.cateringStage",
+  "cq.cateringCharge",
+  "cq.cateringWhere",
+  "cq.cateringMap",
+  "cq.cateringPayFirst",
+  "cq.cateringDelivered",
+  "cq.cateringDeliveredAside",
+  "cq.cateringNote",
+  "cq.owesCatering",
+  "cq.paidCatering",
+  "cq.commissionAhead",
+  "cq.commissionStage",
+  "cq.commissionFor",
+  "cq.commissionKhqr",
+  "cq.commissionH3qr",
+  "cq.commissionNoWhere",
+  "cq.commissionMark",
+  "cq.commissionAside",
+  "cq.abandonQ",
+  "cq.abandonYes",
+  "cq.abandonAside",
+  "cq.bankAtHandOver",
+  "cq.handedCharge",
+  "cq.handedChargeAside",
+  "cq.chargeShort",
+  "cq.chargeUnreachable",
+  "cq.chargeOther",
+  "cq.commissionCash",
+  "cq.giftPaidBank",
+  "cq.abandonQGift",
+  "cq.abandonQCatering",
+  "cq.abandonQDelivery",
+  "cq.abandonPaid",
+  "cq.abandonBack",
+  "cq.abandonRider",
+  "cq.abandonMoved",
+  "cq.abandonOwner",
+  "cq.abandonFailed",
+  "cq.giftPaidEarnings",
+  "cq.giftPaidEarningsAnon",
+  "cq.codeScan",
+  "cq.codeScanTitle",
+  "cq.codeScanOther",
+  "cq.codeScanNot",
+  "cq.qrPill",
+  "cq.qrTitle",
+  "cq.qrWelcome",
+  "cq.qrWelcomeNone",
+  "cq.receiptSee",
+  "cq.receiptAlt",
+  "cq.receiptGone",
+  "cq.receiptCheck",
+  "cq.treatPill",
+  "cq.treatNothing",
+  "cq.codeFound",
+  "cq.codeAllUsed",
+  "hist.nothingOwed",
+  "hist.settled",
+  "hist.by",
+  "hist.emptyToday",
+  "hist.emptyWeek",
+  "hist.weekOne",
+  "hist.weekOther",
+  "hist.unsettledMany",
+  "hist.monthOne",
+  "hist.monthOther",
+  "hist.tookLabel",
+  "hist.emptyMonth",
+  "hist.emptyAll",
+  "hist.closedN",
+  "hist.abandoned",
+  "hist.older",
+  "you.canMoneyNoCash",
+  "you.shiftTitle",
+  "you.shiftHow",
+  "you.shiftStart",
+  "you.shiftSince",
+  "you.shiftEnd",
+  "you.shiftNoRate",
+  "you.shiftErr",
+  "you.wagesTo",
+  "you.wagesToHow",
+  "you.wagesName",
+  "you.wagesFamily",
+  "you.wagesSet",
+  "you.wagesBad",
+  "you.deliveries",
+  "you.owed",
+  "you.tillOne",
+  "you.tillOther",
+  "you.nameBad",
+  "you.homeScreen",
+  "you.messengerStaff",
+  "you.messengerBad",
+  "you.messengerShown",
+  "you.messengerShownWhat",
+  "you.messengerShownErr",
+  "you.phoneMine",
+  "you.phoneOther",
+  "you.phoneUseMine",
+  "you.phoneBad",
+  "you.phoneNone",
+  "you.phoneErr",
+  "ppl.noName",
+  "ppl.ownerRidesOn",
+  "ppl.availableOff",
+  "ppl.settledCash",
+  "ppl.settledKhqr",
+  "ppl.onlyYou",
+  "ppl.wages",
+  "ppl.tally",
+  "ppl.rateBad",
+  "ppl.byThemHow",
+  "ppl.onShiftSince",
+  "ppl.removeShift",
+  "ppl.shiftDay",
+  "ppl.yesterday",
+  "ppl.addShift",
+  "ppl.theyRecord",
+  "ppl.cashOff",
+  "ppl.payH3qr",
+  "ppl.payH3qrHow",
+  "ppl.payNow",
+  "ppl.payNowHow",
+  "ppl.paidNowDone",
+  "ppl.payNowOwed",
+  "ppl.payNowShort",
+  "ppl.payNowPayee",
+  "ppl.payNowStopped",
+  "ppl.payNowClosed",
+  "ppl.payNowNoAnswer",
+  "ppl.checkAgain",
+  "ppl.notConfirmed",
+  "ppl.wagesConnect",
+  "ppl.wagesConnectHow",
+  "ppl.wagesConnected",
+  "ppl.wagesConnectFailed",
+  "ppl.wagesTitle",
+  "ppl.wagesFrom",
+  "ppl.wagesYourAccount",
+  "ppl.wagesStop",
+  "ppl.wagesHow",
+  "ppl.marksNow",
+  "ppl.addTitle",
+  "ppl.name",
+  "ppl.phone",
+  "ppl.role",
+  "ppl.roleStaff",
+  "ppl.roleRider",
+  "ppl.phoneKept",
+  "ppl.send",
+  "ppl.sentStaff",
+  "ppl.sentRider",
+  "ppl.pending",
+  "ppl.pendingStaff",
+  "ppl.pendingRider",
+  "ppl.withdraw",
+  "ppl.removeAsk",
+  "ppl.errName",
+  "ppl.errAlready",
+  "ppl.errOwner",
+  "ppl.errCap",
+  "ppl.errMidRun",
+  "ppl.paidHowMuch",
+  "ppl.paidAmount",
+  "ppl.paidOfDue",
+  "ppl.paidRange",
+  "ppl.paidConfirm",
+  "ppl.yourLabel",
+  "ppl.message",
+  "ppl.selfOff",
+  "ppl.staffGiftBad",
+  "ppl.roleOwner",
+  "ppl.sentOwner",
+  "ppl.operatorSeat",
+  "ss.inEnglish",
+  "ss.opensAt",
+  "ss.closesAt",
+  "ss.openOn",
+  "ss.zoneFootDefault",
+  "ss.wantAsked",
+  "ss.wantHeard",
+  "ss.wantBack",
+  "ss.saved",
+  "ss.mapFindPick",
+  "ss.mapFindNone",
+  "ss.mapFindErr",
+  "ss.mapSave",
+  "ss.atOnceBad",
+  "ss.atOnceHowAuto",
+  "ss.amNotePh",
+  "ss.wifiNotWifi",
+  "ss.wifiNoCode",
+  "ss.wifiQr",
+  "ss.wifiDownload",
+  "ss.wifiForget",
+  "ss.wifiBad.ssid",
+  "ss.wifiBad.password",
+  "ss.amErr",
+  "ask.title",
+  "ask.how",
+  "ask.someone",
+  "ask.asked",
+  "ask.for",
+  "ask.call",
+  "ask.done",
+  "dl.note1",
+  "dl.note2",
+  "dl.needs",
+  "dl.needKhqr",
+  "dl.needMap",
+  "dl.needBands",
+  "dl.and",
+  "dl.payNeeded",
+  "sl.lastWeek",
+  "sl.lastMonth",
+  "sl.yesterday",
+  "me.noFixed",
+  "me.btag",
+  "me.loadErr",
+  "me.pts",
+  "me.change",
+  "me.inside",
+  "me.outOfBand",
+  "me.backInStock",
+  "me.comesBack",
+  "me.fixedOffSub",
+  "me.offConfirm",
+  "me.onConfirm",
+  "me.offYes",
+  "me.onYes",
+  "me.keep",
+  "me.dragHint",
+  "me.dragOne",
+  "me.thankAfter",
+  "me.nameEn",
+  "me.typePick",
+  "me.newCat",
+  "me.newCatEn",
+  "me.askMax",
+  "me.sentBPriceOne",
+  "me.sentBPriceBand",
+  "me.sentBTag",
+  "me.sizeEn",
+  "me.needName",
+  "me.needType",
+  "me.needCat",
+  "me.needCatName",
+  "me.noCat",
+  "me.catDeleteAsk",
+  "me.catDeleteYes",
+  "me.catRenames",
+  "me.needPrice",
+  "me.badAsk",
+  "me.takeOffConfirm",
+  "me.askZero",
+  "me.widthLow",
+  "me.widthHigh",
+  "me.widthSays",
+  "me.widthBad",
+  "me.offShelfHint",
+  "me.giveOneSays",
+  "me.affiliateAsked",
+  "me.caterQty",
+  "me.caterEach",
+  "me.caterAddQty",
+  "me.caterQtyHow",
+  "me.caterKm",
+  "me.caterCharge",
+  "me.caterAddKm",
+  "me.caterKmHow",
+  "me.caterSays",
+  "me.caterTag",
+  "me.caterQtyBad",
+  "me.caterKmBad",
+  "me.caterNeeds",
+  "me.caterCommission",
+  "me.caterCommissionHow",
+  "me.caterCommissionBad",
+  "rd.noBand",
+  "rd.band",
+  "rd.addrLater",
+  "rd.offered",
+  "rd.accept",
+  "rd.passAside",
+  "rd.passAsideLast",
+  "rd.lastResort",
+  "rd.restart",
+  "rd.restartNobody",
+  "rd.restartErr",
+  "rd.moving",
+  "rd.untilNext",
+  "rd.untilCounter",
+  "rd.offersOne",
+  "rd.offersOther",
+  "rd.offHere",
+  "rd.collect",
+  "rd.pickedUp",
+  "rd.onTheWay",
+  "rd.alreadyPaid",
+  "rd.outside",
+  "rd.cantFind",
+  "rd.sent",
+  "rd.askCode",
+  "rd.codePh",
+  "rd.confirm",
+  "rd.wrong",
+  "rd.cantCheck",
+  "rd.notIn",
+  "rd.noLeave",
+  "rd.photoAsked",
+  "rd.photoTake",
+  "rd.photoWhat",
+  "rd.photoErr",
+  "rd.photoSee",
+  "rd.photoRetake",
+  "rd.photoTakeNow",
+  "rd.photoMine",
+  "rd.leaveNoPhoto",
+  "rd.positionEnds",
+  "rd.delivered",
+  "rd.hasIt",
+  "rd.theyHaveIt",
+  "rd.confirmedAt",
+  "rd.addedTo",
+  "rd.paidNote",
+  "rd.routeDeleted",
+  "rd.routeNotDeleted",
+  "rd.backQueue",
+  "rd.backRotation",
+  "rd.loadErr",
+  "rd.leftAtDoor",
+  "rd.leftConfirms",
+  "rd.route",
+  "rd.dir.n",
+  "rd.dir.ne",
+  "rd.dir.e",
+  "rd.dir.se",
+  "rd.dir.s",
+  "rd.dir.sw",
+  "rd.dir.w",
+  "rd.dir.nw",
+  "rd.mapLabel",
+  "rd.notices",
+  "rd.noticesSub",
+  "rd.homeScreen",
+  "rd.from",
+  "rd.offAllSays",
+  "si.title",
+  "si.intro",
+  "si.hubIntro",
+  "si.hubTitle",
+  "si.hubAlready",
+  "si.hubContinue",
+  "si.hubWhere",
+  "si.codeLabel",
+  "si.signingIn",
+  "si.send",
+  "si.sending",
+  "si.errDomain",
+  "si.errCode",
+  "si.errPhone",
+  "si.errMany",
+  "si.errGeneric",
+  "si.from",
+  "si.recaptcha",
+  "si.privacy",
+  "si.terms",
+  "si.resend",
+  "si.resent",
+  "si.errExpired",
+  "si.errQuota",
+  "si.errCaptcha",
+  "main.cantReadShops",
+  "main.noShop",
+  "main.oneNumber",
+  "main.whichShop",
+  "main.cantReadRole",
+  "main.notRider",
+  "open.invited",
+  "open.nameEn",
+  "open.want",
+  "open.chosenFree",
+  "open.keepRandom",
+  "open.tagLabel",
+  "open.tagFree",
+  "open.tagTaken",
+  "open.tagShape",
+  "open.checking",
+  "open.needName",
+  "open.needTag",
+  "open.phoneTitle",
+  "open.phoneIntro",
+  "open.opening",
+  "open.sending",
+  "open.doneHead",
+  "open.doneAt",
+  "open.doneNext",
+  "open.toCounter",
+  "open.seeShop",
+  "open.reqHead",
+  "open.reqBody",
+  "open.pending",
+  "open.pendingSignOut",
+  "open.errSpent",
+  "open.errH3qr",
+  "open.errGeneric",
+  "open.hereGot",
+  "open.errKhqr",
+  "open.errCap",
+  "open.notify",
+  "open.notifyOn",
+  "open.homeScreen",
+  "open.errPaid",
+  "open.errKhqrNone",
+  "open.heldHead",
+  "open.heldBody",
+  "open.affiliate",
+  "open.affiliateSub",
+  "inv.makeAnother",
+  "inv.history",
+  "inv.used",
+  "inv.lapsed",
+  "inv.madeUntil",
+  "inv.making",
+  "inv.link",
+  "inv.code",
+  "inv.copy",
+  "inv.copied",
+  "inv.err",
+  "ph.cropTitle",
+  "ph.cropHowShop",
+  "ph.cropHowIcon",
+  "ph.iconHintNone",
+  "ph.cropHowItem",
+  "ph.cropHowYou",
+  "ph.cropZoom",
+  "ph.cropUse",
+  "ph.add",
+  "ph.working",
+  "ph.pending",
+  "ph.errCap",
+  "ph.errOwner",
+  "ph.errBytes",
+  "ph.shopHint",
+  "no.firstNeeds",
+  "no.note2",
+  "sp.khqrNone",
+  "sp.photo",
+  "sp.bad",
+  "sp.noQr",
+  "sp.checkName",
+  "sp.saveKhqr",
+  "sp.keepOne",
+  "sp.h3qrNone",
+  "sp.saveBanks",
+  "sp.rateSave",
+  "sp.rateBad",
+  "log.approved",
+  "log.eligible",
+  "log.not-eligible",
+  "log.closed",
+  "log.reopened",
+  "log.suspended",
+  "log.restored",
+  "log.affiliate-declined",
+  "log.seated",
+  "log.left",
+  "log.sign-in-link",
+  "wg.each",
+  "wg.times",
+  "wg.wait",
+  "wg.reachNoDoor",
+  "wg.printCaption",
+  "wg.codeNewHow",
+  "wg.drawPick",
+  "wg.drawNow",
+  "wg.drawRise",
+  "wg.drawNone",
+  "wg.drawErr",
+  "wg.drawErrFall",
+  "wg.drawErrPrize",
+  "wg.drawErrClosed",
+  "wg.after",
+  "wg.rowDone",
+  "wg.rowOpen",
+  "wg.check",
+  "cash.gives",
+  "cash.exact",
+  "cash.inUsd",
+  "cash.inKhr",
+  "cash.change",
+  "cash.noChange",
+  "cash.short",
+  "cs.giveOneHere",
+  "cs.closed",
+  "cs.noMenu",
+  "cs.reviewOne",
+  "cs.reviewOther",
+  "cs.toPay",
+  "cs.nameLabel",
+  "cs.namePh",
+  "cs.howPay",
+  "cs.khqrShow",
+  "cs.khqrShowStaff",
+  "cs.h3qrShow",
+  "cs.h3qrScan",
+  "cs.paidCash",
+  "cs.paidSend",
+  "cs.payLater",
+  "cs.noCash",
+  "cs.paidCashFoot",
+  "cs.paidRailFoot",
+  "cs.send",
+  "cs.placed",
+  "cs.placedNamed",
+  "cs.placedPaid",
+  "cs.placedLater",
+  "cs.next",
+  "cs.errSoldOut",
+  "cs.errItem",
+  "cs.errMethod",
+  "cs.errOffline",
+  "cs.errSeat",
+  "cs.errGeneric",
+  "cs.errGiftUsed",
+  "gs2.counts",
+  "gs2.bought",
+  "gs2.draw",
+  "gs2.row",
+  "gs2.noForecast",
+  "sell.label",
+  "sell.where",
+  "sell.whereHint",
+  "sell.update",
+  "sell.shown",
+  "sell.shownNear",
+  "sell.how",
+  "sell.noPos",
+  "sell.needWords",
+  "sell.err",
+  "hb.nameIn",
+  "hb.errName",
+  "hb.errFamily",
+  "hb.errSame",
+  "pf.add",
+  "pf.working",
+  "pf.err",
+  "pr.nameWho",
+  "pr.shown",
+  "pr.shownOn",
+  "pr.shownOff",
+  "rf.how",
+  "rf.first",
+  "rf.days",
+  "rf.daysFrom",
+  "rf.firstSays",
+  "rf.cost",
+  "sq.printCaption",
+  "sq.shareText",
+  "cg.whatOwner",
+  "cg.whatStaff",
+  "cg.reviewGift",
+  "cg.title",
+  "cg.free",
+  "cg.staffPays",
+  "cg.makeFree",
+  "cg.paidNow",
+  "cg.needNames",
+  "cg.placedFor",
+  "cg.placedVia",
+  "cg.waitRelease",
+  "cg.onYou",
+  "cg.youTitle",
+  "cg.rowFor",
+  "cg.rowVia",
+  "cg.rowWaiting",
+  "cg.rowForget",
+  "cg.whatStaffOff",
+  "cg.off",
+  "cg.fromEarnings",
+  "cg.owedNow",
+  "cg.short",
+  "cg.payEarnings",
+  "hs.kindPickup",
+  "hs.kindDelivery",
+  "hs.kindGift",
+  "hs.kindCatering",
+  "hs.what",
+  "hs.giftLine",
+  "hs.after",
+  "hs.money",
+  "hs.bringing",
+  "hs.tab",
+  "hs.points",
+  "hs.thankedAfter",
+  "hs.paid",
+  "hs.owed",
+  "hs.ownerGift",
+  "hs.bank",
+  "hs.steps",
+  "hs.placed",
+  "hs.takenBy",
+  "hs.arrived",
+  "hs.bookedFor",
+  "hs.paidTo",
+  "hs.byBank",
+  "hs.delivered",
+  "hs.handedBy",
+  "hs.closedBy",
+  "hs.commission",
+  "hs.commissionPaid",
+  "hs.commissionOpen",
+  "hs.gift",
+  "hs.giftFor",
+  "hs.giftKeep",
+  "hs.giftHave",
+  "hs.giftPass",
+  "hs.yours",
+  "hs.stageGift",
+  "hs.stageRegift",
+  "hs.yoursOnly",
+  "hs.earnings",
+  "hs.staffPrice",
+  "pp.suspended",
+  "pp.suspendedWhy",
+  "sw.none",
+  "sw.foot",
+  "push.near.title",
+  "push.near.body",
+  "push.near.bodyPlace",
+  "push.ready.title",
+  "push.ready.body",
+  "push.drawn.title",
+  "push.drawn.body",
+  "push.order.title",
+  "push.order.body",
+  "push.giftorder.title",
+  "push.giftorder.body",
+  "push.giftpaid.title",
+  "push.giftpaid.body",
+  "push.run.title",
+  "push.run.body",
+  "push.onway.title",
+  "push.onway.body",
+  "push.leftdoor.title",
+  "push.leftdoor.body",
+  "push.doorcontest.title",
+  "push.doorcontest.body",
+  "push.making.title",
+  "push.making.body",
+  "push.packed.title",
+  "push.packed.body",
+  "push.lastrun.title",
+  "push.lastrun.body",
+  "push.giftready.title",
+  "push.giftready.body",
+  "push.request.title",
+  "push.request.body",
+  "push.affiliate.title",
+  "push.affiliate.body",
+  "push.opened.title",
+  "push.opened.body",
+  "push.thanks.title",
+  "push.thanks.body",
+  "push.catering.title",
+  "push.catering.body",
+  "push.caterchange.title",
+  "push.caterchange.body",
+  "push.catercancel.title",
+  "push.catercancel.body",
+  "push.catercancel.bodyPaid",
+  "push.cateringask.title",
+  "push.cateringask.body",
+  "push.ordercancel.title",
+  "push.ordercancel.body",
+  "push.ordercancel.bodyPaid",
+  "push.closed.title",
+  "push.closed.body",
+  "push.closed.bodyPaid",
+  "push.runclosed.title",
+  "push.runclosed.body",
+  "push.click.title",
+  "push.click.body",
+  "ad.signTitle",
+  "ad.signIntro",
+  "ad.homeScreen",
+  "ad.notOperator",
+  "ad.logged",
+  "ad.perPhoneWhyKept",
+  "ad.logApproved",
+  "ad.logDeclined",
+  "ad.logEligible",
+  "ad.logNotEligible",
+  "ad.logClosed",
+  "ad.logReopened",
+  "ad.logSuspended",
+  "ad.logRestored",
+  "ad.logReportFiled",
+  "ad.logReportClosed",
+  "ad.logDiscovery",
+  "ad.shopsSub",
+  "ad.findShop",
+  "ad.colTag",
+  "ad.colTier",
+  "ad.colJoined",
+  "ad.colMethods",
+  "ad.colState",
+  "ad.noMatch",
+  "ad.noShops",
+  "ad.noColumns",
+  "ad.colRevenue",
+  "ad.colThanks",
+  "ad.colRating",
+  "ad.colImpressions",
+  "ad.noColumnsWhy",
+  "ad.requestsTitle",
+  "ad.randomTag",
+  "ad.movesAround",
+  "ad.approving",
+  "ad.approve",
+  "ad.finishApproval",
+  "ad.approveRandom",
+  "ad.decline",
+  "ad.declineYes",
+  "ad.working",
+  "ad.requestsFoot",
+  "ad.delivers",
+  "ad.noMenu",
+  "ad.tier",
+  "ad.derived",
+  "ad.eligibility",
+  "ad.eligible",
+  "ad.withdraw",
+  "ad.registry",
+  "ad.registryHeld",
+  "ad.registryNone",
+  "ad.status",
+  "ad.reopen",
+  "ad.closeShop",
+  "ad.closedBecause",
+  "ad.closeReason",
+  "ad.closeWhat",
+  "ad.closeYes",
+  "ad.eligibleFoot",
+  "ad.people",
+  "ad.suspended",
+  "ad.suspend",
+  "ad.restore",
+  "ad.noPeople",
+  "ad.peopleFoot",
+  "ad.shopNeverTitle",
+  "ad.shopNever3",
+  "ad.reportsSub",
+  "ad.kindRider",
+  "ad.kindName",
+  "ad.kindShop",
+  "ad.kindOther",
+  "ad.suspendApproval",
+  "ad.noReports",
+  "ad.recordTitle",
+  "ad.recordKind",
+  "ad.recordShop",
+  "ad.recordNoShop",
+  "ad.recordWho",
+  "ad.recordText",
+  "ad.record",
+  "ad.recordFoot",
+  "ad.reachTitle",
+  "ad.reach1",
+  "ad.reach2",
+  "ad.reachNot1",
+  "ad.reachNot2",
+  "ad.reachNot3",
+  "ad.reachNot4",
+  "ad.reachFoot",
+  "ad.themesSub",
+  "ad.themeDefault",
+  "ad.themeOne",
+  "ad.themeUnused",
+  "ad.themeFill",
+  "ad.noPicker",
+  "ad.noPickerWhy",
+  "ad.shape",
+  "ad.shapeIs",
+  "ad.themesMeasured",
+  "ad.callSub",
+  "ad.season",
+  "ad.inRotation",
+  "ad.noSeason",
+  "ad.countsPublic",
+  "ad.order",
+  "ad.orderNone",
+  "ad.orderWhy",
+  "ad.shopSees",
+  "ad.fromNeighbour",
+  "ad.fromPool",
+  "ad.paidFromSomeone",
+  "ad.noDifference",
+  "ad.shareTitle",
+  "ad.share",
+  "ad.callNotTitle",
+  "ad.callNot",
+  "ad.capTitle",
+  "ad.cap",
+  "ad.rule1",
+  "ad.rule2",
+  "ad.refuseUnfinished",
+  "ad.refuseMidRun",
+  "ad.refuseOwner",
+  "ad.refuseTag",
+  "ad.refuseOpening",
+  "ad.refuseRange",
+  "ad.refuseCap",
+  "ad.sponsorToday",
+  "ad.sponsorCommitted",
+  "ad.affRequestsTitle",
+  "ad.affAsked",
+  "ad.wants",
+  "ad.wantApp",
+  "ad.wantPlay",
+  "ad.wantDomain",
+  "ad.affRequestsFoot",
+  "ad.affOnRequest",
+  "ad.logAffiliateDeclined",
+  "ad.who.owner",
+  "ad.who.customer",
+  "ad.who.visitor",
+  "ad.evCounter",
+  "ad.evThank",
+  "ad.evViews",
+  "ad.evErrors",
+  "ad.pushVisit",
+  "ad.pushEvery",
+  "ad.clicksSub",
+  "ad.pushTitle",
+  "ad.pushOffSub",
+  "ad.pushVisitSub",
+  "ad.pushEverySub",
+  "ad.pushNoPhone",
+  "ad.evShape",
+  "ad.evCounts",
+  "ad.evTopWords",
+  "ad.evTopScreens",
+  "ad.evNoPerson",
+  "ad.evRefresh",
+  "ad.evNone",
+  "ad.evOlder",
+  "ad.evNeverTitle",
+  "ad.evNever1",
+  "ad.evNever2",
+  "ad.evNever3",
+  "ad.evNever4",
+  "ad.evNever5",
+  "ad.retFailed",
+  "ad.retDone",
+  "ad.retNeverSub",
+  "ad.retSub",
+  "ad.retNever",
+  "ad.ret12m",
+  "ad.ret3m",
+  "ad.retTitle",
+  "ad.evNeverFoot",
+  "ad.seat",
+  "ad.seatTake",
+  "ad.seatedHere",
+  "ad.seatOpen",
+  "ad.seatOwn",
+  "ad.seatFoot",
+  "ad.refuseAlready",
+  "ad.linkNoName",
+  "ad.linkOwnerTag",
+  "ad.linkNoShops",
+  "ad.linkLast",
+  "ad.linkNever",
+  "ad.linkMake",
+  "ad.linkCopy",
+  "ad.linkCopied",
+  "ad.linkUntil",
+  "ad.linkBrowser",
+  "ad.linkNone",
+  "ad.linkOff",
+  "ad.linkBadPhone",
+  "ad.logSignInLink"
+ ]
+}
