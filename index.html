@@ -27,6 +27,10 @@
 <meta property="og:image:alt" content="HeartBank Shops, on a dark ground with the B-Emblem standing in for the B.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#15803d">
+<link rel="manifest" href="site.webmanifest">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
   /* brand.333.eco v1.3.0 tokens, with the .ceo green pinned. Nothing invented here. */
@@ -144,11 +148,16 @@
   footer p{margin:0 0 9px;max-width:64ch}
   footer b{color:var(--ink-dim);font-weight:500}
   @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+.top{display:flex;justify-content:flex-end;margin:0 0 .5rem}
+.share{display:inline-flex;align-items:center;gap:.4rem;border:1px solid var(--line-strong);border-radius:999px;background:none;color:var(--ink);font:inherit;font-size:.9rem;padding:.4rem .9rem;cursor:pointer}
+.share svg{width:18px;height:18px}
+#toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);max-width:calc(100vw - 32px);overflow-wrap:anywhere;background:var(--ink);color:var(--bg);border-radius:999px;padding:.5rem 1rem;font-size:.9rem}
 </style>
 <script src="./analytics.js?v=af180dcb"></script>
 </head>
 <body>
 <div class="wrap">
+  <div class="top"><button type="button" class="share" id="share" aria-label="Share this page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg>Share</button></div>
   <header>
     <!-- B-Emblem™ standing in for the B of *Bank* — the heart rotated 45° into a
          bistable capital B, rotation baked into the path, never a transform attribute.
@@ -280,5 +289,20 @@
       Artboards open as ordinary pages — <span class="mono">.dc.html</span> is plain HTML.</p>
   </footer>
 </div>
+<div id="toast" role="status" aria-live="polite" hidden>Link copied</div>
+<script>
+// The share button (/build Default 7, roadmap A477): the system share sheet where there is one; else the link is copied and a
+// note says so; else the link itself is shown, to copy by hand. Never a dialog.
+document.getElementById("share").addEventListener("click", async () => {
+  const url = location.href.split(/[?#]/)[0];
+  const m = document.querySelector('meta[name="description"]') || document.querySelector('meta[property="og:description"]');
+  const t = document.getElementById("toast");
+  const say = (s, ms) => { t.textContent = s; t.hidden = false; setTimeout(() => { t.hidden = true; }, ms); };
+  try { if (navigator.share) { await navigator.share({ title: document.title, text: m ? m.content : "", url }); return; } }
+  catch (e) { if (e && e.name === "AbortError") return; }
+  try { await navigator.clipboard.writeText(url); say("Link copied", 2200); }
+  catch { say(url, 8000); }
+});
+</script>
 </body>
 </html>
