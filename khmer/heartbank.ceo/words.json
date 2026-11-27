@@ -322,6 +322,46 @@
      "en": "Other sites (you may review these too)",
      "km": "គេហទំព័រផ្សេងទៀត (អ្នកក៏អាចពិនិត្យបានដែរ)",
      "status": "draft"
+    },
+    "homeLinks": {
+     "en": "Reviewers' links",
+     "km": "តំណរបស់អ្នកពិនិត្យ",
+     "status": "draft"
+    },
+    "homeLinksNote": {
+     "en": "Only the admin link sees this. Each link is that person's own: send it to them alone.",
+     "km": "មានតែតំណអ្នកគ្រប់គ្រងទេដែលឃើញផ្នែកនេះ។ តំណនីមួយៗជារបស់បុគ្គលនោះផ្ទាល់៖ សូមផ្ញើទៅគាត់តែម្នាក់គត់។",
+     "status": "draft"
+    },
+    "linkShow": {
+     "en": "Show",
+     "km": "បង្ហាញ",
+     "status": "draft"
+    },
+    "linkHide": {
+     "en": "Hide",
+     "km": "លាក់",
+     "status": "draft"
+    },
+    "linkCopy": {
+     "en": "Copy",
+     "km": "ចម្លង",
+     "status": "draft"
+    },
+    "linkCopied": {
+     "en": "Copied",
+     "km": "បានចម្លងហើយ",
+     "status": "draft"
+    },
+    "linkMissing": {
+     "en": "No copy of this link here yet",
+     "km": "មិនទាន់មានច្បាប់ចម្លងនៃតំណនេះនៅទីនេះនៅឡើយទេ",
+     "status": "draft"
+    },
+    "linkShare": {
+     "en": "Share",
+     "km": "ចែករំលែក",
+     "status": "draft"
     }
    },
    "name_km": "ទំព័រដើម · translate.333.eco"
@@ -482,6 +522,121 @@
     "choicesDone": {
      "en": "{a} of {b} pages chosen",
      "km": "បានជ្រើសរើស {a} ក្នុងចំណោម {b} ទំព័រ",
+     "status": "draft"
+    },
+    "recAgreeLede": {
+     "en": "Please read this first. Nothing is recorded until you press I agree.",
+     "km": "សូមអាននេះជាមុនសិន។ មិនមានអ្វីត្រូវបានថតទេ រហូតដល់អ្នកចុច «ខ្ញុំយល់ព្រម»។",
+     "status": "draft"
+    },
+    "iAgree": {
+     "en": "I agree",
+     "km": "ខ្ញុំយល់ព្រម",
+     "status": "draft"
+    },
+    "recReader": {
+     "en": "Reading: {name}",
+     "km": "អ្នកអាន៖ {name}",
+     "status": "draft"
+    },
+    "recLede": {
+     "en": "Read each sentence aloud, at your own pace, as you would read it to a friend. Press Record, read, then Stop. Listen back; if it is good, save it.",
+     "km": "សូមអានប្រយោគនីមួយៗឮៗ តាមល្បឿនរបស់អ្នក ដូចអានឲ្យមិត្តភក្តិស្តាប់។ ចុច «ថត» អាន រួចចុច «ឈប់»។ ស្តាប់ឡើងវិញ បើល្អ សូមរក្សាទុក។",
+     "status": "draft"
+    },
+    "recTip": {
+     "en": "A quiet room helps: no fan, no television, the phone about 20 cm from your mouth.",
+     "km": "បន្ទប់ស្ងាត់ជួយបានច្រើន៖ គ្មានកង្ហារ គ្មានទូរទស្សន៍ ហើយកាន់ទូរសព្ទឲ្យឆ្ងាយពីមាត់ប្រហែល ២០ សង់ទីម៉ែត្រ។",
+     "status": "draft"
+    },
+    "recTakesDone": {
+     "en": "{a} of {b} sentences recorded",
+     "km": "បានថត {a} ក្នុងចំណោម {b} ប្រយោគ",
+     "status": "draft"
+    },
+    "recAllDone": {
+     "en": "Every sentence is recorded. Thank you!",
+     "km": "ប្រយោគទាំងអស់ត្រូវបានថតហើយ។ សូមអរគុណ!",
+     "status": "draft"
+    },
+    "recRecord": {
+     "en": "● Record",
+     "km": "● ថត",
+     "status": "draft"
+    },
+    "recStop": {
+     "en": "■ Stop",
+     "km": "■ ឈប់",
+     "status": "draft"
+    },
+    "recRecording": {
+     "en": "Recording… {s} s",
+     "km": "កំពុងថត… {s} វិនាទី",
+     "status": "draft"
+    },
+    "recPlay": {
+     "en": "▶ Listen back",
+     "km": "▶ ស្តាប់ឡើងវិញ",
+     "status": "draft"
+    },
+    "recRedo": {
+     "en": "Record again",
+     "km": "ថតម្តងទៀត",
+     "status": "draft"
+    },
+    "recSaveNext": {
+     "en": "Save and next",
+     "km": "រក្សាទុក ហើយបន្ទាប់",
+     "status": "draft"
+    },
+    "recSavedTake": {
+     "en": "Saved {when}",
+     "km": "បានរក្សាទុក {when}",
+     "status": "draft"
+    },
+    "recPlaySaved": {
+     "en": "▶ Listen to the saved one",
+     "km": "▶ ស្តាប់មួយដែលបានរក្សាទុក",
+     "status": "draft"
+    },
+    "leafEnglish": {
+     "en": "English",
+     "km": "អង់គ្លេស",
+     "status": "draft"
+    },
+    "recNoisy": {
+     "en": "There is noise behind your voice (a fan or a machine?). Please find a quieter spot, then record it again.",
+     "km": "មានសំឡេងរំខាននៅពីក្រោយសំឡេងរបស់អ្នក (កង្ហារ ឬម៉ាស៊ីន?)។ សូមរកកន្លែងស្ងាត់ជាងនេះ ហើយថតម្តងទៀត។",
+     "status": "draft"
+    },
+    "recNothingHeard": {
+     "en": "Nothing was heard. Please record it again.",
+     "km": "មិនបានឮអ្វីទាំងអស់។ សូមថតម្តងទៀត។",
+     "status": "draft"
+    },
+    "recTooQuiet": {
+     "en": "Too quiet: move closer, then record it again.",
+     "km": "សំឡេងតិចពេក៖ សូមខិតទូរសព្ទមកជិតមាត់ ហើយថតម្តងទៀត។",
+     "status": "draft"
+    },
+    "recAll": {
+     "en": "All {n} sentences",
+     "km": "ប្រយោគទាំង {n}",
+     "status": "draft"
+    },
+    "recMicNo": {
+     "en": "The microphone is not allowed. Allow it for this page in the browser's settings, then try again.",
+     "km": "មិនទាន់អនុញ្ញាតមីក្រូហ្វូនទេ។ សូមអនុញ្ញាតវាសម្រាប់ទំព័រនេះ ក្នុងការកំណត់កម្មវិធីរុករក រួចព្យាយាមម្តងទៀត។",
+     "status": "draft"
+    },
+    "recTooShort": {
+     "en": "That was too short to keep. Please record it again.",
+     "km": "ខ្លីពេកមិនអាចរក្សាទុកបានទេ។ សូមថតម្តងទៀត។",
+     "status": "draft"
+    },
+    "recNotSupported": {
+     "en": "This browser cannot record here. Please use Chrome, or Safari on iPhone.",
+     "km": "កម្មវិធីរុករកនេះមិនអាចថតនៅទីនេះបានទេ។ សូមប្រើ Chrome ឬ Safari លើ iPhone។",
      "status": "draft"
     },
     "machineReading": {
