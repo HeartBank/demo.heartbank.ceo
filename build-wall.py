@@ -93,8 +93,11 @@ out = """<!doctype html>
   .frame{position:absolute;display:block;text-decoration:none;color:inherit;
        background:var(--bg);border:1px solid var(--line);border-radius:10px;
        box-shadow:0 8px 28px rgba(20,16,30,.10)}
-  .frame .cap{position:absolute;left:0;top:-26px;font-family:var(--font-mono);font-size:12px;
-       letter-spacing:.03em;color:var(--ink-dim);white-space:nowrap}
+  /* A caption wraps to its own frame's width and grows UPWARD from the frame's top,
+     so a long title can never run across the next screen's caption. */
+  .frame .cap{position:absolute;left:0;right:0;bottom:100%;margin-bottom:8px;font-family:var(--font-mono);font-size:12px;
+       letter-spacing:.03em;color:var(--ink-dim);
+       line-height:1.4;white-space:normal;overflow-wrap:anywhere}
   .frame iframe{border:0;display:block;pointer-events:none;background:var(--bg);border-radius:9px}
   .note{position:absolute;background:#fdf3c7;color:#3b3320;border-radius:8px;padding:12px 14px;
        font-size:13px;line-height:1.5;box-shadow:0 6px 18px rgba(20,16,30,.14);white-space:pre-wrap}
@@ -128,7 +131,7 @@ out = """<!doctype html>
     els.forEach(function(el){
       var x=parseFloat(el.style.left)||0, y=parseFloat(el.style.top)||0;
       var w=parseFloat(el.style.width)||240, h=parseFloat(el.style.height)||el.offsetHeight||120;
-      b.x1=Math.min(b.x1,x); b.y1=Math.min(b.y1,y-30); b.x2=Math.max(b.x2,x+w); b.y2=Math.max(b.y2,y+h);
+      b.x1=Math.min(b.x1,x); var cap=el.querySelector('.cap'); b.y1=Math.min(b.y1,y-(cap?cap.offsetHeight+10:30)); b.x2=Math.max(b.x2,x+w); b.y2=Math.max(b.y2,y+h);
     });
     return b;
   }
